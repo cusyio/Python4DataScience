@@ -37,9 +37,7 @@ def compute_centers(points, labels):
         counts[label] += 1
         centers[label] = [a + b for a, b in zip(centers[label], point)]
 
-    return [
-        [x / count for x in center] for center, count in zip(centers, counts)
-    ]
+    return [[x / count for x in center] for center, count in zip(centers, counts)]
 
 
 def kmeans(points, n_clusters):

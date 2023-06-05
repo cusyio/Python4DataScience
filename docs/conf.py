@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Jupyter Tutorial"
+project = "Python for Data Science"
 copyright = "2019–2023, Veit Schiele"
 author = "Veit Schiele"
 
@@ -82,7 +82,7 @@ html_theme = "furo"
 # documentation.
 #
 # Change default HTML title
-html_title = "Jupyter Tutorial 0.9.0"
+html_title = "Python for Data Science 0.9.0"
 #
 # html_theme_options = {}
 # html_sidebars = {}
@@ -92,7 +92,7 @@ html_title = "Jupyter Tutorial 0.9.0"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-html_logo = "_static/images/logo/logo.svg"
+html_logo = "_static/images/logo/logo.png"
 html_favicon = "_static/images/logo/favicon.ico"
 
 html_css_files = [
@@ -121,8 +121,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "jupyter-tutorial.tex",
-        "Jupyter Tutorial",
+        "Python4DataScience.tex",
+        "Python for Data Science",
         "Veit Schiele",
         "manual",
     ),
@@ -136,6 +136,10 @@ nbsphinx_allow_errors = True
 # -- intersphinx configuration -----------------------------------------------
 
 intersphinx_mapping = {
+    "jupyter-tutorial": (
+        "https://jupyter-tutorial.readthedocs.io/en/latest/",
+        None,
+    ),
     "python": ("https://docs.python.org/3", None),
     "ipython": ("https://ipython.readthedocs.io/en/latest/", None),
     "pytest": ("https://docs.pytest.org/en/latest/", None),

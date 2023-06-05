@@ -247,13 +247,13 @@ Python constructs are not supported.
 Task planner
 ------------
 
-:doc:`ipyparallel/index`, :doc:`dask` and `Ray <https://docs.ray.io/>`_
-can distribute tasks in a cluster.  In doing so, they have different focuses:
+:doc:`jupyter-tutorial:hub/ipyparallel/index`, :doc:`dask` and `Ray
+<https://docs.ray.io/>`_ can distribute tasks in a cluster.  In doing so, they
+have different focuses:
 
-* `ipyparallel` simply integrates into a
-  :doc:`../../workspace/jupyter/hub/index`.
-* Dask imitates pandas, NumPy iterators, Toolz und PySpark when it distributes
-  their tasks.
+* ``ipyparallel`` simply integrates into a :doc:`jupyter-tutorial:hub/index`.
+* :doc:`dask` imitates pandas, NumPy iterators, Toolz und PySpark when it
+  distributes their tasks.
 * Ray provides a simple, universal API for building distributed applications.
 
   * `RLlib <https://docs.ray.io/en/latest/rllib.html>`_ will scale reinforcement
@@ -277,14 +277,13 @@ Our example could look like this with Dask:
 .. literalinclude:: ds_kmeans.py
    :caption: ds_kmeans.py
    :name: ds_kmeans.py
-   :lines: 1-32
+   :lines: 1-
 
 .. toctree::
     :hidden:
     :titlesonly:
     :maxdepth: 0
 
-    ipyparallel/index
     dask.ipynb
 
 Multithreading, Multiprocessing and Async

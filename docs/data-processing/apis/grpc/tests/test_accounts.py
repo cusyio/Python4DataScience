@@ -2,7 +2,6 @@ from pathlib import Path
 
 import grpc
 import pytest
-
 from accounts_pb2 import CreateAccountRequest, GetAccountsRequest
 
 
@@ -33,10 +32,7 @@ def test_create_account(grpc_stub):
     request = CreateAccountRequest(account_name=value)
     response = grpc_stub.CreateAccount(request)
 
-    assert (
-        f"{response.account}"
-        == f'account_id: 1{nl}account_name: "test-data"{nl}'
-    )
+    assert f"{response.account}" == f'account_id: 1{nl}account_name: "test-data"{nl}'
 
 
 def test_get_accounts(grpc_stub):
@@ -64,9 +60,7 @@ def grpc_server(_grpc_server, grpc_addr, my_ssl_key_path, my_ssl_cert_path):
 @pytest.fixture(scope="module")
 def my_channel_ssl_credentials(my_ssl_cert_path):
     # If we're using self-signed certificate it's necessarily to pass root certificate to channel
-    return grpc.ssl_channel_credentials(
-        root_certificates=my_ssl_cert_path.read_bytes()
-    )
+    return grpc.ssl_channel_credentials(root_certificates=my_ssl_cert_path.read_bytes())
 
 
 @pytest.fixture(scope="module")

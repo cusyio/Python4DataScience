@@ -2,8 +2,9 @@ Workspace
 =========
 
 Setting up the workspace includes installing and configuring
-:doc:`ipython/index` and :doc:`jupyter/index` with :doc:`jupyter/nbextensions/index`
-and :doc:`jupyter/ipywidgets/index`, and :doc:`numpy/index`.
+:doc:`ipython/index` and :doc:`Jupyter <jupyter-tutorial:index>` with
+:doc:`jupyter-tutorial:nbextensions/index` and
+:doc:`jupyter-tutorial:ipywidgets/index`, and :doc:`numpy/index`.
 
 .. toctree::
     :hidden:
@@ -11,6 +12,6 @@ and :doc:`jupyter/ipywidgets/index`, and :doc:`numpy/index`.
     :maxdepth: 0
 
     ipython/index
-    jupyter/index
+    jupyter
     numpy/index
     pandas/index

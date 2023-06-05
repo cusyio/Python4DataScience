@@ -6,27 +6,21 @@ Quick start
 Status
 ------
 
-.. image:: https://img.shields.io/github/contributors/veit/jupyter-tutorial.svg
+.. image:: https://img.shields.io/github/contributors/veit/python4datascience.svg
    :alt: Contributors
-   :target: https://github.com/veit/jupyter-tutorial/graphs/contributors
-.. image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
+   :target: https://github.com/veit/python4datascience/graphs/contributors
+.. image:: https://img.shields.io/github/license/veit/python4datascience.svg
    :alt: License
-   :target: https://github.com/veit/jupyter-tutorial/blob/master/LICENSE
-.. image:: https://results.pre-commit.ci/badge/github/veit/jupyter-tutorial/main.svg
+   :target: https://github.com/veit/python4datascience/blob/master/LICENSE
+.. image:: https://results.pre-commit.ci/badge/github/veit/Python4DataScience/main.svg
+   :target: https://results.pre-commit.ci/latest/github/veit/Python4DataScience/main
    :alt: pre-commit.ci status
-   :target: https://results.pre-commit.ci/latest/github/veit/jupyter-tutorial/main
-.. image:: https://readthedocs.org/projects/jupyter-tutorial/badge/?version=latest
+.. image:: https://readthedocs.org/projects/python4datascience/badge/?version=latest
    :alt: Docs
-   :target: https://jupyter-tutorial.readthedocs.io/en/latest/
-.. image:: https://pyup.io/repos/github/veit/jupyter-tutorial/shield.svg
-   :alt: Pyup
-   :target: https://pyup.io/repos/github/veit/jupyter-tutorial/
-.. image:: https://zenodo.org/badge/doi/10.5281/zenodo.4147287.svg
-   :alt: DOI
-   :target: https://zenodo.org/badge/latestdoi/199994535
-.. image:: https://img.shields.io/badge/dynamic/json?label=Mastodon&query=totalItems&url=https%3A%2F%2Fmastodon.social%2F@JupyterTutorial%2Ffollowers.json&logo=mastodon
+   :target: https://python4datascience.readthedocs.io/en/latest/
+.. image:: https://img.shields.io/badge/dynamic/json?label=Mastodon&query=totalItems&url=https%3A%2F%2Fmastodon.social%2F@Python4DataScience%2Ffollowers.json&logo=mastodon
    :alt: Mastodon
-   :target: https://mastodon.social/@JupyterTutorial
+   :target: https://mastodon.social/@Python4DataScience
 
 .. _first-steps:
 
@@ -37,37 +31,21 @@ Installation
 
    .. code-block:: console
 
-    $ curl -O https://codeload.github.com/veit/jupyter-tutorial/zip/main
+    $ curl -O https://codeload.github.com/veit/python4datascience/zip/main
     $ unzip main
     Archive:  main
     …
-       creating: jupyter-tutorial-main/
+       creating: python4datascience-main/
     …
-
-#. Edit the ``Pipfile`` in the unpacked archive and enter your current Python version in this section:
-
-  .. code-block:: console
-
-    [requires]
-    python_version = ""
-
-#. Install Pipenv
-
-   Refer to :doc:`Install Pipenv </productive/envs/pipenv/install>`
 
 #. Install Python packages:
 
    .. code-block:: console
 
-    $ cd jupyter-tutorial-main
-    $ pipenv install
-    Creating a virtualenv for this project…
-    …
-    Installing dependencies from Pipfile.lock (fbb457)…
-    …
-    $ pipenv run jupyter nbextension enable highlighter/highlighter
-        Enabling notebook extension highlighter/highlighter...
-              - Validating: OK
+    $ cd python4datascience-main
+    $ python3 -m venv .
+    $ . bin/activate
+    $ python -m pip install -r docs/requirements.txt
 
 #. Install the `Jupyter Notebook Extensions
    <https://jupyter-contrib-nbextensions.readthedocs.io/>`_ Javascript and CSS
@@ -75,7 +53,7 @@ Installation
 
    .. code-block:: console
 
-    $ pipenv run jupyter contrib nbextension install --user
+    $ jupyter contrib nbextension install --user
     jupyter contrib nbextension install --user
     Installing jupyter_contrib_nbextensions nbextension files to jupyter data directory
     …
@@ -83,7 +61,7 @@ Installation
     jupyter-highlight-selected-word-0.2.0 jupyter-latex-envs-1.4.6
     jupyter-nbextensions-configurator-0.4.1
     …
-    $ pipenv run jupyter nbextension enable latex_envs --user --py
+    $ jupyter nbextension enable latex_envs --user --py
     Enabling notebook extension latex_envs/latex_envs...
           - Validating: OK
 
@@ -95,14 +73,10 @@ Installation
 
     $  sudo apt-get install pandoc
 
-    To create the HTML documentation run these commands:
+   To create the HTML documentation run these commands:
 
-   .. code-block:: console
-
-    $ python3 -m venv .
-    $ bin/python -m pip install --upgrade pip
-    $ bin/python -m pip install -r docs/constraints.txt
-    $ bin/sphinx-build -ab html docs/ docs/_build/
+    $ cd docs
+    $ make html
 
 #. Create a PDF:
 
@@ -112,7 +86,7 @@ Installation
 
    .. code-block:: console
 
-    $ sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended latexmk
+    $ sudo apt install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended latexmk
 
    or for macOS with:
 
@@ -131,8 +105,7 @@ Installation
 
    .. code-block:: console
 
-    $ cd docs/
-    $ pipenv run make latexpdf
+    $ make latexpdf
     …
     The LaTeX files are in _build/latex.
     Run 'make' in that directory to run these through (pdf)latex
@@ -162,8 +135,7 @@ Installation
 
    .. code-block:: console
 
-    $ cd jupyter-tutorial
-    $ vale docs/
+    $ vale .
     ✔ 0 errors, 0 warnings and 0 suggestions in 201 files.
 
 .. _follow-us:
@@ -171,16 +143,15 @@ Installation
 Follow us
 ---------
 
-* `GitHub <https://github.com/veit/jupyter-tutorial>`_
-* `Twitter <https://twitter.com/JupyterTutorial>`_
-* `Mastodon <https://mastodon.social/@JupyterTutorial>`_
+* `GitHub <https://github.com/veit/python4datascience>`_
+* `Mastodon <https://mastodon.social/@Python4DataScience>`_
 
 Pull-Requests
 -------------
 
 If you have suggestions for improvements and additions, I recommend that you
-create a `Fork <https://github.com/veit/jupyter-tutorial/fork>`_ of my `GitHub
-Repository <https://github.com/veit/jupyter-tutorial/>`_ and make your changes
+create a `Fork <https://github.com/veit/python4datascience/fork>`_ of my `GitHub
+Repository <https://github.com/veit/python4datascience/>`_ and make your changes
 there. . You are also welcome to make a *pull request*. If the changes
 contained therein are small and atomic, I’ll be happy to look at your
 suggestions.

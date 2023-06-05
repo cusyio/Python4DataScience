@@ -2,10 +2,10 @@ Pipenv and Spack
 ================
 
 Pipenv has already been used to :doc:`install Jupyter notebooks
-</first-steps/install>`. However, we need Pipenv for our :doc:`Spack
-environments <../../envs/spack/envs>` to be able to generate binary-compatible
-builds with Spack on the one hand and to be able to easily use Python packages
-for data collection, visualization, etc. on the other.
+<jupyter-tutorial:first-steps/install>`. However, we need Pipenv for our
+:doc:`Spack environments <../../envs/spack/envs>` to be able to generate
+binary-compatible builds with Spack on the one hand and to be able to easily use
+Python packages for data collection, visualization, etc. on the other.
 
 To do this, first activate the appropriate Python version from the Spack
 environment:

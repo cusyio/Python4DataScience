@@ -1,5 +1,4 @@
 import logging
-
 from concurrent import futures
 
 import accounts_pb2 as accounts_messages

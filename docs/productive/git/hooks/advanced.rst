@@ -69,7 +69,7 @@ before commits; they can also be used for other Git hooks:
         :samp:`origin`.
     ``$PRE_COMMIT_REMOTE_URL``
         The URL of the remote repository that was pushed to, for example
-        :samp:`git@github.com:veit/jupyter-tutorial`
+        :samp:`git@github.com:veit/Python4DataScience`
     ``$PRE_COMMIT_REMOTE_BRANCH``
         The name of the remote branch that was pushed to, for example
         :samp:`refs/heads/{TARGET-BRANCH}`.

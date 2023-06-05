@@ -238,7 +238,7 @@ For example:
 
 .. code-block:: console
 
-    $ git2prov git@github.com:veit/jupyter-tutorial.git PROV-JSON
+    $ git2prov git@github.com:veit/Python4DataScience.git PROV-JSON
 
 In total, the following serialisation formats are available:
 

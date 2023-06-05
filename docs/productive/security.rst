@@ -69,11 +69,11 @@ tells you that you should investigate the situation more closely.
 
 You can also display the activities of a project with badges, for example:
 
-.. image:: https://img.shields.io/github/commit-activity/y/veit/jupyter-tutorial
+.. image:: https://img.shields.io/github/commit-activity/y/veit/Python4DataScience
    :alt: Jährliche Commit-Aktivität
-.. image:: https://img.shields.io/github/commit-activity/m/veit/jupyter-tutorial
+.. image:: https://img.shields.io/github/commit-activity/m/veit/Python4DataScience
    :alt: Monatliche Commit-Aktivität
-.. image:: https://img.shields.io/github/commit-activity/w/veit/jupyter-tutorial
+.. image:: https://img.shields.io/github/commit-activity/w/veit/Python4DataScience
    :alt: Wöchentliche Commit-Aktivität
 
 Is there a safety concept for the project?

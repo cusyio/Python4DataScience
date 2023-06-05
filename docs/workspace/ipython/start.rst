@@ -18,7 +18,7 @@ notebook server first:
 .. code-block:: console
 
     $ pipenv run jupyter notebook
-    [I 17:35:02.419 NotebookApp] Serving notebooks from local directory: /Users/veit/vsc/jupyter-tutorial
+    [I 17:35:02.419 NotebookApp] Serving notebooks from local directory: /Users/veit/cusy/trn/Python4DataScience
     [I 17:35:02.419 NotebookApp] The Jupyter Notebook is running at:
     [I 17:35:02.427 NotebookApp] http://localhost:8888/?token=72209334c2e325a68115902a63bd064db436c0c84aeced7f
     [I 17:35:02.428 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).

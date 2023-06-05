@@ -7,7 +7,6 @@ from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
 
-
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -288,9 +287,7 @@ _CREATEACCOUNTRESULT.fields_by_name["account"].message_type = _ACCOUNT
 _GETACCOUNTSREQUEST.fields_by_name["account"].message_type = _ACCOUNT
 _GETACCOUNTSRESULT.fields_by_name["account"].message_type = _ACCOUNT
 DESCRIPTOR.message_types_by_name["Account"] = _ACCOUNT
-DESCRIPTOR.message_types_by_name[
-    "CreateAccountRequest"
-] = _CREATEACCOUNTREQUEST
+DESCRIPTOR.message_types_by_name["CreateAccountRequest"] = _CREATEACCOUNTREQUEST
 DESCRIPTOR.message_types_by_name["CreateAccountResult"] = _CREATEACCOUNTRESULT
 DESCRIPTOR.message_types_by_name["GetAccountsRequest"] = _GETACCOUNTSREQUEST
 DESCRIPTOR.message_types_by_name["GetAccountsResult"] = _GETACCOUNTSRESULT
