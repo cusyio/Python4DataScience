@@ -40,7 +40,7 @@ From Chapter 2, the tutorial follows the prototype of a research project:
     changing redundant, inconsistent or incorrectly formatted data.
 #.  :doc:`viz/index` has been moved to a separate tutorial with the many
     different possibilities.
-#.  :doc:`performance/index>` introduces ways to make your code run faster.
+#.  :doc:`performance/index` introduces ways to make your code run faster.
 #.  :doc:`productive/index` shows what is necessary to achieve reproducible
     results: not only :doc:`reproducible environments <productive/envs/index>`
     are needed, but also versioning of the :doc:`source code

@@ -228,13 +228,13 @@ badge for you, which you can include in your ``README`` file, for example
 
     |License|
 
-    .. |License| image:: https://img.shields.io/github/license/veit/Python4DataScience.svg
-       :target: https://github.com/veit/Python4DataScience/blob/main/LICENSE
+    .. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
+       :target: https://github.com/veit/python4datascience/blob/main/LICENSE
 
 |License|
 
-.. |License| image:: https://img.shields.io/github/license/veit/Python4DataScience.svg
-   :target: https://github.com/veit/Python4DataScience/blob/main/LICENSE
+.. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
+   :target: https://github.com/veit/python4datascience/blob/main/LICENSE
 
 .. _standard_format_licensing:
 

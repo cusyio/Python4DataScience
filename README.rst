@@ -12,8 +12,8 @@ Status
 .. image:: https://img.shields.io/github/license/veit/python4datascience.svg
    :alt: License
    :target: https://github.com/veit/python4datascience/blob/master/LICENSE
-.. image:: https://results.pre-commit.ci/badge/github/veit/Python4DataScience/main.svg
-   :target: https://results.pre-commit.ci/latest/github/veit/Python4DataScience/main
+.. image:: https://results.pre-commit.ci/badge/github/veit/python4datascience/main.svg
+   :target: https://results.pre-commit.ci/latest/github/veit/python4datascience/main
    :alt: pre-commit.ci status
 .. image:: https://readthedocs.org/projects/python4datascience/badge/?version=latest
    :alt: Docs

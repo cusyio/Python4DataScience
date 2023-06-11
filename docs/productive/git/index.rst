@@ -48,7 +48,7 @@ Flexibility
 Git not only allows for very flexible workflows but is also suitable for both
 large and small projects on different platforms.
 
-criticisms
+Criticisms
 ----------
 
 A common criticism of Git is that it is difficult to learn: either large parts
@@ -76,7 +76,7 @@ Read more
     * `Git reference <https://git-scm.com/docs>`_
 
 Essentially, in this tutorial, I show on the one hand how :doc:`Jupyter
-Notebooks <jupyter-tutorial:first-steps/index>` can be  managed with Git, and on
+Notebooks <jupyter-tutorial:notebook/index>` can be  managed with Git, and on
 the other hand :doc:`best practices <best-practices>` and typical
 :doc:`workflows/index`.
 
