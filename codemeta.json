@@ -1,0 +1,33 @@
+{
+  "inLanguage": {
+    "alternateName": "eng",
+    "@type": "Language",
+    "name": "English"
+  },
+  "description": "<p>Extract the data science workflow from the Jupyter Tutorial</p>",
+  "license": "https://www.eclipse.org/org/documents/edl-v10.php",
+  "creator": [
+    {
+      "affiliation": "@cusyio",
+      "@type": "Person",
+      "name": "Veit Schiele"
+    }
+  ],
+  "url": "https://zenodo.org/record/8024719",
+  "datePublished": "2023-06-11",
+  "version": "v1.0.0",
+  "keywords": [
+    "data science",
+    "dvc",
+    "git",
+    "Python",
+    "NumPy",
+    "pandas",
+    "iPython"
+  ],
+  "@context": "https://schema.org/",
+  "identifier": "https://doi.org/10.5281/zenodo.8024719",
+  "@id": "https://doi.org/10.5281/zenodo.8024719",
+  "@type": "CreativeWork",
+  "name": "veit/Python4DataScience: v1.0.0"
+}
