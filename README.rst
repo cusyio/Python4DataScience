@@ -18,6 +18,8 @@ Status
 .. image:: https://readthedocs.org/projects/python4datascience/badge/?version=latest
    :alt: Docs
    :target: https://python4datascience.readthedocs.io/en/latest/
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.8024719.svg
+   :target: https://doi.org/10.5281/zenodo.8024719
 .. image:: https://img.shields.io/badge/dynamic/json?label=Mastodon&query=totalItems&url=https%3A%2F%2Fmastodon.social%2F@Python4DataScience%2Ffollowers.json&logo=mastodon
    :alt: Mastodon
    :target: https://mastodon.social/@Python4DataScience
