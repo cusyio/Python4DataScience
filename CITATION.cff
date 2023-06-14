@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: Python4DataScience
+message: >-
+  If you use this tutorial, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Veit
+    family-names: Schiele
+    email: veit@cusy.io
+    affiliation: cusy GmbH
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.8024719
+    description: "Python4DataScience: v1.0.0"
+repository-code: "https://github.com/veit/Python4DataScience"
+url: "https://www.python4data.science/en/v1.0.0/"
+abstract: >-
+  Teaching materials for the cusy training courses on a
+  Python-based data science workflow.
+keywords:
+  - Python
+  - Data-Science
+  - DataScience
+  - iPython
+  - NumPy
+  - pandas
+  - Git
+  - DVC
+license: BSD-3-Clause
+commit: 590c03c46111423b17f5c75abb377b53f602ec6f
+version: v1.0.0
+date-released: "2023-06-11"
