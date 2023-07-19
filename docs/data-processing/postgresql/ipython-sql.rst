@@ -30,7 +30,7 @@ First steps
 
     In [2]: %sql postgresql://
 
-#. Then you can create a table, e.g.:
+#. Then you can create a table, for example:
 
    .. code-block:: python
 
@@ -79,7 +79,7 @@ With ``%config SqlMagic`` you can display the current configuration:
    `pandas documentation
    <https://pandas.pydata.org/pandas-docs/version/0.18.1/options.html#frequently-used-options>`_.
 
-Pandas
+pandas
 ------
 
 If pandas is installed, the ``DataFrame`` method can be used:
@@ -105,21 +105,21 @@ PostgreSQL features
 
 Meta-commands from ``psql`` can also be used in ipython-sql:
 
-``-l``, ``--connections``
+:samp:`-l`, :samp:`--connections`
     lists all active connections
-``-x``, ``--close <session-name>``
+:samp:`-x`, :samp:`--close {SESSION-NAME}`
     close named connection
-``-c``, ``--creator <creator-function>``
+:samp:`-c`, :samp:`--creator {CREATOR-FUNCTION}`
     specifies the creator function for a new connection
-``-s``, ``--section <section-name>``
+:samp:`-s`, :samp:`--section {SECTION-NAME}`
     specifies section of ``dsn_file`` to be used in a connection
-``-p``, ``--persist``
+:samp:`-p`, :samp:`--persist`
     creates a table in the database from a named DataFrame
-``--append``
-    similar to ``--persist``, but the contents are appended to the table
-``-a``, ``--connection_arguments <"{connection arguments}">``
+:samp:`--append`
+    similar to :samp:`--persist`, but the contents are appended to the table
+:samp:`-a`, :samp:`--connection_arguments "\{{CONNECTION-ARGUMENTS}\}"`
     specifies a dict of connection arguments to be passed to the SQL driver
-``-f``, ``--file <path>``
+:samp:`-f`, :samp:`--file {PATH}`
     executes SQL from the file under this path
 
 .. seealso::

@@ -19,7 +19,6 @@ Overview
 
     "`fuzzywuzzy <https://github.com/seatgeek/fuzzywuzzy>`_",".. image:: https://raster.shields.io/github/stars/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/contributors/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/commit-activity/y/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/license/seatgeek/fuzzywuzzy"
     "`dedupe <https://github.com/dedupeio/dedupe>`_",".. image:: https://raster.shields.io/github/stars/dedupeio/dedupe",".. image:: https://raster.shields.io/github/contributors/dedupeio/dedupe",".. image:: https://raster.shields.io/github/commit-activity/y/dedupeio/dedupe",".. image:: https://raster.shields.io/github/license/dedupeio/dedupe"
-    "`Engarde <https://github.com/engarde-dev/engarde>`_",".. image:: https://raster.shields.io/github/stars/engarde-dev/engarde",".. image:: https://raster.shields.io/github/contributors/engarde-dev/engarde",".. image:: https://raster.shields.io/github/commit-activity/y/engarde-dev/engarde",".. image:: https://raster.shields.io/github/license/engarde-dev/engarde"
     "`Bulwark <https://github.com/ZaxR/bulwark>`_",".. image:: https://raster.shields.io/github/stars/ZaxR/bulwark",".. image:: https://raster.shields.io/github/contributors/ZaxR/bulwark",".. image:: https://raster.shields.io/github/commit-activity/y/ZaxR/bulwark",".. image:: https://raster.shields.io/github/license/ZaxR/bulwark"
     "`Hypothesis <https://github.com/HypothesisWorks/hypothesis>`_",".. image:: https://raster.shields.io/github/stars/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/contributors/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/commit-activity/y/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/license/HypothesisWorks/hypothesis"
     "`TDDA <https://github.com/tdda/tdda>`_",".. image:: https://raster.shields.io/github/stars/tdda/tdda",".. image:: https://raster.shields.io/github/contributors/tdda/tdda",".. image:: https://raster.shields.io/github/commit-activity/y/tdda/tdda",".. image:: https://raster.shields.io/github/license/tdda/tdda"
@@ -46,7 +45,6 @@ Overview
     outliers.ipynb
     string-matching.ipynb
     deduplicate.ipynb
-    engarde.ipynb
     bulwark.ipynb
     hypothesis.ipynb
     tdda.ipynb

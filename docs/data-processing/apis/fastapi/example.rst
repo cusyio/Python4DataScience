@@ -4,18 +4,22 @@ Example
 1. Create
 ---------
 
-Create a file ``main.py`` with:
+Create a file :file:`main.py` with:
 
 .. code-block:: python
 
     from typing import Optional
+
     from fastapi import FastAPI
 
+
     app = FastAPI()
+
 
     @app.get("/")
     def read_root():
         return {"Hello": "World"}
+
 
     @app.get("/items/{item_id}")
     def read_item(item_id: int, q: Optional[str] = None):
@@ -61,26 +65,33 @@ You will also get an alternative automatic documentation provided by `ReDoc
 Now we modify the file ``main.py`` to receive a body from a ``PUT`` request:
 
 .. code-block:: python
-   :emphasize-lines: 3,7-10,20-22
+   :emphasize-lines: 3,11-14,27-
 
     from typing import Optional
-    from fastapi import FastAPI
+
     from pydantic import BaseModel
 
+    from fastapi import FastAPI
+
+
     app = FastAPI()
+
 
     class Item(BaseModel):
         name: str
         price: float
         is_offer: Optional[bool] = None
 
+
     @app.get("/")
     def read_root():
         return {"Hello": "World"}
 
+
     @app.get("/items/{item_id}")
     def read_item(item_id: int, q: Optional[str] = None):
         return {"item_id": item_id, "q": q}
+
 
     @app.put("/items/{item_id}")
     def update_item(item_id: int, item: Item):
@@ -90,8 +101,8 @@ The server should reload the file automatically because we added ``--reload`` to
 the uvicorn command. Also the interactive API documentation will show the new
 body with ``PUT``. If you click on the button *Try it out* you will fill in
 the parameter for ``item_id``. Then click on the *Execute* button and the your
-browser will send the parameter to the API and show them on the screen, e.g. as
-response body:
+browser will send the parameter to the API and show them on the screen, for
+example as response body:
 
 .. code-block:: javascript
 

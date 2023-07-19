@@ -25,10 +25,13 @@ method, and ``get_thumbnail()`` a property:
 
     class Image(object):
         thumbnail_resolution = 128
+
         def __init__(self, path):
             ...
+
         def crop(self, width, height):
             ...
+
         @property
         def thumbnail(self):
             ...

@@ -10,15 +10,13 @@ Installation
 
 .. code-block:: console
 
-    $ spack env activate python-374
-    $ spack install py-flake8 ^python@3.7.4
+    $ spack env activate python-311
+    $ spack install py-flake8
 
 Check
 -----
 
-.. code-block:: console
-
-    $ flake8 path/to/your/code
+:samp:`$ flake8 {PATH/TO/YOUR/CODE}`
 
 Configuration
 -------------
@@ -29,7 +27,7 @@ Configuration
 .. code-block:: ini
 
     [tox]
-    envlist = py37, py38, flake8, docs
+    envlist = py38, py311, flake8, docs
 
     [testenv:flake8]
     basepython = python

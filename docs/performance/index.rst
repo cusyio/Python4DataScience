@@ -42,8 +42,11 @@ We can create sample data with:
 .. code-block:: python
 
     from sklearn.datasets import make_blobs
-    points, labels_true = make_blobs(n_samples=1000, centers=3,
-                                 random_state=0, cluster_std=0.60)
+
+
+    points, labels_true = make_blobs(
+        n_samples=1000, centers=3, random_state=0, cluster_std=0.60
+    )
 
 And finally, we can perform the calculation with:
 
@@ -87,16 +90,20 @@ algorithm:
 
   .. code-block:: python
 
-        from sklearn.cluster import KMeans
-        KMeans(10).fit_predict(points)
+     from sklearn.cluster import KMeans
+
+
+     KMeans(10).fit_predict(points)
 
 * `dask_ml.cluster.KMeans
   <https://ml.dask.org/modules/generated/dask_ml.cluster.KMeans.html>`_
 
   .. code-block:: python
 
-        from dask_ml.cluster import KMeans
-        KMeans(10).fit(points).predict(points)
+     from dask_ml.cluster import KMeans
+
+
+     KMeans(10).fit(points).predict(points)
 
 The best that could be said against these existing solutions is that they could
 create a considerable overhead in your project if you are not already using
@@ -166,7 +173,7 @@ Special data structures
     .. literalinclude:: sp_kmeans.py
        :caption: sp_kmeans.py
        :name: sp_kmeans.py
-       :lines: 4-10
+       :lines: 6-9
 
 `scipy.sparse <https://docs.scipy.org/doc/scipy/reference/sparse.html>`_
     `sparse matrices <https://en.wikipedia.org/wiki/Sparse_matrix>`_

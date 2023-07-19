@@ -21,23 +21,23 @@ They usually do not offer any support for combinatorial versioning.
 
 * Traditional binary package managers like RPM, yum, APT, yast, etc.
 
-    * are designed to manage a single software stack
-    * install one version of a package
-    * usually problem-free upgrades to a stable, well-tested stack
+  * are designed to manage a single software stack
+  * install one version of a package
+  * usually problem-free upgrades to a stable, well-tested stack
 
 * Port systems
 
-    * BSD Ports, portage, NixOS, Macports, Homebrew, etc.
-    * mostly little support for builds that are parameterised by compilers or
-      dependent versions
+  * BSD Ports, portage, NixOS, Macports, Homebrew, etc.
+  * mostly little support for builds that are parameterised by compilers or
+    dependent versions
 
 * Virtual machines and Linux containers
 
-    * Containers allow the creation of different environments for different
-      applications
-    * However, they do not solve the build problem for the image
-    * Performance, security and upgrades become very complex with many different
-      builds.
+  * Containers allow the creation of different environments for different
+    applications
+  * However, they do not solve the build problem for the image
+  * Performance, security and upgrades become very complex with many different
+    builds.
 
 .. toctree::
     :hidden:

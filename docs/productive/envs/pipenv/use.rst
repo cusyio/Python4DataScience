@@ -12,7 +12,8 @@ Now that ``requests`` is installed, it can be used.
 
     import requests
 
-    response = requests.get('https://cusy.io')
+
+    response = requests.get("https://cusy.io")
 
     print(response.status_code)
 

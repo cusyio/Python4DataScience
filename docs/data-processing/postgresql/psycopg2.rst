@@ -24,5 +24,5 @@ With Spack you can provide psycopg2 in your kernel, e.g. with
 
 .. code-block:: console
 
-    $ spack env activate python-374
-    $ spack install py-psycopg2 ^python@3.7.4
+    $ spack env activate python-311
+    $ spack install py-psycopg2

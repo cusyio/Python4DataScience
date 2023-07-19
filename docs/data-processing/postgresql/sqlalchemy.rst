@@ -36,60 +36,64 @@ databases:
 Database connection
 -------------------
 
-::
+.. code-block:: python
 
     from sqlalchemy import create_engine
-    engine = create_engine('postgresql:///example', echo=True)
+
+
+    engine = create_engine("postgresql:///example", echo=True)
 
 Data model
 ----------
 
-::
+.. code-block:: python
 
-    from sqlalchemy import Column, Integer, String, ForeignKey
+    from sqlalchemy import Column, ForeignKey, Integer, String
     from sqlalchemy.ext.declarative import declarative_base
     from sqlalchemy.orm import relationship
 
+
     Base = declarative_base()
 
+
     class Address(Base):
-        __tablename__ = 'address'
+        __tablename__ = "address"
 
         id = Column(Integer, primary_key=True)
         street = Column(String)
         zipcode = Column(String)
         country = Column(String, nullable=False)
 
+
     class Contact(Base):
-        __tablename__ = 'contact'
+        __tablename__ = "contact"
 
         id = Column(Integer, primary_key=True)
 
-     firstname = Column(String, nullable=False)
-     lastname = Column(String, nullable=False)
-     email = Column(String, nullable=False)
-     address_id = Column(Integer, ForeignKey(Address.id), nullable=False)
-     address = relationship('Address')
+
+    firstname = Column(String, nullable=False)
+    lastname = Column(String, nullable=False)
+    email = Column(String, nullable=False)
+    address_id = Column(Integer, ForeignKey(Address.id), nullable=False)
+    address = relationship("Address")
 
 Create tables
 -------------
 
-::
+.. code-block:: python
 
     Base.metadata.create_all(engine)
 
 Create Session
 --------------
 
-::
+.. code-block:: python
 
     session = Session(engine)
-    address = Address(street='Birnbaumweg 10', zipcode='79115', country='Germany')
+    address = Address(street="Birnbaumweg 10", zipcode="79115", country="Germany")
 
     contact = Contact(
-        firstname='Veit', lastname='Schiele',
-        email='veit@cusy.io',
-        address=address
+        firstname="Veit", lastname="Schiele", email="veit@cusy.io", address=address
     )
 
     session.add(contact)
@@ -98,39 +102,39 @@ Create Session
 Read
 ----
 
-::
+.. code-block:: python
 
-    contact =
-    session.query(Contact).filter_by(email='veit@cusy.io').first()
+    contact = session.query(Contact).filter_by(email="veit@cusy.io").first()
     print(contact.firstname)
 
     contacts = session.query(Contact).all()
     for contact in contacts:
         print(contact.firstname)
 
-    contacts =
-    session.query(Contact).filter_by(email='veit@cusy.io').all()
+    contacts = session.query(Contact).filter_by(email="veit@cusy.io").all()
     for contact in contacts:
         print(contact.firstname)
 
 Update
 ------
 
-::
+.. code-block:: python
 
-    contact = session.query(Contact) \
-        .filter_by(email='veit@cusy.io').first()
-    contact.email = ‘info@veit-schiele.de'
+    contact = session.query(Contact).filter_by(email="veit@cusy.io").first()
+    contact.email = "info@veit-schiele.de"
+
     session.add(contact)
     session.commit()
 
 Delete
 ------
 
-::
+.. code-block:: python
 
-    contact = session.query(Contact) \
-       .filter_by(email='info@veit-schiele.de').first()
+    contact = (
+        session.query(Contact).filter_by(email="info@veit-schiele.de").first()
+    )
+
     session.delete(contact)
     session.commit()
 

@@ -21,13 +21,18 @@ Connection
     ``.cursor ()``
         Return of a new cursor object via the connection.
 
-    Example::
+    Example:
+
+    .. code-block:: python
 
         import driver
 
-        conn = driver.connect(database='example',
-                               host='localhost',
-                               port=5432)
+
+        conn = driver.connect(
+                database="example",
+                host="localhost",
+                port=5432
+                )
         try:
             # create the cursor
             # use the cursor
@@ -65,13 +70,17 @@ Cursor
         indicates the number of lines that the last call of ``.execute*()`` with
         ``SELECT``, ``UPDATE`` or ``INSERT`` resulted in.
 
-    Example::
+    Example:
+
+    .. code-block:: python
 
         cursor = conn.cursor()
-        cursor.execute("""
+        cursor.execute(
+            """
             SELECT column1, column2
             FROM tableA
-        """)
+        """
+        )
         for column1, column2 in cursor.fetchall():
             print(column1, column2)
 

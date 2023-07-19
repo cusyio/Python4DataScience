@@ -10,6 +10,9 @@ as a database migration tool with the following functions:
   the downgrade can also be specified.
 * The scripts are executed in a specific order.
 
+.. seealso::
+   `Auto Generating Migrations <https://alembic.sqlalchemy.org/en/latest/autogenerate.html>`_
+
 Create migration environment
 ----------------------------
 
@@ -17,7 +20,7 @@ The Migration Environment is a directory that is specific to a particular
 application. It is created with the Alembic ``ini`` command and then managed
 along with the application’s source code.
 
-::
+.. code-block:: console
 
     $ cd myrproject
     $ alembic init alembic
@@ -30,7 +33,9 @@ along with the application’s source code.
     Please edit configuration/connection/logging settings in
     '/path/to/myproject/alembic.ini' before proceeding.
 
-The structure of such a migration environment can e.g. look like this::
+The structure of such a migration environment can for example look like this:
+
+.. code-block:: console
 
     myproject/
     └── alembic
@@ -45,7 +50,9 @@ The structure of such a migration environment can e.g. look like this::
 
 Templates
 ---------
-Alembic includes a number of templates that can be displayed with list::
+Alembic includes a number of templates that can be displayed with list:
+
+.. code-block:: console
 
     $ alembic list_templates
     Available templates:
@@ -61,7 +68,9 @@ Alembic includes a number of templates that can be displayed with list::
 Configure ``ini`` file
 ----------------------
 
-The file created with the ``generic`` template looks like this::
+The file created with the ``generic`` template looks like this:
+
+.. code-block:: ini
 
     # A generic, single database configuration.
 
@@ -158,7 +167,9 @@ A new revision can be created with::
     $ alembic revision -m "create account table"
     Generating /path/to/yourproject/alembic/versions/1975ea83b712_create_account_table.py...done
 
-Then the file ``1975ea83b712_create_account_table.py`` looks like this::
+Then the file ``1975ea83b712_create_account_table.py`` looks like this:
+
+.. code-block:: python
 
     """create account table
 
@@ -169,40 +180,48 @@ Then the file ``1975ea83b712_create_account_table.py`` looks like this::
     """
 
     # revision identifiers, used by Alembic.
-    revision = '1975ea83b712'
+    revision = "1975ea83b712"
     down_revision = None
     branch_labels = None
 
-    from alembic import op
     import sqlalchemy as sa
+
+    from alembic import op
+
 
     def upgrade():
         pass
+
 
     def downgrade():
         pass
 
 ``down_revision``
     Variable that tells Alembic in which order the migrations should be carried
-    out, e.g.::
+    out, for example:
+
+    .. code-block:: python
 
         # revision identifiers, used by Alembic.
-        revision = 'ae1027a6acf'
-        down_revision = '1975ea83b712'
+        revision = "ae1027a6acf"
+        down_revision = "1975ea83b712"
 
 ``upgrade``, ``downgrade``
-    e.g.::
+    for example:
+
+    .. code-block:: python
 
         def upgrade():
             op.create_table(
-                'account',
-                sa.Column('id', sa.Integer, primary_key=True),
-                sa.Column('name', sa.String(50), nullable=False),
-                sa.Column('description', sa.Unicode(200)),
+                "account",
+                sa.Column("id", sa.Integer, primary_key=True),
+                sa.Column("name", sa.String(50), nullable=False),
+                sa.Column("description", sa.Unicode(200)),
             )
 
+
         def downgrade():
-            op.drop_table('account')
+            op.drop_table("account")
 
     ``create_table()`` and ``drop_table()`` are Alembic directives. You can get
     an overview of all Alembic directives in the `Operation Reference
@@ -211,74 +230,93 @@ Then the file ``1975ea83b712_create_account_table.py`` looks like this::
 Run migration
 -------------
 
-First migration::
+First migration:
+
+.. code-block:: console
 
     $ alembic upgrade head
     INFO  [alembic.context] Context class PostgresqlContext.
     INFO  [alembic.context] Will assume transactional DDL.
     INFO  [alembic.context] Running upgrade None -> 1975ea83b712
 
-We can also refer directly to revision numbers::
+We can also refer directly to revision numbers:
+
+.. code-block:: console
 
     $ alembic upgrade ae1
 
-Relative migrations can also be initiated::
+Relative migrations can also be initiated:
+
+.. code-block:: console
 
     $ alembic upgrade +2
 
-or::
+or:
+
+.. code-block:: console
 
     $ alembic downgrade -1
 
-or::
+or:
 
-$ alembic upgrade ae10+2
+.. code-block:: console
+
+    $ alembic upgrade ae10+2
 
 Display Information
 -------------------
 
-Current version::
+Current version
+~~~~~~~~~~~~~~~
 
-        $ alembic current
-        INFO  [alembic.context] Context class PostgresqlContext.
-        INFO  [alembic.context] Will assume transactional DDL.
-        Current revision for postgresql://scott:XXXXX@localhost/test: 1975ea83b712 -> ae1027a6acf (head), Add a column
+.. code-block:: console
 
-History::
+    $ alembic current
+    INFO  [alembic.context] Context class PostgresqlContext.
+    INFO  [alembic.context] Will assume transactional DDL.
+    Current revision for postgresql://scott:XXXXX@localhost/test: 1975ea83b712 -> ae1027a6acf (head), Add a column
 
-        $ alembic history --verbose
+History
+~~~~~~~
 
-        Rev: ae1027a6acf (head)
-        Parent: 1975ea83b712
-        Path: /path/to/yourproject/alembic/versions/ae1027a6acf_add_a_column.py
+.. code-block:: console
 
-            add a column
+    $ alembic history --verbose
 
-            Revision ID: ae1027a6acf
-            Revises: 1975ea83b712
-            Create Date: 2014-11-20 13:02:54.849677
+    Rev: ae1027a6acf (head)
+    Parent: 1975ea83b712
+    Path: /path/to/yourproject/alembic/versions/ae1027a6acf_add_a_column.py
 
-        Rev: 1975ea83b712
-        Parent: <base>
-        Path: /path/to/yourproject/alembic/versions/1975ea83b712_add_account_table.py
+        add a column
 
-            create account table
+        Revision ID: ae1027a6acf
+        Revises: 1975ea83b712
+        Create Date: 2014-11-20 13:02:54.849677
 
-            Revision ID: 1975ea83b712
-            Revises:
-            Create Date: 2014-11-20 13:02:46.257104
+    Rev: 1975ea83b712
+    Parent: <base>
+    Path: /path/to/yourproject/alembic/versions/1975ea83b712_add_account_table.py
 
-    The history can also be displayed more specifically::
+        create account table
 
-        $ alembic history -r1975ea:ae1027
+        Revision ID: 1975ea83b712
+        Revises:
+        Create Date: 2014-11-20 13:02:46.257104
 
-    or::
+The history can also be displayed more specifically:
 
-        $ alembic history -r-3:current
+.. code-block:: console
 
-    or::
+    $ alembic history -r1975ea:ae1027
 
-        $ alembic history -r1975ea:
+or:
 
-.. seealso::
-   `Auto Generating Migrations <https://alembic.sqlalchemy.org/en/latest/autogenerate.html>`_
+.. code-block:: console
+
+    $ alembic history -r-3:current
+
+or:
+
+.. code-block:: console
+
+    $ alembic history -r1975ea:

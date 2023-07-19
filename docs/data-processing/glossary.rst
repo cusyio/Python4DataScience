@@ -94,13 +94,13 @@ Glossary
 
     Column Family
         Column families correspond to tables in relational databases. They group
-        columns with the same or similar content, e.g.
+        columns with the same or similar content, for example
 
         .. code-block:: javascript
 
             profile = {
                 cusy: {
-                    name:       "Cusy GmbH",
+                    name:       "cusy GmbH",
                     email:      "info@cusy.io",
                     website:    "cusy.io"
                 },
@@ -168,7 +168,7 @@ Glossary
     Graph partitioning
         With graph partitioning, graphs are divided into smaller subgraphs.
         However, there is no mathematically exact method to minimise the number
-        of intersected edges, but only a few heuristic algorithms, e.g.
+        of intersected edges, but only a few heuristic algorithms, for example
         clustering algorithms, which combine strongly networked subgraphs to
         abstract nodes.
 

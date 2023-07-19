@@ -114,15 +114,15 @@ Set up
 #. If you then use ``git add`` to add your notebok to the stage area, the
    ``nbstrip_jq`` filter will be applied.
 
-    .. note::
-       However, ``git diff`` will not show you any changes between the working
-       and stage areas. Only with ``git diff --staged`` you can see that only the
-       filtered changes have been applied.
+   .. note::
+      However, ``git diff`` will not show you any changes between the working
+      and stage areas. Only with ``git diff --staged`` you can see that only the
+      filtered changes have been applied.
 
-    .. warning::
-       ``clean`` and ``smudge`` filters often do not play well with ``git
-       rebase`` across such filtered commits. Then you should disable these
-       filters before rebasing.
+   .. warning::
+      ``clean`` and ``smudge`` filters often do not play well with ``git
+      rebase`` across such filtered commits. Then you should disable these
+      filters before rebasing.
 
 #. And there is another problem: If such a notebook is run again, ``git diff``
    will not show any changes, but ``git status`` will. Therefore, the following

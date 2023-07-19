@@ -15,7 +15,7 @@ this data is in the public domain:
     $ mkdir nedata
     $ cd !$
     cd nedata
-    $ wget http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip
+    $ wget https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip
 
 #. Unzip the file
 

@@ -10,25 +10,25 @@ better with these objects. To do this, we configure the
 #. ``shared_buffer`` should be changed to approx. 75% of the total working
    memory, but never fall below 128 kB:
 
-   .. code-block::
+   .. code-block:: ini
 
     shared_buffers = 768MB
 
 #. ``work_mem`` should be increased to at least 16MB:
 
-   .. code-block::
+   .. code-block:: ini
 
     work_mem = 16MB
 
 #. ``maintenance_work_mem`` should be increased to 128MB:
 
-   .. code-block::
+   .. code-block:: ini
 
     maintenance_work_mem = 128MB
 
 #. Finally, ``random_page_cost`` should be set to ``2.0``.
 
-   .. code-block::
+   .. code-block:: ini
 
     random_page_cost = 2.0
 

@@ -25,6 +25,19 @@ Overview
 | File size             | \-    | Only :doc:`../xml-html/index` is less compact.        |
 +-----------------------+-------+-------------------------------------------------------+
 
+.. tab:: Python < 3.11
+
+    You need the Python package `toml <https://pypi.org/project/toml/>`_ to
+    convert TOML files into Python :doc:`python-basics:types/dicts`. You can
+    then load TOML files, for example with:
+
+.. code-block:: python
+
+    import toml
+
+
+    config = toml.load("pyproject.toml")
+
 .. seealso::
 
     * `Home <https://toml.io/>`_
