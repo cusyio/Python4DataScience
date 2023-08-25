@@ -39,9 +39,10 @@ Copyleft licenses
 
 Copyleft licenses oblige the licensees to place any processing of the software
 under the license of the original work. This is to prevent usage restrictions of
-the software. The best known copyleft license is the GNU General Public License
-(GPL). The copyleft of the GPL is seen as very strong, while that of the Mozilla
-Public License is seen as very weak.
+the software. The best known copyleft license is the :abbr:`GPL (GNU General
+Public License)`. The copyleft of the :abbr:`GPL (GNU General Public License)`
+is seen as very strong, while that of the Mozilla Public License is seen as very
+weak.
 
 Since the licensors are not bound by their own copyleft, they can also publish
 new versions under a proprietary license or allow third parties to do so
@@ -49,7 +50,7 @@ new versions under a proprietary license or allow third parties to do so
 
 Copyleft licenses can quickly lead to incompatibilities with free licenses
 without copyleft. For example, the 3 Clause BSD license is incompatible with the
-GPL.
+:abbr:`GPL (GNU General Public License)`.
 
 Permissive open source licenses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
