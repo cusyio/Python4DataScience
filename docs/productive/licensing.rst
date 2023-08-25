@@ -34,15 +34,15 @@ They are defined by the `Free Software Foundation (FSF)
 (OSI) <https://opensource.org/>`_. A distinction can essentially be made between
 copyleft, permissive and public domain licenses.
 
-Copyleft licenses
-~~~~~~~~~~~~~~~~~
+Copyleft or reciprocal licences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Copyleft licenses oblige the licensees to place any processing of the software
-under the license of the original work. This is to prevent usage restrictions of
-the software. The best known copyleft license is the :abbr:`GPL (GNU General
-Public License)`. The copyleft of the :abbr:`GPL (GNU General Public License)`
-is seen as very strong, while that of the Mozilla Public License is seen as very
-weak.
+Copyleft licences oblige the licensees to place any adaptation of the software
+(so-called derivatives) under the licence of the original work. This is intended
+to prevent restrictions on the use of the software. The best-known copyleft
+licence is the :abbr:`GPL (GNU General Public License)`. The copyleft of the
+:abbr:`GPL (GNU General Public License)` is considered very strong, while that
+of the Mozilla Public License is considered very weak.
 
 Since the licensors are not bound by their own copyleft, they can also publish
 new versions under a proprietary license or allow third parties to do so
