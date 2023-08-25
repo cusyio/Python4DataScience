@@ -40,9 +40,12 @@ Copyleft or reciprocal licences
 Copyleft licences oblige the licensees to place any adaptation of the software
 (so-called derivatives) under the licence of the original work. This is intended
 to prevent restrictions on the use of the software. The best-known copyleft
-licence is the :abbr:`GPL (GNU General Public License)`. The copyleft of the
-:abbr:`GPL (GNU General Public License)` is considered very strong, while that
-of the Mozilla Public License is considered very weak.
+licence is the `GPL (GNU General Public License)
+<https://en.wikipedia.org/wiki/GNU_General_Public_License>`_. The copyleft of
+the :abbr:`GPL (GNU General Public License)` is considered very strong, while
+that of the `Mozilla Public License
+<https://en.wikipedia.org/wiki/Mozilla_Public_License>`_ is considered very
+weak.
 
 Since the licensors are not bound by their own copyleft, they can also publish
 new versions under a proprietary license or allow third parties to do so
@@ -68,15 +71,16 @@ Permissive open source licenses
 Permissive open source licenses allow broader reuse than copyleft licenses.
 Derivatives and copies of the source code can be distributed under conditions
 that have fundamentally different properties than those of the original license.
-The best known examples of such licenses are the MIT license and the BSD
-license.
+The best known examples of such licenses are `MIT
+<https://en.wikipedia.org/wiki/MIT_License>`_ and `BSD
+<https://en.wikipedia.org/wiki/BSD_licenses>`_.
 
 Public domain licenses
 ~~~~~~~~~~~~~~~~~~~~~~
 
-In the case of public domain licenses, copyrights are transferred to the general
-public. The Creative Commons Zero license was created to identify the release of
-the greatest possible usage rights.
+With public domain licences, the copyrights are transferred to the general
+public. The `WTFPL <https://en.wikipedia.org/wiki/WTFPL>`_ was created to mark
+the public domain of software.
 
 Non-software licences
 ---------------------
