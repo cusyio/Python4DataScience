@@ -50,7 +50,17 @@ new versions under a proprietary license or allow third parties to do so
 
 Copyleft licenses can quickly lead to incompatibilities with free licenses
 without copyleft. For example, the 3 Clause BSD license is incompatible with the
-:abbr:`GPL (GNU General Public License)`.
+
+However, copyleft licences can quickly create incompatibilities when distributed
+together with software under other free licences. For example, the 3-Clause BSD
+licence is incompatible with the :abbr:`GPL (GNU General Public License)`.
+
+The `EUPL
+<https://joinup.ec.europa.eu/collection/eupl/introduction-eupl-licence>`_, on
+the other hand, is a reciprocal licence that is at least compatible and
+interoperable with most other open reciprocal licences: the compatible licence
+obligations take precedence if they conflict with the obligations arising from
+the EUPL.
 
 Permissive open source licenses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
