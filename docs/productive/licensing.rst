@@ -194,12 +194,23 @@ better from from patent infringement, but it is not compatible with the GPL v2.
 Check dependencies
 ~~~~~~~~~~~~~~~~~~
 
-Therefore, you should look at the licences of the packages you depend on and
-should be compatible with. To analyse licences, you can look at `license
+In addition, you should look at what licences those packages have that you
+depend on and should be compatible with:
+
+.. figure:: software-license-compatiblity.svg
+   :alt: Software licence compatibility
+
+   Licence compatibility for derivative works or combined works of own code and
+   external code licensed under an open source licence (from `Licence
+   compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_,
+   following `The Rise of Open Source Licensing
+   <https://www.turre.com/pub/openbook_valimaki.pdf>`_ p. 119).
+
+To analyse licences, you can look at `license
 compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_ and use
 `licensechecker
-<https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_, a command line tool that scans installation directories for
-licences.
+<https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
+a command line tool that scans installation directories for licences.
 
 It can also be useful to release a package under multiple licences. An example of this is cryptography/LICENSE.
 
