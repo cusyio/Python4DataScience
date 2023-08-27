@@ -212,11 +212,17 @@ compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_ and use
 <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
 a command line tool that scans installation directories for licences.
 
-It can also be useful to release a package under multiple licences. An example of this is cryptography/LICENSE.
-
 Furthermore, it can also be useful to publish a package under several licences.
 An example of this is `cryptography/LICENSE
-<https://github.com/pyca/cryptography/blob/adf234e/LICENSE>`_.
+<https://github.com/pyca/cryptography/blob/adf234e/LICENSE>`_:
+
+    This software is made available under the terms of *either* of the licenses
+    found in LICENSE.APACHE or LICENSE.BSD. Contributions to cryptography are
+    made under the terms of *both* these licenses.
+
+    The code used in the OpenSSL locking callback and OS random engine is
+    derived from the same in CPython, and is licensed under the terms of the PSF
+    License Agreement.
 
 GitHub
 ------
