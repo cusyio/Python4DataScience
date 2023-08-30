@@ -411,6 +411,28 @@ Alternatives
          <https://github.com/oss-review-toolkit/ort-ci-github-action>`_
        * `ORT for GitLab <https://github.com/oss-review-toolkit/ort-gitlab-ci>`_
 
+
+`liccheck <https://github.com/dhatim/python-license-check/tree/master>`_
+    checks Python packages from :file:`requirement.txt` and reports problems,
+    for example:
+
+    .. code-block:: console
+
+        liccheck -s liccheck.ini -r requirements.txt
+        gathering licenses...
+        3 packages and dependencies.
+        check unknown packages...
+        3 packages.
+            cffi (1.15.1): ['MIT']
+              dependency:
+                  cffi << cryptography
+            cryptography (41.0.3): ['Apache Software', 'BSD']
+              dependency:
+                  cryptography
+            pycparser (2.21): ['BSD']
+              dependency:
+                  pycparser << cffi << cryptography
+
 Python package metadata
 -----------------------
 
