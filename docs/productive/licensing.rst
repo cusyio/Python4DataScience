@@ -296,9 +296,43 @@ REUSE
 `REUSE <https://reuse.software/>`__ was initiated by the Free Software
 Foundation Europe (FSFE) to facilitate the licensing of free software projects.
 The `REUSE tool <https://git.fsfe.org/reuse/tool>`_ checks licenses and supports
-you in compliance with the license. With the `REUSE API
-<https://reuse.software/dev/#api>`_ you can also generate a dynamic compliance
-badge:
+you in compliance with the license, for example:
+
+.. code-block:: console
+
+    reuse lint
+    # MISSING COPYRIGHT AND LICENSING INFORMATION
+
+    The following files have no copyright and licensing information:
+    * .gitattributes
+    * .github/ISSUE_TEMPLATE/openssl-release.md
+    ...
+    * vectors/cryptography_vectors/x509/wosign-bc-invalid.pem
+    * vectors/pyproject.toml
+
+    The following files have no licensing information:
+    * docs/_ext/linkcode_res.py
+    * src/cryptography/__about__.py
+
+
+    # SUMMARY
+
+    * Bad licenses: 0
+    * Deprecated licenses: 0
+    * Licenses without file extension: 0
+    * Missing licenses: 0
+    * Unused licenses: 0
+    * Used licenses: 0
+    * Read errors: 0
+    * files with copyright information: 2 / 2806
+    * files with license information: 0 / 2806
+
+    Unfortunately, your project is not compliant with version 3.0 of the REUSE Specification :-(
+
+
+
+With the `REUSE API <https://reuse.software/dev/#api>`_ you can also generate a
+dynamic compliance badge:
 
 .. figure:: reuse-compliant.svg
    :alt: REUSE-compliant Badge
