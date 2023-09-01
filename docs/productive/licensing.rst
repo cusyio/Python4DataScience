@@ -362,17 +362,55 @@ dynamic compliance badge:
 CI workflow
 :::::::::::
 
-You can easily integrate REUSE into your continuous integration workflow, for
-example for GitLab in the ``.gitlab-ci.yml`` file with:
+You can easily integrate REUSE into your continuous integration workflow:
 
-.. code-block:: yaml
+.. tab:: Pre-commit
 
-    reuse:
-      image:
-        name: fsfe/reuse:latest
-        entrypoint: [""]
-      script:
-        - reuse lint
+    You can automatically run ``reuse lint`` as a :doc:`pre-commit hook
+    <git/hooks/pre-commit>` on every commit by adding the following to your
+    :file:`.pre-commit-config.yaml`:
+
+    .. code-block:: yaml
+
+        repos:
+        - repo: https://github.com/fsfe/reuse-tool
+          rev: v2.1.0
+          hooks:
+          - id: reuse
+
+.. tab:: GitLab
+
+    Add the following to the :file:`.gitlab-ci.yml` file:
+
+    .. code-block:: yaml
+
+        reuse:
+          image:
+            name: fsfe/reuse:latest
+            entrypoint: [""]
+          script:
+            - reuse lint
+
+.. tab:: GitHub
+
+    On GitHub you can integrate the REUSE action into your workflow with the
+    GitHub Action `REUSE Compliance Check
+    <https://github.com/marketplace/actions/reuse-compliance-check>`_, for
+    example, by adding the following to your :file:`workflow .yml` file:
+
+    .. code-block:: yaml
+
+        name: REUSE Compliance Check
+
+        on: [push, pull_request]
+
+        jobs:
+          test:
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v3
+            - name: REUSE Compliance Check
+              uses: fsfe/reuse-action@v2
 
 Alternatives
 ::::::::::::
