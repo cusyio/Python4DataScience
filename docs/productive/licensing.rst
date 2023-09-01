@@ -211,10 +211,28 @@ depend on and should be compatible with:
    <https://www.turre.com/pub/openbook_valimaki.pdf>`_ p. 119).
 
 To analyse licences, you can look at `license
-compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_ and use
-`licensechecker
-<https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
-a command line tool that scans installation directories for licences.
+compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_.
+
+With `liccheck <https://github.com/dhatim/python-license-check/tree/master>`_
+you can check Python packages and their dependencies with a
+:file:`requirement.txt` file, for example:
+
+    .. code-block:: console
+
+        liccheck -s liccheck.ini -r requirements.txt
+        gathering licenses...
+        3 packages and dependencies.
+        check unknown packages...
+        3 packages.
+            cffi (1.15.1): ['MIT']
+              dependency:
+                  cffi << cryptography
+            cryptography (41.0.3): ['Apache Software', 'BSD']
+              dependency:
+                  cryptography
+            pycparser (2.21): ['BSD']
+              dependency:
+                  pycparser << cffi << cryptography
 
 Furthermore, it can also be useful to publish a package under several licences.
 An example of this is `cryptography/LICENSE
@@ -333,8 +351,6 @@ you in compliance with the license, for example:
 
     Unfortunately, your project is not compliant with version 3.0 of the REUSE Specification :-(
 
-
-
 With the `REUSE API <https://reuse.software/dev/#api>`_ you can also generate a
 dynamic compliance badge:
 
@@ -419,27 +435,8 @@ Alternatives
          <https://github.com/oss-review-toolkit/ort-ci-github-action>`_
        * `ORT for GitLab <https://github.com/oss-review-toolkit/ort-gitlab-ci>`_
 
-
-`liccheck <https://github.com/dhatim/python-license-check/tree/master>`_
-    checks Python packages from :file:`requirement.txt` and reports problems,
-    for example:
-
-    .. code-block:: console
-
-        liccheck -s liccheck.ini -r requirements.txt
-        gathering licenses...
-        3 packages and dependencies.
-        check unknown packages...
-        3 packages.
-            cffi (1.15.1): ['MIT']
-              dependency:
-                  cffi << cryptography
-            cryptography (41.0.3): ['Apache Software', 'BSD']
-              dependency:
-                  cryptography
-            pycparser (2.21): ['BSD']
-              dependency:
-                  pycparser << cffi << cryptography
+`licensechecker <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_
+    A command line tool that scans installation directories for licences.
 
 Python package metadata
 -----------------------
