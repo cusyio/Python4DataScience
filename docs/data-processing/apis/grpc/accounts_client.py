@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 import logging
 
 import accounts_pb2 as accounts_messages

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 md5: b79de48ff285c75387327c481eec8f42
 outs:
 - md5: 4bb1a88c88be36dccdeb2cc60f51bcff

@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2021 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+
 def dist(x, y):
     """Calculate the distance"""
     return sum((xi - yi) ** 2 for xi, yi in zip(x, y))

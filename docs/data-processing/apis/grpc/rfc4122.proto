@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2021 Veit Schiele
+//
+// SPDX-License-Identifier: BSD-3-Clause
+
 // A UUID in accordance with section 4.1.2 of the RFC 4122.
 message Uuid {
     // The low field of the timestamp: unsigned 32 bit integer

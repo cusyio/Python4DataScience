@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 alabaster==0.7.13
 appnope==0.1.3
 asttokens==2.2.1

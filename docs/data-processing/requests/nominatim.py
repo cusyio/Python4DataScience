@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 from functools import lru_cache
 from time import sleep
 

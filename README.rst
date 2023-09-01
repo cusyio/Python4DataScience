@@ -1,3 +1,7 @@
+.. SPDX-FileCopyrightText: 2021 Veit Schiele
+..
+.. SPDX-License-Identifier: BSD-3-Clause
+
 Quick start
 ===========
 
@@ -9,10 +13,10 @@ Status
 .. image:: https://img.shields.io/github/contributors/veit/python4datascience.svg
    :alt: Contributors
    :target: https://github.com/veit/python4datascience/graphs/contributors
-.. image:: https://img.shields.io/github/license/veit/python4datascience.svg
+.. image:: https://img.shields.io/github/license/veit/Python4DataScience.svg
    :alt: License
-   :target: https://github.com/veit/python4datascience/blob/master/LICENSE
-.. image:: https://results.pre-commit.ci/badge/github/veit/python4datascience/main.svg
+   :target: https://github.com/veit/python4datascience/blob/main/LICENSE
+.. image:: https://results.pre-commit.ci/badge/github/veit/Python4DataScience/main.svg
    :target: https://results.pre-commit.ci/latest/github/veit/python4datascience/main
    :alt: pre-commit.ci status
 .. image:: https://readthedocs.org/projects/python4datascience/badge/?version=latest

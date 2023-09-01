@@ -1,3 +1,7 @@
+.. SPDX-FileCopyrightText: 2020 Veit Schiele
+..
+.. SPDX-License-Identifier: BSD-3-Clause
+
 Use case 2: Python and other interpreted languages
 ==================================================
 

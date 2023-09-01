@@ -1,3 +1,7 @@
+.. SPDX-FileCopyrightText: 2021 Veit Schiele
+..
+.. SPDX-License-Identifier: BSD-3-Clause
+
 Check and improve code quality and complexity
 =============================================
 

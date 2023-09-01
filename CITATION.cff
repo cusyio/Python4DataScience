@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 cff-version: 1.2.0
 title: Python4DataScience
 message: >-

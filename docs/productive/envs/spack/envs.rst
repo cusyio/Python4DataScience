@@ -1,3 +1,7 @@
+.. SPDX-FileCopyrightText: 2020 Veit Schiele
+..
+.. SPDX-License-Identifier: BSD-3-Clause
+
 Environments, ``spack.yaml`` and ``spack.lock``
 ===============================================
 

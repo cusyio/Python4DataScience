@@ -1,4 +1,8 @@
 -c constraints.txt
+# SPDX-FileCopyrightText: 2019 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 furo
 ipython
 ipywidgets

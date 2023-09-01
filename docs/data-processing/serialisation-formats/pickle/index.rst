@@ -1,3 +1,7 @@
+.. SPDX-FileCopyrightText: 2022 Veit Schiele
+..
+.. SPDX-License-Identifier: BSD-3-Clause
+
 Pickle
 ======
 

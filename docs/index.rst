@@ -1,3 +1,7 @@
+.. SPDX-FileCopyrightText: 2019 Veit Schiele
+..
+.. SPDX-License-Identifier: BSD-3-Clause
+
 =======================
 Python for Data Science
 =======================

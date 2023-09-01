@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 from typing import Optional
 
 from pydantic import BaseModel

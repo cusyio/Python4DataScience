@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2023 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 import sys
 from io import StringIO
 
