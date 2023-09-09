@@ -13,48 +13,51 @@ Environment variables
 For more information, see `Configuration With Environment Variables
 <https://docs.pipenv.org/advanced/#configuration-with-environment-variables>`_.
 
-``.env`` file
--------------
+:file:`.env` file
+-----------------
 
-If an ``.env`` file exists in your virtual environment, ``$ pipenv shell`` and
-``$ pipenv run`` will automatically load it:
+If an :file:`.env` file exists in your virtual environment, ``$ pipenv shell``
+and ``$ pipenv run`` will automatically load it:
 
 .. code-block:: console
 
     $ cat .env
-    USERNAME=Veit⏎
+    USERNAME=veit
 
     $ pipenv run python
-    Loading .env environment variables…
+    Loading .env environment variables...
     …
+
+.. code-block:: python
+
     >>> import os
-    >>> os.environ['USERNAME']
-    'Veit'
+    >>> os.environ["USERNAME"]
+    'veit'
 
 The credentials of the version management, can also be specified in the
-``Pipfile``, for example:
+:file:`Pipfile`, for example:
 
 .. code-block:: ini
 
     [[source]]
-    url = "https://$USERNAME:${PASSWORD}@pypi.cusy.io/simple"
+    url = "https://$USERNAME:${PASSWORD}@ce.cusy.io/api/v4/projects/$PROJECT_ID/packages/pypi/simple"
     verify_ssl = true
-    name = "cusy-pypi"
+    name = "gitlab"
 
 .. note::
-   ``pipenv`` hashes the ``Pipfile`` before determining the environment
-   variables, and the environment variables are also written in
-   ``Pipfile.lock``, so that no credentials need to be stored in the version
+   ``pipenv`` hashes the :file:`pipfile` before determining the environment
+   variables, and the environment variables from the :file:`pipfile.lock` are
+   also replaced so that no credentials need to be stored in the version
    management.
 
-You can also save the ``.env`` file outside your virtual environment. You then
-only have to specify the path to this file in ``PIPENV_DOTENV_LOCATION``:
+You can also save the :file:`.env` file outside your virtual environment. You
+then only have to specify the path to this file in ``PIPENV_DOTENV_LOCATION``:
 
 .. code-block:: console
 
-    $ PIPENV_DOTENV_LOCATION=/path/to/.env pipenv shell
+    $ PIPENV_DOTENV_LOCATION=/PATH/TO/.env pipenv shell
 
-You can also prevent ``pipenv`` from using an existing ``.env`` file with:
+You can also prevent ``pipenv`` from using an existing :file:`.env` file with:
 
 .. code-block:: console
 
