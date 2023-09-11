@@ -40,3 +40,11 @@ Git glossary
     ``HEAD``
         The ``HEAD`` pointer represents your current working directory and can
         be moved to different branches, tags or commits with ``git switch``.
+
+    Trunk-Based Development
+     TBD
+         Git workflow with short-lived topic branches that are quickly merged
+         into a single ``main`` branch.
+
+         .. seealso::
+            * `Trunk Based Development <https://trunkbaseddevelopment.com/>`_
