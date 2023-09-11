@@ -30,11 +30,11 @@ For iX distributions, Git should be in the standard repository.
 
    .. code-block:: console
 
-    $ git --version
+      $ git --version
 
    ``git-completion`` you can install with `Homebrew <https://brew.sh/>`_:
 
-   Then you have to add the following line in ``~/.bash_profile``:
+   Then you have to add the following line in :file:`~/.bash_profile`:
 
    .. code-block:: bash
 
@@ -51,15 +51,15 @@ For iX distributions, Git should be in the standard repository.
 Configuration
 -------------
 
-``$ git config --global user.name "[name]"``
+:file:`$ git config --global user.name "{NAME}"`
     defines the name associated with your commit transactions.
-``$ git config --global user.email "[email address]"``
+:file:`$ git config --global user.email "{EMAIL_ADDRESS}"`
     defines the email that will be linked to your commit transactions.
-``$ git config --global color.ui auto``
+:file:`$ git config --global color.ui auto`
     activates the coloring of the command line output.
 
-The ``~/.gitconfig`` file
-~~~~~~~~~~~~~~~~~~~~~~~~~
+The :file:`~/.gitconfig` file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For example, the following file can be created with the commands given above:
 
@@ -70,11 +70,9 @@ For example, the following file can be created with the commands given above:
         email = veit@cusy.io
 
     [color]
-        diff = auto
-        status = auto
-        branch = auto
+        ui = auto
 
-However, aliases can also be specified in the ``~/.gitconfig`` file:
+However, aliases can also be specified in the :file:`~/.gitconfig` file:
 
 .. code-block:: ini
 
@@ -123,7 +121,7 @@ Then we can use :doc:`pandas:reference/api/pandas.DataFrame.to_csv` in
     :language: python
 
 Then the following section is added to the global Git configuration
-``~/.gitconfig``:
+:file:`~/.gitconfig`:
 
 .. code-block:: ini
 
@@ -131,7 +129,7 @@ Then the following section is added to the global Git configuration
         textconv=python3 /PATH/TO/exceltocsv.py
         binary=true
 
-Finally, in the global ``~/.gitattributes`` file, our ``excel`` converter is
+Finally, in the global :file:`~/.gitattributes` file, our ``excel`` converter is
 linked to :file:`*.xlsx` files:
 
 .. code-block:: ini
@@ -155,14 +153,14 @@ For this, ``pdftohtml`` is additionally required. It can be installed with
 
       $ brew install pdftohtml
 
-Add the following section to the global Git configuration ``~/.gitconfig``:
+Add the following section to the global Git configuration :file:`~/.gitconfig`:
 
 .. code-block:: ini
 
     [diff "pdf"]
         textconv=pdftohtml -stdout
 
-Finally, in the global ``~/.gitattributes`` file, our ``pdf`` converter is
+Finally, in the global :file:`~/.gitattributes` file, our ``pdf`` converter is
 linked to :file:`*.pdf` files:
 
 .. code-block:: ini
@@ -180,8 +178,8 @@ Differences in Word documents can also be displayed. For this purpose `Pandoc
 
 .. tab:: Windows
 
-   Download and install the ``..msi``. file from `GitHub
-   <https://github.com/jgm/pandoc/releases/tag/2.19.2>`_.
+   Download and install the :file:`*.msi`. file from `GitHub
+   <https://github.com/jgm/pandoc/releases/>`_.
 
 .. tab:: Debian/Ubuntu
 
@@ -196,7 +194,7 @@ Differences in Word documents can also be displayed. For this purpose `Pandoc
       $ brew install pandoc
 
 Then the following section is added to the global Git configuration
-``~/.gitconfig``:
+:file:`~/.gitconfig`:
 
 .. code-block:: ini
 
@@ -205,7 +203,7 @@ Then the following section is added to the global Git configuration
         binary=true
         prompt=false
 
-Finally, in the global ``~/.gitattributes`` file, our ``word`` converter is
+Finally, in the global :file:`~/.gitattributes` file, our ``word`` converter is
 linked to :file:`*.docx` files:
 
 .. code-block:: ini
@@ -253,7 +251,7 @@ increased if necessary, for example with:
         Configuring component 'Git Credential Manager'...
         Configuring component 'Azure Repos provider'...
 
-    This will add the ``[credential]`` section to your ``~.gitconfig`` file:
+    This will add the ``[credential]`` section to your :file:`~.gitconfig` file:
 
     .. code-block:: ini
 
@@ -264,8 +262,8 @@ increased if necessary, for example with:
     Now, when cloning a repository, a *Git Credential Manager* window opens and asks you
     to enter your credentials.
 
-    In addition, the ``~/.gitconfig`` file is supplemented, for example by the following
-    two lines:
+    In addition, the :file:`~/.gitconfig` file is supplemented, for example by
+    the following two lines:
 
     .. code-block:: ini
 
@@ -288,7 +286,7 @@ increased if necessary, for example with:
         Password:
         git config --global credential.helper osxkeychain
 
-    This enters the following in the `~/.gitconfig` file:
+    This enters the following in the :file:`~/.gitconfig` file:
 
     .. code-block:: ini
 
@@ -296,7 +294,7 @@ increased if necessary, for example with:
             helper = osxkeychain
 
 .. note::
-    You can find a comprehensive example of a `~/.gitconfig` file in my
+    You can find a comprehensive example of a :file:`~/.gitconfig` file in my
     `dotfiles <https://github.com/veit/dotfiles/>`__ repository: `.gitconfig
     <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
 
@@ -306,11 +304,11 @@ increased if necessary, for example with:
 
 .. _gitignore:
 
-The ``.gitignore`` file
-~~~~~~~~~~~~~~~~~~~~~~~
+The :file:`.gitignore` file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the ``.gitignore`` file you can exclude files from version management. A
-typical ``.gitignore`` file can look like this:
+In the :file:`.gitignore` file you can exclude files from version management. A
+typical :file:`.gitignore` file can look like this:
 
 .. code-block:: ini
 
@@ -319,106 +317,107 @@ typical ``.gitignore`` file can look like this:
     /tmp
     *.swp
 
-In doing so, Git uses `Globbing <https://linux.die.net/man/7/glob>`_ patterns, among others:
+In doing so, Git uses `Globbing <https://linux.die.net/man/7/glob>`_ patterns,
+among others:
 
-+-------------------------------+-------------------------------+-------------------------------+
-| Pattern                       | Example                       | Description                   |
-+===============================+===============================+===============================+
-| .. code-block:: console       | ``logs/instance.log``,        | You can put two asterisks to  |
-|                               | ``logs/instance/error.log``,  | prefix directories anywhere.  |
-|     **/logs                   | ``prod/logs/instance.log``    |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs/instance.log``,        | You can put two asterisks to  |
-|                               | ``prod/logs/instance.log``    | prefix files with their name  |
-|     **/logs/instance.log      | but not                       | in a parent directory.        |
-|                               | ``logs/prod/instance.log``    |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance.log``,             | An asterisk is a placeholder  |
-|                               | ``error.log``,                | for null or more characters.  |
-|     *.log                     | ``logs/instance.log``         |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``/logs/instance.log``,       | An exclamation mark in front  |
-|                               | ``/logs/error.log``,          | of a pattern ignores it. If a |
-|     /logs                     | but not                       | file matches a pattern, but   |
-|     !/logs/.gitkeep           | ``/logs/.gitkeep`` or         | also a negating one that is   |
-|                               | ``/instance.log``             | defined later, it is not      |
-|                               |                               | ignored.                      |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``/instance.log``,            | With a preceding slash, the   |
-|                               | but not                       | pattern only matches files    |
-|     /instance.log             | ``logs/instance.log``         | in the root directory of the  |
-|                               |                               | repository.                   |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance.log``,             | Usualy the pattern match      |
-|                               | ``logs/instance.log``         | files in any directory.       |
-|     instance.log              |                               |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance0.log``,            | A question mark fits exactly  |
-|                               | ``instance1.log``,            | on a charater.                |
-|     instance?.log             | but not                       |                               |
-|                               | ``instance.log`` or           |                               |
-|                               | ``instance10.log``            |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance0.log``,            | Square brackets can be used   |
-|                               | ``instance1.log``,            | to find a single character    |
-|     instance[0-9].log         | but not                       | from a specific range.        |
-|                               | ``instance.log`` or           |                               |
-|                               | ``instance10.log``            |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance0.log``,            | Square brackets match a       |
-|                               | ``instance1.log``,            | single character from a given |
-|     instance[01].log          | but not                       | set.                          |
-|                               | ``instance2.log`` or          |                               |
-|                               | ``instance01.log``            |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance2.log``,            | An exclamation mark can be    |
-|                               | but not                       | used to find any character    |
-|     instance[!01].log         | ``instance0.log``,            | from a specified set.         |
-|                               | ``instance1.log`` or          |                               |
-|                               | ``instance01.log``            |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs``                      | If no slash appended, the     |
-|                               | ``logs/instance.log``         | pattern fix both files and    |
-|     logs                      | ``prod/logs/instance.log``    | the contents of directories   |
-|                               |                               | witch this name.              |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs/instance.log``,        | Appending a slash indicates   |
-|                               | ``logs/prod/instance.log``,   | that the pattern is a         |
-|     logs/                     | ``prod/logs/instance.log``    | directory. The entire         |
-|                               |                               | contents of any directory in  |
-|                               |                               | the repository that matches   |
-|                               |                               | the name – including all its  |
-|                               |                               | files and subdirectories –    |
-|                               |                               | are ignored.                  |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       |``var/instance.log``,          | Two Asterisks match null or   |
-|                               |``var/logs/instance.log``,     | more directories.             |
-|                               |but not                        |                               |
-|     var/**/instance.log       |``var/logs/instance/error.log``|                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs/instance/error.log``,  | Wildcards can also be used in |
-|                               | ``logs/instance1/error.log``  | directory names.              |
-|     logs/instance*/error.log  |                               |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs/instance.log``,        | Pattern, that specify a       |
-|                               | but not                       | particular file in a          |
-|     logs/instance.log         | ``var/logs/instance.log``     | directory are relative to the |
-|                               | or                            | root of the repository.       |
-|                               | ``instance.log``              |                               |
-+-------------------------------+-------------------------------+-------------------------------+
++-------------------------------+-----------------------------------+-------------------------------+
+| Pattern                       | Example                           | Description                   |
++===============================+===================================+===============================+
+| .. code-block:: console       | :file:`logs/instance.log`,        | You can put two asterisks to  |
+|                               | :file:`logs/instance/error.log`,  | prefix directories anywhere.  |
+|     **/logs                   | :file:`prod/logs/instance.log`    |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs/instance.log`,        | You can put two asterisks to  |
+|                               | :file:`prod/logs/instance.log`    | prefix files with their name  |
+|     **/logs/instance.log      | but not                           | in a parent directory.        |
+|                               | :file:`logs/prod/instance.log`    |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance.log`,             | An asterisk is a placeholder  |
+|                               | :file:`error.log`,                | for null or more characters.  |
+|     *.log                     | :file:`logs/instance.log`         |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`/logs/instance.log`,       | An exclamation mark in front  |
+|                               | :file:`/logs/error.log`,          | of a pattern ignores it. If a |
+|     /logs                     | but not                           | file matches a pattern, but   |
+|     !/logs/.gitkeep           | :file:`/logs/.gitkeep` or         | also a negating one that is   |
+|                               | :file:`/instance.log`             | defined later, it is not      |
+|                               |                                   | ignored.                      |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`/instance.log`,            | With a preceding slash, the   |
+|                               | but not                           | pattern only matches files    |
+|     /instance.log             | :file:`logs/instance.log`         | in the root directory of the  |
+|                               |                                   | repository.                   |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance.log`,             | Usualy the pattern match      |
+|                               | :file:`logs/instance.log`         | files in any directory.       |
+|     instance.log              |                                   |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance0.log`,            | A question mark fits exactly  |
+|                               | :file:`instance1.log`,            | on a charater.                |
+|     instance?.log             | but not                           |                               |
+|                               | :file:`instance.log` or           |                               |
+|                               | :file:`instance10.log`            |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance0.log`,            | Square brackets can be used   |
+|                               | :file:`instance1.log`,            | to find a single character    |
+|     instance[0-9].log         | but not                           | from a specific range.        |
+|                               | :file:`instance.log` or           |                               |
+|                               | :file:`instance10.log`            |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance0.log`,            | Square brackets match a       |
+|                               | :file:`instance1.log`,            | single character from a given |
+|     instance[01].log          | but not                           | set.                          |
+|                               | :file:`instance2.log` or          |                               |
+|                               | :file:`instance01.log`            |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance2.log`,            | An exclamation mark can be    |
+|                               | but not                           | used to find any character    |
+|     instance[!01].log         | :file:`instance0.log`,            | from a specified set.         |
+|                               | :file:`instance1.log` or          |                               |
+|                               | :file:`instance01.log`            |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs`                      | If no slash appended, the     |
+|                               | :file:`logs/instance.log`         | pattern fix both files and    |
+|     logs                      | :file:`prod/logs/instance.log`    | the contents of directories   |
+|                               |                                   | witch this name.              |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs/instance.log`,        | Appending a slash indicates   |
+|                               | :file:`logs/prod/instance.log`,   | that the pattern is a         |
+|     logs/                     | :file:`prod/logs/instance.log`    | directory. The entire         |
+|                               |                                   | contents of any directory in  |
+|                               |                                   | the repository that matches   |
+|                               |                                   | the name – including all its  |
+|                               |                                   | files and subdirectories –    |
+|                               |                                   | are ignored.                  |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       |:file:`var/instance.log`,          | Two Asterisks match null or   |
+|                               |:file:`var/logs/instance.log`,     | more directories.             |
+|                               |but not                            |                               |
+|     var/**/instance.log       |:file:`var/logs/instance/error.log`|                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs/instance/error.log`,  | Wildcards can also be used in |
+|                               | :file:`logs/instance1/error.log`  | directory names.              |
+|     logs/instance*/error.log  |                                   |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs/instance.log`,        | Pattern, that specify a       |
+|                               | but not                           | particular file in a          |
+|     logs/instance.log         | :file:`var/logs/instance.log`     | directory are relative to the |
+|                               | or                                | root of the repository.       |
+|                               | :file:`instance.log`              |                               |
++-------------------------------+-----------------------------------+-------------------------------+
 
 Git-commit empty folder
 :::::::::::::::::::::::
 
 In the example above you can see that with ``/logs/*`` no content of the
-``logs`` directory should be versioned with Git, but an exception is defined in
-the following line: ``!logs/.gitkeep`` allows the file  ``.gitkeep`` to be
-managed with Git. The ``logs`` directory is then also transferred to the Git
+:file:`logs` directory should be versioned with Git, but an exception is defined
+in the following line: ``!logs/.gitkeep`` allows the file :file:`.gitkeep` to be
+managed with Git. The :file:`logs` directory is then also transferred to the Git
 repository. This construction is necessary because empty folders cannot be
 managed with Git.
 
-Another possibility is to create a  ``.gitignore`` file in an empty folder with
-the following content:
+Another possibility is to create a :file:`.gitignore` file in an empty folder
+with the following content:
 
 .. code-block:: ini
 
@@ -435,7 +434,7 @@ the following content:
 ::::::::::::::::
 
 However, you can also exclude files centrally for all Git repositories. For this
-purpose, you can set ``excludesfile`` in the ``~/.gitconfig`` file:
+purpose, you can set ``excludesfile`` in the :file:`~/.gitconfig` file:
 
 .. code-block:: ini
 
@@ -498,11 +497,11 @@ an exception to the general rule:
 
 This approach should be more obvious and less confusing for your team.
 
-Troubleshooting ``.gitignore`` files
-::::::::::::::::::::::::::::::::::::
+Troubleshooting :file:`.gitignore` files
+::::::::::::::::::::::::::::::::::::::::
 
-For complicated ``.gitignore`` patterns, or patterns that are spread across
-multiple ``.gitignore`` files, it can be difficult to figure out why a
+For complicated :file:`.gitignore` patterns, or patterns that are spread across
+multiple :file:`.gitignore` files, it can be difficult to figure out why a
 particular file is being ignored. You can use the ``git check-ignore`` command
 with the ``-v`` (or ``--verbose``) option to determine which pattern is causing
 a particular file to be ignored:
