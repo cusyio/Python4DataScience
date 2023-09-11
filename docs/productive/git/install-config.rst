@@ -84,6 +84,23 @@ However, aliases can also be specified in the :file:`~/.gitconfig` file:
         df = diff
         dfs = diff --staged
 
+.. seealso::
+   Shell-Konfiguration:
+
+   * `oh-my-zsh <https://ohmyz.sh>`_
+
+     * `Git plugin aliases
+       <https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git#aliases>`_
+     * `zsh-you-should-use
+       <https://github.com/MichaelAquilina/zsh-you-should-use>`_
+
+   * `Starship <https://starship.rs>`_
+
+     * `git_branch-Modul <https://starship.rs/config/#git-branch>`_
+     * `git_commit-Modul <https://starship.rs/config/#git-commit>`_
+     * `git_state <https://starship.rs/config/#git-state>`_
+     * `git_status-Modul <https://starship.rs/config/#git-status>`_
+
 The editor can also be specified and space errors can be highlighted in ``git
 diff``:
 
@@ -95,6 +112,79 @@ diff``:
 
         # Highlight whitespace errors in git diff:
         whitespace = tabwidth=4,tab-in-indent,cr-at-eol,trailing-space
+
+.. note::
+   In addition to :file:`~/.gitconfig`, since version 1.17.12 Git also looks in
+   :file:`~/.config/git/config` for a global configuration file.
+
+   Under Linux, :file:`~/.config` can sometimes be a different path set by the
+   environment variable ``XDG_CONFIG_HOME``. This behaviour is part of the `X
+   Desktop Group (XDG) specification
+   <https://wiki.archlinux.org/title/XDG_Base_Directory#Specification>`_. You
+   can get the other path with:
+
+   .. code-block:: ini
+
+      $ echo $XDG_CONFIG_HOME
+
+.. seealso::
+   * `git config files <https://git-scm.com/docs/git-config#FILES>`_
+
+Since you can set options at multiple levels, you may want to keep track of
+where Git reads a particular value from. With ``git config --list`` [#]_ you can
+list all the overridden options and values. You can combine this with
+``--show-scope`` [#]_ to see where Git is getting the value from:
+
+.. code-block:: console
+
+   $ git config --list --show-scope
+   system  credential.helper=osxkeychain
+   global  user.name=veit
+   global  user.email=veit@cusy.io
+   …
+
+You can also use ``--show-origin`` [#]_ to list the names of the configuration
+files:
+
+.. code-block:: console
+
+   $ git config --list --show-origin
+   file:/opt/homebrew/etc/gitconfig        credential.helper=osxkeychain
+   file:/Users/veit/.config/git/config     user.name=veit
+   file:/Users/veit/.config/git/config     user.email=veit@cusy.io
+   …
+
+Alternative configuration file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use other configuration files for certain working directories, for
+example to distinguish between private and professional projects. You can use a
+local configuration in your repository or `conditional includes
+<https://git-scm.com/docs/git-config#_conditional_includes>`_ at the end of your
+global configuration:
+
+.. code-block:: ini
+
+    …
+    [includeIf "gitdir:~/private"]
+    path = ~/.config/git/config-private
+
+This construct ensures that Git includes additional configurations or overwrites
+existing ones when you work in :file:`~/private`.
+
+Now create the file :file:`~/.config/git/config-private` and define your
+alternative configuration there, for example:
+
+.. code-block:: ini
+
+   [user]
+       email = kontakt@veit-schiele.de
+   [core]
+       sshCommand = ssh -i ~/.ssh/private_id_rsa
+
+.. seealso::
+   * `core.sshCommand
+     <https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresshCommand>`_
 
 ``git diff``
 ~~~~~~~~~~~~
@@ -502,9 +592,27 @@ Troubleshooting :file:`.gitignore` files
 
 For complicated :file:`.gitignore` patterns, or patterns that are spread across
 multiple :file:`.gitignore` files, it can be difficult to figure out why a
-particular file is being ignored. You can use the ``git check-ignore`` command
-with the ``-v`` (or ``--verbose``) option to determine which pattern is causing
-a particular file to be ignored:
+particular file is being ignored.
+
+With ``git status --ignored=matching`` [#]_, an *Ignored Files* section is added
+to the output, showing all ignored files and directories:
+
+.. code-block:: console
+
+   $ git status --ignored=matching
+   On branch main
+   Ignored Files:
+     (use "git add -f <file>...", to pre-mark the changes for committing
+       .DS_Store
+       docs/.DS_Store
+       docs/_build/doctrees/
+       docs/_build/html/
+       docs/clean-prep/.ipynb_checkpoints/
+       …
+       nothing to commit, working tree clean
+
+You can use the ``git check-ignore`` command with the ``-v`` (or ``--verbose``)
+option to determine which pattern is causing a particular file to be ignored:
 
 .. code-block:: console
 
@@ -518,3 +626,66 @@ The output shows
 You can pass multiple filenames to ``git check-ignore`` if you like, and the
 names themselves don’t even have to match the files that exist in your
 repository.
+
+You can get a complete list of all ignored files with ``git ls-files --ignored
+--exclude-standard --others`` [#]_. With ``--exclude-standard`` the standard
+ignored files are read and with ``--others`` the non-versioned files are
+displayed instead of the versioned ones:
+
+.. code-block:: console
+
+   $ git ls-files --ignored --exclude-standard --others
+   .DS_Store
+   _build/doctrees/clean-prep/bulwark.doctree
+   _build/doctrees/clean-prep/dask-pipeline.doctree
+   _build/doctrees/clean-prep/deduplicate.doctree
+   …
+
+Occasionally you may want to bypass the global :file:`~/.gitignore` file to see
+which files Git always ignores, regardless of your configuration. You can do
+this by switching to another ``exclude`` option, ``--exclude-per-directory``,
+which uses only the repository’s :file:`.gitignore` files:
+
+.. code-block:: console
+
+   $ git ls-files --ignored --exclude-per-directory=.gitignore --others
+   docs/_build/doctrees/clean-prep/bulwark.doctree
+   docs/_build/doctrees/clean-prep/dask-pipeline.doctree
+   docs/_build/doctrees/clean-prep/deduplicate.doctree
+   …
+
+Note that the :file:`.DS_Store` file is no longer listed as ignored.
+
+If you replace ``--others`` with ``--cached``, ``git ls-files`` will list files
+that would be ignored unless they have already been committed:
+
+.. code-block:: console
+
+   $ git ls-files --ignored --exclude-per-directory=.gitignore --cached
+   data/iris.csv
+
+You may have such files because someone added them to a :file:`.gitignore` file
+before the relevant patterns, or because someone added them with ``git add
+--force``. Either way, if you no longer want to manage the file with Git, you
+can remove it from Git management with the following one-liner, but don’t
+delete it:
+
+.. code-block:: console
+
+   $ git ls-files --ignored --exclude-per-directory=.gitignore --cached | xargs -r git rm --cached
+   rm 'data/iris.csv'
+
+----
+
+.. [#] `git config --list
+   <https://git-scm.com/docs/git-config#Documentation/git-config.txt---list>`_
+.. [#] `git config --show-scope
+   <https://git-scm.com/docs/git-config#Documentation/git-config.txt---show-scope>`_
+.. [#] `git config --show-origin
+   <https://git-scm.com/docs/git-config#Documentation/git-config.txt---show-origin>`_
+.. [#] `git status --ignored
+   <https://git-scm.com/docs/git-status#Documentation/git-status.txt---ignoredltmodegt>`_
+.. [#] `git check-ignore
+   <https://git-scm.com/docs/git-check-ignore>`_
+.. [#] `git ls-files --ignored
+   <https://git-scm.com/docs/git-ls-files#Documentation/git-ls-files.txt---ignored>`_
