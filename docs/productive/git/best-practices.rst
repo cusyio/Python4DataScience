@@ -138,7 +138,15 @@ Git best practices
         * `Git Internals - Maintenance and Data Recovery
           <https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery>`_
 
-  * Clean up the remote tracking branches with ``git remote update --prune``.
+  * Clean up the remote tracking branches with ``git remote update --prune``. It
+    is even better if you change the default setting so that remotely deleted
+    branches are also deleted locally with ``git fetch`` and ``git pull``. You
+    can achieve this with:
+
+    .. code-block:: console
+
+       $ git config --global fetch.prune true
+
   * Checks forgotten work with ``git stash list``.
 
 * Check your repositories regularly for unwanted files!

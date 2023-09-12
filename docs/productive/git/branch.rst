@@ -114,6 +114,14 @@ the remote server as well, you can type the following:
 
 :samp:`$ git push origin --delete [{BRANCH_NAME}]`
 
+To remove remote branches locally, you can run ``git fetch`` with the
+``--prune`` or ``-p`` option. You can also make this the default behaviour by
+enabling ``fetch.prune``:
+
+.. code-block:: console
+
+   $ git config --global fetch.prune true
+
 Rename branches
 ---------------
 
