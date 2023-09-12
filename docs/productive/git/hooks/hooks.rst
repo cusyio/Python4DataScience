@@ -17,11 +17,15 @@ pre-commit scripts
         makes sure that (non-binary) executables have a shebang line
     ``check-shebang-scripts-are-executable``
         makes sure (non-binary) files are executable with a shebang line
+    ``check-merge-conflict``
+        searches for files containing merge-conflict strings
     ``check-symlinks``
         checks for symlinks that don’t point to anything
     ``destroyed-symlinks``
         detects symlinks that have been changed into regular files with the
         contents of the path the symlink points to.
+    ``no-commit-to-branch``
+        protects branches before committing
 
 `pygrep-hooks <https://github.com/pre-commit/pygrep-hooks>`_
     provides regular expressions for Python and reStructuredText, including:
@@ -138,6 +142,8 @@ Miscellaneous
     Git commit message linter
 `nbstripout <https://github.com/kynan/nbstripout>`_
     removes the output of Jupyter Notebooks
+`ripsecrets <https://github.com/sirwart/ripsecrets>`_
+    prevents secret keys from being included in your source code
 `detect-secrets <https://github.com/Yelp/detect-secrets>`_
     detects high entropy strings that are likely to be passwords
 `pip-compile <https://github.com/jazzband/pip-tools>`_

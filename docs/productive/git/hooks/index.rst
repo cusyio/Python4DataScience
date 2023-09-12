@@ -6,9 +6,24 @@ Git hooks
 =========
 
 Git hooks are scripts that are automatically executed when certain events occur
-in a Git repository. They can be located either in local or server-side
-repositories. This allows Git repositories to be customised and user-defined
-actions to be triggered.
+in a Git repository, including:
+
++---------------+-------------------------------------------------------+
+| Command       | Hook                                                  |
++===============+=======================================================+
+| ``comit``     | ``comit-msg``, ``pre-commit``                         |
++---------------+-------------------------------------------------------+
+| ``merge``     | ``pre-merge``, ``comit-msg``                          |
++---------------+-------------------------------------------------------+
+| ``rebase``    | ``pre-rebase``                                        |
++---------------+-------------------------------------------------------+
+| ``pull``      | ``pre-merge``, ``comit-msg``                          |
++---------------+-------------------------------------------------------+
+| ``push``      | ``pre-push``                                          |
++---------------+-------------------------------------------------------+
+
+They can be located either in local or server-side repositories. This allows Git
+repositories to be customised and user-defined actions to be triggered.
 
 Git hooks are located in the :file:`.git/hooks/` directory. When a repository is
 created, some sample scripts are already created there:
@@ -47,3 +62,5 @@ However, the scripts cannot be copied into the server-side repository.
     advanced
     template
     ci
+    skip
+    template
