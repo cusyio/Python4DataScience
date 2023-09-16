@@ -42,7 +42,7 @@ Overview
 
 .. seealso::
 
-    * `RFC 4180 <https://tools.ietf.org/html/rfc4180>`_
+    * :rfc:`4180`
     * `xsv <https://github.com/BurntSushi/xsv>`_
 
 Example

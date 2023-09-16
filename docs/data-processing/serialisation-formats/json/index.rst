@@ -21,12 +21,12 @@ Overview
 |                       |       | ``__comment__`` key/value pair.                       |
 +-----------------------+-------+-------------------------------------------------------+
 | Standardisation       | \+    | JSON has a formal strongly typed `standard`_ (see     |
-|                       |       | also `RFC 8259`_).                                    |
+|                       |       | also :rfc:`8259`).                                    |
 |                       |       | However, JSON data also contains some pitfalls due to |
 |                       |       | the ambiguity of the JSON specifications:             |
 |                       |       |                                                       |
 |                       |       | *A JSON parser MUST accept all texts that conform to  |
-|                       |       | the JSON grammar* (`RFC 7159`_)                       |
+|                       |       | the JSON grammar* (:rfc:`7159`)                       |
 |                       |       |                                                       |
 |                       |       | and                                                   |
 |                       |       |                                                       |
@@ -35,7 +35,7 @@ Overview
 |                       |       | the maximum depth of nesting. An implementation may   |
 |                       |       | set limits on the range and precision of numbers. An  |
 |                       |       | implementation may set limits on the length and       |
-|                       |       | character contents of strings* (`RFC 7158 #9`_).      |
+|                       |       | character contents of strings* (:rfc:`7158#9`).       |
 |                       |       |                                                       |
 |                       |       | Unfortunately there is neither a reference            |
 |                       |       | implementation nor an official test suite that would  |
@@ -126,9 +126,6 @@ Response of the :ref:`OSM-Nomination-API
     ]
 
 .. _`standard`: https://www.json.org/json-en.html
-.. _`RFC 8259`: https://tools.ietf.org/html/rfc8259
-.. _`RFC 7159`: https://tools.ietf.org/html/rfc7159
-.. _`RFC 7158 #9`: https://www.ietf.org/rfc/rfc7158.html#section-9
 .. _`JSON_Checker`: http://www.json.org/JSON_checker/
 .. _`JSON Schema Proposal`: http://json-schema.org/
 .. _`JSON Encoding Rules (JER)`: https://www.itu.int/rec/T-REC-X.697-201710-I/

@@ -69,6 +69,6 @@ Other Formats
           <https://github.com/Abscissa/SDLang-D/wiki/Language-Guide>`_
         * `GitHub <https://github.com/Abscissa/SDLang-D>`__
 
-`XDR (RFC 4506) <https://tools.ietf.org/html/rfc4506>`_
+XDR (:rfc:`4506`)
     Short for *External Data Representation Standard*. Useful for transferring
     data between different computer architectures.
