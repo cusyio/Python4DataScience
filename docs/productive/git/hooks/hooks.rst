@@ -52,6 +52,11 @@ Linters and formatters
         pre-commit framework
     `mypy <https://github.com/pre-commit/mirrors-mypy>`_
         provides `mypy <https://github.com/python/mypy>`__
+    `validate-pyproject <https://github.com/abravalheri/validate-pyproject>`_
+        checks :file:`pyproject.toml` files
+    `sp-repo-review <https://github.com/scientific-python/cookie>`_
+        evaluates existing repos against the `Scientific Python guidelines
+        <https://learn.scientific-python.org/development/>`_.
     `clang-format <https://github.com/pre-commit/mirrors-clang-format>`_
         provides `clang-format-wheel
         <https://github.com/ssciwr/clang-format-wheel>`__
