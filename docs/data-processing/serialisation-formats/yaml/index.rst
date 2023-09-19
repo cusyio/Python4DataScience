@@ -36,7 +36,9 @@ Overview
     * `Home <https://yaml.org/>`_
     * `Specification <https://yaml.org/spec/>`_
     * `YAML Validator <https://codebeautify.org/yaml-validator>`_
-    * `StrictYAML <https://github.com/crdoconnor/strictyaml>`_
+    * `StrictYAML <https://hitchdev.com/strictyaml/>`_
+    * `What YAML features does StrictYAML remove?
+      <https://hitchdev.com/strictyaml/features-removed/>`_
     * `noyaml.com <https://noyaml.com/>`_
 
 .. _`Kwalify`: http://www.kuwata-lab.com/kwalify/
