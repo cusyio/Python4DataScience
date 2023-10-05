@@ -5,242 +5,222 @@
 Git best practices
 ==================
 
-* Commit early!
+Commit early
+------------
 
-  Make your first commit after you’ve finished the initial installation and
-  before you make your first changes. For a cookie cutter template, for example,
-  proceed as follows:
+Make your first commit after you’ve finished the initial installation and
+before you make your first changes. For a cookie cutter template, for example,
+proceed as follows:
 
-  .. code-block:: console
+.. code-block:: console
 
-    $ pipenv run cookiecutter https://github.com/veit/cookiecutter-namespace-template.git
-    full_name [Veit Schiele]:
-    email [veit@cusy.io]:
-    github_username [veit]:
-    project_name [cusy.example]:
-    …
+  $ pipenv run cookiecutter https://github.com/veit/cookiecutter-namespace-template.git
+  full_name [Veit Schiele]:
+  email [veit@cusy.io]:
+  github_username [veit]:
+  project_name [cusy.example]:
+  …
 
-  If no ``.gitignore`` file is present in your project, you should create one
-  and at least -exclude ``.ipynb_checkpoints`` and ``*/.ipynb_checkpoints/*``.
+These initial changes can then be checked in with:
 
+.. code-block:: console
 
-  If you have accidentally checked the corresponding files into your Git
-  repository, you can remove them again with:
+  $ cd cusy.example
+  $ git init
+  $ git add *
+  $ git add .gitignore
+  $ git commit -m 'Initial commit'
+  $ git remote add origin ssh://git@github.com:veit/cusy.example.git
+  $ git push -u origin main
 
-  .. code-block:: console
+Exclude undesired files
+-----------------------
 
-    $ git rm -r .ipynb_checkpoints/
+Temporary files, jupyter checkpoint folders and builds have no business in a git repository.
+Credentials do not either.
+The ``.gitignore`` file contains a list of paths that git will not add unless you ask for it explicitly.
 
-  You can get an overview of other ``.gitignore`` entries either in the
-  `dotfiles <https://github.com/veit/dotfiles>`_ repository or on the
-  `gitignore.io  <https://gitignore.io/>`_ website.
+You can find a template ``.gitignore`` file for Python projects in the
+`dotfiles <https://github.com/veit/dotfiles>`_ repository.
+The `gitignore.io  <https://gitignore.io/>`_ website contains ``.gitignore`` files for other programming languages.
+The ``.gitignore`` file itself should be checked in, too:
 
-  These initial changes can then be checked in with:
+.. code-block:: console
 
-  .. code-block:: console
+  $ git add .gitignore
+  $ git commit -m 'add .gitignore file'
 
-    $ cd cusy.example
-    $ git init
-    $ git add *
-    $ git add .gitignore
-    $ git commit -m 'Initial commit'
-    $ git remote add origin ssh://git@github.com:veit/cusy.example.git
-    $ git push -u origin main
+If you have accidentally checked undesired files into your Git
+repository, you can remove them again with:
 
-  Each repository should also have a ``README.rst`` file that describes the
-  deployment and the basic structure of the code.
+.. code-block:: console
 
-* Commit often!
-
-  This makes it easier for you
-
-  * to isolate errors
-  * to understand the code
-  * to maintain the code in the future
-
-  If you have made several changes to a file, you can split them up into several
-  commits later with:
-
-  .. code-block:: console
-
-    $ git add -p my-changed-file.py
-
-* Don’t change the published history!
-
-  Even if you later find out that a commit that has already been published with
-  ``git push`` contains one or more errors, you should never try to undo this
-  commit. Rather, you should fix the error that have occurred through further
-  commits.
+  $ git rm -r .ipynb_checkpoints/
 
 
-* Choose a Git workflow!
+Write a README
+--------------
 
-  Choose a workflow that fits best to your project. Projects are by no means
-  identical and a workflow that fits one project does not necessarily have to
-  fit in another project. A different workflow can be recommended initially than
-  in the further progress of the project.
+Each repository should also have a ``README.rst`` file that describes the
+deployment and the basic structure of the code.
 
-* Make meaningful commits!
+Commit often
+------------
 
-  By creating insightful and descriptive commit messages, you make working in a
-  team a lot easier. They allow others to understand your changes. They are also
-  helpful at a later point in time to understand which goal should be achieved
-  with the code.
+Each completed task and subtask should be immediately followed by a commit.
+Incomplete work also may be stored on git.
+As a rule of thumb you should commit at least daily before leaving work.
+In busy times it is common to commit every 10 minutes.
 
-  Usually short messages, 50–72 characters long, should be specified and
-  displayed on one line, eg with ``git log --oneline``.
+Frequent commits make it easier for you to:
 
-  With ``git blame`` you can later specify for each line in which revision and
-  by which author the change was made. You can find more information on this in
-  the Git documentation: `git-blame <https://git-scm.com/docs/git-blame>`_.
+* isolate errors
+* understand the code
+* maintain the code in the future
 
-  If you use gitmojis in your commit messages, you can easily see the intent of
-  the commit later.
+If you have made several changes to a file, you can split them up into several
+commits later with:
 
-  .. note::
+.. code-block:: console
 
-    * `gitmoji.dev <https://gitmoji.dev/>`_
-    * `github.com/carloscuesta/gitmoji
-      <https://github.com/carloscuesta/gitmoji>`_
-    * `github.com/carloscuesta/gitmoji-cli
-      <https://github.com/carloscuesta/gitmoji-cli>`_
-    * `Visual Studio Code Extension
-      <https://marketplace.visualstudio.com/items?itemName=seatonjiang.gitmoji-vscode>`_
+  $ git add -p my-changed-file.py
 
-  GitLab also interprets certain commit messages as links, for example:
+Don’t change the published history
+----------------------------------
 
-  .. code-block:: console
+Even if you later find out that a commit that has already been published with
+``git push`` contains one or more errors, you should never try to undo this
+commit. Rather, you should fix the error that have occurred through further
+commits.
 
-    $ git commit -m "Awesome commit message (Fix #21 and close group/otherproject#22)"
+.. warnings::
 
-  * links to issues: ``#123``
+  Workflows with ``git rebase`` are a reasonable exception to this rule.
 
-    * also for issues in other projects:: ``othergroup/otherproject#123``
+Choose a Git workflow
+---------------------
 
-  * links to merge requests: ``!123``
-  * links to snippets: ``$123``
+Choose a workflow that fits best to your project. Projects are by no means
+identical and a workflow that fits one project does not necessarily have to
+fit in another project. A different workflow can be recommended initially than
+in the further progress of the project.
 
-  There should be at least one ticket for each commit that should provide more
-  detailed information about the changes.
+Write meaningful commit messages
+--------------------------------
 
-  You can find more good information in `A Note About Git Commit Messages
+By creating insightful and descriptive commit messages, you make working in a
+team a lot easier. They allow others to understand your changes. They are also
+helpful at a later point in time to understand which goal should be achieved
+with the code.
+
+Usually short messages, 50–72 characters long, should be specified and
+displayed on one line, eg with ``git log --oneline``.
+
+With ``git blame`` you can later specify for each line in which revision and
+by which author the change was made. You can find more information on this in
+the Git documentation: `git-blame <https://git-scm.com/docs/git-blame>`_.
+
+If you use gitmojis in your commit messages, you can easily see the intent of
+the commit later.
+
+.. note::
+
+  * `gitmoji.dev <https://gitmoji.dev/>`_
+  * `github.com/carloscuesta/gitmoji
+    <https://github.com/carloscuesta/gitmoji>`_
+  * `github.com/carloscuesta/gitmoji-cli
+    <https://github.com/carloscuesta/gitmoji-cli>`_
+  * `Visual Studio Code Extension
+    <https://marketplace.visualstudio.com/items?itemName=seatonjiang.gitmoji-vscode>`_
+
+GitLab also interprets certain commit messages as links, for example:
+
+.. code-block:: console
+
+  $ git commit -m "Awesome commit message (Fix #21 and close group/otherproject#22)"
+
+* links to issues: ``#123``
+
+  * also for issues in other projects:: ``othergroup/otherproject#123``
+
+* links to merge requests: ``!123``
+* links to snippets: ``$123``
+
+There should be at least one ticket for each commit that should provide more
+detailed information about the changes.
+
+.. note::
+  * `A Note About Git Commit Messages
   <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_.
 
-* Maintain your repository regularly!
+Maintain your repository regularly
+----------------------------------
 
-  You should perform the following maintenance work regularly:
+You should perform the following maintenance work regularly:
 
-  * Validate the repo with ``git fsck``.
-  * Compresses the repo with  ``git gc`` or ``git gc --aggressive``.
+Validate the repo
+~~~~~~~~~~~~~~~~~
 
-    .. seealso::
-        * `git gc <https://git-scm.com/docs/git-gc>`_
-        * `Git Internals - Maintenance and Data Recovery
-          <https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery>`_
+The command ``git fsck`` checks whether all objects in the internal datastructure
+of git are consistently connected with each other.
 
-  * Clean up the remote tracking branches with ``git remote update --prune``. It
-    is even better if you change the default setting so that remotely deleted
-    branches are also deleted locally with ``git fetch`` and ``git pull``. You
-    can achieve this with:
+Compresses the repo
+~~~~~~~~~~~~~~~~~~~
 
-    .. code-block:: console
+Save storage space with the command ``git gc`` or ``git gc --aggressive``.
 
-       $ git config --global fetch.prune true
+.. seealso::
+    * `git gc <https://git-scm.com/docs/git-gc>`_
+    * `Git Internals - Maintenance and Data Recovery
+      <https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery>`_
 
-  * Checks forgotten work with ``git stash list``.
+Clean up remote tracking branches
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Check your repositories regularly for unwanted files!
+Unused branches on a server can be removed with ``git remote update --prune``.
+It is even better if you change the default setting so that remotely deleted
+branches are also deleted locally with ``git fetch`` and ``git pull``. You
+can achieve this with:
 
-  With `Gitleaks <https://github.com/zricethezav/gitleaks>`_ you can regularly
-  check your repositories for unintentionally saved access data.
+.. code-block:: console
 
-  You can also run Gitleaks automatically as a GitLab action. To do this, you
-  need to include the `Secret-Detection.gitlab-ci.yml
-  <https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml>`_ template, for example, in a stage called
-  ``secrets-detection`` in your ``.gitlab-ci.yml`` file:
+    $ git config --global fetch.prune true
 
-  .. code-block:: yaml
+Check forgotten work
+~~~~~~~~~~~~~~~~~~~~
 
-     stages:
-       - secrets-detection
+Display a list of saved stashes with ``git stash list``.
+They can be removed with ``git stash drop``.
 
-     gitleaks:
-       stage: secrets-detection
-       include:
-         - template: Security/Secret-Detection.gitlab-ci.yml
+Check your repositories for unwanted files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  The template creates secret detection jobs in your CI/CD pipeline and searches
-  the source code of your project for secrets. The results are saved as a
-  `Secret Detection Report Artefakt
-  <https://docs.gitlab.com/ee/ci/yaml/artifacts_reports.html#artifactsreportssecret_detection>`_ that you can download and analyse later.
+With `Gitleaks <https://github.com/zricethezav/gitleaks>`_ you can regularly
+check your repositories for unintentionally saved access data.
 
-  .. seealso::
+You can also run Gitleaks automatically as a GitLab action. To do this, you
+need to include the `Secret-Detection.gitlab-ci.yml
+<https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml>`_ template, for example, in a stage called
+``secrets-detection`` in your ``.gitlab-ci.yml`` file:
 
-     * `GitLab Secret Detection
-       <https://docs.gitlab.com/ee/user/application_security/secret_detection/>`_
+.. code-block:: yaml
 
-  With `git-filter-repo <https://github.com/newren/git-filter-repo>`_ you can
-  remove unwanted files, be it access data or large binary files, from your Git
-  history.
+    stages:
+      - secrets-detection
 
-  Alternatively, you can also delete the data on the command line.
+    gitleaks:
+      stage: secrets-detection
+      include:
+        - template: Security/Secret-Detection.gitlab-ci.yml
 
-  * Delete the last commit
+The template creates secret detection jobs in your CI/CD pipeline and searches
+the source code of your project for secrets. The results are saved as a
+`Secret Detection Report Artefakt
+<https://docs.gitlab.com/ee/ci/yaml/artifacts_reports.html#artifactsreportssecret_detection>`_ that you can download and analyse later.
 
-    .. code-block:: console
+.. seealso::
 
-        $ git reset HEAD^ --hard
-        $ git push origin -f
+    * `GitLab Secret Detection
+      <https://docs.gitlab.com/ee/user/application_security/secret_detection/>`_
 
-  * Delete other commits
-
-    .. code-block:: console
-
-        $ git rebase -i SHA origin/main
-
-    ``-i``
-        Interactive mode, in which your standard editor is opened and a list of
-        all commits after the commit with the hash value :samp:`{SHA}` to be
-        removed is displayed, for example
-
-        .. code-block:: console
-
-            pick d82199e Update readme
-            pick 410266e Change import for the interface
-            …
-
-        If you now remove a line, this commit will be deleted after saving and
-        closing the editor. Then the remote repository can be updated with:
-
-        .. code-block:: console
-
-          $ git push origin HEAD:main -f
-
-  * Modifying a commit message
-
-    This can also be easily with ``rebase``  by not deleting the line in your
-    editor but replace ``pick`` with  ``r`` (*reword*).
-
-  * Remove a file from the history
-
-    A file can be completely removed from the current branch’s Git history with:
-
-    .. code-block:: console
-
-        $ git filter-repo --invert-paths --path path/somefile
-        $ git push --no-verify --mirror
-
-    .. note::
-       Inform the team members that they should create a clone of the
-       repository again.
-
-  * Removing a string from the history
-
-    .. code-block:: console
-
-        $ git filter-repo --message-callback 'return re.sub(b"^git-svn-id:.*\n", b"", message, flags=re.MULTILINE)'
-
-  .. seealso::
-    * `git-filter-repo — Man Page <https://www.mankier.com/1/git-filter-repo>`_
-    * `git-reflog <https://git-scm.com/docs/git-reflog>`_
-    * `git-gc <https://git-scm.com/docs/git-gc>`_
+With :ref: you can remove unwanted files from your Git history.
