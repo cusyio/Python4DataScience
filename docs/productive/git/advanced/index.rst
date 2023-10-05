@@ -5,6 +5,19 @@
 Advanced Git
 ============
 
+.. toctree::
+   :hidden:
+
+   cherry-pick
+   bisect
+   hooks/index
+   tools
+   jupyter-config
+   vs-code/index
+   gitlab/index
+   git-big-picture
+   etckeeper
+
 Git Notes
 ---------
 
