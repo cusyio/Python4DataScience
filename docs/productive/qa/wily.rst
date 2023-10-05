@@ -172,7 +172,7 @@ Use
 … as pre-commit hook
 ~~~~~~~~~~~~~~~~~~~~
 
-You can also use Wily as a :doc:`../git/hooks/pre-commit`. To do this, you would
+You can also use Wily as a :doc:`../git/advanced/hooks/pre-commit`. To do this, you would
 have to add the following to the ``pre-commit-config.yaml`` configuration file, for example:
 
 .. code-block:: yaml

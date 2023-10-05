@@ -5,7 +5,7 @@
 Git rebase
 ==========
 
-While git rebase is also briefly covered in :doc:`jupyter-config`,
+While git rebase is also briefly covered in :doc:`advanced/jupyter-config`,
 :doc:`best-practices` and :doc:`workflows/feature-branches`, here we will look
 more closely at its configuration, use cases and pitfalls.
 
@@ -24,14 +24,14 @@ you might want to keep the latest updates to the main branch in your feature
 branch, but keep the history of your branch clean. This would have the advantage
 that you could later do a clean ``git merge`` of your functional branch into the
 main branch. This *clean history* also makes it easier for you to find a
-regression with regressions using :doc:`bisect`. A more realistic scenario would
+regression with regressions using :doc:`advanced/bisect`. A more realistic scenario would
 be the following:
 
 #. An error is found in the main branch in a function that once worked without
    errors.
 #. With the *clean history* of the main branch, :doc:`log` should allow for
    quick conclusions.
-#. If :doc:`log` does not lead to the desired result, :doc:`git bisect <bisect>`
+#. If :doc:`log` does not lead to the desired result, :doc:`git bisect <advanced/bisect>`
    will probably help. In this case, the clean Git history helps ``git bisect``
    in the search for the regression.
 

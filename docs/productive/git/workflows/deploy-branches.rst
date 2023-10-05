@@ -130,7 +130,7 @@ In this case each branch should contain a minor version, for example ``2.7`` or
 as possible. This reduces the number of merges that have to be distributed
 across multiple branches during bug fixes. Usually, these are first transferred
 to the  ``main`` and then transferred from there to the release branch with
-:doc:`../cherry-pick`, for example:
+:doc:`../advanced/cherry-pick`, for example:
 
 .. code-block:: console
 

@@ -219,7 +219,7 @@ With `protected Git branches <protected_branches>`, rules can be defined for the
 adoption of changes in standard and release branches, for example automated
 `static code analyses <https://en.wikipedia.org/wiki/Static_program_analysis>`_
 with :doc:`qa/flake8`, :doc:`qa/pysa`, :doc:`qa/wily` and :ref:`code reviews
-<code_reviews>` via :doc:`merge requests <git/gitlab/merge-requests>`.
+<code_reviews>` via :doc:`merge requests <git/advanced/gitlab/merge-requests>`.
 
 .. _code_reviews:
 

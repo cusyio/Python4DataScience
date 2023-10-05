@@ -16,7 +16,7 @@ The three main approaches to this continuous development are:
 Continuous Integration
     runs a series of scripts sequentially or in parallel that your application
     automatically builds and tests, for example after each ``git pull`` in a
-    :doc:`feature branch <../workflows/feature-branches>`. This is to make it
+    :doc:`feature branch <../../workflows/feature-branches>`. This is to make it
     less likely that you will introduce bugs into your application.
 
     If the checks work as expected, you can make a :doc:`merge request
