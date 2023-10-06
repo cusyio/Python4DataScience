@@ -6,6 +6,10 @@ short-lived topic branches that are merged into a single ``main`` branch.
 :abbr:`TBD (Trunk Based Development)` leads to an easily managed linear
 progression.
 
+Trunk Based Development is a perfect fit for one-person projects.
+Branches are not necessary, but using a version control system 
+pays off quickly even for a single developer.
+
 In smaller development teams, each pair-programming duo preferably transfers
 small commits directly to the trunk (or ``main`` branch), although the build
 must first be successfully executed before integration.

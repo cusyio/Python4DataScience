@@ -5,6 +5,12 @@
 Splitting repos
 ===============
 
+It is often useful to divide a large Git repository into multiple smaller ones.
+This can be necessary in a project that has grown over time, or if you want to
+manage a sub-project in a separate repository.
+Of couse you could simply create a new repository and copy the files,
+but you would also loose the entire version history.
+
 Here I describe how you can split a Git repository without losing the associated
 history.
 

@@ -11,13 +11,11 @@ Deployment and release branches
 Deployment branches
 ===================
 
-They are recommended if, for example, you cannot determine the release time
+We recommend one or more deployment branches if, for example, you cannot determine the release time
 yourself, for example if an iOS application has to pass the app store validation
 or you only have a fixed time window available for deployment. In this case, a
 production branch ``prod``, that reflects the code provided is recommended. Such
-a workflow prevents the additional work of ``git flow`` for releasing and
-tagging.
-
+a workflow prevents the additional work when using :doc:`../rebase` and :doc:`../tag`.
 
 Assuming that you have a ``development``, ``staging`` and ``production``
 environment, then a merge or pull request for a feature is first made to the
