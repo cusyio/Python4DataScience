@@ -148,8 +148,7 @@ There should be at least one ticket for each commit that should provide more
 detailed information about the changes.
 
 .. note::
-  * `A Note About Git Commit Messages
-  <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_.
+  * `A Note About Git Commit Messages <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`__.
 
 Maintain your repository regularly
 ----------------------------------
