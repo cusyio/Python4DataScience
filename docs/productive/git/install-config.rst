@@ -63,7 +63,7 @@ For iX distributions, Git should be in the standard repository.
 Configuration
 -------------
 
-The author of every change needs to be transparent. 
+The author of every change needs to be transparent.
 Specify your name and email address as follows:
 
 

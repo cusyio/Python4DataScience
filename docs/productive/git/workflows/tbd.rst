@@ -7,7 +7,7 @@ short-lived topic branches that are merged into a single ``main`` branch.
 progression.
 
 Trunk Based Development is a perfect fit for one-person projects.
-Branches are not necessary, but using a version control system 
+Branches are not necessary, but using a version control system
 pays off quickly even for a single developer.
 
 In smaller development teams, each pair-programming duo preferably transfers
