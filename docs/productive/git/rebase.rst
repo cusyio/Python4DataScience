@@ -5,13 +5,10 @@
 Git rebase
 ==========
 
-While git rebase is also briefly covered in :doc:`jupyter-config`,
-:doc:`best-practices` and :doc:`workflows/feature-branches`, here we will look
-more closely at its configuration, use cases and pitfalls.
-
-Here, ``git rebase``, in addition to ``git merge``, allows you to merge
+The commands ``git rebase`` and ``git merge`` allow you to merge
 :doc:`branch`. While ``git merge`` is always a moving forward change approach,
 ``git rebase`` has powerful history rewrite functions.
+Here we take a look at its configuration, use cases and pitfalls.
 
 In doing so, ``git rebase`` moves a sequence of commits to a new base commit and
 can be useful for :doc:`workflows/feature-branches` workflows. Internally, Git
@@ -24,14 +21,14 @@ you might want to keep the latest updates to the main branch in your feature
 branch, but keep the history of your branch clean. This would have the advantage
 that you could later do a clean ``git merge`` of your functional branch into the
 main branch. This *clean history* also makes it easier for you to find a
-regression with regressions using :doc:`bisect`. A more realistic scenario would
+regression with regressions using :doc:`advanced/bisect`. A more realistic scenario would
 be the following:
 
 #. An error is found in the main branch in a function that once worked without
    errors.
 #. With the *clean history* of the main branch, :doc:`log` should allow for
    quick conclusions.
-#. If :doc:`log` does not lead to the desired result, :doc:`git bisect <bisect>`
+#. If :doc:`log` does not lead to the desired result, :doc:`git bisect <advanced/bisect>`
    will probably help. In this case, the clean Git history helps ``git bisect``
    in the search for the regression.
 
@@ -39,6 +36,11 @@ be the following:
     The published history should only be changed in very rare exceptional cases,
     as the old commits would be replaced by new ones and it would look as if
     this part of the project history had suddenly disappeared.
+
+.. note::
+
+   ``git rebase`` is also covered briefly in :doc:`advanced/jupyter-config`
+   and :doc:`workflows/feature-branches`.
 
 Rebasing dependent branches with ``–update-refs``
 -------------------------------------------------
@@ -62,3 +64,35 @@ option is always specified.
 .. seealso::
    `rebase: add --update-refs option
    <https://lore.kernel.org/git/3ec2cc922f971af4e4a558188cf139cc0c0150d6.1657631226.git.gitgitgadget@gmail.com/>`_
+
+
+Delete commits with rebase
+--------------------------
+
+.. code-block:: console
+
+   $ git rebase -i SHA origin/main
+
+``-i``
+   Interactive mode, in which your standard editor is opened and a list of
+   all commits after the commit with the hash value :samp:`{SHA}` to be
+   removed is displayed, for example
+
+.. code-block:: console
+
+   pick d82199e Update readme
+   pick 410266e Change import for the interface
+   …
+
+If you now remove a line, this commit will be deleted after saving and
+closing the editor. Then the remote repository can be updated with:
+
+.. code-block:: console
+
+   $ git push origin HEAD:main -f
+
+Modify a commit message with rebase
+-----------------------------------
+
+This can also be easily with ``rebase``  by not deleting the line in your
+editor but replace ``pick`` with  ``r`` (*reword*).

@@ -16,10 +16,20 @@ Workspaces
     moves files from the workspace to a stash.
 ``git stash pop``
     brings files from the stash to the work area.
+``git commit``
+    writes changes from the staging area to the local repository.
+``git pull``
+    copies changes from the remote to the local repository and updates the work area.
 ``git push``
-    moves files from the staging area to the repository.
+    copies changes from the local repository to the remote repository.
 
-    ``git push -u origin main``
-        ``-u`` defines the upstream reference for each branch, the arguments are
-        then given and no longer have to be specified explicitly.  In our
-        example ``main`` in the external repository is referenced.
+    :samp:`git push -u {UPSTREAM} {BRANCHNAME}`
+        ``-u`` (long form ``--set-upstream``)
+          allows to specify the remote repository and a branch in it.
+
+        :samp:`{UPSTREAM}`
+            the name of the remote repository, typically ``origin``.
+
+        :samp:`{BRANCHNAME}`
+            the name of a branch in the remote repository,
+            typically the same as in the local repository.

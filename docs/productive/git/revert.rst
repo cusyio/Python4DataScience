@@ -95,7 +95,33 @@ branch:
 
 :samp:`$ git reset HEAD~`
     resets the last commit, and its changes are now reapplied to the stage area.
-:samp:`$ git switch {DESIRED_BRANCH}`
-    switches to the desired branch.
-:samp:`$ git commit -m '{COMMIT_MESSAGE}'`
-    Commit the changes from the stage area to the desired branch.
+
+
+.. _git-filter-repo:
+
+Remove a file from the history
+------------------------------
+
+A file can be completely removed from the current branches Git history.
+This could be necessary if you accidentally committed passwords or huge files:
+
+.. code-block:: console
+
+    $ git filter-repo --invert-paths --path path/somefile
+    $ git push --no-verify --mirror
+
+.. note::
+    Inform the team members that they should create a clone of the
+    repository again.
+
+Remove a string from the history
+--------------------------------
+
+.. code-block:: console
+
+    $ git filter-repo --message-callback 'return re.sub(b"^git-svn-id:.*\n", b"", message, flags=re.MULTILINE)'
+
+.. seealso::
+    * `git-filter-repo — Man Page <https://www.mankier.com/1/git-filter-repo>`_
+    * `git-reflog <https://git-scm.com/docs/git-reflog>`_
+    * `git-gc <https://git-scm.com/docs/git-gc>`_

@@ -28,7 +28,9 @@ to use merge or pull requests to discuss changes with others in the team and
 give them the opportunity to approve a feature before it is integrated into the
 official project. However, if you encounter problems in your feature
 development, you can also use merge or pull requests to discuss possible
-solutions with others in the team. Merge or pull requests are provided by
+solutions with others in the team.
+
+Merge or pull requests are provided by
 web-based services such as `GitHub <https://github.com/>`_, `GitLab
 <https://about.gitlab.com/>`_ and `Atlassian <https://bitbucket.org/>`_ for
 reviewing and commenting on changes. You can also use :samp:`@{ID}` in your
@@ -171,6 +173,10 @@ linear progression by moving the changes in the feature branch to the top of the
       $ git pull origin main
       $ git merge --no-ff 17-some-feature
 
+The simple-git-workflow using ``rebase`` creates a strictly linear version history.
+In this linear history it is easier to understand changes over time
+and to find bugs with :doc:`bisect <../advanced/bisect>`.
+
 Summary
 -------
 
@@ -186,3 +192,8 @@ The main advantages of feature branches workflows are as follows
 However, they cannot answer how deployments to different environments or
 splitting into different releases should be done. Possible answers to this are
 described in :doc:`deploy-branches`.
+
+.. seealso::
+
+   Both variations of feature branches are simpler alternatives
+   of the considerably more complex :doc:`git-flow`.

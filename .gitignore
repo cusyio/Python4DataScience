@@ -5,6 +5,12 @@
 # Mac OS X
 .DS_Store
 
+# Editors
+.vscode/
+
+# Sphinx builds
+docs/_build/
+
 # IPython
 .ipynb_checkpoints
 

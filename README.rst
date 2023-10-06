@@ -30,6 +30,17 @@ Status
 
 .. _first-steps:
 
+Overview
+--------
+
+This repository contains a data management and analysis tutorial using Python.
+The folders contain:
+
+- ``data/`` - data for an example project
+- ``docs/`` - the actual tutorial docs
+- ``fastapi/`` - example web server providing data
+
+
 Installation
 ------------
 
@@ -161,3 +172,9 @@ Repository <https://github.com/veit/python4datascience/>`_ and make your changes
 there. . You are also welcome to make a *pull request*. If the changes
 contained therein are small and atomic, I’ll be happy to look at your
 suggestions.
+
+The following guidelines help us to maintain the German translation of the tutorial:
+
+* Write commit messages in Englisch
+* Start commit messages with a `Gitmoji <https://gitmoji.dev/>`__
+* Stick to English names of files and folders.

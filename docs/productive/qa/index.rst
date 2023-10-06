@@ -9,7 +9,7 @@ Before you start refactoring, you should measure the complexity of your code. In
 the following, I would like to introduce you to some tools and concepts that
 check the complexity of your code and simplify the maintenance and care of
 Python packages and other source code. Often, together with
-:doc:`../git/hooks/pre-commit`, the code quality can also be checked and
+:doc:`../git/advanced/hooks/pre-commit`, the code quality can also be checked and
 improved automatically.
 
 .. seealso::

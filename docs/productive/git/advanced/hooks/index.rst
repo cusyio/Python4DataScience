@@ -60,7 +60,6 @@ However, the scripts cannot be copied into the server-side repository.
     pre-commit
     hooks
     advanced
-    template
     ci
     skip
     template

@@ -2,16 +2,19 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Git flow
+Git Flow
 ========
 
 Git Flow was one of the first proposals for the use of Git branches. It
 recommended a ``main`` branch and a separate ``develop`` branch as well as
 various other branches for features, releases and hotfixes. The various
 developments should be brought together in the develop branch, then transferred
-to the ``release`` branch and finally end up in the ``main`` branch. So Git
-Flow, while a well-defined but complex standard, has practically the following
-two problems:
+to the ``release`` branch and finally end up in the ``main`` branch.
+
+Drawbacks of Git Flow
+---------------------
+
+While Git Flow is a well-defined but complex standard, it creates two practical problems:
 
 * Most developers and tools assume that the ``main`` branch is the branch from
   which branches and merges are executed. With Git Flow, there is additional
