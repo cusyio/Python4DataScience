@@ -12,26 +12,26 @@ Start your own project
 ~~~~~~~~~~~~~~~~~~~~~~
 
 :samp:`$ git init {MY_PROJECT}`
-    creates a new, local git repository
+    creates a new, local git repository.
 
     :samp:`{MY_PROJECT}`
         if the project name is given, Git creates a new directory and
-        initializes it
+        initializes it.
 
-        If no project name is given, the current directory is initialised
+        If no project name is given, the current directory is initialised.
 
 Work on a project
 ~~~~~~~~~~~~~~~~~
 
 :samp:`$ git clone {PROJECT_URL}`
     downloads a project with all branches and the entire history from the remote
-    repository
+    repository.
 
     ``--depth``
-        indicates the number of commits to be downloaded
+        indicates the number of commits to be downloaded.
 
     ``-b``
-        specifies the name of the remote branch to be downloaded
+        specifies the name of the remote branch to be downloaded.
 
 Work on a project
 -----------------
@@ -68,7 +68,7 @@ Work on a project
     identifiers of the git object versions.
 
     The rest of the output is a list of diff chunks whose header is enclosed in
-    ``@@`` symbols. It gives a summary of the changes made in the file. In our
+    ``@@`` symbols. Each chunk shows changes made in a file. In our
     example, 7 lines were extracted starting at line 46 and 7 lines were added
     starting at line 46.
 
@@ -125,9 +125,9 @@ Work on a project
 ``$ git reset [--hard|--soft] [target-reference]``
     resets the history to an earlier commit.
 :samp:`$ git rm {FILE}`
-    remove a file from the work and stage areas.
+    removes a file from the work and stage areas.
 ``$ git stash``
-    move the current changes from the work area to the stash.
+    moves the current changes from the work area to the stash.
 
     To be able to distinguish your hidden changes as well as possible, the
     following two options are recommended:
@@ -197,14 +197,14 @@ Work on a project
         shows the changes in the hidden files.
     ``pop``
         transfer the changes from the hiding place to the work area and empty
-        the hiding place, for example
+        the hiding place, for example:
 
         .. code-block:: console
 
             git stash pop stash@{2}
 
     ``drop``
-        emptying a specific stash, for example:
+        empties a specific stash, for example:
 
 
         .. code-block:: console
