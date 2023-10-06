@@ -140,9 +140,7 @@ GitLab also interprets certain commit messages as links, for example:
   $ git commit -m "Awesome commit message (Fix #21 and close group/otherproject#22)"
 
 * links to issues: ``#123``
-
-  * also for issues in other projects:: ``othergroup/otherproject#123``
-
+* links to issues in other projects: ``othergroup/otherproject#123``
 * links to merge requests: ``!123``
 * links to snippets: ``$123``
 
