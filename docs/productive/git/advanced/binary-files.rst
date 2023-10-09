@@ -1,3 +1,8 @@
+.. SPDX-FileCopyrightText: 2022 Veit Schiele
+..
+.. SPDX-FileContributor: Modified by Kristian Rother
+..
+.. SPDX-License-Identifier: BSD-3-Clause
 
 Git for binary files
 ====================
@@ -109,12 +114,12 @@ Then add the following section to your global Git configuration
 Finally, in the global :file:`~/.gitattributes` file, our ``word`` converter is
 linked to :file:`*.docx` files:
 
-.. code-block:: ini
+.. code-block::
 
     *.docx diff=word
 
 The same procedure can be used to obtain useful diffs from other binaries, for
-example ``*.zip``, ``*.jar`` and other archives with ``unzip`` or for changes in
+example :file:`*.zip`, :file:`*.jar` and other archives with ``unzip`` or for changes in
 the meta information of images with ``exiv2``. There are also conversion tools
-for converting ``*.odt``, ``.doc`` and other document formats into plain text.
+for converting :file:`*.odt`, :file:`*.doc` and other document formats into plain text.
 For binary files for which there is no converter, strings are often sufficient.

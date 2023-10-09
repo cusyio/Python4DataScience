@@ -1,5 +1,7 @@
 .. SPDX-FileCopyrightText: 2020 Veit Schiele
 ..
+.. SPDX-FileContributor: Modified by Kristian Rother
+..
 .. SPDX-License-Identifier: BSD-3-Clause
 
 Jupyter Notebooks with Git
@@ -12,7 +14,7 @@ There are several issues to manage Jupyter Notebooks with Git:
 
 * Jupyter Notebooks cell metadata changes even when no content changes have been
   made to the cells. This makes Git diffs unnecessarily complicated.
-* The lines that Git writes to the ``*.ipynb`` files in case of :ref:`merge
+* The lines that Git writes to the :file:`*.ipynb` files in case of :ref:`merge
   conflicts <merge-conflicts>` cause the notebooks to no longer be valid JSON
   and therefore cannot be opened by Jupyter: you will then get the *Error
   loading notebook* message when opening them.
