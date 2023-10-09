@@ -8,6 +8,19 @@ Workspaces
 .. figure:: git-workspaces.png
    :alt: Git workspaces
 
+Git manages multiple locations or **workspaces** where files are stored:
+
+- the **local working copy** contains files and folders that can be edited normally
+- the **staging area** contains changes to files that are scheduled for writing into the version history
+- the **local repository** contains the entire history of all files in the project
+- the **remote repository** also contains the entire history, but is stored on a remote server
+- the **stash** contains changes that are temporarily stored somewhere else to move them out of the way
+ 
+Basic Git commands
+------------------
+
+The following basic Git commands move changes between these workspaces.
+
 ``git add``
     adds files from the working directory to the staging area.
 ``git reset HEAD``
