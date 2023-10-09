@@ -7,7 +7,7 @@ Monorepos and large repositories
 
 In a large project, single components of a software may be kept in separate repositories.
 However, sometimes this creates unnecessary complexity, for instance which versions of the components work together.
-In these cases, it can make sense to keep all parts of a project in a monolithic repository 
+In these cases, it can make sense to keep all parts of a project in a monolithic repository
 or *monorepo*.
 
 Definition
