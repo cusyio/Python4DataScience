@@ -1,5 +1,7 @@
 .. SPDX-FileCopyrightText: 2020 Veit Schiele
 ..
+.. SPDX-FileContributor: Modified by Kristian Rother
+..
 .. SPDX-License-Identifier: BSD-3-Clause
 
 Workspaces
@@ -15,7 +17,7 @@ Git manages multiple locations or **workspaces** where files are stored:
 - the **local repository** contains the entire history of all files in the project
 - the **remote repository** also contains the entire history, but is stored on a remote server
 - the **stash** contains changes that are temporarily stored somewhere else to move them out of the way
- 
+
 Basic Git commands
 ------------------
 
