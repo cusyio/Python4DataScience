@@ -35,10 +35,10 @@ Overview
 Example
 -------
 
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="ISO-8859-1" ?>
-    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"></xs:schema>
+.. literalinclude:: books.xml
+   :caption: books.xml
+   :name: books.xml
+   :language: xml
 
 .. seealso::
 
