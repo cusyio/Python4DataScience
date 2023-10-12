@@ -12,11 +12,18 @@ Workspaces
 
 Git manages multiple locations or **workspaces** where files are stored:
 
-- the **local working copy** contains files and folders that can be edited normally
-- the **staging area** contains changes to files that are scheduled for writing into the version history
-- the **local repository** contains the entire history of all files in the project
-- the **remote repository** also contains the entire history, but is stored on a remote server
-- the **stash** contains changes that are temporarily stored somewhere else to move them out of the way
+local working copy
+    contains files and folders that can be edited normally.
+staging area
+    contains changes to files that are scheduled for writing into the version
+    history.
+local repository
+    contains the entire history of all files in the project.
+remote repository
+    also contains the entire history, but is stored on a remote server.
+stash
+    contains changes that are temporarily stored somewhere else to move them out
+    of the way.
 
 Basic Git commands
 ------------------
