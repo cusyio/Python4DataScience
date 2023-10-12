@@ -77,8 +77,8 @@ Overview
 Example
 -------
 
-Response of the :ref:`OSM-Nomination-API
-</data-processing/requests/requests.ipynb#example-osm-nomination-api>`
+Response of the :ref:`OSM-Nominatim-API
+</data-processing/requests/requests.ipynb#example-osm-nominatim-api>`
 
 .. code-block:: javascript
 
