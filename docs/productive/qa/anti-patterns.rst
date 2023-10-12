@@ -101,9 +101,31 @@ can be replaced by
 .. note::
    The `itertools <https://docs.python.org/3/library/itertools.html>`_ of the
    Python standard library are often also good for reducing the nesting depth by
-   creating functions to create iterators from data structures. You can also
-   filter with itertools, for example with `filterfalse
-   <https://docs.python.org/3/library/itertools.html#itertools.filterfalse>`_.
+   creating functions to create iterators from data structures.
+
+.. note::
+   You can also filter with itertools, for example with `filterfalse
+   <https://docs.python.org/3/library/itertools.html#itertools.filterfalse>`_:
+
+   .. code-block::
+
+      >>> from itertools import filterfalse
+      >>> from math import isnan
+      >>> from statistics import median
+      >>> data = [20.7, float('NaN'),19.2, 18.3, float('NaN'), 14.4]
+      >>> sorted(data)
+      [20.7, nan, 14.4, 18.3, 19.2, nan]
+      >>> median(data)
+      16.35
+      >>> sum(map(isnan, data))
+      2
+      >>> clean = list(filterfalse(isnan, data))
+      >>> clean
+      [20.7, 19.2, 18.3, 14.4]
+      >>> sorted(clean)
+      [14.4, 18.3, 19.2, 20.7]
+      >>> median(clean)
+      18.75
 
 Query tools for complex dicts
 -----------------------------
