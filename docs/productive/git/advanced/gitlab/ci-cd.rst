@@ -45,11 +45,11 @@ Continuous Deployment
 Activating CI/CD in a project
 -----------------------------
 
-#. Select menuselection:`Menu --> Projects` in the top bar and find your
+#. Select :menuselection:`Menu --> Projects` in the top bar and find your
    project.
-#. In the left sidebar, select menuselection:`Settings --> General`.
+#. In the left sidebar, select :menuselection:`Settings --> General`.
 #. Expand :guilabel:`Visibility, project features, permissions`.
-#. In the menuselection:`Repository` section, activate the :guilabel:`CI/CD
+#. In the :menuselection:`Repository` section, activate the :guilabel:`CI/CD
    option`.
 #. Select :guilabel:`Save changes`.
 

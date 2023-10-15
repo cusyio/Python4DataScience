@@ -517,8 +517,8 @@ option to determine which pattern is causing a particular file to be ignored:
 
 .. code-block:: console
 
-    $ git check-ignore -v data/iris.csv
-    data/.gitignore:2:!iris.csv	data/iris.csv
+   $ git check-ignore -v data/iris.csv
+   data/.gitignore:2:!iris.csv  data/iris.csv
 
 The output shows
 :samp:`{FILE_CONTAINING_THE_PATTERN}:{LINE_NUMBER_OF_THE_PATTERN}:{PATTERN}

@@ -277,8 +277,8 @@ HERMES
 
 `HERMES <https://project.software-metadata.pub>`_ simplifies the publication of
 research software by continuously retrieving existing metadata in :ref:`cff`,
-:ref:`codemeta` and :doc:Git <../git/index>`. Subsequently, the metadata is also
-compiled appropriately for `InvenioRDM
+:ref:`codemeta` and :doc:`Git <../git/index>`. Subsequently, the metadata is
+also compiled appropriately for `InvenioRDM
 <https://invenio-software.org/products/rdm/>`_ and `Dataverse
 <https://dataverse.org/>`_. Finally, :ref:`CITATION.cff <cff>` and
 :ref:`codemeta.json <codemeta>` are also updated for the publication

@@ -43,7 +43,7 @@ If you haven’t created an IPython configuration file yet, you can do this with
 
     $ ipython profile create [profilename]
 
-If no profile name is given, ``default` is used. The file is usually created in
+If no profile name is given, ``default`` is used. The file is usually created in
 ``~/.ipython/profile_default/`` and named depending on the purpose:
 ``ipython_config.py`` is used for all IPython commands, while
 ``ipython_notebook_config.py`` is only used for commands in IPython notebooks.

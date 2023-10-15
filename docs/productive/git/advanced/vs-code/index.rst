@@ -77,7 +77,7 @@ Git status bar
 
    * the current branch with the possibility to switch to another branch
    * incoming and outgoing commits
-   * the menuselection:`Synchronize Changes` action, which first executes ``git
+   * the :menuselection:`Synchronize Changes` action, which first executes ``git
      pull`` and then ``git push``.
 
 Extensions

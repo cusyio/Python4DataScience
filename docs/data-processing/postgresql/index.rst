@@ -14,7 +14,7 @@ ACID compliant
     the validity of the data even in the event of a fault.
 
 SQL:2011
-    Ttemporal_tables <https://github.com/arkhipov/temporal_tables>`_ also meet
+    `temporal_tables <https://github.com/arkhipov/temporal_tables>`_ also meet
     the SQL standard ISO/IEC 9075:2011, including:
 
     * Time period definitions

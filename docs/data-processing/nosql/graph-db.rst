@@ -67,8 +67,8 @@ Typical graph databases are Neo4j, OrientDB InfiniteGraph and ArangoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Licenses**           | AGPL and commercially          | Apache License 2.0             | commercially                   | Apache License 2.0             |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Data model**         | :term:`Property graph model    | Multi-Model                    | :term:`Property graph model    | Multi-model: documents, graphs |
-|                        | (PGM)`                         |                                | (PGM)`                         | and :term:`Key/value pair`     |
+| **Data model**         | :term:`Property graph model`   | Multi-Model                    | :term:`Property graph model`   | Multi-model: documents, graphs |
+|                        |                                |                                |                                | and :term:`Key/value pair`     |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Query langauge**     | REST, `Cypher`_, `Gremlin`_    | `Extended SQL`_, `Gremlin`_    | Traverser API, PQL             |`ArangoDB Query Language (AQL)`_|
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+

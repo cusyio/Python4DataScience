@@ -243,7 +243,8 @@ Glossary
         database. Read access is therefore also blocked. The data is only
         released again when the changes have been saved.
 
-    Property graph model (PGM)
+    Property graph model
+    PGM
         Nodes and edges consist of objects with properties embedded in them. Not
         only a value (label) is stored in an edge or a node, but a
         :term:`Key/value pair`.

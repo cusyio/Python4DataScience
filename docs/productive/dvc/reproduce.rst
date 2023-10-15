@@ -15,7 +15,7 @@ To reproduce the results of a project, we first clone the data managed with DVC:
     A       data/data.xml
     1 file added
     $ ls data/
-    data.xml	data.xml.dvc
+    data.xml    data.xml.dvc
 
 Then you can easily reproduce the results with `dvc repro
 <https://dvc.org/doc/command-reference/repro>`_:
