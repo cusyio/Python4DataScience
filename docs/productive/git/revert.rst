@@ -80,22 +80,16 @@ Undo changes
 
        :samp:`$ git checkout {FILE}`
 
+Undo commit in the wrong branch
+-------------------------------
+
 If you have accidentally committed to an existing branch instead of creating a
 new branch first, you can change this in the following three steps:
 
-:samp:`$ git branch {NEW_BRANCH}`
-    create a new branch
-:samp:`$ git reset HEAD~ --hard`
-     resets the last commit in your active branch
-:samp:`$ git switch {NEW_BRANCH}`
-    applies the changes to the new branch
-
-The procedure is similar if you have accidentally made a commit in the wrong
-branch:
-
-:samp:`$ git reset HEAD~`
-    resets the last commit, and its changes are now reapplied to the stage area.
-
+#. create a new branch with :samp:`$ git branch {NEW_BRANCH}`
+#. Resets the last commit in your active branch with :samp:`$ git reset HEAD~
+   --hard`
+#. Apply the changes to the new branch with :samp:`$ git switch {NEW_BRANCH}`
 
 .. _git-filter-repo:
 
