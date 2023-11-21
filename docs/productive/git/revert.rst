@@ -12,7 +12,7 @@ Undo changes
 
         $ git reset HEAD~1
 
-    ``--HEAD~1``
+    ``HEAD~1``
         takes back the last commit and its changes are now transferred back to
         the staging area.
 
