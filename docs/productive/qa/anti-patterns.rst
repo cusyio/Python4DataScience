@@ -142,9 +142,9 @@ Reduce code with ``dataclasses`` and ``attrs``
 introduced in Python 3.7 and there is also a backport for Python 3.6. They are
 meant to simplify the definition of classes that are mainly created to store
 values and can then be accessed via attribute search. Some examples are
-``collection.namedtuple``, ``Typing.NamedTuple``, Recipes to Records [#]_ and
-Nested Dicts [#]_. Data classes save you from writing and managing these
-methods.
+:func:`collections.namedtuple`, +:py:class:`typing.NamedTuple`, Recipes to
+Records [#]_ and Nested Dicts [#]_. Data classes save you from writing and
+managing these methods.
 
 .. seealso::
    * :pep:`557` – Data Classes
