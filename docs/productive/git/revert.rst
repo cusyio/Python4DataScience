@@ -5,6 +5,36 @@
 Undo changes
 ============
 
+With Git 2.23, ``git restore`` was added for undoing file changes. Previously,
+this task was performed by ``git reset``, which also has other tasks:
+
+:samp:`$ git restore`
+    changes files in the working directory to a state that was previously known
+    to Git. By default, Git ``HEAD`` checks out the last commit of the current
+    branch.
+
+    .. note::
+
+        In Git < 2.23, ``git restore`` is not yet available. In this case, you
+        still need to use ``git checkout``:
+
+       :samp:`$ git checkout {FILE}`
+
+    :samp:`git restore [-S|--staged] {FILE}`
+        undoes the addition of files. The changes are retained in your workspace
+        so that you can change and add them again if necessary.
+
+        The command is equivalent to :samp:`git reset {PATH}`.
+
+    :samp:`git restore [-SW] {FILE}`
+        undoes the addition and changes in the workspace.
+    :samp:`git restore [-s|--source] {BRANCH} {FILE}`
+        restores a change to the version in the :samp:`{BRANCH}`.
+    :samp:`git restore [-s|--source] @~ {FILE}`
+        restores a change to the previous commit.
+    :samp:`git restore [-p|--patch]`
+        lets you select the changes to be undone individually.
+
 :samp:`$ git reset [--hard|--soft] {TARGET_REFERENCE}`
     resets the history to a previous commit, for example:
 
@@ -69,16 +99,6 @@ Undo changes
     updates and replaces the last commit with a new commit that combines all
     deployed changes with the contents of the previous commit. If nothing is
     provided, only the previous commit message is rewritten.
-:samp:`$ git restore {FILE}`
-    changes files in the working directory to a state previously known to Git.
-    By default, Git ``HEAD`` checks out the last commit of the current branch.
-
-    .. note::
-
-        In Git < 2.23, ``git restore`` is not yet available. In this case you
-        still have to use ``git checkout``:
-
-       :samp:`$ git checkout {FILE}`
 
 Undo commit in the wrong branch
 -------------------------------

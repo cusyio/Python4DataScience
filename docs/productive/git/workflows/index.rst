@@ -26,6 +26,7 @@ In the following, we discuss some of these Git workflows.
    feature-branches
    deploy-branches
    tbd
+   merge-strategies
    monorepos
    split-repos
    ci

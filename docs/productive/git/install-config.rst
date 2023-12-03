@@ -120,15 +120,30 @@ However, aliases can also be specified in the :file:`~/.gitconfig` file:
      * `git_state <https://starship.rs/config/#git-state>`_
      * `git_status-Modul <https://starship.rs/config/#git-status>`_
 
-The editor can also be specified, and whitespace errors can be highlighted in ``git
-diff``:
+The editor can also be specified, for example with:
 
 .. code-block:: ini
 
     [core]
-
         editor = vim
 
+or for Visual Studio Code:
+
+.. code-block:: ini
+
+    [core]
+        editor = code --wait
+
+.. note::
+   On macOS, you must first start Visual Studio Code, then open the command
+   palette with :kbd:`⌘+⇧-p` and finally execute the ``Install 'code' command in
+   PATH``.
+
+The highlighting of space errors in ``git diff`` can also be configured:
+
+.. code-block:: ini
+
+    [core]
         # Highlight whitespace errors in git diff:
         whitespace = tabwidth=4,tab-in-indent,cr-at-eol,trailing-space
 

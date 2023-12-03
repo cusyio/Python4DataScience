@@ -93,7 +93,7 @@ Even if you later find out that a commit that has already been published with
 commit. Rather, you should fix the error that have occurred through further
 commits.
 
-.. warnings::
+.. warning::
 
   Workflows with ``git rebase`` are a reasonable exception to this rule.
 

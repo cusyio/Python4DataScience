@@ -21,25 +21,28 @@ you might want to keep the latest updates to the main branch in your feature
 branch, but keep the history of your branch clean. This would have the advantage
 that you could later do a clean ``git merge`` of your functional branch into the
 main branch. This *clean history* also makes it easier for you to find a
-regression with regressions using :doc:`advanced/bisect`. A more realistic scenario would
-be the following:
+regression with :doc:`advanced/bisect`. A more realistic scenario would be the
+following:
 
 #. An error is found in the main branch in a function that once worked without
    errors.
 #. With the *clean history* of the main branch, :doc:`log` should allow for
    quick conclusions.
-#. If :doc:`log` does not lead to the desired result, :doc:`git bisect <advanced/bisect>`
-   will probably help. In this case, the clean Git history helps ``git bisect``
-   in the search for the regression.
+#. If :doc:`log` does not lead to the desired result, :doc:`git bisect
+   <advanced/bisect>` will probably help. In this case, the clean Git history
+   helps ``git bisect`` in the search for the regression.
 
 .. warning::
-    The published history should only be changed in very rare exceptional cases,
-    as the old commits would be replaced by new ones and it would look as if
-    this part of the project history had suddenly disappeared.
+   The published history should only be changed in very rare exceptional cases,
+   as the old commits would be replaced by new ones and it would look as if
+   this part of the project history had suddenly disappeared.
+
+.. seealso::
+   `git rebase: what can go wrong?
+   <https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/#undoing-a-rebase-is-hard>`_
 
 .. note::
-
-   ``git rebase`` is also covered briefly in :doc:`advanced/jupyter-config`
+   ``git rebase`` is also covered briefly in :doc:`advanced/jupyter-notebooks`
    and :doc:`workflows/feature-branches`.
 
 Rebasing dependent branches with ``–update-refs``

@@ -5,11 +5,19 @@
 Git branches
 ============
 
-:samp:`$ git branch [-a]`
+:samp:`$ git branch [-a] [-l "{GLOB_PATTERN}"]`
     shows all local branches in a repository.
 
     ``-a``
         also shows all removed branches.
+    ``-l``
+        restricts the branches to those that correspond to a specific pattern.
+
+:samp:`$ git branch --sort=-committerdate`
+    sorts the branches according to the commit date.
+
+    You can also use :samp:`git config --global branch.sort -committerdate` to
+    make this setting your default setting.
 
 :samp:`$ git branch [{BRANCH_NAME}]`
     creates a new branch based on the current ``HEAD``.
@@ -53,7 +61,7 @@ Git branches
         .. code-block:: console
 
             $ git checkout main
-            $ git merge '#42'
+            $ git merge 'my-feature'
             Merge made by recursive.
              setup.py |    1 +
              1 files changed, 1 insertions(+), 0 deletions(-)
@@ -71,17 +79,28 @@ Occasionally, however, Git runs into issues with merging, such as:
 
     .. code-block:: console
 
-        $ git merge '#17'
+        $ git merge 'my-feature'
         Auto-merging setup.py
         CONFLICT (content): Merge conflict in setup.py
         Automatic merge failed; fix conflicts and then commit the result.
 
-    .. seealso::
+The history can then look like this, for example:
 
-        * `Git Branching - Basic Branching and Merging
-          <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>`_
-        * `Git Tools - Advanced Merging
-          <https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging>`_
+.. code-block:: console
+
+    *   49770a2 (HEAD -> main) Fix merge conflict with my-feature
+    |\
+    | * 9412467 (my-feature) My feature
+    * | 46ab1a2 Hotfix directly in main
+    |/
+    * 0c65f04 Initial commit
+
+.. seealso::
+
+   * `Git Branching - Basic Branching and Merging
+     <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>`_
+   * `Git Tools - Advanced Merging
+     <https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging>`_
 
 Delete branches
 ---------------
@@ -121,6 +140,9 @@ enabling ``fetch.prune``:
 .. code-block:: console
 
    $ git config --global fetch.prune true
+
+.. seealso::
+   `PRUNING <https://git-scm.com/docs/git-fetch#_pruning>`_
 
 Rename branches
 ---------------
