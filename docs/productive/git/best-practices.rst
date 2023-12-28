@@ -14,63 +14,63 @@ proceed as follows:
 
 .. code-block:: console
 
-  $ pipenv run cookiecutter https://github.com/veit/cookiecutter-namespace-template.git
-  full_name [Veit Schiele]:
-  email [veit@cusy.io]:
-  github_username [veit]:
-  project_name [cusy.example]:
-  …
+   $ pipenv run cookiecutter https://github.com/veit/cookiecutter-namespace-template.git
+   full_name [Veit Schiele]:
+   email [veit@cusy.io]:
+   github_username [veit]:
+   project_name [cusy.example]:
+   …
 
 These initial changes can then be checked in with:
 
 .. code-block:: console
 
-  $ cd cusy.example
-  $ git init
-  $ git add *
-  $ git add .gitignore
-  $ git commit -m 'Initial commit'
-  $ git remote add origin ssh://git@github.com:veit/cusy.example.git
-  $ git push -u origin main
+   $ cd cusy.example
+   $ git init
+   $ git add *
+   $ git add .gitignore
+   $ git commit -m 'Initial commit'
+   $ git remote add origin ssh://git@github.com:veit/cusy.example.git
+   $ git push -u origin main
 
 Exclude undesired files
 -----------------------
 
-Temporary files, jupyter checkpoint folders and builds have no business in a git repository.
-Credentials do not either.
-The ``.gitignore`` file contains a list of paths that git will not add unless you ask for it explicitly.
+Temporary files, jupyter checkpoint folders and builds have no business in a git
+repository. Credentials do not either. The :file:`.gitignore` file contains a
+list of paths that git will not add unless you ask for it explicitly.
 
 You can find a template ``.gitignore`` file for Python projects in the
 `dotfiles <https://github.com/veit/dotfiles>`_ repository.
-The `gitignore.io  <https://gitignore.io/>`_ website contains ``.gitignore`` files for other programming languages.
-The ``.gitignore`` file itself should be checked in, too:
+The `gitignore.io  <https://gitignore.io/>`_ website contains :file:`.gitignore`
+files for other programming languages.
+The :file:`.gitignore` file itself should be checked in, too:
 
 .. code-block:: console
 
-  $ git add .gitignore
-  $ git commit -m 'add .gitignore file'
+   $ git add .gitignore
+   $ git commit -m 'add .gitignore file'
 
-If you have accidentally checked undesired files into your Git
-repository, you can remove them again with:
+If you have accidentally checked undesired files into your Git repository, you
+can remove them again with:
 
 .. code-block:: console
 
-  $ git rm -r .ipynb_checkpoints/
-
+   $ git rm -r .ipynb_checkpoints/
 
 Write a README
 --------------
 
-Each repository should also have a ``README.rst`` file that describes the
+Each repository should also have a :file:`README.rst` file that describes the
 deployment and the basic structure of the code.
 
 Commit often
 ------------
 
 Each completed task and subtask should be immediately followed by a commit.
-Incomplete work also may be stored on git.
-As a rule of thumb you should commit at least daily before leaving work.
-In busy times it is common to commit every 10 minutes.
+Incomplete work also may be stored on git. As a rule of thumb you should commit
+at least daily before leaving work. In busy times it is common to commit every
+10 minutes.
 
 Frequent commits make it easier for you to:
 
@@ -95,7 +95,7 @@ commits.
 
 .. warning::
 
-  Workflows with ``git rebase`` are a reasonable exception to this rule.
+   Workflows with ``git rebase`` are a reasonable exception to this rule.
 
 Choose a Git workflow
 ---------------------
@@ -125,24 +125,24 @@ the commit later.
 
 .. note::
 
-  * `gitmoji.dev <https://gitmoji.dev/>`_
-  * `github.com/carloscuesta/gitmoji
-    <https://github.com/carloscuesta/gitmoji>`_
-  * `github.com/carloscuesta/gitmoji-cli
-    <https://github.com/carloscuesta/gitmoji-cli>`_
-  * `Visual Studio Code Extension
-    <https://marketplace.visualstudio.com/items?itemName=seatonjiang.gitmoji-vscode>`_
+   * `gitmoji.dev <https://gitmoji.dev/>`_
+   * `github.com/carloscuesta/gitmoji
+     <https://github.com/carloscuesta/gitmoji>`_
+   * `github.com/carloscuesta/gitmoji-cli
+     <https://github.com/carloscuesta/gitmoji-cli>`_
+   * `Visual Studio Code Extension
+     <https://marketplace.visualstudio.com/items?itemName=seatonjiang.gitmoji-vscode>`_
 
 GitLab also interprets certain commit messages as links, for example:
 
 .. code-block:: console
 
-  $ git commit -m "Awesome commit message (Fix #21 and close group/otherproject#22)"
+   $ git commit -m "Awesome commit message (Fix #21 and close group/otherproject#22)"
 
-* links to issues: ``#123``
-* links to issues in other projects: ``othergroup/otherproject#123``
-* links to merge requests: ``!123``
-* links to snippets: ``$123``
+* links to issues: :samp:`#{NUMBER}`
+* links to issues in other projects: :samp:`{GROUP/PROJECT}#{NUMBER}`
+* links to merge requests: :samp:`!{NUMBER}`
+* links to snippets: :samp:`${NUMBER}`
 
 There should be at least one ticket for each commit that should provide more
 detailed information about the changes.
@@ -158,8 +158,8 @@ You should perform the following maintenance work regularly:
 Validate the repo
 ~~~~~~~~~~~~~~~~~
 
-The command ``git fsck`` checks whether all objects in the internal datastructure
-of git are consistently connected with each other.
+The command ``git fsck`` checks whether all objects in the internal
+datastructure of git are consistently connected with each other.
 
 Compresses the repo
 ~~~~~~~~~~~~~~~~~~~
@@ -186,8 +186,8 @@ can achieve this with:
 Check forgotten work
 ~~~~~~~~~~~~~~~~~~~~
 
-Display a list of saved stashes with ``git stash list``.
-They can be removed with ``git stash drop``.
+Display a list of saved stashes with ``git stash list``. They can be removed
+with ``git stash drop``.
 
 Check your repositories for unwanted files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -195,10 +195,11 @@ Check your repositories for unwanted files
 With `Gitleaks <https://github.com/zricethezav/gitleaks>`_ you can regularly
 check your repositories for unintentionally saved access data.
 
-You can also run Gitleaks automatically as a GitLab action. To do this, you
-need to include the `Secret-Detection.gitlab-ci.yml
-<https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml>`_ template, for example, in a stage called
-``secrets-detection`` in your ``.gitlab-ci.yml`` file:
+You can also run Gitleaks automatically as a GitLab action. To do this, you need
+to include the `Secret-Detection.gitlab-ci.yml
+<https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml>`_
+template, for example, in a stage called ``secrets-detection`` in your
+:file:`.gitlab-ci.yml` file:
 
 .. code-block:: yaml
 
@@ -211,13 +212,15 @@ need to include the `Secret-Detection.gitlab-ci.yml
         - template: Security/Secret-Detection.gitlab-ci.yml
 
 The template creates secret detection jobs in your CI/CD pipeline and searches
-the source code of your project for secrets. The results are saved as a
-`Secret Detection Report Artefakt
-<https://docs.gitlab.com/ee/ci/yaml/artifacts_reports.html#artifactsreportssecret_detection>`_ that you can download and analyse later.
+the source code of your project for secrets. The results are saved as a `Secret
+Detection Report Artefakt
+<https://docs.gitlab.com/ee/ci/yaml/artifacts_reports.html#artifactsreportssecret_detection>`_
+that you can download and analyse later.
 
 .. seealso::
 
     * `GitLab Secret Detection
       <https://docs.gitlab.com/ee/user/application_security/secret_detection/>`_
 
-With :ref: you can remove unwanted files from your Git history.
+With :ref:`git-filter-repo <git-filter-repo>` you can remove unwanted files from
+your Git history.
