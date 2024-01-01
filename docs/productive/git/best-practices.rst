@@ -147,8 +147,89 @@ GitLab also interprets certain commit messages as links, for example:
 There should be at least one ticket for each commit that should provide more
 detailed information about the changes.
 
-.. note::
-  * `A Note About Git Commit Messages <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`__.
+There should be at least one ticket for each commit, which should contain more
+detailed information about the changes. Alternatively, you can also write
+multi-line commit messages containing this information, for example with:
+
+.. code-block:: console
+
+   $ git commit -m 'Expand section on meaningful commit messages' -m 'Fix the serious problem'
+
+Or, if you just enter :samp:`git commit`, your editor will open, for example
+with the following text:
+
+.. code-block:: ini
+
+   # Please enter the commit message for your changes. Lines starting
+   # with '#' will be ignored, and an empty message aborts the commit.
+   #
+   # On branch main
+
+Git expects you to insert your commit message at the beginning of the file.
+After you have finished editing the file, Git reads its contents and continues.
+It cleans up the file by removing lines commented with ``#`` and subsequent
+empty lines. If the message is empty after cleaning up, Git cancels the commit –
+this is useful if you realise that you have forgotten something. Otherwise, the
+commit is created with the remaining content. However, GitLab uses ``#`` as a
+prefix for the number of an item. This double meaning of ``#`` can lead to
+confusion if you write a commit message that refers to an item:
+
+.. code-block:: ini
+
+   Expand section on meaningful commit messages
+   #21: Add multi-line commit messages
+   # Please enter the commit message for your changes. Lines starting
+   # with '#' will be ignored, and an empty message aborts the commit.
+   #
+   # On branch main
+   # Changes to be committed:
+   #       modified:   productive/git/best-practices.rst
+   #
+
+Git usually removes the line starting with #21 so that the message looks like
+this:
+
+.. code-block:: ini
+
+   Expand section on meaningful commit messages
+
+Avoid this mishap by using an alternative clean-up mode called *Scissors*. You
+can activate it globally with:
+
+.. code-block:: console
+
+   $ git config --global commit.cleanup scissors
+
+Git then starts each new commit message with the *Scissorsr* line:
+
+.. code-block:: ini
+
+   # ------------------------ >8 ------------------------
+   # Do not modify or remove the line above.
+   # Everything below it will be ignored.
+   #
+   # On branch main
+   # ...
+   #
+
+Specify co-authors
+~~~~~~~~~~~~~~~~~~
+
+If you are working on a commit with a team member, it’s good to acknowledge
+their contribution with the ``co-authored-by`` trailer. Trailers are additional
+metadata at the end of the commit message that use a :samp:`{KEY}: {VALUE}`
+syntax and can be repeated to list multiple values:
+
+.. code-block:: ini
+
+   Expand section on meaningful commit messages
+   #21: Add multi-line commit messages
+   co-authored-by: Kristian Rother <kristian.rother@cusy.io>
+   co-authored-by: Frank Hofmann <frank.hofmann@cusy.io>
+
+GitLab analyses the ``co-authored-by`` lines to display all avatars of the
+commit and also to update the profile statistics of the co-authors, :abbr:`etc.
+(et cetera)`.
 
 Maintain your repository regularly
 ----------------------------------
