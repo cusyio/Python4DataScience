@@ -35,18 +35,25 @@ this task was performed by ``git reset``, which also has other tasks:
     :samp:`git restore [-p|--patch]`
         lets you select the changes to be undone individually.
 
-:samp:`$ git reset [--hard|--soft] {TARGET_REFERENCE}`
-    resets the history to a previous commit, for example:
+:samp:`$ git reset [--hard | --mixed | --soft | --keep] {TARGET_REFERENCE}`
+    resets the history to an earlier commit.
+
+    .. warning::
+        The risk with ``reset`` is that work can be lost. Although commits are
+        not deleted immediately, they can become orphaned so that there is no
+        longer a direct path to them. They must then be found and restored
+        promptly with ``git reflog`` as Git usually deletes all orphaned commits
+        after 30 days.
 
     .. code-block:: console
 
-        $ git reset HEAD~1
+        $ git reset @~
 
-    ``HEAD~1``
-        takes back the last commit and its changes are now transferred back to
-        the staging area.
+    ``@~``
+        cancels the last commit, whereby its changes are now transferred back to
+        the stage area.
 
-        If there are changes in the staging area, they are moved to the working
+        If there are changes in the stage area, these are moved to the work
         area, for example:
 
         .. code-block:: console
@@ -65,6 +72,10 @@ this task was performed by ``git reset``, which also has other tasks:
               (use "git add <file>...", to mark the changes for commit)
                 README.rst
 
+    ``@~3``
+        takes back the last three commits.
+    ``'@{u}'``
+        takes the remote version (*upstream*) of the current branch.
     ``--hard``
         discards the changes in the staging and working area as well.
 
@@ -80,15 +91,37 @@ this task was performed by ``git reset``, which also has other tasks:
             On branch main
             nothing to commit (create/copy files and use "git add" to version)
 
+    ``--mixed``
+        resets the stage area, but not the work area, so that the changed files
+        are retained but not marked for commit.
+
+        .. tip::
+           I usually prefer ``--soft`` over ``--mixed``: it keeps the undone
+           changes separate so that any additional changes are explicit. This is
+           especially useful if you have changes to the same file in the stage
+           and workspace.
+
     ``--soft``
         takes back the commits, but leaves the stage and workspace unchanged.
 
-    .. warning::
-        The risk with ``reset`` is that work can be lost. Commits are not
-        deleted immediately, but they can become orphaned so that there is no
-        direct path to them. They must then be found and restored promptly with
-        ``git reflog``, as Git usually deletes all orphaned commits after 30
-        days.
+    ``--keep``
+        resets the stage area and updates the files in the work area that differ
+        between :samp:`COMMIT` and ``HEAD``, but retains those that differ
+        between stage and work area, these are files with changes that have not
+        yet been added. If a file that differs between :samp:`COMMIT` and stage
+        area has unadded changes, ``reset`` will be cancelled.
+
+        You can then deal with your uncommitted changes, perhaps undoing them
+        with ``git restore`` or hiding them with ``git stash``, before trying
+        again.
+
+        .. tip::
+           Many other guides recommend ``--hard`` for this task, probably
+           because this mode has been around for a while. However, this mode is
+           riskier because it irrevocably discards the changes not included in
+           the commit without asking questions. However, I use ``--keep`` and if
+           I want to discard all uncommitted changes before the ``reset``, I use
+           ``git restore -SW``.
 
 :samp:`$ git revert {COMMIT SHA}`
     creates a new commit and reverts the changes of the specified commit so that
