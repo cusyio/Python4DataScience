@@ -133,15 +133,44 @@ this task was performed by ``git reset``, which also has other tasks:
     deployed changes with the contents of the previous commit. If nothing is
     provided, only the previous commit message is rewritten.
 
+Reference for common reset commands
+-----------------------------------
+
+Undo all local changes to a branch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: console
+
+    $ git reset --keep '@{u}'
+
+Undo all commits in the current branch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`git merge-base <https://git-scm.com/docs/git-merge-base>`_ selects the commit
+where two branches have split. Pass ``@`` and ``main`` to select the commit
+where the current branch is forked from ``main``. Reset it to undo all commits
+on the local branch with:
+
+.. code-block:: console
+
+    $ git reset --soft $(git merge-base @ main)
+
+Undo all changes in the current branch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: console
+
+    $ git reset --keep main
+
 Undo commit in the wrong branch
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have accidentally committed to an existing branch instead of creating a
 new branch first, you can change this in the following three steps:
 
 #. create a new branch with :samp:`$ git branch {NEW_BRANCH}`
-#. Resets the last commit in your active branch with :samp:`$ git reset HEAD~
-   --hard`
+#. Resets the last commit in your active branch with :samp:`$ git reset --keep
+   @~`
 #. Apply the changes to the new branch with :samp:`$ git switch {NEW_BRANCH}`
 
 .. _git-filter-repo:
