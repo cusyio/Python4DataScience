@@ -102,6 +102,90 @@ The history can then look like this, for example:
    * `Git Tools - Advanced Merging
      <https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging>`_
 
+``rerere`` to reuse recorded conflict resolutions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:abbr:`rerere (reuse recorded resolutions)` makes it easier for you to have to
+resolve the same merge conflicts again and again. This can happen, for example,
+if you merge a commit into several branches or if you have to rebase a branch
+repeatedly. Resolving merge conflicts requires concentration and energy, and it
+is a waste to resolve the same conflict again and again. `git rerere
+<https://git-scm.com/docs/git-rerere>`_ is rarely called directly, however, but
+is usually activated globally. It is then automatically used by ``git merge``,
+``git rebase`` and ``git commit``. Its most important effect is that it adds
+some messages to the output of these commands. You can activate it with:
+
+.. code-block:: console
+
+   $ git config --global rerere.enabled true
+
+Let’s look at an example of ``git rerere`` in action. Suppose you attempt a
+merge and run into conflicts:
+
+.. code-block:: console
+
+   % git merge rerere-example
+   Auto-merging README.md
+   CONFLICT (content): Merge conflict in README.md
+   Recorded preimage for 'README.md'
+   Automatic merge failed; fix conflicts and then commit the result.
+
+``git rerere`` wrote the third line, ``Preimage for 'README.md'``, meaning that
+the conflict was recorded before we fixed it. If we fix the conflict now, we can
+proceed with the merge, in our example with:
+
+.. code-block:: console
+
+   $ git add README.md
+   $ git merge --continue
+   Recorded resolution for 'README.md'.
+   [main 5935d00] Merge branch 'rerere-example'
+
+``git rerere`` now reports ``conflict resolution recorded for 'README.md'.``,
+meaning that it has saved how we resolved the conflicts in this file. Suppose
+you undo this merge because you realise that it was not finished:
+
+.. code-block:: console
+
+    $ git reset --keep @~
+
+Later you repeat the merging process:
+
+.. code-block:: console
+
+   $ git merge rerere-example
+   Auto-merging README.md
+   CONFLICT (content): Merge conflict in README.md
+   Resolved 'README.md' using previous resolution.
+   Automatic merge failed; fix conflicts and then commit the result.
+   When finished, apply stashed changes with `git stash pop`
+
+``git rerere`` solved the conflict using the previous solution, which means it
+reused your previous merge. Now check that the file is correct and then
+continue:
+
+.. code-block:: console
+
+   $ git add README.md
+   $ git merge --continue
+   [main c922b21] Merge branch 'rerere-example'
+
+``git rerere`` saves its data within the :file:`.git` directory of your Git
+repository in an :file:`rr-cache` directory. You should note two things here:
+
+#. The rerere cache is local. It is not shared when you perform a ``git push``,
+   so your team colleagues cannot reuse the merges you have performed.
+#. Git’s automatic garbage collection deletes entries from the :file:`rr-cache`.
+   It is controlled by two configuration options:
+
+   `gc.rerereResolved <https://git-scm.com/docs/git-config#Documentation/git-config.txt-gcrerereResolved>`_
+       determines how long entries for resolved conflicts are kept. The default
+       value is 60 days. And with git ``config gc.rerereResolved`` you can
+       change the default values for your project.
+   `gc.rerereUnresolved <https://git-scm.com/docs/git-config#Documentation/git-config.txt-gcrerereUnresolved>`_
+       determines how long entries for unresolved conflicts are kept. The
+       default value is 15 days.
+
 Delete branches
 ---------------
 
@@ -124,6 +208,9 @@ configuration:
 
 :samp:`$ git remote add origin https://ce.cusy.io/veit/{NEWREPO}.git`
 
+Add remote branches
+~~~~~~~~~~~~~~~~~~~
+
 Now the branch can also be added to the remote repository:
 
 :samp:`$ git push origin [{BRANCH_NAME}]`
@@ -131,7 +218,22 @@ Now the branch can also be added to the remote repository:
 With ``git branch -d`` you delete the branches locally only. To delete them on
 the remote server as well, you can type the following:
 
-:samp:`$ git push origin --delete [{BRANCH_NAME}]`
+:samp:`$ git push --set-upstream origin [{BRANCH_NAME}]`
+
+If you want to add all branches of a local repository to the remote repo, you
+can do this with:
+
+:samp:`$ git push --set-upstream origin --all`
+
+You can configure the following so that this happens automatically for branches
+without a tracking upstream:
+
+.. code-block:: console
+
+   $ git config --global push.autoSetupRemote true
+
+Delete remote branches
+~~~~~~~~~~~~~~~~~~~~~~
 
 To remove remote branches locally, you can run ``git fetch`` with the
 ``--prune`` or ``-p`` option. You can also make this the default behaviour by

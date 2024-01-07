@@ -69,8 +69,12 @@ option is always specified.
    <https://lore.kernel.org/git/3ec2cc922f971af4e4a558188cf139cc0c0150d6.1657631226.git.gitgitgadget@gmail.com/>`_
 
 
-Delete commits with rebase
---------------------------
+Delete commits with ``git rebase``
+----------------------------------
+
+This can also be easily realised with ``git rebase``, whereby you do not have to
+delete the line in your editor but replace the line ``pick`` with ``r``
+(*reword*).
 
 .. code-block:: console
 
@@ -99,3 +103,69 @@ Modify a commit message with rebase
 
 This can also be easily with ``rebase``  by not deleting the line in your
 editor but replace ``pick`` with  ``r`` (*reword*).
+
+``rebase`` as standard ``git pull`` strategy
+--------------------------------------------
+
+Normally, ``git pull`` fetches and merges new remote commits without any
+problems. Usually only new commits from the remote branch are added, a so-called
+fast-forward merge. However, if both the local and remote branches have new
+commits, the branches will diverge. You must then somehow harmonise the
+different histories. By default, as of Git 2.33.1, any discrepancy will cause
+``git pull`` to stop and display the following message:
+
+.. code-block:: console
+
+   $ git pull
+   hint: You have divergent branches and need to specify how to reconcile them.
+   hint: You can do so by running one of the following commands sometime before
+   hint: your next pull:
+   hint:
+   hint:   git config pull.rebase false  # merge
+   hint:   git config pull.rebase true   # rebase
+   hint:   git config pull.ff only       # fast-forward only
+   hint:
+   hint: You can replace "git config" with "git config --global" to set a default
+   hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+   hint: or --ff-only on the command line to override the configured default per
+   hint: invocation.
+   fatal: Need to specify how to reconcile divergent branches.
+
+The notes allow three options:
+
+``git config pull.rebase false``
+    merges the local and remote commits. Before Git 2.33.1, Git always used this
+    merge.
+``git config pull.rebase true``
+    The local commits are transferred to the remote commits.
+``git config pull.ff only``
+    always leads to an error with divergent branches. You can then decide on a
+    case-by-case basis with ``--no-rebase`` (which means ``merge``) or
+    ``--rebase`` whether you want to merge or rebase.
+
+.. tip::
+   I recommend ``git config pull.rebase true``, as merging can be confusing.
+   Rebasing the local commits to the remote ones makes the story linear, which
+   is more understandable.
+
+Make ``rebase`` part of your standard strategy:
+
+.. code-block:: console
+
+   $ git config --global pull.rebase interactive
+
+If ``git pull`` then encounters divergent local and remote branches, it will
+perform a ``rebase``:
+
+.. code-block:: console
+
+   $ git pull
+   Auto-merging README.md
+   CONFLICT (content): Merge conflict in README.md
+   error: could not apply e50dfe5...
+   hint: Resolve all conflicts manually, mark them as resolved with
+   hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+   hint: You can instead skip this commit: run "git rebase --skip".
+   hint: To abort and get back to the state before "git rebase", run "git rebase --
+   ,→abort".
+   Could not apply e50dfe5...

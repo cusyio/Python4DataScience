@@ -82,6 +82,25 @@ no further history of commits.
     :samp:`git push` command. Others get the tags on :samp:`git clone` or
     :samp:`git pull` of the repo.
 
+    With ``git push --follow-tags`` you can also share the corresponding
+    annotated tags with a commit.
+
+    .. note::
+       ``--follow-tags`` works for annotated tags, not for lightweight tags.
+
+    If you want to use ``--follow-tags`` for all future pushes, you can
+    configure this with
+
+    .. code-block:: console
+
+       $ git config --global push.followTags true
+
+    .. seealso::
+       * `git push --follow-tags
+         <https://git-scm.com/docs/git-push#Documentation/git-push.txt---follow-tags>`_
+       * `git config push.followTags
+         <https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushfollowTags>`_
+
 :samp:`git checkout {TAGNAME}`
     switches to the state of the repo with this tag and detaches ``HEAD``. This
     means that any changes made now will not update the tag, but will end up in
