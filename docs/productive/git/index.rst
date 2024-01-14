@@ -93,8 +93,8 @@ the other hand :doc:`best practices <best-practices>` and typical
     log
     tag
     branch
-    revert
     rebase
+    undo
     best-practices
     workflows/index
     advanced/index

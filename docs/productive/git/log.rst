@@ -141,6 +141,8 @@ View
            ``--all`` shows the log for all branches; :samp:`{FEATURE}` only
            shows the commits of this branch.
 
+.. _reflog:
+
 ``reflog``
 ----------
 
@@ -152,6 +154,10 @@ cetera)` You can use it to find all unreachable commits, even those on deleted
 branches. This allows you to undo many otherwise destructive actions.
 
 Let’s look at the basics of using reflog and some typical use cases.
+
+.. warning::
+   The reflog is only part of your local repository. If you delete a repository
+   and clone it again, the new clone will have a fresh, empty reflog.
 
 Show the reflog for ``HEAD``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -183,7 +189,7 @@ Show the reflog for ``HEAD``
   my-feature)``.
 * The names ``HEAD@\{N}`` are alternative references for the specified commits.
   ``N`` is the number of returning reflog entries.
-*  remaining text describes the change. Above you can see several types of
+* remaining text describes the change. Above you can see several types of
   entries:
 
   * :samp:`commit: {MESSAGE}` for commits
@@ -250,111 +256,6 @@ without case-sensitivity:
     12bc4d4 (HEAD -> main, my-feature-branch) HEAD@{2}: commit (amend): Add my feature and more
     982d93a HEAD@{3}: commit: Add my feature
 
-Restoring a deleted branch
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Assuming you have accidentally deleted an unmerged branch, you can recreate the
-branch with the corresponding SHA:
-
-.. code-block:: console
-
-   $ git branch -D new-feature
-   Branch new-feature entfernt (war d53e431).
-
-The output contains the SHA commit to which the branch pointed. You can recreate
-the branch with this SHA:
-
-.. code-block:: console
-
-   $ git branch new-feature d53e431
-
-But what if you have deleted the branch and the corresponding terminal history
-has been lost? To find the SHA again, you can pass the reflog output to
-``grep``:
-
-.. code-block:: console
-
-   $ git reflog | grep -A 1 new-feature
-   12bc4d4 HEAD@{0}: checkout: moving from new-feature to main
-   d53e431 HEAD@{1}: commit: Add new feature
-   12bc4d4 HEAD@{2}: checkout: moving from main to new-feature
-   12bc4d4 HEAD@{3}: merge my-feature: Fast-forward
-
-``-A 1`` displays an additional line after each hit. The output shows several
-reflog entries that refer to the branch. The first entry shows a change from
-``new-feature`` to ``main``, with the commit SHA on ``main``. The entry before
-it is the last change to ``new-feature`` with the SHA to restore:
-
-.. code-block:: console
-
-   $ git branch triceratops-enclosure 43f66f9
-
-By default, you can save such a branch within 30 days after deleting the branch,
-as ``gc.reflogExpireUnreachable`` is usually set to do so.
-
-Undoing a commit change
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Let’s return to the introductory example. Imagine you have made a commit and
-changed it later. Then you realise that the change should be undone. How can you
-proceed? If you can still see the original Git commit output in your terminal
-history, you can retrieve the SHA from there and undo the change. But if this is
-no longer possible, it’s time for the reflog. Check the reflog for the branch:
-
-.. code-block:: console
-
-   $ git reflog my-feature-branch
-   12bc4d4 (HEAD -> main, my-feature-branch) my-feature-branch@{0}: commit (amend): Add my feature and more
-   982d93a my-feature-branch@{1}: commit: Add my feature
-   900844a my-feature-branch@{2}: branch: Created from HEAD
-
-The first entry, ``commit (amend)``, shows the creation of the amended commit.
-The second entry shows the original commit, which we now want to return to with
-a hard reset:
-
-.. code-block:: console
-
-   $ git reset --hard 982d93a
-
-You may then want to restore the content of the changed commit in order to
-correct it and change it again. Do this with git ``restore`` from the changed
-commit SHA, which is at the top of the previous ``reflog`` output:
-
-.. code-block:: console
-
-   $ git restore -s 12bc4d4
-
-Undoing a faulty rebase
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Imagine you are working on a ``new-feature`` branch with three commits, of which
-you want to undo the middle one:
-
-.. code-block:: console
-
-   $ git rebase -i main
-
-.. code-block:: diff
-
-    pick d53e431 Add new feature
-   -pick 329271a More performant implementation for the new feature
-   -pick 1d6c477 Add API docs
-
-However, you have now inadvertently deleted the last commit. If you can no
-longer see the SHA value in the terminal history, you can pass the ``reflog``
-output to ``grep`` again:
-
-.. code-block:: console
-
-   $ git reflog| grep 'API docs'
-   1d6c477 HEAD@{2}: commit: Add API docs
-
-With this SHA, the commit can now be restored with :doc:`advanced/cherry-pick`:
-
-.. code-block:: console
-
-   $ git cherry-pick 1d6c477
-
 Note the expiry of entries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -370,7 +271,3 @@ controlled by two ``gc.*`` options:
 
 You can increase these options to a longer time frame, but this is rarely
 useful.
-
-.. warning::
-   The reflog is only part of your local repository. If you delete a repository
-   and clone it again, the new clone will have a fresh, empty reflog.
