@@ -39,6 +39,16 @@ Work on a project
 ``$ git status``
     shows the status of the current branch in the working directory with new,
     changed and files already marked for commit.
+
+    ``-v``
+        shows the changes in the stage area as a diff.
+    ``-vv``
+        also shows the changes in the working directory as a second diff.
+
+    .. seealso::
+       `git status -v
+       <https://git-scm.com/docs/git-status#Documentation/git-status.txt--v>`_
+
 :samp:`$ git add {FILE}`
     adds a file to the stage area.
 

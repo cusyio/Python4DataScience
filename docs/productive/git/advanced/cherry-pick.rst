@@ -39,3 +39,11 @@ change was supposed to be made and then cherry-pick the commit to that branch.
 However, cherry-picking usually results in duplicate commits, and in many cases
 we prefer to use git merges. Nevertheless, ``git cherry-pick`` can be very
 suitable for some scenarios, for example :ref:`release-branches` workflows.
+
+``git range-diff``
+------------------
+
+`git range-diff <https://git-scm.com/docs/git-range-diff>`_ shows the difference
+between two commit ranges, that is, which commits between these ranges are the
+same or have changed. This command can help, for example, when checking which
+commits were applied to which branches with ``git cherry-pick``.
