@@ -116,5 +116,5 @@ linked to :file:`*.docx` files:
 The same procedure can be used to obtain useful diffs from other binaries, for
 example ``*.zip``, ``*.jar`` and other archives with ``unzip`` or for changes in
 the meta information of images with ``exiv2``. There are also conversion tools
-for converting ``*.odt``, ``.doc`` and other document formats into plain text.
+for converting ``*.odt``, ``*.doc`` and other document formats into plain text.
 For binary files for which there is no converter, strings are often sufficient.
