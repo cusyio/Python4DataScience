@@ -222,6 +222,13 @@ automated `static code analyses
 :doc:`qa/pysa`, :doc:`qa/wily` and :ref:`code reviews <code_reviews>` via
 :doc:`merge requests <git/advanced/gitlab/merge-requests>`.
 
+.. seealso::
+   * `Reproducible Builds <https://reproducible-builds.org>`_
+   * `Python 3.12.0 from a supply chain security perspective
+     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-13>`_
+   * `Defending against the PyTorch supply chain attack PoC
+     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-25>`_
+
 .. _code_reviews:
 
 Are code reviews performed?
