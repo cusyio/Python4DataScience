@@ -43,6 +43,8 @@ Owners
     essentially administer the groups and workflows. They can grant access to
     groups and are allowed to delete.
 
+.. _protected_branches:
+
 Protected branches
 ------------------
 
