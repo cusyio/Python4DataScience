@@ -142,22 +142,18 @@ of dicts in Python.
 Reduce code with ``dataclasses`` and ``attrs``
 ----------------------------------------------
 
-:doc:`python-basics:dataclasses` are intended to simplify the definition of classes that
-are mainly created to store values and can then be accessed via attribute search. Some
-examples are :func:`collections.namedtuple`, :py:class:`typing.NamedTuple`, recipes for
-records [#]_ and nested dicts [#]_. Data classes save you from having to write and manage
-these methods.
+:doc:`python-basics:dataclasses`
+    are intended to simplify the definition of classes that are mainly created to store
+    values and can then be accessed via attribute search. Some examples are
+    :func:`collections.namedtuple`, :py:class:`typing.NamedTuple`, recipes for `records
+    <https://web.archive.org/web/20170904185553/http://code.activestate.com/recipes/576555-records/>`_
+    and `nested dicts
+    <https://web.archive.org/web/20100604034714/http://code.activestate.com/recipes/576586-dot-style-nested-lookups-over-dictionary-based-dat>`_.
+    Data classes save you from having to write and manage these methods.
 
-.. seealso::
-   * :pep:`557` – Data Classes
+    .. seealso::
+       * :pep:`557` – Data Classes
 
-`attrs <https://www.attrs.org/en/stable/>`_  is a Python package that has been
-around much longer than ``dataclasses``, is more comprehensive and can also be
-used with older versions of Python.
-
-----
-
-.. [#] `Records (Python recipe)
-       <https://web.archive.org/web/20170904185553/http://code.activestate.com/recipes/576555-records/>`_
-.. [#] `Dot-style nested lookups over dictionary based data structures (Python recipe)
-       <https://web.archive.org/web/20100604034714/http://code.activestate.com/recipes/576586-dot-style-nested-lookups-over-dictionary-based-dat>`_
+`attrs <https://www.attrs.org/en/stable/>`_
+    is a Python package that has been around much longer than ``dataclasses``, is more
+    comprehensive and can also be used with older versions of Python.
