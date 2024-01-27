@@ -142,13 +142,11 @@ of dicts in Python.
 Reduce code with ``dataclasses`` and ``attrs``
 ----------------------------------------------
 
-`dataclasses <https://docs.python.org/3/library/dataclasses.html>`_ were
-introduced in Python 3.7 and there is also a backport for Python 3.6. They are
-meant to simplify the definition of classes that are mainly created to store
-values and can then be accessed via attribute search. Some examples are
-:func:`collections.namedtuple`, +:py:class:`typing.NamedTuple`, Recipes to
-Records [#]_ and Nested Dicts [#]_. Data classes save you from writing and
-managing these methods.
+:doc:`python-basics:dataclasses` are intended to simplify the definition of classes that
+are mainly created to store values and can then be accessed via attribute search. Some
+examples are :func:`collections.namedtuple`, :py:class:`typing.NamedTuple`, recipes for
+records [#]_ and nested dicts [#]_. Data classes save you from having to write and manage
+these methods.
 
 .. seealso::
    * :pep:`557` – Data Classes
