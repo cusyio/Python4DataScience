@@ -302,7 +302,7 @@ Account = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _ACCOUNT,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:Account)
     },
 )
@@ -313,7 +313,7 @@ CreateAccountRequest = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _CREATEACCOUNTREQUEST,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:CreateAccountRequest)
     },
 )
@@ -324,7 +324,7 @@ CreateAccountResult = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _CREATEACCOUNTRESULT,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:CreateAccountResult)
     },
 )
@@ -335,7 +335,7 @@ GetAccountsRequest = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _GETACCOUNTSREQUEST,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:GetAccountsRequest)
     },
 )
@@ -346,7 +346,7 @@ GetAccountsResult = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _GETACCOUNTSRESULT,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:GetAccountsResult)
     },
 )
