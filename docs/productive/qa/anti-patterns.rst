@@ -10,6 +10,25 @@ design of a programme. For example, the overuse of isinstance checks against
 concrete classes is a code smell, as it makes the programme more difficult to
 extend to deal with new types in the future.
 
+Recognising code smells
+-----------------------
+
+One way to better recognise code smells is to describe the characteristics of
+code. Make a note of the things you recognise; add any patterns you see, like or
+don’t understand. The following questions may prompt you to think further:
+
+* Are there methods that have the same form?
+* Are there methods that have an argument with the same name?
+* Do arguments with the same name always mean the same thing?
+* If you want to add a private method to a class, where would it go?
+* If you were to split the class into two parts, where would the dividing line
+  be?
+* Do the tests in the conditions have anything in common?
+* How many branches do the conditions have?
+* Do the methods contain any code other than the condition?
+* Does each method depend more on the argument passed or on the class as a
+  whole?
+
 Typical code smells in Python
 -----------------------------
 
