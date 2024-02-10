@@ -5,6 +5,11 @@
 Code-Smells and Anti-Patterns
 =============================
 
+Code smells are coding patterns that indicate that something is wrong with the
+design of a programme. For example, the overuse of isinstance checks against
+concrete classes is a code smell, as it makes the programme more difficult to
+extend to deal with new types in the future.
+
 .. seealso::
    * `Effective Python <https://effectivepython.com/>`_
      by Brett Slatkin
