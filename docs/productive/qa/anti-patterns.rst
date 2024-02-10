@@ -29,6 +29,115 @@ don’t understand. The following questions may prompt you to think further:
 * Does each method depend more on the argument passed or on the class as a
   whole?
 
+SOLID principles
+----------------
+
+`SOLID
+<https://en.wikipedia.org/wiki/SOLID>`_ is an acronym for:
+
+S – :ref:`single-responsibility`
+    The methods of a class should be orientated towards a single purpose.
+O – :ref:`open-closed`
+    Objects should be open for extensions but closed for changes.
+L – :ref:`liskov-substitution`
+    Subclasses should be substitutable by their superclasses.
+I – :ref:`interface-segregation`
+    Objects should not depend on methods that they do not use.
+D – :ref:`dependency-inversion`
+    Abstractions should not depend on details.
+
+.. _open-closed:
+
+Open-closed principle
+---------------------
+
+The decision as to whether refactoring should be carried out should depend on
+whether your code is already open to new requirements without having to change
+existing code. Refactorings should not be mixed with the addition of new
+functions, but both processes should be separated from each other. If you are
+confronted with a new requirement, first reorganise the existing code so that it
+is open for the new function and only add the new code once this has been
+completed.
+
+    Refactoring is the process of changing a software system in such a way that
+    it does not alter the external behavior of the code yet improves its
+    internal structure.
+
+– `Martin Fowler: Refactoring
+<https://www.mitp.de/IT-WEB/Software-Entwicklung/Refactoring.html>`_
+
+.. note::
+   Safe refactoring relies on :doc:`tests <python-basics:test/index>`. If you
+   really refactor the code without changing the behaviour, the existing tests
+   should continue to succeed at every step. The tests are a safety net that
+   justifies confidence in the new arrangement of the code. If they fail,
+
+   * you have inadvertently broken the code,
+   * or the existing tests are flawed.
+
+.. _single-responsibility:
+
+Single responsibility principle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `single responsibility principle
+<https://en.wikipedia.org/wiki/Single_responsibility_principle>`_ states that
+each class should only fulfil one task:
+
+    There should never be more than one reason for a class to change.
+
+– `Robert C. Martin: SRP: The Single Responsibility Principle
+<https://web.archive.org/web/20140407020253/http://www.objectmentor.com/resources/articles/srp.pdf>`_
+
+.. _liskov-substitution:
+
+Liskov’s principle of substitution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `Liskov substitution principle
+<https://en.wikipedia.org/wiki/Liskov_substitution_principle>`_ states that
+subclasses must be substitutable by their superclasses. The Liskov substitution
+principle also applies to :ref:`python-basics:duck-typing`: every object that
+claims to be a duck must fully implement the duck’s API. Duck types should be
+interchangeable. Applying logic across different data types of objects is called
+`polymorphism <https://en.wikipedia.org/wiki/Polymorphism_(computer_science)>`_.
+
+.. _interface-segregation:
+
+Interface segregation principle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+the `interface segregation principle
+<https://en.wikipedia.org/wiki/Interface_segregation_principle>`_ applies the
+:ref:`single-responsibility` to interfaces in order to isolate a specific
+behaviour. If a change to a part of your code is required, extracting an object
+that plays a role opens up the possibility of supporting the new behaviour
+without having to change the existing code. This is preferable to coded
+concretisations.
+
+In this context, `Demeter’s law <https://en.wikipedia.org/wiki/Law_of_Demeter>`_
+is also interesting, which states that objects should only communicate with
+objects in their immediate environment. This effectively restricts the list of
+other objects to which an object can send a message and reduces the coupling
+between objects: an object can only talk to its neighbours, but not to the
+neighbours of its neighbours; objects can only send messages to those directly
+involved.
+
+.. _dependency-inversion:
+
+Dependency inversion principle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `Dependency inversion principle
+<https://en.wikipedia.org/wiki/Dependency_inversion_principle>`_ can be
+defined as
+
+    Abstractions should not depend upon details. Details should depend upon
+    abstractions.
+
+– `Robert C. Martin: The Dependency Inversion Principle
+<https://www.cs.utexas.edu/users/downing/papers/DIP-1996.pdf>`_
+
 Typical code smells in Python
 -----------------------------
 
