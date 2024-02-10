@@ -10,6 +10,9 @@ design of a programme. For example, the overuse of isinstance checks against
 concrete classes is a code smell, as it makes the programme more difficult to
 extend to deal with new types in the future.
 
+Typical code smells in Python
+-----------------------------
+
 .. seealso::
    * `Effective Python <https://effectivepython.com/>`_
      by Brett Slatkin
@@ -18,7 +21,7 @@ extend to deal with new types in the future.
      by Brandon Rhodes
 
 Functions that should be objects
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In addition to object-oriented programming, Python also supports procedural
 programming using functions and inheritable classes. Both paradigms should,
@@ -51,7 +54,7 @@ method, and ``get_thumbnail()`` a property:
             return thumb
 
 Objects that should be functions
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes, however, object-oriented code should also be better broken down into
 functions, for example if a class contains only one other method apart from
@@ -78,7 +81,7 @@ functions, for example if a class contains only one other method apart from
    with only one public method from line 60.
 
 Nested code
------------
+~~~~~~~~~~~
 
     *«Flat is better than nested.»*
 
@@ -137,7 +140,7 @@ can be replaced by
       18.75
 
 Query tools for complex dicts
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `JMESPath <https://jmespath.org/>`_, `glom <https://github.com/mahmoud/glom>`_,
 `asq <https://asq.readthedocs.io/en/latest/>`_ and `flupy
@@ -145,7 +148,7 @@ Query tools for complex dicts
 of dicts in Python.
 
 Reduce code with ``dataclasses`` and ``attrs``
-----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :doc:`python-basics:dataclasses`
     are intended to simplify the definition of classes that are mainly created to store
