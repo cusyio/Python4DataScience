@@ -1,4 +1,5 @@
 """Module containing bug report helper(s)."""
+
 from __future__ import print_function
 
 import json
