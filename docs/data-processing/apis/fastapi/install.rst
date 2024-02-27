@@ -46,7 +46,7 @@ Pydantic can use the optional dependencies
 
 Starlette can use the optional dependencies
 
-:doc:`requests <../../requests/index>`
+:doc:`httpx <../../httpx/index>`
     if you want to use the ``TestClient``.
 `aiofiles <https://github.com/Tinche/aiofiles>`_
     if you want to use ``FileResponse`` or ``StaticFiles``.

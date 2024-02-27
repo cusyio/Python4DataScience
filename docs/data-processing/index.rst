@@ -14,7 +14,7 @@ introduce you to different :doc:`serialisation formats <serialisation-formats/in
 three tools in more detail that make data accessible:
 
 * :doc:`/data-processing/pandas-io`
-* :doc:`requests/index`
+* :doc:`httpx/index`
 * :doc:`intake/index`
 
 .. seealso::
@@ -56,7 +56,7 @@ Python packages to :doc:`clean up and validate data <../clean-prep/index>`.
     pandas-io
     serialisation-formats/index
     intake/index
-    requests/index
+    httpx/index
     remote-file-systems
     geodata
     postgresql/index
