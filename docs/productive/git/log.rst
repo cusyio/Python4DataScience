@@ -37,7 +37,7 @@ Filter and sort
 
        :samp:`git log --author="{VEIT\|VSC}"`
 
-   :samp:`git log --grep = "{TERM}" [-i]`
+   :samp:`git log --grep="{TERM}" [-i]`
        filters the commit history for regular expressions in the commit message.
 
        ``-i``
