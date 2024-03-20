@@ -284,13 +284,8 @@ template, for example, in a stage called ``secrets-detection`` in your
 
 .. code-block:: yaml
 
-    stages:
-      - secrets-detection
-
-    gitleaks:
-      stage: secrets-detection
-      include:
-        - template: Security/Secret-Detection.gitlab-ci.yml
+    include:
+      - template: Security/Secret-Detection.gitlab-ci.yml
 
 The template creates secret detection jobs in your CI/CD pipeline and searches
 the source code of your project for secrets. The results are saved as a `Secret
