@@ -20,7 +20,7 @@ You can get an overview of public repositories with research data e.g. in
 * `IATI Registry <https://www.iatiregistry.org/>`_
 * `World Bank Open Data <https://data.worldbank.org/>`_
 * `Open Data Inception <https://opendatainception.io/>`_
-* `EU Open Data Portal Data <http://open-data.europa.eu/en/data/>`_
+* `European data <https://data.europa.eu/en>`_
 * `GovData.de <https://www.govdata.de/>`_
 * `US Census Bureau <https://www.census.gov/data.html>`_
 * `data.gov <https://www.data.gov/>`_
@@ -30,7 +30,7 @@ You can get an overview of public repositories with research data e.g. in
 * `Yelp Open Dataset <https://www.yelp.com/dataset>`_
 * `Kaggle Datasets <https://www.kaggle.com/datasets>`_
 * `OpenDataMonitor
-  <https://opendatamonitor.eu/frontend/web/index.php?r=dashboard%2Findex>`_
+  <https://project.opendatamonitor.eu>`_
 * `Open Data Impact Map <https://opendataimpactmap.org/>`_
 * `CKAN <https://ckan.org/>`_
 * `UC Irvine Machine Learning Repository

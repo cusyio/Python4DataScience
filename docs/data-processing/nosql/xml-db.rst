@@ -28,7 +28,7 @@ Examples of XML database systems are eXist and MonetDB.
 +------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------+
 | **Licenses**           | LGPL-2.1 License                               | Mozilla Public License 2.0                     | BSD-3-Clause License                           |
 +------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------+
-| **Data model**         | XML                                            | XML, column-oriented data structure            | XML, `geographic data`_                        |
+| **Data model**         | XML                                            | XML, column-oriented data structure            | XML                                            |
 +------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------+
 | **Query langauge**     | :term:`XQuery`, :term:`XPATH`                  | SQL                                            | :term:`XQuery`, :term:`XPATH`                  |
 +------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------+
@@ -51,4 +51,3 @@ Examples of XML database systems are eXist and MonetDB.
 .. _`exist-db.org/exist/apps/doc/documentation`: https://exist-db.org/exist/apps/doc/documentation
 .. _`www.monetdb.org/Documentation`: https://www.monetdb.org/Documentation
 .. _`docs.basex.org`: https://docs.basex.org/wiki/Main_Page
-.. _`geographic data`: https://docs.basex.org/wiki/Geo_Module

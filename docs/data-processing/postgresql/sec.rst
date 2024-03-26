@@ -35,7 +35,7 @@ Save passwords
 
 Passwords should never be in plain text, e.g. also not be saved in an ``.env``
 file. When saving and transmitting passwords, this should always be `salted
-<https://en.wikipedia.org/wiki/Salt_(cryptography>`_. For PostgreSQL there is
+<https://en.wikipedia.org/wiki/Salt_(cryptography)>`_. For PostgreSQL there is
 the extension `pgcrypto
 <https://www.postgresql.org/docs/current/pgcrypto.html>`_, which can be
 easily activated with

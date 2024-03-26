@@ -52,7 +52,7 @@ Starlette can use the optional dependencies
     if you want to use ``FileResponse`` or ``StaticFiles``.
 `jinja2 <https://jinja.palletsprojects.com/>`_
     if you want to use the default template configuration.
-`python-multipart <https://andrew-d.github.io/python-multipart/>`_
+`python-multipart <https://kludex.github.io/python-multipart/>`_
     if you want to support form parsing, with ``request.form()``.
 `itsdangerous <https://itsdangerous.palletsprojects.com/>`_
     required for ``SessionMiddleware`` support.

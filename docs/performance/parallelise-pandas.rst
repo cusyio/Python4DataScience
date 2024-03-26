@@ -12,8 +12,8 @@ that can parallelise the processing of data frames.
 cuDF
 ----
 
-cuDF is a GPU DataFrame library that implements a `Pandas-like API
-<https://docs.rapids.ai/api/cudf/stable/api.html>`_.
+cuDF is a GPU DataFrame library that implements a `pandas-like API
+<https://docs.rapids.ai/api/cudf/stable/>`_.
 
 .. seealso::
 
@@ -44,9 +44,10 @@ The restrictions refer to  ``pd.read_json``, which is only implemented for
 Dask
 ----
 
-`Dask DataFrame <../../performance/dask.html#Dask-DataFrame>`_ is a
-large parallel DataFrame made up of multiple Pandas DataFrames. Here, the
-``dask.dataframe`` API is a subset of the Pandas API, although there are minor
+`Dask DataFrame
+<https://www.python4data.science/en/latest/performance/dask.html#Dask-DataFrame>`_
+is a large parallel DataFrame made up of multiple pandas DataFrames. Here, the
+``dask.dataframe`` API is a subset of the pandas API, although there are minor
 changes.
 
 .. seealso::
@@ -54,4 +55,4 @@ changes.
     * `Home <https://docs.dask.org/en/latest/dataframe.html>`_
     * `API docs <https://docs.dask.org/en/latest/dataframe-api.html>`_
     * `Example notebook <https://examples.dask.org/dataframe.html>`_
-    * `Tutorial <https://tutorial.dask.org/04_dataframe.html>`_
+    * `Tutorial <https://tutorial.dask.org/01_dataframe.html>`_

@@ -158,7 +158,7 @@ Fonts
     .. seealso::
        * `Font Licensing <https://www.fsf.org/blogs/licensing/20050425novalis>`_
 
-`LaTeX ec fonts <https://dante.ctan.org/tex-archive/fonts/ec/src/copyrite.txt>`_
+`LaTeX ec fonts <https://web.archive.org/web/20130212180815/https://dante.ctan.org/tex-archive/fonts/ec/src/copyrite.txt>`_
     Free *European Computer Modern and Text Companion* fonts commonly used with
     Latex.
 `Arphic Public License <https://spdx.org/licenses/Arphic-1999>`_
@@ -430,7 +430,7 @@ Alternatives
 
        * `OpenChain project <https://www.openchainproject.org>`_
        * `OpenChain Self Certification
-         <https://certification.openchainproject.org>`_
+         <https://www.openchainproject.org/get-started>`_
        * `Reference-Material
          <https://github.com/OpenChain-Project/Reference-Material>`_
 

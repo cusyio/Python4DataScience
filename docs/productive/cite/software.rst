@@ -319,7 +319,7 @@ repositories.
       :alt: Zenodo: Neues persönliches Zugangstoken
 
 #. Copy the newly created token to a new `GitHub secret
-   <https://docs.github.com/de/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository>`_
+   <https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository>`_
    named :samp:`ZENODO_SANDBOX` in your repository: `Settings --> Secrets and
    Variables --> Actions --> New repository secret`:
 

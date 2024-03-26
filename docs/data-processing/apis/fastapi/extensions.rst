@@ -147,7 +147,7 @@ ORMs
     .. image:: https://raster.shields.io/github/license/piccolo-orm/piccolo_admin
        :alt: License
 
-`ormar <https://github.com/collerek/ormar/>`_
+`ormar <https://collerek.github.io/ormar/latest/fastapi/>`_
     Asynchronous mini-ORM, with which you only need to maintain one set of
     models and migrate them with :doc:`/data-processing/postgresql/alembic` if
     necessary (→ `example <https://collerek.github.io/ormar/fastapi/>`__); it is

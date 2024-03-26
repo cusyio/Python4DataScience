@@ -139,7 +139,7 @@ There you will find the two files ``spack.yaml`` and ``spack.lock``.
     .. seealso::
 
         * `spack.yaml
-          <https://spack.readthedocs.io/en/latest/environments.html#spack-yaml>`_
+          <https://spack.readthedocs.io/en/latest/environments.html#environments-spack-yaml>`_
 
 .. _spack_lock:
 

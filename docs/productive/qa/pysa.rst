@@ -95,5 +95,5 @@ Use
    ``jump 1``
     jumps to the first call and shows the source code
 
-Further commands can be found in `Commands
-<https://pyre-check.org/docs/static-analysis-post-processor/#commands>`_.
+Further commands can be found in the `SAPP Command-Line Interface
+<https://github.com/facebook/sapp?tab=readme-ov-file#command-line-interface>`_.

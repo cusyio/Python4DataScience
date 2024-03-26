@@ -16,7 +16,7 @@ Overview
 |                       |       | Recursive objects are also possible.                  |
 +-----------------------+-------+-------------------------------------------------------+
 | Standardisation       | ++    | Pickle is defined in the Python Enhancement Proposals |
-|                       |       | Proposals `307`_, `3154`_ and `574`_.                 |
+|                       |       | Proposals :pep:`307`, :pep:`3154` and :pep:``574`.    |
 +-----------------------+-------+-------------------------------------------------------+
 | Schema IDL            | -\-   | No                                                    |
 +-----------------------+-------+-------------------------------------------------------+
@@ -46,9 +46,6 @@ Overview
     `Ned Batchelder: Pickle’s nine flaws <https://nedbatchelder.com/blog/202006/pickles_nine_flaws.html>`_
         Disadvantages of ``pickle`` and alternatives
 
-.. _`307`: https://www.python.org/dev/peps/pep-0307
-.. _`3154`: https://www.python.org/dev/peps/pep-3154
-.. _`574`: https://www.python.org/dev/peps/pep-0574
 .. _`Don’t pickle your data`:
    https://www.benfrederickson.com/dont-pickle-your-data/
 

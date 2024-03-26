@@ -214,7 +214,7 @@ I/O-heavy processes and multithreaded code, on the other hand, are unlikely to
 benefit.
 
 .. seealso::
-    * `Faster CPython <https://faster-cpython.readthedocs.io/>`__
+    * `Faster CPython <https://web.archive.org/web/20221007175548/https://faster-cpython.readthedocs.io/>`__
 
 If you don’t want to wait with your project until the release of Python 3.11 in
 the final version probably on 24 October 2022, you can also have a look at the
@@ -267,18 +267,22 @@ have different focuses:
   distributes their tasks.
 * Ray provides a simple, universal API for building distributed applications.
 
-  * `RLlib <https://docs.ray.io/en/latest/rllib.html>`_ will scale reinforcement
-    learning in particular.
-  * A `backend for joblib <https://docs.ray.io/en/latest/joblib.html>`_ supports
+  * `RLlib <https://docs.ray.io/en/latest/rllib/index.html>`_ will scale
+    reinforcement learning in particular.
+  * A `backend for joblib
+    <https://docs.ray.io/en/latest/ray-more-libs/joblib.html>`_ supports
     distributed `scikit-learn <https://scikit-learn.org/stable/>`_ programs.
-  * `XGBoost-Ray <https://docs.ray.io/en/latest/xgboost-ray.html>`_ is a backend
-    for distributed `XGBoost <https://xgboost.readthedocs.io/en/latest/>`_.
-  * `LightGBM-Ray <https://docs.ray.io/en/latest/lightgbm-ray.html>`_ is a
+  * `XGBoost-Ray
+    <https://docs.ray.io/en/latest/train/examples/xgboost/xgboost_example.html>`_
+    is a backend for distributed `XGBoost
+    <https://xgboost.readthedocs.io/en/latest/>`_.
+  * `LightGBM-Ray
+    <https://docs.ray.io/en/latest/tune/examples/lightgbm_example.html>`_ is a
     backend for distributed `LightGBM
     <https://lightgbm.readthedocs.io/en/latest/>`_.
   * `Collective Communication Lib
-    <https://docs.ray.io/en/latest/ray-collective.html>`_ offers a set of native
-    collective primitives for `Gloo
+    <https://docs.ray.io/en/latest/ray-more-libs/ray-collective.html>`_ offers a
+    set of native collective primitives for `Gloo
     <https://github.com/facebookincubator/gloo>`_ and the `NVIDIA Collective
     Communication Library (NCCL)
     <https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html>`_.

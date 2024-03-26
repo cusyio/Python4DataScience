@@ -112,21 +112,21 @@ may not be used. The absence of a licence complicates any kind of security
 review or audit and poses a legal risk for potential use.
 
 OSSF-Scorecard uses the `GitHub License API
-<https://docs.github.com/en/rest/licenses#get-the-license-for-a-repository>`_
+<https://docs.github.com/en/rest/licenses/licenses?apiVersion=2022-11-28#get-the-license-for-a-repository>`_
 for projects hosted on GitHub, otherwise it uses its own heuristics to detect a
 published license file. Files in a :file:`LICENSES` directory should be named
 with their :ref:`SPDX <standard_format_licensing>` licence identifier followed
 by an appropriate file extension as described in the :ref:`REUSE <reuse>`
 specification.
 
-Are the best practices of the :abbr:`CII (Core Infrastructure Initiative)` being followed?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Are the best practices of the :abbr:`OpenSSF (Open Source Security Foundation)` being followed?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Risk: Low
 
-The `Core Infrastructure Initiative (CII) Best Practices Program
-<https://www.coreinfrastructure.org/programs/best-practices-program/>`_ includes
-a set of security-oriented best practices for open source software development:
+The `Open Source Security Foundation (OpenSSF) Best Practices Program
+<https://github.com/ossf/wg-best-practices-os-developers/>`_ includes a set of
+security-oriented best practices for open source software development:
 
 * the vulnerability reporting procedure is published on the project page
 * a working build system automatically rebuilds the software from source code
@@ -194,7 +194,7 @@ You can also use :doc:`/productive/qa/pysa` for `taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_ analyses.
 
 For GitHub repositories you can also use `CodeQL <https://codeql.github.com>`_;
-see `codeql-action <https://github.com/github/codeql-action#usage>`_.
+see `codeql-action <https://github.com/github/codeql-action?tab=readme-ov-file#usage>`_.
 
 Risk assessment of the source code
 ----------------------------------

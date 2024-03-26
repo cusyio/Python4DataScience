@@ -297,8 +297,8 @@ respective package.
 
  This is compatible with ``==2.18.*``.
 
-* For some packages, installation options  `Extras
-  <https://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-extras-optional-features-with-their-own-dependencies>`_
+* For some packages, `optional dependencies
+  <https://setuptools.pypa.io/en/latest/userguide/dependency_management.html#optional-dependencies>`_
   can also be specified with square brackets:
 
   .. code-block:: console

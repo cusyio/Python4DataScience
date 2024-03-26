@@ -27,7 +27,7 @@ three tools in more detail that make data accessible:
     `Pattern <https://github.com/clips/pattern>`_
         Python module for data mining, natural language processing, ML and
         network analysis.
-    `Web Scraping Reference <https://blog.hartleybrody.com/web-scraping-cheat-sheet/#javascript-heavy-websites>`_
+    `Web Scraping Reference <https://blog.hartleybrody.com/web-scraping-cheat-sheet/>`_
         Overview of web scraping with Python.
 
 

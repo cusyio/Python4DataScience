@@ -10,8 +10,8 @@ Other Formats
 
     .. seealso::
 
-        * `Specification
-          <https://avro.apache.org/docs/current/spec.html#Data+Serialization>`__
+        * `Data Serialization and Deserialization
+          <https://avro.apache.org/docs/1.11.1/specification/#data-serialization-and-deserialization>`__
 
 `BSON <http://bsonspec.org/>`_
     Short for *Binary JSON*. A binary data format mainly for :term:`MongoDB`

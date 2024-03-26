@@ -35,7 +35,8 @@ Overview
 |                       |       | the maximum depth of nesting. An implementation may   |
 |                       |       | set limits on the range and precision of numbers. An  |
 |                       |       | implementation may set limits on the length and       |
-|                       |       | character contents of strings* (:rfc:`7158#9`).       |
+|                       |       | character contents of strings*                        |
+|                       |       | (:rfc:`7158#section-9`).                              |
 |                       |       |                                                       |
 |                       |       | Unfortunately there is neither a reference            |
 |                       |       | implementation nor an official test suite that would  |

@@ -36,7 +36,7 @@ Biology
 
 * `American Journal of Human Genetics <https://www.cell.com/ajhg/home>`_
 * `Artificial Life <https://direct.mit.edu/artl>`_
-* Psychonomic Society: `Behaviour Research Methods <https://www.psychonomic.org/page/BRM>`_
+* Psychonomic Society: `Behaviour Research Methods <https://www.psychonomic.org/page/brm>`_
 * Oxford Academic: `Bioinformatics <https://academic.oup.com/bioinformatics/>`_
 * `Bioinformatics and Biology Insights
   <https://journals.sagepub.com/home/bbia>`_
@@ -65,7 +65,7 @@ Biology
 * `Neuroinformatics
   <https://www.springer.com/journal/12021>`_
 * `Nucleic Acids Research <https://academic.oup.com/nar>`_
-* `PeerJ <https://peerj.com/about/publications/#PeerJ>`_
+* `PeerJ - Life and Environment <https://peerj.com/life-environment/>`_
 * `PLoS Computational Biology: Software collection
   <https://collections.plos.org/collection/software/>`_
 * `PLoS ONE <https://journals.plos.org/plosone/>`_

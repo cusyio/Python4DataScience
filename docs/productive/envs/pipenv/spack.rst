@@ -38,4 +38,4 @@ This uses the environment installed with Spack and installs additional packages.
 .. seealso::
 
     * `Pipenv and Other Python Distributions
-      <https://pipenv.pypa.io/en/latest/advanced/#pipenv-and-other-python-distributions>`_
+      <https://pipenv.pypa.io/en/latest/advanced.html#pipenv-and-other-python-distributions>`_

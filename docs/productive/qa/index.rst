@@ -27,7 +27,7 @@ Checker
    mypy
    pytype
    wily
-   pyre
+   pystra
    pysa
 
 Formatter
