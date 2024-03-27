@@ -28,7 +28,9 @@ Key/value database systems are e.g. Riak, Cassandra, Redis and MongoDB.
 | **Development          | Erlang                         | Java                           | ANSI C                         | C++                            |
 | language**             |                                |                                |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Licenses**           | Apache License 2.0             | Apache License 2.0             | BSD-3-Clause License           | Server Side Public License     |
+| **Licenses**           | Apache License 2.0             | Apache License 2.0             | Redis Source Available License | Server Side Public License     |
+|                        |                                |                                | v2, Server-Side Public License |                                |
+|                        |                                |                                | v1                             |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Data model**         | Essentially                    | :term:`Column Family`          | Keys are stored as strings,    | Flexible scheme with           |
 |                        | :term:`Key/value pair`         | correspond to tables, keyspaces| values as strings, hashes,     | denormalised model             |
@@ -47,8 +49,9 @@ Key/value database systems are e.g. Riak, Cassandra, Redis and MongoDB.
 |                        |                                | OldNetworkTopologyStrategy     |:term:`Consistent hash function`|                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Remarks**            |                                | See also `Scylla`_, a          | See also `KeyDB`_, a fork      | `BSON` with a maximum          |
-|                        |                                | Cassandra-compatible           | from Redis with multithreading.| document size of 16 MB.        |
-|                        |                                | reimplementation in C.         |                                |                                |
+|                        |                                | Cassandra-compatible           | from Redis with multithreading,| document size of 16 MB.        |
+|                        |                                | reimplementation in C.         | and `Redict`_, a fork, licenced|                                |
+|                        |                                |                                | under LGPL-3.0.                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 
 .. _`Riak`: https://riak.com/
@@ -67,4 +70,5 @@ Key/value database systems are e.g. Riak, Cassandra, Redis and MongoDB.
 .. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/latest/cql/
 .. _`Scylla`: https://www.scylladb.com/
 .. _`KeyDB`: https://github.com/JohnSully/KeyDB
+.. _`Redict`: https://redict.io/
 .. _`BSON`: http://www.bsonspec.org/
