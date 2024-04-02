@@ -4,8 +4,8 @@
     "@type": "Language",
     "name": "English"
   },
-  "description": "<p>Extract the data science workflow from the Jupyter Tutorial</p>",
-  "license": "https://www.eclipse.org/org/documents/edl-v10.php",
+  "description": "Teaching materials for the cusy training courses on Python-based data science workflows",
+  "license": "https://spdx.org/licenses/BSD-3-Clause.html",
   "creator": [
     {
       "affiliation": "@cusyio",
@@ -13,9 +13,9 @@
       "name": "Veit Schiele"
     }
   ],
-  "url": "https://zenodo.org/record/8024719",
-  "datePublished": "2023-06-11",
-  "version": "v1.0.0",
+  "url": "https://zenodo.org/record/10907725",
+  "datePublished": "2024-04-02",
+  "version": "24.1.0",
   "keywords": [
     "data science",
     "dvc",
@@ -26,8 +26,8 @@
     "iPython"
   ],
   "@context": "https://schema.org/",
-  "identifier": "https://doi.org/10.5281/zenodo.8024719",
-  "@id": "https://doi.org/10.5281/zenodo.8024719",
+  "identifier": "https://doi.org/10.5281/zenodo.10907725",
+  "@id": "https://doi.org/10.5281/zenodo.10907725",
   "@type": "CreativeWork",
-  "name": "veit/Python4DataScience: v1.0.0"
+  "name": "veit/Python4DataScience: 24.1.0"
 }
