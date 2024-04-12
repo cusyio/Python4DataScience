@@ -41,4 +41,5 @@ Key features are:
 
     install
     example
+    tips
     extensions
