@@ -90,7 +90,7 @@ the other hand :doc:`best practices <best-practices>` and typical
     working-areas
     install-config
     work
-    log
+    review
     tag
     branch
     rebase

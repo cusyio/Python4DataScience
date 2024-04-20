@@ -11,10 +11,10 @@ Start working on a project
 Start your own project
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:samp:`$ git init {MY_PROJECT}`
+:samp:`$ git init [{PROJECT}]`
     creates a new, local git repository.
 
-    :samp:`{MY_PROJECT}`
+    :samp:`[{PROJECT}]`
         if the project name is given, Git creates a new directory and
         initializes it.
 
@@ -49,16 +49,16 @@ Work on a project
        `git status -v
        <https://git-scm.com/docs/git-status#Documentation/git-status.txt--v>`_
 
-:samp:`$ git add {FILE}`
-    adds a file to the stage area.
+:samp:`$ git add {PATH}`
+    adds one or more files to the stage area.
 
-    :samp:`-p {FILE}`
-        adds parts of a file to the stage area.
-    :samp:`-e {FILE}`
+    :samp:`-p`
+        adds parts of one or more files to the stage area.
+    :samp:`-e`
         the changes to be adopted can be edited in the standard editor.
 
-:samp:`$ git diff {FILE}`
-    shows differences between work and stage areas, for example:
+:samp:`$ git diff [{PATH}]`
+    shows differences between working and stage areas, for example:
 
     .. code-block:: console
 
@@ -124,20 +124,19 @@ Work on a project
         :samp:`$ git checkout {FILE}`
 
 ``$ git commit``
-    make a new commit with the added changes.
+    makes a new commit with the added changes.
 
-    ``-m 'Commit message'``
-        write a commit message directly in the command line.
+    ``-m 'COMMIT MESSAGE'``
+        writes a commit message directly from the command line.
     ``--dry-run --short``
         shows what would be committed with the status in short format.
 
-
-``$ git reset [--hard|--soft] [target-reference]``
+``$ git reset [--hard|--soft] [TARGET_REFERENCE]``
     resets the history to an earlier commit.
-:samp:`$ git rm {FILE}`
+:samp:`$ git rm {PATH}`
     removes a file from the work and stage areas.
 ``$ git stash``
-    moves the current changes from the work area to the stash.
+    moves the current changes from the workspace to a stash.
 
     To be able to distinguish your hidden changes as well as possible, the
     following two options are recommended:
@@ -202,16 +201,16 @@ Work on a project
     ``-u UNTRACKED_FILE``
         hides unversioned files.
     ``list``
-        lists the hidden changes.
+        lists the various stashes.
     ``show``
-        shows the changes in the hidden files.
+        shows the changes in the stashed files.
     ``pop``
-        transfer the changes from the hiding place to the work area and empty
-        the hiding place, for example:
+        transfers the changes from the stash to the workspace and empties the
+        stash, for example:
 
         .. code-block:: console
 
-            git stash pop stash@{2}
+           $ git stash pop stash@{2}
 
     ``drop``
         empties a specific stash, for example:

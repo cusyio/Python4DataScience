@@ -16,7 +16,7 @@ Git glossary
         and :term:`HEAD` points to that branch.
 
     Cache
-        iObsolete for :term:`Index`.
+        Obsolete for :term:`Index`.
 
     Clone
         Local version of a repository including all commits and branches.
@@ -26,15 +26,19 @@ Git glossary
         <https://en.wikipedia.org/wiki/Secure_Hash_Algorithms>`_.
 
     Fork
-        A copy of a repository on GitLab that belongs to another user or group.
+        A copy of a repository on :term:`GitLab` that belongs to another user
+        or group.
 
     Git
         Git is a distributed version control system.
 
     GitLab
-        Web application for version management based on :term:`git`. RGitlab CI,
-        a system for continuous integration, GitLab Runner, container registry
-        and much more were added later.
+        Web application for version management based on :term:`git`. Later,
+        :doc:`advanced/gitlab/ci-cd`, a system for continuous integration,
+        GitLab Runner, Container Registry and many other things were added.
+
+        .. seealso::
+           * :doc:`advanced/gitlab/index`
 
     ``HEAD``
         The ``HEAD`` pointer represents your current working directory and can
@@ -51,21 +55,16 @@ Git glossary
         :samp:`origin/{NAME_OF_UPSTREAM_BRANCH}`, which you can see with ``git
         branch -r``.
 
-    Remote repository
-        A repository that is used to track a shared project but is located
-        elsewhere.
-
-    ``remote``
-        shared repository, for example on GitLab, for exchanging changes in a
-        team
-
-    ``fork``
-        Copy of a repository on GitLab that belongs to another user
-
     Merge request
         Place to compare and discuss the changes introduced in a branch with
-        ratings, comments, tests etc.; see also `Merge requests
-        <https://docs.gitlab.com/ee/user/project/merge_requests/>`_.
+        ratings, comments, tests :abbr:`etc. (et cetera)`.
+
+        .. seealso::
+           * :doc:`advanced/gitlab/merge-requests`.
+
+    Remote repository
+        shared repository, for example on :term:`GitLab`, for exchanging changes
+        in a team.
 
     Trunk-Based Development
     TBD
@@ -73,7 +72,7 @@ Git glossary
          into a single ``main`` branch.
 
          .. seealso::
-            * `Trunk Based Development <https://trunkbaseddevelopment.com/>`_
+            * :doc:`workflows/tbd`
 
 
     Working Tree

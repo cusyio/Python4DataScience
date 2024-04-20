@@ -26,9 +26,9 @@ following:
 
 #. An error is found in the main branch in a function that once worked without
    errors.
-#. With the *clean history* of the main branch, :doc:`log` should allow for
+#. With the *clean history* of the main branch, :doc:`review` should allow for
    quick conclusions.
-#. If :doc:`log` does not lead to the desired result, :doc:`git bisect
+#. If :doc:`review` does not lead to the desired result, :doc:`git bisect
    <advanced/bisect>` will probably help. In this case, the clean Git history
    helps ``git bisect`` in the search for the regression.
 

@@ -19,10 +19,10 @@ Git branches
     You can also use :samp:`git config --global branch.sort -committerdate` to
     make this setting your default setting.
 
-:samp:`$ git branch [{BRANCH_NAME}]`
+:samp:`$ git branch {BRANCH_NAME}`
     creates a new branch based on the current ``HEAD``.
 
-:samp:`$ git switch [-c] [{BRANCH_NAME}]`
+:samp:`$ git switch [-c] {BRANCH_NAME}`
     switches between branches.
 
     ``-c``
@@ -39,7 +39,7 @@ Git branches
             ``-b``
                 creates the specified branch if it does not already exist.
 
-:samp:`$ git merge [{FROM_BRANCH_NAME}]`
+:samp:`$ git merge {FROM_BRANCH_NAME}`
     connects the given branch with the current branch you are currently in, for
     example:
 

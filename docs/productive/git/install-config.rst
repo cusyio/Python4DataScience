@@ -19,7 +19,8 @@ For iX distributions, Git should be in the standard repository.
 
       $ sudo apt install git-all
 
-    To install only Git the `git <https://packages.debian.org/stable/git>`_ package suffices:
+   To install only Git the `git <https://packages.debian.org/stable/git>`_
+   package suffices:
 
    .. code-block:: console
 

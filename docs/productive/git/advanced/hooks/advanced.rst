@@ -76,7 +76,7 @@ before commits; they can also be used for other Git hooks:
         :samp:`git@github.com:veit/python4datascience`
     ``$PRE_COMMIT_REMOTE_BRANCH``
         The name of the remote branch that was pushed to, for example
-        :samp:`refs/heads/{TARGET-BRANCH}`.
+        :samp:`refs/heads/{TARGET_BRANCH}`.
     ``$PRE_COMMIT_LOCAL_BRANCH``
         The name of the local branch that was pushed to the remote branch, for
         example :samp:`{HEAD}`.

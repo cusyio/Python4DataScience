@@ -20,19 +20,19 @@ this task was performed by ``git reset``, which also has other tasks:
 
        :samp:`$ git checkout {FILE}`
 
-    :samp:`git restore [-S|--staged] {FILE}`
+    :samp:`$ git restore [-S|--staged] {PATH/TO/FILE}`
         undoes the addition of files. The changes are retained in your workspace
         so that you can change and add them again if necessary.
 
-        The command is equivalent to :samp:`git reset {PATH}`.
+        The command is equivalent to :samp:`$ git reset {PATH/TO/FILE}`.
 
-    :samp:`git restore [-SW] {FILE}`
+    :samp:`$ git restore [-SW] {FILE}`
         undoes the addition and changes in the workspace.
-    :samp:`git restore [-s|--source] {BRANCH} {FILE}`
+    :samp:`$ git restore [-s|--source] {BRANCH} {FILE}`
         restores a change to the version in the :samp:`{BRANCH}`.
-    :samp:`git restore [-s|--source] @~ {FILE}`
+    :samp:`$ git restore [-s|--source] @~ {FILE}`
         restores a change to the previous commit.
-    :samp:`git restore [-p|--patch]`
+    :samp:`$ git restore [-p|--patch]`
         lets you select the changes to be undone individually.
 
 :samp:`$ git reset [--hard | --mixed | --soft | --keep] {TARGET_REFERENCE}`
@@ -123,7 +123,7 @@ this task was performed by ``git reset``, which also has other tasks:
            I want to discard all uncommitted changes before the ``reset``, I use
            ``git restore -SW``.
 
-:samp:`$ git revert {COMMIT SHA}`
+:samp:`$ git revert {COMMIT_SHA}`
     creates a new commit and reverts the changes of the specified commit so that
     the changes are inverted.
 :samp:`$ git fetch --prune {REMOTE}`
