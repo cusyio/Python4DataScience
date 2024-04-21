@@ -27,5 +27,5 @@ architects*, *technical writers* and *maintainers* can also be defined.
     :maxdepth: 0
 
     data
-    software
+    software/index
     journals
