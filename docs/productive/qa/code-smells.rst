@@ -2,8 +2,8 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Code-Smells and Anti-Patterns
-=============================
+Code-Smells and design principles
+=================================
 
 Code smells are coding patterns that indicate that something is wrong with the
 design of a programme. For example, the overuse of isinstance checks against
@@ -51,13 +51,13 @@ D – :ref:`dependency-inversion`
 Open-closed principle
 ---------------------
 
-The decision as to whether refactoring should be carried out should depend on
-whether your code is already open to new requirements without having to change
+The decision as to whether refactoring should be carried out at all should
+depend on whether your code is already *open* to new requirements. Open here
+means that your code should be open for extensions without having to change
 existing code. Refactorings should not be mixed with the addition of new
-functions, but both processes should be separated from each other. If you are
-confronted with a new requirement, first reorganise the existing code so that it
-is open for the new function and only add the new code once this has been
-completed.
+functions. Instead, these two processes should be kept separate. When faced with
+a new requirement, first reorganise the existing code so that it is open to the
+new function and only add the new code once this has been completed.
 
     Refactoring is the process of changing a software system in such a way that
     it does not alter the external behavior of the code yet improves its
@@ -140,13 +140,6 @@ defined as
 
 Typical code smells in Python
 -----------------------------
-
-.. seealso::
-   * `Effective Python <https://effectivepython.com/>`_
-     by Brett Slatkin
-   * `When Python Practices Go Wrong
-     <https://rhodesmill.org/brandon/slides/2019-11-codedive/>`_
-     by Brandon Rhodes
 
 Functions that should be objects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -291,5 +284,12 @@ Reduce code with ``dataclasses`` and ``attrs``
        * :pep:`557` – Data Classes
 
 `attrs <https://www.attrs.org/en/stable/>`_
-    is a Python package that has been around much longer than ``dataclasses``, is more
-    comprehensive and can also be used with older versions of Python.
+    is a Python package that has been around much longer than ``dataclasses``,
+    is more comprehensive and can also be used with older versions of Python.
+
+.. seealso::
+   * `Effective Python <https://effectivepython.com/>`_
+     by Brett Slatkin
+   * `When Python Practices Go Wrong
+     <https://rhodesmill.org/brandon/slides/2019-11-codedive/>`_
+     by Brandon Rhodes
