@@ -423,15 +423,23 @@ managed with Git. The :file:`logs` directory is then also transferred to the Git
 repository. This construction is necessary because empty folders cannot be
 managed with Git.
 
-Another possibility is to create a :file:`.gitignore` file in an empty folder
-with the following content:
+.. warning::
+   However, this technique has several disadvantages:
+
+   * Both :file:`.gitignore` and :file:`log/.gitkeep` must be edited.
+   * When renaming the directory, it is easy to forget to change the
+     :file:`.gitignore` file as well.
+   * :file:`.gitkeep` is a completely normal file for Git; however, the name
+     suggests that the file would be treated specially by Git.
+
+A better option is to create a :file:`.gitignore` file with the following
+content in an empty directory:
 
 .. code-block:: ini
 
     # ignore everything except .gitignore
     *
     !.gitignore
-
 
 .. seealso:
     * `Can I add empty directories?
