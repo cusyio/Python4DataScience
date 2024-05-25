@@ -19,6 +19,8 @@ Advanced Git
     can lead to problems when managing with Git.
 :doc:`Binärdateien <binary-files>`
     can be configured in Git so that meaningful diffs are displayed.
+:doc:`batch`
+    can process files from a Git repository together.
 :doc:`vs-code/index`
     can use an existing Git installation to provide the corresponding
     functionalities.
@@ -41,6 +43,7 @@ Advanced Git
    hooks/index
    jupyter-notebooks
    binary-files
+   batch
    vs-code/index
    gitlab/index
    git-big-picture
