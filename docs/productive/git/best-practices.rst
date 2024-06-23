@@ -108,17 +108,60 @@ in the further progress of the project.
 Write meaningful commit messages
 --------------------------------
 
+.. figure:: git_commit.png
+   :alt: Git commit messages
+
+   xkcd: `Git Commit <https://xkcd.com/1296/>`_
+
+   Merge branch 'asdfasjkfdlas/alkdjf' into sdkjfls-final
+
 By creating insightful and descriptive commit messages, you make working in a
 team a lot easier. They allow others to understand your changes. They are also
 helpful at a later point in time to understand which goal should be achieved
-with the code.
+with the code. A diff can tell you exactly what has changed, but the commit
+message can also tell you **why**.
 
-Usually short messages, 50–72 characters long, should be specified and
-displayed on one line, eg with ``git log --oneline``.
+Just as the :doc:`Python Style Guide <python-basics:style>` defines conventions
+for naming, formatting, :abbr:`etc. (et cetera)`, a team should also agree on
+conventions for commit messages. These should at least define style, content and
+metadata:
 
-With ``git blame`` you can later specify for each line in which revision and
-by which author the change was made. You can find more information on this in
-the Git documentation: `git-blame <https://git-scm.com/docs/git-blame>`_.
+Style
+    markup syntax, grammar, capitalisation and punctuation.
+Content
+    What content should the body of the commit message contain? And what should
+    it not contain?
+Metadata
+    How should issue IDs, pull requests etc. be referenced?
+
+Fortunately, there are already established conventions as to what constitutes a
+typical Git commit message. So you don’t have to reinvent anything. Just follow
+these seven rules and you’ll be on the right track:
+
+#. Separate the subject from the text with a blank line.
+#. Limit the subject line to 50 characters.
+#. Capitalise the subject line.
+#. Do not end the subject line with a full stop.
+#. Use the imperative in the subject line.
+#. Limit the body text to 72 characters per line.
+#. Explain the **what** and **why** in the body text, not the how.
+
+.. seealso::
+   * Tim Pope: `A Note About Git Commit Messages
+     <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_
+   * Pro Git: `Commit Guidelines
+     <https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines>`_
+   * Linus Torvalds: `Contributing
+     <https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing>`_
+   * Peter Hutterer: `On commit messages
+     <http://who-t.blogspot.com/2009/12/on-commit-messages.html>`_
+   * Erlang/OTP: `Writing good commit messages
+     <https://github.com/erlang/otp/wiki/writing-good-commit-messages>`_
+   * spring-framework: `Format commit messages
+     <https://github.com/spring-projects/spring-framework/blob/30bce7/CONTRIBUTING.md#format-commit-messages>`_
+
+Gitmojis
+~~~~~~~~
 
 If you use gitmojis in your commit messages, you can easily see the intent of
 the commit later.
