@@ -26,7 +26,7 @@ Git branches
     switches between branches.
 
     ``-c``
-        creates a new branch.
+        creates the branch to switch to.
 
     .. note::
 
@@ -40,7 +40,7 @@ Git branches
                 creates the specified branch if it does not already exist.
 
 :samp:`$ git merge {FROM_BRANCH_NAME}`
-    connects the given branch with the current branch you are currently in, for
+    connects the specified branch with the branch you are currently in, for
     example:
 
     .. code-block:: console
@@ -77,12 +77,12 @@ Merge conflicts
 
 Occasionally, however, Git runs into issues with merging, such as:
 
-    .. code-block:: console
+.. code-block:: console
 
-        $ git merge 'my-feature'
-        Auto-merging setup.py
-        CONFLICT (content): Merge conflict in setup.py
-        Automatic merge failed; fix conflicts and then commit the result.
+   $ git merge 'my-feature'
+   Auto-merging setup.py
+   CONFLICT (content): Merge conflict in setup.py
+   Automatic merge failed; fix conflicts and then commit the result.
 
 The history can then look like this, for example:
 
@@ -101,6 +101,62 @@ The history can then look like this, for example:
      <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>`_
    * `Git Tools - Advanced Merging
      <https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging>`_
+
+Improved conflict display with zdiff3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Git normally displays merge conflicts as follows:
+
+.. code-block:: console
+
+   <<<<<<< HEAD
+   This line has been changed by feature one.
+   This line has also been changed by feature one.
+   This line will be changed by feature two.
+   =======
+   This line is changed by feature one.
+   This line has been changed by feature two.
+   This line has also been changed by feature two.
+   >>>>>>> feature_two
+
+The lines of the merge target are located between the markers ``<<<<<<<`` and
+``=======``. The lines between the markers ``=======`` and ``>>>>>>>`` are the
+lines of the merge source. The labels after the arrow markers name the commit
+references that are merged.
+
+This is often sufficient to resolve a conflict. But it can also be unnecessarily
+challenging because the original lines from which both sides started are
+missing. The common ground from which both sides started creates clarity about
+the context in which both changes arose.
+
+If you set `merge.conflictStyle
+<https://git-scm.com/docs/git-config#Documentation/git-config.txt-mergeconflictStyle>`_
+to ``zdiff3``, you can also display the common basis:
+
+.. code-block:: console
+
+   $ git config --global merge.conflictStyle zdiff3
+
+Here is the same merge with this style:
+
+.. code-block:: console
+
+   <<<<<<< HEAD
+   This line has been changed by feature one.
+   This line has also been changed by feature one.
+   This line will be changed by feature two.
+   ||||||| 45d92bd
+   This line is changed by feature one.
+   This line will be changed by feature one and feature two.
+   This line will be changed by feature two.
+   =======
+   This line is changed by feature one.
+   This line has been changed by feature two.
+   This line has also been changed by feature two.
+
+The common base is now displayed between the markers ``|||||||`` and
+``=======`` with the SHA value of the common base. This additional context is
+often useful for resolving a conflict.
 
 ``rerere`` to reuse recorded conflict resolutions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
