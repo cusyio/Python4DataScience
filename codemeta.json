@@ -13,9 +13,9 @@
       "name": "Veit Schiele"
     }
   ],
-  "url": "https://zenodo.org/record/10907725",
-  "datePublished": "2024-04-02",
-  "version": "24.1.0",
+  "url": "https://zenodo.org/record/12593850",
+  "datePublished": "2024-06-29",
+  "version": "24.2.0",
   "keywords": [
     "data science",
     "dvc",
@@ -26,8 +26,8 @@
     "iPython"
   ],
   "@context": "https://schema.org/",
-  "identifier": "https://doi.org/10.5281/zenodo.10907725",
-  "@id": "https://doi.org/10.5281/zenodo.10907725",
+  "identifier": "https://doi.org/10.5281/zenodo.12593850",
+  "@id": "https://doi.org/10.5281/zenodo.12593850",
   "@type": "CreativeWork",
-  "name": "veit/Python4DataScience: 24.1.0"
+  "name": "veit/Python4DataScience: 24.2.0"
 }
