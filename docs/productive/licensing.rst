@@ -180,6 +180,10 @@ covered by the CERN Open Hardware licences:
 `CERN-OHL-S-2.0 <https://ohwr.org/cern_ohl_s_v2.txt>`_
     strongly reciprocal
 
+.. seealso::
+   * `Certified Open Source Hardware Projects
+     <https://certification.oshwa.org/list.html>`_
+
 Choosing a suitable license
 ---------------------------
 
