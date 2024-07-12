@@ -86,6 +86,18 @@ Authentication
     .. image:: https://raster.shields.io/github/license/fastapi-users/fastapi-users
        :alt: License
 
+`fastapi-auth <https://github.com/zopyx/fastapi-auth>`_
+    Quickly adds a customisable registration and authentication system
+
+    .. image:: https://raster.shields.io/github/stars/zopyx/fastapi-auth
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/zopyx/fastapi-auth
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/zopyx/fastapi-auth
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/zopyx/fastapi-auth
+       :alt: License
+
 ORMs
 ----
 
