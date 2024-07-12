@@ -559,6 +559,19 @@ Websockets
 Other tools
 -----------
 
+`FastAPI Utilities <https://github.com/dmontagu/fastapi-utils>`_
+    Utilities to reduce boilerplate and reuse common functionality across
+    projects.
+
+    .. image:: https://raster.shields.io/github/stars/dmontagu/fastapi-utils
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/dmontagu/fastapi-utils
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/dmontagu/fastapi-utils
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/dmontagu/fastapi-utils
+       :alt: License
+
 `Pydantic-SQLAlchemy <https://github.com/tiangolo/pydantic-sqlalchemy>`_
     Creating Pydantic models from SQLAlchemy models
 
