@@ -49,19 +49,6 @@ Authentication
     .. image:: https://raster.shields.io/github/license/yezz123/AuthX
        :alt: License
 
-`FastAPI Security <https://github.com/jacobsvante/fastapi-security>`_
-    Authentication and authorisation
-
-
-    .. image:: https://raster.shields.io/github/stars/jacobsvante/fastapi-security
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/jacobsvante/fastapi-security
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/jacobsvante/fastapi-security
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/jacobsvante/fastapi-security
-       :alt: License
-
 `FastAPI simple security <https://github.com/mrtolkien/fastapi_simple_security>`_
     API key-based security package focused on ease of use
 
@@ -113,36 +100,6 @@ ORMs
     .. image:: https://raster.shields.io/github/commit-activity/y/mfreeborn/fastapi-sqlalchemy
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/mfreeborn/fastapi-sqlalchemy
-       :alt: License
-
-`FastAPIwee <https://github.com/Ignisor/FastAPIwee>`_
-    Easy way to create a REST API based on `PeeWee
-    <https://github.com/coleifer/peewee>`_ models
-
-    .. image:: https://raster.shields.io/github/stars/Ignisor/FastAPIwee
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/Ignisor/FastAPIwee
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/Ignisor/FastAPIwee
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/Ignisor/FastAPIwee
-       :alt: License
-
-`GINO <https://github.com/python-gino/gino>`_
-    Lightweight asynchronous ORM built on SQLAlchemy Core for Python
-    :doc:`asyncio </performance/asyncio-example>`, supporting PostgreSQL with
-    `asyncpg <https://github.com/MagicStack/asyncpg>`_, and MySQL with `aiomysql
-    <https://github.com/aio-libs/aiomysql>`_ (→ `example
-    <https://github.com/leosussan/fastapi-gino-arq-uvicorn>`_)
-
-
-    .. image:: https://raster.shields.io/github/stars/python-gino/gino
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/python-gino/gino
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/python-gino/gino
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/python-gino/gino
        :alt: License
 
 `ORM <https://github.com/encode/orm>`_
@@ -249,19 +206,6 @@ SQL Query Builders
     .. image:: https://raster.shields.io/github/license/arthurio/fastapi-filter
        :alt: Lizenz
 
-`asyncpgsa <https://github.com/CanopyTax/asyncpgsa>`_
-    Python wrapper around `asyncpg <https://github.com/MagicStack/asyncpg>`_ for
-    use with :doc:`/data-processing/postgresql/sqlalchemy`
-
-    .. image:: https://raster.shields.io/github/stars/CanopyTax/asyncpgsa
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/CanopyTax/asyncpgsa
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/CanopyTax/asyncpgsa
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/CanopyTax/asyncpgsa
-       :alt: License
-
 `Databases <https://github.com/encode/databases>`_
     Simple asyncio support for the database drivers `asyncpg
     <https://github.com/MagicStack/asyncpg>`_, `aiopg
@@ -341,38 +285,11 @@ Code generators
     .. image:: https://raster.shields.io/github/license/koxudaxi/fastapi-code-generator
        :alt: License
 
-`FastAPI-based API Client Generator <https://github.com/dmontagu/fastapi_client>`_
-    mypy- and IDE-friendly API client from an OpenAPI specification using the
-    `OpenAPI Generator
-    <https://github.com/OpenAPITools/openapi-generator>`_
-
-    .. image:: https://raster.shields.io/github/stars/dmontagu/fastapi_client
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/dmontagu/fastapi_client
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/dmontagu/fastapi_client
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/dmontagu/fastapi_client
-       :alt: License
-
 Utilities
 ---------
 
 Caching
 ~~~~~~~
-
-`FastAPI Cache <https://github.com/comeuplater/fastapi_cache>`_
-    Lightweight cache system
-
-
-    .. image:: https://raster.shields.io/github/stars/comeuplater/fastapi_cache
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/comeuplater/fastapi_cache
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/comeuplater/fastapi_cache
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/comeuplater/fastapi_cache
-       :alt: License
 
 `fastapi-cache <https://github.com/long2ice/fastapi-cache>`_
     Caching of fastapi responses and function results, with backends supporting
@@ -488,18 +405,6 @@ Prometheus
 Templating
 ~~~~~~~~~~
 
-`fastapi-jinja <https://github.com/AGeekInside/fastapi-jinja>`_
-    Integration of the Jinja template language
-
-    .. image:: https://raster.shields.io/github/stars/AGeekInside/fastapi-jinja
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/AGeekInside/fastapi-jinja
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/AGeekInside/fastapi-jinja
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/AGeekInside/fastapi-jinja
-       :alt: License
-
 `fastapi-chameleon <https://github.com/mikeckennedy/fastapi-chameleon>`_
     Integration of the template language Chameleon
 
@@ -530,19 +435,6 @@ Pagination
 
 Websockets
 ~~~~~~~~~~
-
-`fastapi-socketio <https://github.com/pyropy/fastapi-socketio>`_
-    Easy integration of `socket.io in <https://socket.io/>`_ into your FastAPI
-    application
-
-    .. image:: https://raster.shields.io/github/stars/pyropy/fastapi-socketio
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/pyropy/fastapi-socketio
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/pyropy/fastapi-socketio
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/pyropy/fastapi-socketio
-       :alt: License
 
 `FastAPI Websocket Pub/Sub <https://github.com/permitio/fastapi_websocket_pubsub>`_
     Fast and permanent pub/sub channel via websockets
@@ -621,6 +513,142 @@ Other tools
     .. image:: https://raster.shields.io/github/license/sunhailin-Leo/fastapi_profiler
        :alt: License
 
+`manage-fastapi <https://github.com/ycd/manage-fastapi>`_
+    Project generator and manager for FastAPI
+
+    .. image:: https://raster.shields.io/github/stars/ycd/manage-fastapi
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/ycd/manage-fastapi
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/ycd/manage-fastapi
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/ycd/manage-fastapi
+       :alt: License
+
+`fastapi-plugins <https://github.com/madkote/fastapi-plugins>`_
+    Production-ready plug-ins for the FastAPI framework, including for caching
+    with memcached or Redis, scheduler, configuration and logging
+
+    .. image:: https://raster.shields.io/github/stars/madkote/fastapi-plugins
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/madkote/fastapi-plugins
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/madkote/fastapi-plugins
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/madkote/fastapi-plugins
+       :alt: License
+
+Dormant projects
+----------------
+
+`FastAPI Security <https://github.com/jacobsvante/fastapi-security>`_
+    Authentication and authorisation
+
+
+    .. image:: https://raster.shields.io/github/stars/jacobsvante/fastapi-security
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/jacobsvante/fastapi-security
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/jacobsvante/fastapi-security
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/jacobsvante/fastapi-security
+       :alt: License
+
+`FastAPIwee <https://github.com/Ignisor/FastAPIwee>`_
+    Easy way to create a REST API based on `PeeWee
+    <https://github.com/coleifer/peewee>`_ models
+
+    .. image:: https://raster.shields.io/github/stars/Ignisor/FastAPIwee
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/Ignisor/FastAPIwee
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/Ignisor/FastAPIwee
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/Ignisor/FastAPIwee
+       :alt: License
+
+`GINO <https://github.com/python-gino/gino>`_
+    Lightweight asynchronous ORM built on SQLAlchemy Core for Python
+    :doc:`asyncio </performance/asyncio-example>`, supporting PostgreSQL with
+    `asyncpg <https://github.com/MagicStack/asyncpg>`_, and MySQL with `aiomysql
+    <https://github.com/aio-libs/aiomysql>`_ (→ `example
+    <https://github.com/leosussan/fastapi-gino-arq-uvicorn>`_)
+
+
+    .. image:: https://raster.shields.io/github/stars/python-gino/gino
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/python-gino/gino
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/python-gino/gino
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/python-gino/gino
+       :alt: License
+
+`asyncpgsa <https://github.com/CanopyTax/asyncpgsa>`_
+    Python wrapper around `asyncpg <https://github.com/MagicStack/asyncpg>`_ for
+    use with :doc:`/data-processing/postgresql/sqlalchemy`
+
+    .. image:: https://raster.shields.io/github/stars/CanopyTax/asyncpgsa
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/CanopyTax/asyncpgsa
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/CanopyTax/asyncpgsa
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/CanopyTax/asyncpgsa
+       :alt: License
+
+`FastAPI-based API Client Generator <https://github.com/dmontagu/fastapi_client>`_
+    mypy- and IDE-friendly API client from an OpenAPI specification using the
+    `OpenAPI Generator
+    <https://github.com/OpenAPITools/openapi-generator>`_
+
+    .. image:: https://raster.shields.io/github/stars/dmontagu/fastapi_client
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/dmontagu/fastapi_client
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/dmontagu/fastapi_client
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/dmontagu/fastapi_client
+       :alt: License
+
+`FastAPI Cache <https://github.com/comeuplater/fastapi_cache>`_
+    Lightweight cache system
+
+
+    .. image:: https://raster.shields.io/github/stars/comeuplater/fastapi_cache
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/comeuplater/fastapi_cache
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/comeuplater/fastapi_cache
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/comeuplater/fastapi_cache
+       :alt: License
+
+`fastapi-jinja <https://github.com/AGeekInside/fastapi-jinja>`_
+    Integration of the Jinja template language
+
+    .. image:: https://raster.shields.io/github/stars/AGeekInside/fastapi-jinja
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/AGeekInside/fastapi-jinja
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/AGeekInside/fastapi-jinja
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/AGeekInside/fastapi-jinja
+       :alt: License
+
+`fastapi-socketio <https://github.com/pyropy/fastapi-socketio>`_
+    Easy integration of `socket.io in <https://socket.io/>`_ into your FastAPI
+    application
+
+    .. image:: https://raster.shields.io/github/stars/pyropy/fastapi-socketio
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/pyropy/fastapi-socketio
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/pyropy/fastapi-socketio
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/pyropy/fastapi-socketio
+       :alt: License
+
 `fastapi-versioning <https://github.com/DeanWay/fastapi-versioning>`_
     API versioning for FastAPI web applications
 
@@ -645,18 +673,6 @@ Other tools
     .. image:: https://raster.shields.io/github/license/Invictify/Jupter-Notebook-REST-API
        :alt: License
 
-`manage-fastapi <https://github.com/ycd/manage-fastapi>`_
-    Project generator and manager for FastAPI
-
-    .. image:: https://raster.shields.io/github/stars/ycd/manage-fastapi
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/ycd/manage-fastapi
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/ycd/manage-fastapi
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/ycd/manage-fastapi
-       :alt: License
-
 `msgpack-asgi <https://github.com/florimondmanca/msgpack-asgi>`_
     Automatic negotiation of MessagePack content in ASGI applications
 
@@ -667,19 +683,6 @@ Other tools
     .. image:: https://raster.shields.io/github/commit-activity/y/florimondmanca/msgpack-asgi
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/florimondmanca/msgpack-asgi
-       :alt: License
-
-`fastapi-plugins <https://github.com/madkote/fastapi-plugins>`_
-    Production-ready plug-ins for the FastAPI framework, including for caching
-    with memcached or Redis, scheduler, configuration and logging
-
-    .. image:: https://raster.shields.io/github/stars/madkote/fastapi-plugins
-       :alt: Stars
-    .. image:: https://raster.shields.io/github/contributors/madkote/fastapi-plugins
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/madkote/fastapi-plugins
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/madkote/fastapi-plugins
        :alt: License
 
 `fastapi-serviceutils <https://github.com/skallfass/fastapi_serviceutils>`_
