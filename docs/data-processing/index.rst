@@ -17,6 +17,10 @@ three tools in more detail that make data accessible:
 * :doc:`httpx/index`
 * :doc:`intake/index`
 
+.. tip::
+   `Read, write and provide data with Python
+   <https://cusy.io/en/our-training-courses/read-write-and-provide-data-with-python>`_
+
 .. seealso::
     `pandas I/O API <https://pandas.pydata.org/docs/user_guide/io.html>`_
         The pandas I/O API is a set of top level ``reader`` functions that

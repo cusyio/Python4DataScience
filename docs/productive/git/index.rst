@@ -21,6 +21,10 @@ local repository can contain specific changes.
 However, Git can not only be used in a distributed way, it is also performant,
 secure and flexible.
 
+.. tip::
+   `Versioned and reproducible storage of code and data
+   <https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data>`_
+
 Performance
 -----------
 

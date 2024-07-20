@@ -30,6 +30,10 @@ the main functionality of NumPy:
     array-oriented programming and thinking is an important step on the way to becoming a
     data scientist.
 
+.. tip::
+   `cusy seminar: Numerical calculations with NumPy
+   <https://cusy.io/en/our-training-courses/numerical-calculations-with-numpy>`_
+
 .. seealso::
     * `Home
       <https://numpy.org/>`_

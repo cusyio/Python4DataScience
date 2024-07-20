@@ -26,6 +26,10 @@ Python code. Mostly pandas is used to
   :doc:`/data-processing/serialisation-formats/json/index` data
 * prepare machine learning
 
+.. tip::
+   `Analysing data with pandas
+   <https://cusy.io/en/our-training-courses/analysing-data-with-pandas>`_
+
 .. seealso::
     * `Home
       <https://pandas.pydata.org/>`_

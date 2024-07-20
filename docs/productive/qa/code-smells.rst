@@ -10,6 +10,10 @@ design of a programme. For example, the overuse of isinstance checks against
 concrete classes is a code smell, as it makes the programme more difficult to
 extend to deal with new types in the future.
 
+.. tip::
+   `Design patterns in Python
+   <https://cusy.io/en/our-training-courses/design-patterns-in-python>`_
+
 Recognising code smells
 -----------------------
 

@@ -15,6 +15,10 @@ we also use several small, specialised libraries like :doc:`dedupe
 systems like `Great Expectations <https://greatexpectations.io/>`_ or `MobyDQ
 <https://ubisoft.github.io/mobydq/>`_.
 
+.. tip::
+   `cusy seminar: Cleanse and validate data with Python
+   <https://cusy.io/en/our-training-courses/cleanse-and-validate-data-with-python>`_
+
 Overview
 --------
 
