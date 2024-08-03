@@ -2,8 +2,11 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
+Splitting and merging repos
+===========================
+
 Splitting repos
-===============
+---------------
 
 It is often useful to divide a large Git repository into multiple smaller ones.
 This can be necessary in a project that has grown over time, or if you want to
@@ -15,7 +18,7 @@ Here I describe how you can split a Git repository without losing the associated
 history.
 
 Scenario and goals
-------------------
+~~~~~~~~~~~~~~~~~~
 
 We want to split out from the Jupyter tutorial repository the part that deals
 with visualising the data: ``docs/viz/``. The challenge is that the history for
@@ -59,3 +62,26 @@ For our Jupyter tutorial repository, we now invert the selected path:
     $ python3 ../git-filter-repo --invert-paths --path docs/viz
     $ git remote add origin git@github.com:veit/jupyter-tutorial.git
     $ git push -f -u origin main
+
+Repos zusammenführen
+--------------------
+
+Repos with different histories can also be merged. This can be desirable, for
+example, if a project was started locally but a project with an initial commit
+was created on the Git server. In this case, you can simply use ``git pull
+--allow-unrelated-histories``; the option is then passed on to the underlying
+``git merge``.
+
+If you want to merge two larger projects, you can do this as follows:
+
+.. code-block:: console
+
+    $ git remote add -f pyviz git@github.com:veit/pyviz-tutorial.git docs/viz/
+    $ git merge -s ours --no-commit --allow-unrelated-histories pyviz/main
+    $ git read-tree --prefix=docs/pyviz -u pyviz/main
+    $ git commit -m "Merge pyviz tutorial as subdirectory"
+    $ git push
+
+.. seealso::
+   `merge-options
+   <https://git-scm.com/docs/merge-options#Documentation/merge-options.txt---allow-unrelated-histories>`_
