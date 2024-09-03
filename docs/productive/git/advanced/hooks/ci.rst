@@ -51,6 +51,8 @@ Examples for GitHub Actions
 
         * `pre-commit/action <https://github.com/pre-commit/action>`_
 
+.. _pre-commit-in-gitlab-ci:
+
 Example for GitLab Actions
 --------------------------
 

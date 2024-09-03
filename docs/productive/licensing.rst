@@ -361,7 +361,7 @@ dynamic compliance badge:
 .. figure:: reuse-compliant.svg
    :alt: REUSE-compliant Badge
 
-.. _gitlab-ci-workflow:
+.. _reuse-in-gitlab-ci:
 
 CI workflow
 :::::::::::

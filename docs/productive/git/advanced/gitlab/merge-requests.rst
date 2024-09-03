@@ -29,7 +29,7 @@ Merge request workflows
    <https://docs.gitlab.com/ee/ci/testing/unit_test_reports.html>`_ in
    :doc:`GitLab CI/CD <ci-cd>`.
 #. You avoid using dependencies whose licence is incompatible with your project
-   with :ref:`licence compliance reports <gitlab-ci-workflow>`.
+   with :ref:`licence compliance reports <reuse-in-gitlab-ci>`.
 #. You request `approval
    <https://docs.gitlab.com/ee/user/project/merge_requests/approvals/index.html>`_
    of your changes.

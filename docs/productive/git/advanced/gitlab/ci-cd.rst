@@ -34,8 +34,8 @@ Continuous Delivery
     <deployment-branches>`.
 
     .. seealso::
-       * `Continuous Delivery <https://continuousdelivery.com>`_
-       * `Continuous Delivery
+       * `continuousdelivery.com <https://continuousdelivery.com>`_
+       * `Wikipedia: Continuous Delivery
          <https://en.wikipedia.org/wiki/Continuous_delivery>`__
 
 Continuous Deployment
@@ -65,14 +65,19 @@ Jobs
     define what needs to be done, for example compiling code or testing.
 
     .. seealso::
-       `Jobs <https://docs.gitlab.com/ee/ci/jobs/index.html>`_
+       * `GitLab Docs: Jobs
+         <https://docs.gitlab.com/ee/ci/jobs/index.html>`_
+       * :ref:`cibuildwheel <python-basics:cibuildwheel-in-gitlab-ci>`
+       * :ref:`pre-commit Hooks <pre-commit-in-gitlab-ci>`
+       * :ref:`Licensing <reuse-in-gitlab-ci>`
 
 Stages
     define when the jobs are to be executed, for example the phase ``test`` to
     be executed after the phase ``build``.
 
     .. seealso::
-       `Stages <https://docs.gitlab.com/ee/ci/yaml/index.html#stages>`_
+       `GitLab Docs: CI/CD YAML syntax reference
+       <https://docs.gitlab.com/ee/ci/yaml/index.html#stages>`_
 
 *Jobs* are executed by so-called `runners
 <https://docs.gitlab.com/ee/ci/runners/index.html>`_. Several *jobs* in a
@@ -157,11 +162,11 @@ a running pipeline, retry *jobs* in a failed pipeline or delete a pipeline.
    GitLab CI/CD pipeline
 
 .. seealso::
-   * `Customize pipeline configuration
+   * `GitLab Docs: Customize pipeline configuration
      <https://docs.gitlab.com/ee/ci/yaml/index.html>`_
-   * `Scheduled pipelines
+   * `GitLab Docs: Scheduled pipelines
      <https://docs.gitlab.com/ee/ci/pipelines/schedules.html>`_
-   * `GitLab CI/CD variables
+   * `GitLab Docs: GitLab CI/CD variables
      <https://docs.gitlab.com/ee/ci/variables/index.html>`_
-   * `Predefined variables reference
+   * `GitLab Docs: Predefined variables reference
      <https://docs.gitlab.com/ee/ci/variables/predefined_variables.html>`_
