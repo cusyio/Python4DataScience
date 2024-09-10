@@ -355,12 +355,12 @@ among others:
 |     /instance.log             | :file:`logs/instance.log`         | in the root directory of the  |
 |                               |                                   | repository.                   |
 +-------------------------------+-----------------------------------+-------------------------------+
-| .. code-block:: console       | :file:`instance.log`,             | Usualy the pattern match      |
+| .. code-block:: console       | :file:`instance.log`,             | Usually the pattern match     |
 |                               | :file:`logs/instance.log`         | files in any directory.       |
 |     instance.log              |                                   |                               |
 +-------------------------------+-----------------------------------+-------------------------------+
 | .. code-block:: console       | :file:`instance0.log`,            | A question mark fits exactly  |
-|                               | :file:`instance1.log`,            | on a charater.                |
+|                               | :file:`instance1.log`,            | on a character.               |
 |     instance?.log             | but not                           |                               |
 |                               | :file:`instance.log` or           |                               |
 |                               | :file:`instance10.log`            |                               |

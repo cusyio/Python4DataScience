@@ -5,8 +5,8 @@
 PostgreSQL
 ==========
 
-Basic funtions
---------------
+Basic functions
+---------------
 
 ACID compliant
     ACID (**A** tomicity, **C** onsistency, **I** solation, **D** urability) is

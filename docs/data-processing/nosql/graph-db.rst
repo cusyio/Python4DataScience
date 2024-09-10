@@ -70,7 +70,7 @@ Typical graph databases are Neo4j, OrientDB and ArangoDB.
 | **Data model**         | :term:`Property graph model`   | Multi-Model                    | Multi-model: documents, graphs |
 |                        |                                |                                | and :term:`Key/value pair`     |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Query langauge**     | REST, `Cypher`_, `Gremlin`_    | `Extended SQL`_, `Gremlin`_    | ArangoDB Query Language (AQL)`_|
+| **Query language**     | REST, `Cypher`_, `Gremlin`_    | `Extended SQL`_, `Gremlin`_    | ArangoDB Query Language (AQL)`_|
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Transactions,        |* :term:`Two-phase locking      | :term:`ACID`                   | :term:`ACID`,                  |
 | concurrency**          |  (2PL)`                        |                                | :term:`MVCC – Multiversion     |

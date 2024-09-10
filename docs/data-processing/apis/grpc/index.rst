@@ -114,7 +114,7 @@ specifies the communication between clients and servers:
 #. First the stream is started by the client with a mandatory ``Call Header``
 
    #. followed by optional ``Initial-Metadata``
-   #. followd by optional ``Payload Messages``.
+   #. followed by optional ``Payload Messages``.
 
    The contents of ``Call Header`` and ``Initial Metadata`` are sent as HTTP/2
    headers compressed with ``HPACK``.

@@ -38,3 +38,8 @@ repos:
     - id: sphinx-lint
       args: [--jobs=1]
       types: [rst]
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+    - id: codespell
+      args: [--toml pyproject.toml]

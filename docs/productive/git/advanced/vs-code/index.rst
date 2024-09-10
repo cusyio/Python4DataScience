@@ -48,7 +48,7 @@ select changes. If necessary, you will receive more specific commit actions in
     undo it with :menuselection:`Git: Undo Last Commit` in the
     :menuselection:`Command Palette` (:kbd:`⇧ ⌘ P`).
 
-The sorce control icon in the activity bar on the left shows you how many
+The source control icon in the activity bar on the left shows you how many
 changes you have made in your repository. Selecting the icon will give you a
 more detailed overview of your changes. Selecting a single file will show you
 the line-by-line text changes. You can also use the editor on the right to make

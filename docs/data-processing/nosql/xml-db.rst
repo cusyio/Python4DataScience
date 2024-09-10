@@ -30,7 +30,7 @@ Examples of XML database systems are eXist and MonetDB.
 +------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------+
 | **Data model**         | XML                                            | XML, column-oriented data structure            | XML                                            |
 +------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------+
-| **Query langauge**     | :term:`XQuery`, :term:`XPATH`                  | SQL                                            | :term:`XQuery`, :term:`XPATH`                  |
+| **Query language**     | :term:`XQuery`, :term:`XPATH`                  | SQL                                            | :term:`XQuery`, :term:`XPATH`                  |
 +------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------+
 | **Transactions,        |                                                | :term:`Optimistic Concurrency <Locking>`       | :term:`ACID`, XQuery Locks                     |
 | concurrency**          |                                                |                                                |                                                |

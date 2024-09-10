@@ -11,7 +11,7 @@ Splitting repos
 It is often useful to divide a large Git repository into multiple smaller ones.
 This can be necessary in a project that has grown over time, or if you want to
 manage a sub-project in a separate repository.
-Of couse you could simply create a new repository and copy the files,
+Of course you could simply create a new repository and copy the files,
 but you would also loose the entire version history.
 
 Here I describe how you can split a Git repository without losing the associated
@@ -63,8 +63,8 @@ For our Jupyter tutorial repository, we now invert the selected path:
     $ git remote add origin git@github.com:veit/jupyter-tutorial.git
     $ git push -f -u origin main
 
-Repos zusammenführen
---------------------
+Merge repos
+-----------
 
 Repos with different histories can also be merged. This can be desirable, for
 example, if a project was started locally but a project with an initial commit

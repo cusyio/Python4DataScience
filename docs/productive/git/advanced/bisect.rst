@@ -48,8 +48,8 @@ This means that only log₂(n+1) commits need to be tested.
 
     $ git show HEAD
     commit 2ddcca36c8bcfa251724fe342c8327451988be0d
-    Autor: Linus Torvalds <torvalds@linux-foundation.org>
-    Datum: Sa 3. Mai 11:59:44 2008 -0700
+    Author: Linus Torvalds <torvalds@linux-foundation.org>
+    Date: Sat May 3 11:59:44 2008 -0700
 
         Linux 2.6.26-rc1
 
@@ -64,7 +64,7 @@ This means that only log₂(n+1) commits need to be tested.
     -EXTRAVERSION =
     + SUBLEVEL = 26
     + EXTRAVERSION = -rc1
-     NAME = Funky Weasel ist Jiggy wit it
+     NAME = Funky Weasel is Jiggy with it
 
      # * DOKUMENTATION *
 
