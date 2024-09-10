@@ -1,0 +1,41 @@
+[project]
+name = "Python4DataScience"
+version = "24.2.0"
+authors = [
+  { name="Veit Schiele", email="veit@cusy.io" },
+]
+description = "Teaching materials for the cusy training courses on Python-based data science workflows: https://cusy.io/en/seminars"
+readme = "README.rst"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+docs = [
+    "furo",
+    "ipython",
+    "ipywidgets",
+    "nbsphinx",
+    "sphinxcontrib-svg2pdfconverter",
+    "sphinxext.opengraph", # matplotlib is required for social cards
+    "matplotlib",
+    "sphinx-copybutton",
+    "sphinx_inline_tabs",
+    "sphinx-lint",
+]
+
+dev = [
+    "Python4DataScience[docs]",
+    "pre-commit",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cusyio/Python4DataScience/"
+"Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
+
+[tool.setuptools]
+packages = []
