@@ -42,9 +42,9 @@ list of paths that git will not add unless you ask for it explicitly.
 
 You can find a template ``.gitignore`` file for Python projects in the
 `dotfiles <https://github.com/veit/dotfiles>`_ repository.
-The `gitignore.io  <https://gitignore.io/>`_ website contains :file:`.gitignore`
-files for other programming languages.
-The :file:`.gitignore` file itself should be checked in, too:
+The `gitignore.io <https://www.toptal.com/developers/gitignore/>`_ website
+contains :file:`.gitignore` files for other programming languages. The
+:file:`.gitignore` file itself should be checked in, too:
 
 .. code-block:: console
 
@@ -316,8 +316,8 @@ with ``git stash drop``.
 Check your repositories for unwanted files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With `Gitleaks <https://github.com/zricethezav/gitleaks>`_ you can regularly
-check your repositories for unintentionally saved access data.
+With `Gitleaks <https://github.com/gitleaks/gitleaks>`_ you can regularly check
+your repositories for unintentionally saved access data.
 
 You can also run Gitleaks automatically as a GitLab action. To do this, you need
 to include the `Secret-Detection.gitlab-ci.yml

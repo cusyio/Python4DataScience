@@ -111,7 +111,7 @@ There are also helper scripts to identify large items: :samp:`git filter-branch
 
 .. seealso::
    * `How to tear apart a repository: the Git way
-     <https://www.atlassian.com/blog/git/tear-apart-repository-git-way?>`_
+     <https://web.archive.org/web/20230612060352/https://www.atlassian.com/blog/git/tear-apart-repository-git-way>`_
 
 .. _git-clone-branch:
 
@@ -130,12 +130,12 @@ much difference with this.
 Git LFS
 ~~~~~~~
 
-`Git LFS <https://git-lfs.github.com/>`_ is an extension that stores pointers to
-large files in your repository rather than the files themselves; these are
-stored on a remote server, drastically reducing the time it takes to clone your
-repository. Git LFS accesses Git’s native push, pull, checkout and fetch
-operations to transfer and replace objects, meaning you can work with large
-files in your repository as usual.
+`Git LFS <https://git-lfs.com>`_ is an extension that stores pointers to large
+files in your repository rather than the files themselves; these are stored on a
+remote server, drastically reducing the time it takes to clone your repository.
+Git LFS accesses Git’s native push, pull, checkout and fetch operations to
+transfer and replace objects, meaning you can work with large files in your
+repository as usual.
 
 You can install Git LFS with
 
@@ -253,9 +253,9 @@ the search:
 
 .. seealso::
    * `Improve Git monorepo performance with a file system monitor
-     <https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/>`_
+     <https://github.blog/engineering/improve-git-monorepo-performance-with-a-file-system-monitor/>`_
    * `Scaling monorepo maintenance
-     <https://github.blog/2021-04-29-scaling-monorepo-maintenance/>`_
+     <https://github.blog/open-source/git/scaling-monorepo-maintenance/>`_
 
 Scalar
 ------

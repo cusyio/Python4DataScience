@@ -24,9 +24,9 @@ While Git Flow is a well-defined but complex standard, it creates two practical 
   which should only bring advantages in the rarest of cases.
 
 In response to the problems of Git Flow, `GitHub
-<https://guides.github.com/introduction/flow/>`_ and `Atlassian
-<https://www.atlassian.com/de/git/tutorials/comparing-workflows>`_ developed
-simpler alternatives that are mostly limited to so-called
+<https://docs.github.com/de/get-started/using-github/github-flow>`_ and
+`Atlassian <https://www.atlassian.com/de/git/tutorials/comparing-workflows>`_
+developed simpler alternatives that are mostly limited to so-called
 :doc:`feature-branches`.
 
 .. seealso::

@@ -10,7 +10,7 @@ Review
 
 .. seealso::
    * `Git’s Database Internals III: File History Queries
-     <https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/>`_
+     <https://github.blog/open-source/git/gits-database-internals-iii-file-history-queries/>`_
 
 Filter and sort
 ~~~~~~~~~~~~~~~

@@ -40,10 +40,11 @@ this data is in the public domain:
 
    The files ``.dbf``, ``.prj``, ``.shp`` and ``.shp`` form a so-called
    ShapeFile, a popular geospatial data format that is used by GIS software. To
-   load this into our database, we also need `GDAL <http://www.gdal.org/>`_, the
-   *Geospatial Data Abstraction Library*. When we install GDAL we also get OGR,
-   *OpenGIS Simple Features Reference Implementation*, a vector data translation
-   library that we can use to translate the shapefile into data.
+   load this into our database, we also need `GDAL
+   <https://gdal.org/en/latest/>`_, the *Geospatial Data Abstraction Library*.
+   When we install GDAL we also get OGR, *OpenGIS Simple Features Reference
+   Implementation*, a vector data translation library that we can use to
+   translate the shapefile into data.
 
    #. GDAL can be easily installed with the package manager:
 
@@ -86,7 +87,7 @@ this data is in the public domain:
         specifies the path to the input file
 
       .. seealso::
-         * `ogr2ogr <https://gdal.org/programs/ogr2ogr.html>`_
+         * `ogr2ogr <https://gdal.org/en/latest/programs/ogr2ogr.html>`_
 
    #. Check the import with ``ogrinfo``
 

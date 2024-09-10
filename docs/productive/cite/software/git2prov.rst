@@ -35,5 +35,5 @@ Alternatively, Git2PROV also provides a web server with:
 
 .. seealso::
    * `Git2PROV: Exposing Version Control System Content as W3C PROV
-     <http://ceur-ws.org/Vol-1035/iswc2013_demo_32.pdf>`_
+     <https://ceur-ws.org/Vol-1035/iswc2013_demo_32.pdf>`_
    * `GitHub-Repository <https://github.com/IDLabResearch/Git2PROV>`_

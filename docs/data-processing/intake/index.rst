@@ -10,7 +10,7 @@ is not only interesting for data scientists and engineers, but also for data
 providers.
 
 .. seealso::
-    * `Docs <https://intake.readthedocs.io/>`_
+    * `Docs <https://intake.readthedocs.io/en/latest/>`_
     * `GitHub <https://github.com/intake/intake/>`_
     * `Intake: Taking the Pain out of Data Access
       <https://www.anaconda.com/blog/intake-taking-the-pain-out-of-data-access>`_

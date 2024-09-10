@@ -110,7 +110,7 @@ However, aliases can also be specified in the :file:`~/.gitconfig` file:
    * `oh-my-zsh <https://ohmyz.sh>`_
 
      * `Git plugin aliases
-       <https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git#aliases>`_
+       <https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md#aliases>`_
      * `zsh-you-should-use
        <https://github.com/MichaelAquilina/zsh-you-should-use>`_
 
@@ -267,11 +267,11 @@ If necessary, the timeout can be increased, for example with:
 .. tab:: Windows
 
     For Windows, `Git Credential Manager (GCM)
-    <https://github.com/GitCredentialManager/git-credential-manager>`_ is
-    available. It is integrated in `Git for Windows
-    <https://git-scm.com/download/win>`_ and is installed by default. However,
-    there is also a standalone Installer in `Releases
-    <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
+    <https://github.com/git-ecosystem/git-credential-manager>`_ is available. It
+    is integrated in `Git for Windows <https://git-scm.com/download/win>`_ and
+    is installed by default. However, there is also a standalone Installer in
+    `Releases
+    <https://github.com/git-ecosystem/git-credential-manager/releases>`_.
 
     It is configured with
 
@@ -307,7 +307,7 @@ If necessary, the timeout can be increased, for example with:
 
 .. seealso::
     * `Git Credential Manager: authentication for everyone
-      <https://github.blog/2022-04-07-git-credential-manager-authentication-for-everyone/>`_
+      <https://github.blog/security/application-security/git-credential-manager-authentication-for-everyone/>`_
 
 .. _gitignore:
 
@@ -460,9 +460,10 @@ purpose, you can set ``excludesfile`` in the :file:`~/.gitconfig` file:
         …
 
 .. note::
-    You can find helpful templates in my `dotfiles
-    <https://github.com/veit/dotfiles/tree/main/gitignores>`__ repository or
-    on the `gitignore.io <https://gitignore.io/>`_ website.
+   You can find helpful templates in my `dotfiles
+   <https://github.com/veit/dotfiles/tree/main/gitignores>`__ repository or
+   on the `gitignore.io <https://www.toptal.com/developers/gitignore/>`_
+   website.
 
 Ignoring a file from the repository
 :::::::::::::::::::::::::::::::::::

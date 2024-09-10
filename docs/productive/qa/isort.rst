@@ -5,8 +5,8 @@
 ``isort``
 =========
 
-`isort <https://github.com/timothycrosley/isort>`_ formats your ``import``
-statements in separate and sorted blocks.
+`isort <https://github.com/PyCQA/isort>`_ formats your ``import`` statements in
+separate and sorted blocks.
 
 Installation
 ------------

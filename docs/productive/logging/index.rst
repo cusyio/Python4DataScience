@@ -15,7 +15,7 @@ Logging usually serves two different purposes:
 * Diagnosis:
 
   * You can display the context of certain events.
-  * Tools like `Sentry <https://sentry.io/>`_ group related events and
+  * Tools like `Sentry <https://sentry.io/welcome/>`_ group related events and
     facilitate user identification, etc., so that developers can find the cause
     of the error more quickly.
 
@@ -41,8 +41,8 @@ What are the advantages of  ``logging`` over  ``print``?
 
    * `loguru <https://github.com/Delgan/loguru>`_, which makes logging almost as
      easy as using print instructions.
-   * `structlog <https://www.structlog.org/>`_ adds structure to your log
-     entries.
+   * `structlog <https://www.structlog.org/en/stable/>`_ adds structure to your
+     log entries.
 
 .. toctree::
     :hidden:

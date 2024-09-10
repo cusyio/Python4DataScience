@@ -47,7 +47,7 @@ Such data pipelines can be displayed or represented as a dependency graph with
     evaluate.dvc
 
 * With ``dvc dag --dot`` a ``.dot`` file for `Graphviz
-  <http://www.graphviz.org/>`_ is generated:
+  <https://www.graphviz.org>`_ is generated:
 
 .. graphviz::
 

@@ -19,7 +19,7 @@ builds on Cython and NumPy, making it less memory intensive and faster than pure
 Python code. Mostly pandas is used to
 
 * replace :doc:`/data-processing/serialisation-formats/excel` and `Power BI
-  <https://powerbi.microsoft.com/en-us/>`_
+  <https://www.microsoft.com/en-us/power-platform/products/power-bi/>`_
 * implement an `ETL <https://en.wikipedia.org/wiki/Extract,_transform,_load>`_
   process
 * process :doc:`/data-processing/serialisation-formats/csv/index` or

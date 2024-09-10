@@ -10,7 +10,7 @@ FastAPI is a web framework for building APIs with Python 3.6+ based type hints.
 Key features are:
 
 * very high performance thanks to `pydantic
-  <https://pydantic-docs.helpmanual.io/>`_ for the data part and `Starlette
+  <https://docs.pydantic.dev/latest/>`_ for the data part and `Starlette
   <https://www.starlette.io/>`_ for the web part.
 
 * fast and easy to code
@@ -28,11 +28,11 @@ Key features are:
 
 * robust, production-ready code with automatic interactive documentation
 * based on the open standards for APIs: `OpenAPI <https://www.openapis.org/>`_
-  formerly known as Swagger) and `JSON Schema <http://json-schema.org/>`_
+  formerly known as Swagger) and `JSON Schema <https://json-schema.org>`_
 
 .. seealso::
     * `Home <https://fastapi.tiangolo.com/>`_
-    * `GitHub <https://github.com/tiangolo/fastapi>`_
+    * `GitHub <https://github.com/fastapi/fastapi>`_
 
 .. toctree::
     :hidden:

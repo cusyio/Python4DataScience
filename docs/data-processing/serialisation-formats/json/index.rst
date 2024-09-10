@@ -129,13 +129,13 @@ Response of the :ref:`OSM-Nominatim-API
 
 .. _`standard`: https://www.json.org/json-en.html
 .. _`JSON_Checker`: http://www.json.org/JSON_checker/
-.. _`JSON Schema Proposal`: http://json-schema.org/
+.. _`JSON Schema Proposal`: https://json-schema.org
 .. _`JSON Encoding Rules (JER)`: https://www.itu.int/rec/T-REC-X.697-201710-I/
 .. _`Kwalify`: http://www.kuwata-lab.com/kwalify/
-.. _`Rx`: http://rx.codesimply.com/
+.. _`Rx`: https://rx.codesimply.com
 .. _`JSON-LD`: https://json-ld.org#
 .. _`JMESPath`: https://jmespath.org/
-.. _`validators`: https://json-schema.org/implementations.html#validators
+.. _`validators`: https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=#validator
 
 .. toctree::
     :hidden:

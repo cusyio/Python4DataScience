@@ -62,7 +62,7 @@ Example
 .. _`csv`: https://docs.python.org/3/library/csv.html
 .. _`pandas`: https://pandas.pydata.org/
 .. _`read_excel`: https://pandas.pydata.org/docs/user_guide/io.html#io-excel-reader
-.. _`iris.csv`: https://sourceforge.net/projects/irisdss/files/IRIS.csv
+.. _`iris.csv`: https://sourceforge.net/projects/irisdss/files/latest/download
 
 .. toctree::
     :hidden:

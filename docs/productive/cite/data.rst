@@ -10,8 +10,8 @@ DataCite Metadata Schema
 
 The DataCite Metadata Working Group published the DataCite Metadata Schema
 Documentation for the publication and citation of research data in 2019:
-`DataCite Metadata Schema 4.3 <https://doi.org/10.14454/7xq3-zf69>`_ together
-with a XSD (XML Schema Definition): `metadata.xsd
+`DataCite Metadata Schema 4.3 <https://schema.datacite.org/meta/kernel-4.3/>`_
+together with a XSD (XML Schema Definition): `metadata.xsd
 <https://schema.datacite.org/meta/kernel-4.3/metadata.xsd>`_.
 
 A simple datacite example can look like this:
@@ -81,13 +81,13 @@ necessary to be able to exchange provenance information interoperably.
 Python prov
 ~~~~~~~~~~~
 
-With `prov <https://prov.readthedocs.io/>`_, a Python3 library is available that
-supports the import and export of the `PROV data model
+With `prov <https://prov.readthedocs.io/en/latest/>`_, a Python3 library is
+available that supports the import and export of the `PROV data model
 <https://www.w3.org/TR/prov-dm/>`_ into the following serialisation formats:
 
 * `PROV-O (RDF) <https://www.w3.org/TR/2013/REC-prov-o-20130430/>`_
 * `PROV-XML <https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/>`_
-* `PROV-JSON <https://www.w3.org/Submission/prov-json/>`_
+* `PROV-JSON <https://www.w3.org/submissions/prov-json/>`_
 
 In addition, PROV documents can be created with :doc:`pyviz:matplotlib/networkx`
 `MultiDiGraph
@@ -100,4 +100,4 @@ PNG and SVG formats.
      <https://trungdong.github.io/prov-python-short-tutorial.html>`_ by Dong
      Huynh
    * `PROV Tutorial.ipynb
-     <https://nbviewer.jupyter.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb>`_
+     <https://nbviewer.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb>`_

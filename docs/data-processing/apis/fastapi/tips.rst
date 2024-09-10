@@ -12,7 +12,7 @@ If you want to use
 
 * `SQLModel <https://sqlmodel.tiangolo.com/>`_ for Python database interaction
   (ORM)
-* `Pydantic <https://docs.pydantic.dev/>`_ for data validation
+* `Pydantic <https://docs.pydantic.dev/latest/>`_ for data validation
 * `PostgreSQL <https://www.postgresql.org/>`_ for data storage
 
 the data structure could look like this:

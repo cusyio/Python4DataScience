@@ -10,20 +10,20 @@ Quick start
 Status
 ------
 
-.. image:: https://img.shields.io/github/contributors/veit/python4datascience.svg
+.. image:: https://img.shields.io/github/contributors/cusyio/python4datascience.svg
    :alt: Contributors
-   :target: https://github.com/veit/python4datascience/graphs/contributors
-.. image:: https://img.shields.io/github/license/veit/Python4DataScience.svg
+   :target: https://github.com/cusyio/python4datascience/graphs/contributors
+.. image:: https://img.shields.io/github/license/cusyio/Python4DataScience.svg
    :alt: License
-   :target: https://github.com/veit/python4datascience/blob/main/LICENSE
-.. image:: https://results.pre-commit.ci/badge/github/veit/Python4DataScience/main.svg
-   :target: https://results.pre-commit.ci/latest/github/veit/python4datascience/main
+   :target: https://github.com/cusyio/python4datascience/blob/main/LICENSE
+.. image:: https://results.pre-commit.ci/badge/github/cusyio/Python4DataScience/main.svg
+   :target: https://results.pre-commit.ci/repo/github/649815375
    :alt: pre-commit.ci status
 .. image:: https://readthedocs.org/projects/python4datascience/badge/?version=latest
    :alt: Docs
-   :target: https://python4datascience.readthedocs.io/en/latest/
+   :target: https://www.python4data.science/en/latest/
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo..12593850.svg
-   :target: https://doi.org/10.5281/zenodo..12593850
+   :target: https://doi.org/10.5281/zenodo.12593850
 .. image:: https://img.shields.io/badge/dynamic/json?label=Mastodon&query=totalItems&url=https%3A%2F%2Fmastodon.social%2F@Python4DataScience%2Ffollowers.json&logo=mastodon
    :alt: Mastodon
    :target: https://mastodon.social/@Python4DataScience
@@ -48,7 +48,7 @@ Installation
 
    .. code-block:: console
 
-    $ curl -O https://codeload.github.com/veit/python4datascience/zip/main
+    $ curl -O https://codeload.github.com/cusyio/python4datascience/zip/main
     $ unzip main
     Archive:  main
     …
@@ -160,20 +160,21 @@ Installation
 Follow us
 ---------
 
-* `GitHub <https://github.com/veit/python4datascience>`_
+* `GitHub <https://github.com/cusyio/python4datascience>`_
 * `Mastodon <https://mastodon.social/@Python4DataScience>`_
 
 Pull-Requests
 -------------
 
 If you have suggestions for improvements and additions, I recommend that you
-create a `Fork <https://github.com/veit/python4datascience/fork>`_ of my `GitHub
-Repository <https://github.com/veit/python4datascience/>`_ and make your changes
-there. . You are also welcome to make a *pull request*. If the changes
-contained therein are small and atomic, I’ll be happy to look at your
+create a `Fork <https://github.com/cusyio/python4datascience/fork>`_ of my
+`GitHub Repository <https://github.com/cusyio/python4datascience/>`_ and make
+your changes there. You are also welcome to make a *pull request*. If the
+changes contained therein are small and atomic, I’ll be happy to look at your
 suggestions.
 
-The following guidelines help us to maintain the German translation of the tutorial:
+The following guidelines help us to maintain the German translation of the
+tutorial:
 
 * Write commit messages in Englisch
 * Start commit messages with a `Gitmoji <https://gitmoji.dev/>`__

@@ -259,8 +259,8 @@ Task planner
 ------------
 
 :doc:`jupyter-tutorial:hub/ipyparallel/index`, :doc:`dask` and `Ray
-<https://docs.ray.io/>`_ can distribute tasks in a cluster.  In doing so, they
-have different focuses:
+<https://docs.ray.io/en/latest/>`_ can distribute tasks in a cluster. In doing
+so, they have different focuses:
 
 * ``ipyparallel`` simply integrates into a :doc:`jupyter-tutorial:hub/index`.
 * :doc:`dask` imitates pandas, NumPy iterators, Toolz und PySpark when it

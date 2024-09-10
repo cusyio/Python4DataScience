@@ -101,7 +101,7 @@ Nested code
 
     *«Flat is better than nested.»*
 
-– Tim Peters, `Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_
+– Tim Peters, `Zen of Python <https://peps.python.org/pep-0020/>`_
 
 Nested code makes it difficult to read and understand. You need to understand
 and remember the conditions as you go through the nestings. Objectively, the

@@ -107,7 +107,7 @@ overwritten:
 .. seealso::
    Further information on user-specific installations can be found in `User
    Installs
-   <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
+   <https://pip.pypa.io/en/latest/user_guide/#user-installs>`_.
 
 Create virtual environments
 ---------------------------

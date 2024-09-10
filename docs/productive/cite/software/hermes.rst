@@ -50,7 +50,7 @@ repositories.
       :alt: Zenodo: Neues persönliches Zugangstoken
 
 #. Copy the newly created token to a new `GitHub secret
-   <https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository>`_
+   <https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository>`_
    named :samp:`ZENODO_SANDBOX` in your repository: `Settings --> Secrets and
    Variables --> Actions --> New repository secret`:
 
@@ -60,10 +60,10 @@ repositories.
 #. Configure the GitHub action
 
    The HERMES project provides templates for continuous integration in a special
-   repository: `hermes-hmc/ci-templates
-   <https://github.com/hermes-hmc/ci-templates>`_. Copy the template file
+   repository: `softwarepub/ci-templates
+   <https://github.com/softwarepub/ci-templates>`_. Copy the template file
    `TEMPLATE_hermes_github_to_zenodo.yml
-   <https://github.com/hermes-hmc/ci-templates/blob/main/TEMPLATE_hermes_github_to_zenodo.yml>`_
+   <https://github.com/softwarepub/ci-templates/blob/main/TEMPLATE_hermes_github_to_zenodo.yml>`_
    into the :file:`.github/workflows/` directory of your repository and rename
    it, for example to :file:`hermes_github_to_zenodo.yml`.
 

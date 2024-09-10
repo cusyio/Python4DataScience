@@ -15,7 +15,8 @@ and identifies vulnerable code.
      <https://dzone.com/articles/what-is-taint-analysis-and-why-should-i-care>`_
    * `How Pysa works <https://pyre-check.org/docs/pysa-basics>`_
    * `Running Pysa <https://pyre-check.org/docs/pysa-running/>`_
-   * `Pysa Tutorial <https://github.com/facebook/pyre-check/tree/master/documentation/pysa_tutorial>`_
+   * `Pysa Tutorial
+     <https://github.com/facebook/pyre-check/tree/main/documentation/pysa_tutorial>`_
 
 Configuration
 -------------
@@ -39,7 +40,7 @@ Pysa uses two file types for configuration:
   ``taint_models_path`` in your ``.pyre_configuration`` file.
 
 You can find practical examples in the `Pyre repository
-<https://github.com/facebook/pyre-check/tree/master/stubs/taint/core_privacy_security>`_.
+<https://github.com/facebook/pyre-check/tree/main/stubs/taint/core_privacy_security>`_.
 
 Use
 ---
@@ -96,4 +97,4 @@ Use
     jumps to the first call and shows the source code
 
 Further commands can be found in the `SAPP Command-Line Interface
-<https://github.com/facebook/sapp?tab=readme-ov-file#command-line-interface>`_.
+<https://github.com/facebook/sapp/blob/main/README.md#command-line-interface>`_.

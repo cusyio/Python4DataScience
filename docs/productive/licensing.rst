@@ -19,7 +19,7 @@ required.
    * `The Whys and Hows of Licensing Scientific Code
      <https://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/>`_
    * `A Quick Guide to Software Licensing for the Scientist-Programmer
-     <https://doi.org/10.1371/journal.pcbi.1002598>`_
+     <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598>`_
    * Karl Fogel: `Producing Open Source Software <https://producingoss.com/>`_
    * `Forschungsdaten veröffentlichen
      <https://forschungsdaten.info/themen/rechte-und-pflichten/forschungsdaten-veroeffentlichen/>`_
@@ -103,8 +103,9 @@ open licences used for non-software material, from datasets to videos. However,
 they are `not recommended for software
 <https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software>`_.
 
-The `Open Knowledge Foundation <https://okfn.org>`_ has also published a set of
-`Open Data Commons <https://opendatacommons.org>`_ licences for data/databases:
+The `Open Knowledge Foundation <https://okfn.org/en/>`_ has also published a set
+of `Open Data Commons <https://opendatacommons.org>`_ licences for
+data/databases:
 
 `Open Data Commons Open Database License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_
     Attribution and sharing under equal terms.
@@ -148,7 +149,7 @@ specifically for free documentation.
 Fonts
 ~~~~~
 
-`SIL Open Font License 1.1 <https://opensource.org/licenses/OFL-1.1>`_
+`SIL Open Font License 1.1 <https://opensource.org/license/OFL-1.1>`_
     Font licence that can be freely used in other works.
 `GNU General Public License 3 <https://www.gnu.org/licenses/gpl-3.0>`_
     It can also be used for fonts, but it may only be included in documents with
@@ -189,9 +190,10 @@ Choosing a suitable license
 
 Overviews of possible licenses can be found in the `SPDX License List
 <https://spdx.org/licenses/>`_ or `OSI Open Source Licenses by Category
-<https://opensource.org/licenses/category>`_. When choosing suitable licences,
-the websites `Choose an open source license <https://choosealicense.com/>`_ and
-`Comparison of free and open-source software licenses
+<https://opensource.org/licenses#toggle-license-categories>`_. When choosing
+suitable licences, the websites `Choose an open source license
+<https://choosealicense.com/>`_ and `Comparison of free and open-source software
+licenses
 <https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses>`_
 will help you.
 
@@ -267,17 +269,17 @@ in your repository.
 #. After you have given a commit message, for example ``Add license``, you can
    click on *Commit new file*.
 
-If you’ve already added a ``/LICENSE`` file to your repository, GitHub uses
+If you’ve already added a :file:`/LICENSE` file to your repository, GitHub uses
 `licensee <https://github.com/licensee/licensee>`_ to compare the file with a
-short `list of open source licenses  <https://choosealicense.com/appendix/>`_.
-If GitHub can’t detect your repository’s license, it might contain multiple
+short `list of open source licenses <https://choosealicense.com/appendix/>`_. If
+GitHub can’t detect your repository’s license, it might contain multiple
 licenses or be too complex. Then consider whether you can simplify the license,
-for example by outsourcing complexity to the ``/README`` file.
+for example by outsourcing complexity to the :file:`/README` file.
 
 Conversely, you can also search for repositories with specific licenses or
 license families on GitHub. You can get an overview of the license keywords in
 `Searching GitHub by license type
-<https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository#searching-github-by-license-type>`_.
+<https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type>`_.
 
 Finally, you can have `Shields.io <https://shields.io/>`_ generate a license
 badge for you, which you can include in your ``README`` file, for example
@@ -287,12 +289,12 @@ badge for you, which you can include in your ``README`` file, for example
     |License|
 
     .. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
-       :target: https://github.com/veit/python4datascience/blob/main/LICENSE
+       :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSE
 
 |License|
 
 .. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
-   :target: https://github.com/veit/python4datascience/blob/main/LICENSE
+   :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSE
 
 .. _standard_format_licensing:
 
@@ -426,24 +428,24 @@ Alternatives
     copyright clarity, but sets higher requirements to achieve full compliance.
 
     It is based on `OpenChain Specification 2.1
-    <https://github.com/OpenChain-Project/License-Compliance-Specification/raw/master/2.1/de/OpenChain-2.1_original_de.pdf>`_
+    <https://raw.githubusercontent.com/OpenChain-Project/License-Compliance-Specification/master/2.1/de/OpenChain-2.1_original_de.pdf>`_
     and is an international standard on software supply chains, simplified
     procurement, and open source license compliance.
 
     .. seealso::
 
-       * `OpenChain project <https://www.openchainproject.org>`_
+       * `OpenChain project <https://openchainproject.org>`_
        * `OpenChain Self Certification
-         <https://www.openchainproject.org/get-started>`_
+         <https://openchainproject.org/get-started>`_
        * `Reference-Material
          <https://github.com/OpenChain-Project/Reference-Material>`_
 
-`ScanCode <https://www.aboutcode.org/projects/scancode.html>`_
+`ScanCode <https://aboutcode.org/scancode/>`_
     offers a range of tools and applications for scanning software codebases and
     packages to determine the origin and licence (provenance) of open source
     software (and other third-party software).
 
-    `DeltaCode <https://github.com/nexB/deltacode>`_
+    `DeltaCode <https://github.com/aboutcode-org/deltacode>`_
         compares two codebase scans to detect significant changes.
 
 `ClearlyDefined <https://clearlydefined.io/>`_
@@ -475,7 +477,7 @@ Alternatives
     .. seealso::
        * `GitHub Action for ORT
          <https://github.com/oss-review-toolkit/ort-ci-github-action>`_
-       * `ORT for GitLab <https://github.com/oss-review-toolkit/ort-gitlab-ci>`_
+       * `ORT for GitLab <https://github.com/oss-review-toolkit/ort-ci-gitlab>`_
 
 `licensechecker <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_
     A command line tool that scans installation directories for licences.

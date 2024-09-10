@@ -52,8 +52,8 @@ Risk: High
 Outdated dependencies make a project vulnerable to attacks on known
 vulnerabilities. Therefore, the process of updating dependencies should be
 automated by checking for outdated or insecure requirements and updating them if
-necessary. You can use `dependabot <https://github.com/dependabot>`_ or `PyUp
-<https://pyup.io>`_ for this purpose.
+necessary. You can use `dependabot <https://github.com/dependabot>`_ or `Safety
+CLI <https://safetycli.com>`_ for this purpose.
 
 You can also update your :doc:`/productive/envs/pipenv/index` environments
 automatically with :ref:`pipenv update <pipenv_update>`.
@@ -194,7 +194,7 @@ You can also use :doc:`/productive/qa/pysa` for `taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_ analyses.
 
 For GitHub repositories you can also use `CodeQL <https://codeql.github.com>`_;
-see `codeql-action <https://github.com/github/codeql-action?tab=readme-ov-file#usage>`_.
+see `codeql-action <https://github.com/github/codeql-action/blob/main/README.md#usage>`_.
 
 Risk assessment of the source code
 ----------------------------------

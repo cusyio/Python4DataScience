@@ -89,5 +89,5 @@ Then the changed data only has to be transferred to Git or DVC:
     $ dvc push
 
 If several phases are now created with ``dvc run`` and the output of one command
-being specified as a dependency of another, a `DVC Pipeline
-<https://dvc.org/doc/commands-reference/pipeline>`_ is created.
+being specified as a dependency of another, a `DVC dag
+<https://dvc.org/doc/command-reference/dag>`_ is created.

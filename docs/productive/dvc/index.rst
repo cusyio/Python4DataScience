@@ -41,7 +41,7 @@ External dependencies can also be specified with :ref:`dvc remote <dvc-remote>`.
    <https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data>`_
 
 .. seealso::
-   * `Tutorial <https://dvc.org/doc/tutorial>`_
+   * `Tutorial <https://dvc.org/doc/start>`_
    * `Documentation <https://dvc.org/doc>`_
    * `Git Repository <https://github.com/iterative/dvc>`_
 

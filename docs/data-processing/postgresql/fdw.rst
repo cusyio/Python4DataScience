@@ -25,7 +25,7 @@ ODBC
 
 Multicorn
     `Multicorn <https://multicorn.org/>`_ makes it easy to develop FDWs. For
-    example, `SQLAlchemy <http://www.sqlalchemy.org/>`_ uses Multicorn to save
+    example, `SQLAlchemy <https://www.sqlalchemy.org>`_ uses Multicorn to save
     your data in PostgreSQL.
 
     * `GitHub <sqlalchem://github.com/Kozea/Multicorn>`__
@@ -75,7 +75,7 @@ NoSQL database wrappers
 -----------------------
 
 Cassandra
-    FDW für `Cassandra <https://cassandra.apache.org//>`_
+    FDW für `Cassandra <https://cassandra.apache.org/_/index.html>`_
 
     * `GitHub <https://github.com/rankactive/cassandra-fdw>`__
     * `rankactive <https://rankactive.com/resources/postgresql-cassandra-fdw>`_
@@ -115,7 +115,7 @@ JSON
 XML
     FDW for XML files
 
-    * `GitHub <https://github.com/Kozea/Multicorn>`__
+    * `GitHub <https://github.com/Segfault-Inc/Multicorn>`__
     * `PGXN <https://pgxn.org/dist/multicorn/>`__
 
 .. _geo-wrappers:
@@ -124,9 +124,9 @@ Geo wrappers
 ------------
 
 GDAL/OGR
-    FDW for the  `GDAL/OGR <https://gdal.org/>`_ driver including databases
-    like Oracle and SQLite as well as file formats like MapInfo, CSV, Excel,
-    OpenOffice, OpenStreetMap PBF and XML.
+    FDW for the  `GDAL/OGR <https://gdal.org/en/latest/>`_ driver including
+    databases like Oracle and SQLite as well as file formats like MapInfo, CSV,
+    Excel, OpenOffice, OpenStreetMap PBF and XML.
 
     * `GitHub <https://github.com/pramsey/pgsql-ogr-fdw>`__
 

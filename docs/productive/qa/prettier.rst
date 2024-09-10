@@ -9,7 +9,7 @@
 types, including `TypeScript <https://www.typescriptlang.org/>`_, `JSON
 <https://json.org/>`_, `Vue <https://vuejs.org/>`_, `YAML <https://yaml.org/>`_,
 `TOML
-<https://github.com/bd82/toml-tools/tree/master/packages/prettier-plugin-toml>`_
+<https://github.com/un-ts/toml-tools/tree/master/packages/prettier-plugin-toml>`_
 and `XML <https://github.com/prettier/plugin-xml>`_.
 
 Installation

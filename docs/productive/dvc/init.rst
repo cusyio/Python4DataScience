@@ -82,8 +82,8 @@ results with Git without having to check the file content into Git:
 
 This will add the file ``data/data.xml`` in ``data/.gitignore`` and write the
 meta information in ``data/data.xml.dvc``. Further information on the file
-format of the ``*.dvc`` can be found under `DVC-File Format
-<https://dvc.org/doc/user-guide/dvc-file-format>`_.
+format of the ``*.dvc`` can be found in `DVC Project Structure
+<https://dvc.org/doc/user-guide/project-structure>`_.
 
 In order to be able to manage different versions of your project data with Git,
 you only have to add the CVS file:

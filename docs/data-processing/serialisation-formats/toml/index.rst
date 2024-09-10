@@ -44,7 +44,7 @@ Overview
 
 .. seealso::
 
-    * `Home <https://toml.io/>`_
+    * `Home <https://toml.io/en/>`_
     * `GitHub <https://github.com/toml-lang/toml>`_
     * `Wiki <https://github.com/toml-lang/toml/wiki>`_
     * `What is wrong with TOML?

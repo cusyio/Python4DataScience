@@ -57,7 +57,7 @@ repository.
 GitHub Flow
 -----------
 
-`GitHub Flow <https://docs.github.com/en/get-started/quickstart/github-flow>`_
+`GitHub Flow <https://docs.github.com/en/get-started/using-github/github-flow>`_
 was intended to be a greatly simplified alternative to :doc:`git-flow`, with
 only different feature branches in addition to the ``main`` branch. The
 lifecycle of a Git feature branch could then look like this:
@@ -124,10 +124,10 @@ Simple Git workflow
 -------------------
 
 Atlassian also recommends a `similar strategy
-<https://www.atlassian.com/blog/git/simple-git-workflow-is-simple>`_, but they
-recommend :doc:`rebasing <../rebase>` the feature branches. This gives you a
-linear progression by moving the changes in the feature branch to the top of the
-``main`` branch before merging with a fast-forward merge.
+<https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow>`_,
+but they recommend :doc:`rebasing <../rebase>` the feature branches. This gives
+you a linear progression by moving the changes in the feature branch to the top
+of the ``main`` branch before merging with a fast-forward merge.
 
 #. Use ``rebase`` to keep your feature branch up to date with ``main``:
 

@@ -93,11 +93,11 @@ Python Code Quality Authority
         conventions
     `docformatter <https://github.com/PyCQA/docformatter>`_
         formats docstrings according to :pep:`257`
-    `pylint <https://github.com/PyCQA/pylint>`_
+    `pylint <https://github.com/pylint-dev/pylint>`_
         Python linter
     `doc8 <https://github.com/PyCQA/doc8>`_
         executes doc8 for linting documents
-    `prospector <https://github.com/PyCQA/prospector>`_
+    `prospector <https://github.com/landscapeio/prospector>`_
         analyses Python code with prospector
     `isort <https://github.com/PyCQA/isort>`_
         sorts Python imports
@@ -137,7 +137,7 @@ Miscellaneous
 
 `pyupgrade <https://github.com/asottile/pyupgrade>`_
     automatically updates the syntax for newer versions
-`reorder-python-imports <https://github.com/asottile/reorder_python_imports>`_
+`reorder-python-imports <https://github.com/asottile/reorder-python-imports>`_
     reorders imports into Python files
 `dead <https://github.com/asottile/dead>`_
     detects dead Python code

@@ -29,7 +29,7 @@ Image processing
 ----------------
 
 * `Image Processing On Line <http://www.ipol.im/>`_
-* `Insight Journal <http://insight-journal.org/>`_
+* `Insight Journal <https://insight-journal.org>`_
 
 Biology
 -------
@@ -52,7 +52,7 @@ Biology
 * `Database: The Journal of Biological Databases and Curation
   <https://academic.oup.com/database>`_
 * `Ecography <http://www.ecography.org/>`_
-* `eLife <http://elifesciences.org/category/tools-and-resources>`_
+* `eLife <https://elifesciences.org/articles/tools-resources>`_
 * `Epidemiology <https://journals.lww.com/epidem/pages/default.aspx>`_
 * `Evolutionary Bioinformatics
   <https://journals.sagepub.com/home/evb>`_
@@ -63,7 +63,7 @@ Biology
 * `Nature Methods <https://www.nature.com/nmeth/>`_
 * `Neurocomputing <https://www.journals.elsevier.com/neurocomputing>`_
 * `Neuroinformatics
-  <https://www.springer.com/journal/12021>`_
+  <https://link.springer.com/journal/12021>`_
 * `Nucleic Acids Research <https://academic.oup.com/nar>`_
 * `PeerJ - Life and Environment <https://peerj.com/life-environment/>`_
 * `PLoS Computational Biology: Software collection
@@ -94,7 +94,7 @@ Human and social sciences
 * `Digital Humanities Quarterly
   <http://www.digitalhumanities.org/dhq/>`_
 * `Journal of Artificial Societies and Social Simulation
-  <http://jasss.soc.surrey.ac.uk/JASSS.html>`_
+  <https://www.jasss.org/JASSS.html>`_
 * `Journal of Economic Dynamics and Control
   <https://www.journals.elsevier.com/journal-of-economic-dynamics-and-control>`_
 
@@ -126,7 +126,7 @@ Computer science, mathematics and statistics
 * `Journal of Software for Algebra and Geometry
   <https://msp.org/jsag/>`_
 * `Journal of Statistical Software
-  <https://www.jstatsoft.org/>`_
+  <https://www.jstatsoft.org/index>`_
 * `Knowledge-Based Systems
   <https://www.journals.elsevier.com/knowledge-based-systems/>`_
 * `LMS Journal of Computation and Mathematics
@@ -134,9 +134,9 @@ Computer science, mathematics and statistics
 * `The Mathematica Journal
   <https://www.mathematica-journal.com/>`_
 * `Mathematical Programming Computation
-  <https://www.springer.com/journal/12532>`_
+  <https://link.springer.com/journal/12532>`_
 * `Numerical Algorithms
-  <https://www.springer.com/journal/11075>`_
+  <https://link.springer.com/journal/11075>`_
 * `PeerJ Computer Science
   <https://peerj.com/computer-science/>`_
 * `The R Journal <https://journal.r-project.org/>`_
@@ -148,7 +148,7 @@ Physics and Earth Sciences
 --------------------------
 
 * `AAS: The Astronomy Journal <https://iopscience.iop.org/journal/1538-3881/>`_
-* `AAS: The Astrophysical Journal <https://iopscience.iop.org/journal/0004-637X/>`_
+* `AAS: The Astrophysical Journal <https://iopscience.iop.org/journal/0004-637X>`_
 * `AAS: The Astrophysical Journal Supplement Series <https://iopscience.iop.org/journal/0067-0049/>`_
 * `Astronomy and Computing
   <https://www.journals.elsevier.com/astronomy-and-computing>`_
@@ -160,7 +160,7 @@ Physics and Earth Sciences
 * `Computers and Geosciences
   <https://www.journals.elsevier.com/journal-of-economic-dynamics-and-control>`_
 * `Computing and Software for Big Science
-  <https://www.springer.com/journal/41781>`_
+  <https://link.springer.com/journal/41781>`_
 * `Environmental Modelling & Software
   <https://www.journals.elsevier.com/environmental-modelling-and-software>`_
 * `Geoscientific Model Development

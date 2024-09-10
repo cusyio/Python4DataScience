@@ -5,12 +5,12 @@
 GitLab
 ======
 
-`GitLab <https://gitlab.com>`_ is a web application for version management based
-on Git. Later, further functions were added such as an issue tracking system
-with Kanban board, a system for `Continuous Integration and Continuous Delivery
-(CI/CD) <https://about.gitlab.com/features/continuous-integration/>`_ as well as
-a Wiki and Snippets. The GitLab Community Edition (CE) is developed as open
-source software under the MIT licence and can be installed on-premises.
+`GitLab <https://about.gitlab.com>`_ is a web application for version management
+based on Git. Later, further functions were added such as an issue tracking
+system with Kanban board, a system for `Continuous Integration and Continuous
+Delivery (CI/CD) <https://about.gitlab.com/solutions/continuous-integration/>`_
+as well as a Wiki and Snippets. The GitLab Community Edition (CE) is developed
+as open source software under the MIT licence and can be installed on-premises.
 
 The GitLab CI tools enable automated builds and deployments without the need for
 external integrations, for example building a Docker container with the Python

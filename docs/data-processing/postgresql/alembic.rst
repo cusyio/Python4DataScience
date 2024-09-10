@@ -5,8 +5,8 @@
 Alembic
 =======
 
-`Alembic <https://alembic.sqlalchemy.org/>`_ is based on SQLAlchemy and serves
-as a database migration tool with the following functions:
+`Alembic <https://alembic.sqlalchemy.org/en/latest/>`_ is based on SQLAlchemy
+and serves as a database migration tool with the following functions:
 
 * ``ALTER`` statements to a database to change the structure of tables and other
   constructs
@@ -15,7 +15,8 @@ as a database migration tool with the following functions:
 * The scripts are executed in a specific order.
 
 .. seealso::
-   `Auto Generating Migrations <https://alembic.sqlalchemy.org/en/latest/autogenerate.html>`_
+   `Auto Generating Migrations
+   <https://alembic.sqlalchemy.org/en/latest/autogenerate.html>`_
 
 Create migration environment
 ----------------------------

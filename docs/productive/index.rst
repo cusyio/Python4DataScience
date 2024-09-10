@@ -39,14 +39,14 @@ and :doc:`creating packages <python-basics:libs/index>`.
 .. seealso::
 
    * `Dustin Boswell, Trevor Foucher: The Art of Readable Code
-     <https://learning.oreilly.com/library/view/~/9781449318482/>`_
+     <https://www.oreilly.com/library/view/the-art-of/9781449318482/>`_
    * TIB workshop «FAIR Data and Software»
 
      * `GitHub Page
        <https://tibhannover.github.io/2018-07-09-FAIR-Data-and-Software/>`_
      * `GitHub Repository
        <https://github.com/TIBHannover/2018-07-09-FAIR-Data-and-Software>`_
-     * `Slides <https://doi.org/10.5281/zenodo.3707745>`_
+     * `Slides <https://zenodo.org/records/3707745>`_
    * `Dryad: Best practices for creating reusable data publications
      <https://datadryad.org/stash/best_practices>`_
 

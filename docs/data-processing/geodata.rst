@@ -28,7 +28,7 @@ Software
 Reading and writing
 ~~~~~~~~~~~~~~~~~~~
 
-`Geospatial Data Abstraction Library (GDAL) <https://gdal.org/>`_
+`Geospatial Data Abstraction Library (GDAL) <https://gdal.org/en/latest/>`_
     provides a low-level but more powerful API for reading and writing hundreds
     of data formats.
 
@@ -138,11 +138,10 @@ Reading and writing
 Remote sensing
 ~~~~~~~~~~~~~~
 
-`Satpy <https://satpy.readthedocs.io/>`_
+`Satpy <https://satpy.readthedocs.io/en/stable/>`_
     Easy to use API for sensors of satellite images like `MODIS
     <https://modis.gsfc.nasa.gov/data/>`_, `Sentinel-2
-    <https://sentinel.esa.int/web/sentinel/missions/sentinel-2>`_ :abbr:`etc
-    (et cetera)`.
+    <https://sentiwiki.copernicus.eu/web/s2-mission>`_ :abbr:`etc (et cetera)`.
 
     .. image::
        https://raster.shields.io/github/stars/pytroll/satpy
@@ -223,7 +222,7 @@ General purposes
     .. image::
        https://raster.shields.io/github/license/symerio/pgeocode
 
-`Arcpy <https://pro.arcgis.com/de/pro-app/arcpy/get-started/what-is-arcpy-.htm>`_
+`Arcpy <https://pro.arcgis.com/de/pro-app/latest/arcpy/get-started/what-is-arcpy-.htm>`_
     is used by `Esri ArcGIS <https://en.wikipedia.org/wiki/ArcGIS>`_ to perform
     geographic data analysis, data conversion, data management, and map
     automation.

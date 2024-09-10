@@ -21,7 +21,7 @@ Examples for GitHub Actions
     up to date.
 
     You can add further installations under `Install pre-commit ci
-    <https://github.com/apps/pre-commit-ci/installations/new>`_.
+    <https://github.com/login?integration=pre-commit-ci&return_to=%2Fapps%2Fpre-commit-ci%2Finstallations%2Fnew>`_.
 
 :file:`.github/workflows/pre-commit.yml`
     Alternative configuration as a GitHub workflow, for example:

@@ -55,7 +55,7 @@ Typical graph databases are Neo4j, OrientDB and ArangoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **GitHub**             | `neo4j/neo4j`_                 | `orientechnologies/orientdb`_  | `arangodb/arangodb`_           |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Docs**               | `neo4j.com/docs/`_             | `orientdb.dev/docs/`_          | `arangodb.com/documentation/`_ |
+| **Docs**               | `neo4j.com/docs/`_             | `orientdb.dev/docs/`_          | `docs.arangodb.com`_           |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Application areas**  | CMS, social networks,          | Master data management, social | Fraud Detection, IoT,          |
 |                        | GIS systems, ERP, …            | networks, `time series`_,      | identity management,,          |
@@ -106,14 +106,14 @@ Typical graph databases are Neo4j, OrientDB and ArangoDB.
 .. _`Neo4j`: https://neo4j.com
 .. _`OrientDB`: https://orientdb.dev
 .. _`neo4j/neo4j`: https://github.com/neo4j/neo4j
-.. _`ArangoDB`: https://www.arangodb.com/
+.. _`ArangoDB`: https://arangodb.com
 .. _`orientechnologies/orientdb`: https://github.com/orientechnologies/orientdb
 .. _`arangodb/arangodb`: https://github.com/arangodb/arangodb
 .. _`time series`: https://orientdb.dev/docs/3.2.x/gettingstarted/Time-series-use-case.html
 .. _`key value`: https://orientdb.dev/docs/3.2.x/gettingstarted/Key-Value-use-case.html
 .. _`neo4j.com/docs/`: https://neo4j.com/docs/
 .. _`orientdb.dev/docs/`: https://orientdb.dev/docs/3.2.x/index.html
-.. _`arangodb.com/documentation/`: https://arangodb.com/documentation/
+.. _`docs.arangodb.com`: https://docs.arangodb.com/
 .. _`Extended SQL`: https://orientdb.dev/docs/3.2.x/sql/index.html
 .. _`Cypher`: https://neo4j.com/docs/1.4/cypher-query-lang.html
 .. _`Gremlin`: https://github.com/tinkerpop/gremlin/wiki

@@ -57,7 +57,7 @@ Examples of object database systems are ZODB.
 +------------------------+----------------------------------------+
 | **GitHub**             | `zopefoundation/ZODB`_                 |
 +------------------------+----------------------------------------+
-| **Docs**               | `www.zodb.org/en/latest/tutorial.html`_|
+| **Docs**               | `zodb.org/en/latest/tutorial.html`_    |
 +------------------------+----------------------------------------+
 | **Application areas**  | Plone, Pyramid, BTrees, volatile data  |
 |                        |                                        |
@@ -84,5 +84,5 @@ Examples of object database systems are ZODB.
 .. _`ZODB`: hhttp://www.zodb.org/
 .. _`Objectivity/DB`: https://www.objectivity.com/products/objectivitydb/
 .. _`zopefoundation/ZODB`: https://github.com/zopefoundation/ZODB
-.. _`www.zodb.org/en/latest/tutorial.html`: http://www.zodb.org/en/latest/tutorial.html
+.. _`zodb.org/en/latest/tutorial.html`: https://zodb.org/en/latest/tutorial.html
 .. _`ZODB Replication Services (ZRS)`: https://pypi.org/project/zc.zrs/

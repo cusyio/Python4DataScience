@@ -5,8 +5,8 @@
 Trial metrics
 =============
 
-With the `dvc metrics <https://dvc.org/doc/commands-reference/metrics>`_
-command, DVC is also a framework for recording and comparing the performance of
+With the `dvc metrics <https://dvc.org/doc/command-reference/metrics>`_ command,
+DVC is also a framework for recording and comparing the performance of
 experiments.
 
 `evaluate.py
@@ -14,8 +14,8 @@ experiments.
 calculates the AUC (**A** rea **U** nder the **C** urve). It uses the test data
 set, reads the features from the file ``features/test.pkl`` and creates the
 metrics file ``auc.metric``. It can be identified as a DVC metric with the
-``-M`` option of `dvc run <https://dvc.org/doc/commands-reference/run>`_, in our
-example with:
+``-M`` option of `dvc run <https://dvc.org/doc/command-reference/stage/add>`_,
+in our example with:
 
 .. code-block:: console
 

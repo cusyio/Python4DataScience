@@ -13,16 +13,16 @@ Other Formats
         * `Data Serialization and Deserialization
           <https://avro.apache.org/docs/1.11.1/specification/#data-serialization-and-deserialization>`__
 
-`BSON <http://bsonspec.org/>`_
+`BSON <https://bsonspec.org>`_
     Short for *Binary JSON*. A binary data format mainly for :term:`MongoDB`
 
     .. seealso::
 
-        * `Specification <http://bsonspec.org/spec.html>`__
+        * `Specification <https://bsonspec.org/spec.html>`__
         * `MongoDB Extended JSON
-          <https://docs.mongodb.com/manual/reference/mongodb-extended-json/>`_
+          <https://www.mongodb.com/docs/manual/reference/mongodb-extended-json/>`_
         * `bsondump
-          <https://docs.mongodb.com/manual/reference/program/bsondump/>`_
+          <https://www.mongodb.com/docs/database-tools/bsondump/>`_
 
 `Cap’n Proto <https://capnproto.org/>`_
     A fast data interchange format.
@@ -66,8 +66,8 @@ Other Formats
     .. seealso::
 
         * `Language Guide
-          <https://github.com/Abscissa/SDLang-D/wiki/Language-Guide>`_
-        * `GitHub <https://github.com/Abscissa/SDLang-D>`__
+          <https://github.com/dlang-community/SDLang-D/wiki/Language-Guide>`_
+        * `GitHub <https://github.com/dlang-community/SDLang-D>`__
 
 XDR (:rfc:`4506`)
     Short for *External Data Representation Standard*. Useful for transferring

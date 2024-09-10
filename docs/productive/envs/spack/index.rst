@@ -13,8 +13,8 @@ Modeling and simulation environments are very heterogeneous. :doc:`Spack
 * Resolving different versions of dependencies
 
 .. seealso::
-   * `Docs <https://spack.readthedocs.io/>`_
-   * `Tutorial <https://spack-tutorial.readthedocs.io/>`_
+   * `Docs <https://spack.readthedocs.io/en/latest/>`_
+   * `Tutorial <https://spack-tutorial.readthedocs.io/en/latest/>`_
    * `Spack Encyclopedia <https://spack.github.io/spackpedia/>`_
    * `GitHub <https://github.com/spack>`_
 

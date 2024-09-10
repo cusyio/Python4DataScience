@@ -80,7 +80,7 @@ Read more
     * `Flight rules for Git <https://github.com/k88hudson/git-flight-rules>`_
     * `First Aid git <https://firstaidgit.io/>`_
     * `git-tips <https://github.com/git-tips/tips>`_
-    * `Pro Git book <https://git-scm.com/book>`_
+    * `Pro Git book <https://git-scm.com/book/en/v2>`_
     * `Git reference <https://git-scm.com/docs>`_
 
 Essentially, in this tutorial, I show on the one hand how :doc:`Jupyter

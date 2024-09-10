@@ -18,7 +18,6 @@ simple example :download:`accounts.proto`:
 
 .. literalinclude:: accounts.proto
    :caption: accounts.proto
-   :name: accounts.proto
    :language: proto
    :lines: 1-7
 
@@ -42,7 +41,6 @@ parameters and return types specified as protocol buffer messages:
 
 .. literalinclude:: accounts.proto
    :caption: accounts.proto
-   :name: accounts.proto
    :language: proto
    :lines: 8-
 

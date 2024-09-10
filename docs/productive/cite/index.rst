@@ -18,7 +18,7 @@ architects*, *technical writers* and *maintainers* can also be defined.
 
 .. seealso::
    * `ICMJE: Defining the Role of Authors and Contributors
-     <http://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html>`_
+     <https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html>`_
    * `Bot Recognize All Contributors <https://allcontributors.org/>`_
 
 .. toctree::

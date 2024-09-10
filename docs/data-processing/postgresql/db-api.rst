@@ -9,9 +9,8 @@ The Python API for database connectors is easy to use and understand. The two
 main concepts are:
 
 Connection
-    `Connection Objects
-    <https://www.python.org/dev/peps/pep-0249/#connection-objects>`_ allow the
-    following methods:
+    `Connection Objects <https://peps.python.org/pep-0249/#connection-objects>`_
+    allow the following methods:
 
     ``connect(parameters…)``
         opens the connection to the database
@@ -47,8 +46,8 @@ Connection
             conn.close()
 
 Cursor
-    `Cursor objects <https://www.python.org/dev/peps/pep-0249/#cursor-objects>`_
-    are used to manage the context of a ``.fetch*()`` method.
+    `Cursor objects <https://peps.python.org/pep-0249/#cursor-objects>`_ are
+    used to manage the context of a ``.fetch*()`` method.
 
     Cursors that are created in the same connection are not isolated from one
     another.

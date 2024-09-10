@@ -23,7 +23,7 @@ You can get an overview of public repositories with research data e.g. in
 * `European data <https://data.europa.eu/en>`_
 * `GovData.de <https://www.govdata.de/>`_
 * `US Census Bureau <https://www.census.gov/data.html>`_
-* `data.gov <https://www.data.gov/>`_
+* `data.gov <https://data.gov>`_
 * `Google Dataset Search <https://datasetsearch.research.google.com/>`_
 * `Google Public Data Search <https://www.google.com/publicdata/directory>`_
 * `Registry of Open Data on AWS <https://registry.opendata.aws/>`_
@@ -34,11 +34,11 @@ You can get an overview of public repositories with research data e.g. in
 * `Open Data Impact Map <https://opendataimpactmap.org/>`_
 * `CKAN <https://ckan.org/>`_
 * `UC Irvine Machine Learning Repository
-  <https://archive.ics.uci.edu/ml/index.php>`_
+  <https://archive.ics.uci.edu>`_
 * `Hugging Face Datasets <https://github.com/huggingface/datasets>`_
 * `Dataverse Project <https://dataverse.org/>`_
 * `Open Data Kit <https://opendatakit.org/>`_
 * `LODUM University of Münster‘s Open Data initiative
-  <https://www.uni-muenster.de/LODUM/>`_
+  <https://www.ulb.uni-muenster.de/bibliothek/aktivitaeten/projekte/projekt-life.html>`_
 * `freeCodeCamp open-data <https://github.com/freeCodeCamp/open-data>`_
 * `Reddit Datasets Community <https://www.reddit.com/r/datasets/>`_

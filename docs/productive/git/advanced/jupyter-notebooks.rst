@@ -236,8 +236,8 @@ For this purpose ReviewNB is perfect.
 ``nbdime``
 ----------
 
-`nbdime <https://nbdime.readthedocs.io/>`_ is a GUI for `nbformat
-<https://nbformat.readthedocs.io/>`_ diffs and replaces `nbdiff
+`nbdime <https://nbdime.readthedocs.io/en/latest/>`_ is a GUI for `nbformat
+<https://nbformat.readthedocs.io/en/latest/>`_ diffs and replaces `nbdiff
 <https://github.com/tarmstrong/nbdiff>`_. It attempts content-aware diffing
 locally as well as merging notebooks, is not limited to displaying diffs, but
 also prevents unnecessary changes from being checked in. However, it is not
@@ -249,8 +249,9 @@ compatible with ``nbdev2``.
 --------------
 
 `nbstripout <https://github.com/kynan/nbstripout>`_ automates *Clear all
-outputs*. It uses `nbformat <https://nbformat.readthedocs.io/>`_ and a few auto
-magic to set up ``.git config``. In my opinion, however, it has two drawbacks:
+outputs*. It uses `nbformat <https://nbformat.readthedocs.io/en/latest/>`_ and a
+few auto magic to set up ``.git config``. In my opinion, however, it has two
+drawbacks:
 
 * it is limited to the problematic metadata section
 * it is slow.

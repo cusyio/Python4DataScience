@@ -18,10 +18,10 @@ Key/value database systems are e.g. Riak, Cassandra, Redis and MongoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **GitHub**             | `basho/riak`_                  | `apache/cassandra`_            | `redis/redis`_                 | `mongodb/mongo`_               |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Docs**               | `docs.riak.com`_               | `cassandra.apache.org/doc/`_   | `redis.io/documentation`_      | `docs.mongodb.com`_            |
+| **Docs**               | `docs.riak.com`_               | `cassandra.apache.org/doc/`_   | `redis.io/docs`_               | `www.mongodb.com/docs`_        |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Application areas**  | Session storage, Log data,     | Georedundancy, high writing    | Session Cache, Full Page       | IoT, Mobile apps, CMS,         |
-|                        | Sensor data, CMS               | speed, democratic peer-to-peer | Cache (FPC), Queues, Pub/Sub   | `simple geospatial data`_, …   |
+|                        | Sensor data, CMS               | speed, democratic peer-to-peer | Cache (FPC), Queues, Pub/Sub   | `2d Index Internals`_, …       |
 |                        |                                | (P2P) architecture, data with  |                                |                                |
 |                        |                                | a defined lifetime             |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
@@ -61,7 +61,7 @@ Key/value database systems are e.g. Riak, Cassandra, Redis and MongoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 
 .. _`Riak`: https://riak.com/
-.. _`Cassandra`: https://cassandra.apache.org/
+.. _`Cassandra`: https://cassandra.apache.org/_/index.html
 .. _`Redis`: https://redis.io/
 .. _`MongoDB`: https://www.mongodb.com/
 .. _`basho/riak`: https://github.com/basho/riak
@@ -70,12 +70,12 @@ Key/value database systems are e.g. Riak, Cassandra, Redis and MongoDB.
 .. _`mongodb/mongo`: https://github.com/mongodb/mongo
 .. _`docs.riak.com`: https://docs.riak.com/
 .. _`cassandra.apache.org/doc/`: https://cassandra.apache.org/doc/latest/
-.. _`redis.io/documentation`: https://redis.io/documentation
-.. _`docs.mongodb.com`: https://docs.mongodb.com/
-.. _`simple geospatial data`: https://docs.mongodb.com/manual/core/geospatial-indexes/
-.. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/latest/cql/
+.. _`redis.io/docs`: https://redis.io/docs/latest/
+.. _`www.mongodb.com/docs`: https://www.mongodb.com/docs/
+.. _`2d Index Internals`: https://www.mongodb.com/docs/manual/core/indexes/index-types/geospatial/2d/internals/
+.. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/stable/cassandra/cql/
 .. _`Scylla`: https://www.scylladb.com/
-.. _`KeyDB`: https://github.com/JohnSully/KeyDB
+.. _`KeyDB`: https://github.com/Snapchat/KeyDB
 .. _`Redict`: https://redict.io/
 .. _`Valkey`: https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community
 .. _`BSON`: http://www.bsonspec.org/

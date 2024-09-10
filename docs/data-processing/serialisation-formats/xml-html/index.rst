@@ -44,7 +44,7 @@ Example
 
     * `Home <https://www.w3.org/XML/>`_
     * `Specification <https://www.w3.org/TR/REC-xml/>`_
-    * `Validator <http://validator.w3.org/>`_
+    * `Validator <https://validator.w3.org>`_
     * `The XML FAQ <http://xml.silmaril.ie/>`_
 
 .. _`XML schema`: https://www.w3.org/TR/xmlschema-0/
