@@ -38,7 +38,7 @@ Examples of column-oriented database systems are :term:`Cassandra`,
 |                        | *Keyspaces* databases; no      |                                |                                |
 |                        | logical structure, no scheme   |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Query langauge**     | `Cassandra Query Language      | `Hypertable Query Language     | Java Client API, Thrift/REST   |
+| **Query language**     | `Cassandra Query Language      | `Hypertable Query Language     | Java Client API, Thrift/REST   |
 |                        | (CQL)`_                        | (HQL)`_                        | API                            |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Transactions,        | :term:`Eventual Consistency`   | :term:`MVCC – Multiversion     | :term:`ACID` per line,         |

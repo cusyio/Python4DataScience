@@ -31,6 +31,7 @@ docs = [
 dev = [
     "Python4DataScience[docs]",
     "pre-commit",
+    "codespell",
 ]
 
 [project.urls]
@@ -39,3 +40,7 @@ dev = [
 
 [tool.setuptools]
 packages = []
+
+[tool.codespell]
+skip = "*.csv, *.pdf, *.ipynb, ./docs/_build/*, ./styles/*"
+ignore-words-list = "fo, AAS, ans, Groth, Ned, Redict, redict, reStructedText, splitted"

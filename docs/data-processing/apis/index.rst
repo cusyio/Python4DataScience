@@ -2,8 +2,8 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-**A**\pplication **P**\rogramming **I**\nterface (API)
-======================================================
+Application Programming Interface (API)
+=======================================
 
 APIs can be used to provide the data. :doc:`fastapi/index` is a library that can
 generate APIs and documentation based on `OpenAPI <https://www.openapis.org/>`_

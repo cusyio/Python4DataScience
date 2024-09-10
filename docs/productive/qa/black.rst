@@ -9,9 +9,9 @@ Black
 deterministic format.
 
 .. seealso::
-    Was lesbaren Code auszeichnet, ist gut beschrieben im Trey Hunners Blog-Post
-    `Craft Your Python Like Poetry
-    <https://treyhunner.com/2017/07/craft-your-python-like-poetry/>`_.
+   What characterises readable code is well described in Trey Hunner's blog post
+   `Craft Your Python Like Poetry
+   <https://treyhunner.com/2017/07/craft-your-python-like-poetry/>`_.
 
 Installation
 ------------

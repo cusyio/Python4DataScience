@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-.. Workarround for displaying the index in the toc
+.. Workaround for displaying the index in the toc
 
 Index
 =====

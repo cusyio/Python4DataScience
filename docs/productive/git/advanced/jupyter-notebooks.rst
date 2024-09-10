@@ -191,7 +191,7 @@ Set up
 
          *.ipynb filter=nbstrip_jq
 
-#. If you then use ``git add`` to add your notebok to the stage area, the
+#. If you then use ``git add`` to add your notebook to the stage area, the
    ``nbstrip_jq`` filter will be applied.
 
    .. note::

@@ -59,7 +59,7 @@ including
 +----------------------------------------------------+------------------------------------------------------------------------------------------+
 | :doc:`pandas:reference/api/pandas.read_sql_table`  | reads an entire SQL table (with                                                          |
 |                                                    | :doc:`postgresql/sqlalchemy`) as a pandas DataFrame                                      |
-|                                                    | (corresponds to a query that selects everything Rin this                                 |
+|                                                    | (corresponds to a query that selects everything in this                                  |
 |                                                    | table with ``read_sql``)                                                                 |
 +----------------------------------------------------+------------------------------------------------------------------------------------------+
 | :doc:`pandas:reference/api/pandas.read_stata`      | reads a data set from the                                                                |

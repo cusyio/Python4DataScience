@@ -473,7 +473,7 @@ Oceanography
        https://raster.shields.io/github/license/mvdh7/PyCO2SYS
 
 `pyoos <https://pypi.org/project/pyoos/>`_
-    High level data collection library for met/ocean data publically available.
+    High level data collection library for met/ocean data publicly available.
 
     .. image::
        https://raster.shields.io/github/stars/ioos/pyoos

@@ -13,7 +13,7 @@ the Python package manager :term:`pip`, the call would look like this:
     $ python -m pip install --no-deps --require-hashes ----only-binary=:all:
 
 Dedicated environments (for example with :doc:`pipenv/index`, :term:`devpi` and
-:doc:`Spack <spack/index>` simplify this if you save the file with ther
+:doc:`Spack <spack/index>` simplify this if you save the file with their
 specifications, for example ``Pipfile``, ``Pipfile.lock``, ``package-lock.json``
 :abbr:`etc (et cetera)`. In this way, you and others can reproduce the
 environments.

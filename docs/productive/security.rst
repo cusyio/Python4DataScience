@@ -136,8 +136,7 @@ security-oriented best practices for open source software development:
 * at least one static code analysis tool applied to each planned major
   production release
 
-You can also get a corresponding badge with the `OpenSSF Best Practices Badge
-Programm <https://bestpractices.coreinfrastructure.org/de>`_.
+You can also get a corresponding badge with the `OpenSSF Best Practices Badge Program <https://www.bestpractices.dev/en>`_.
 
 Continuous testing
 ------------------

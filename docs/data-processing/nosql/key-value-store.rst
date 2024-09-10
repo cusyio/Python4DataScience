@@ -37,7 +37,7 @@ Key/value database systems are e.g. Riak, Cassandra, Redis and MongoDB.
 |                        |                                | to databases; no logical       | lists, sets and sorted sets    |                                |
 |                        |                                | structure, no scheme           |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Query langauge**     | Keyfilter, :term:`MapReduce`,  | `Cassandra Query Language      |                                | jQuery, :term:`MapReduce`      |
+| **Query language**     | Keyfilter, :term:`MapReduce`,  | `Cassandra Query Language      |                                | jQuery, :term:`MapReduce`      |
 |                        | Link walking, no ad hoc queries| (CQL)`_                        |                                |                                |
 |                        | possible                       |                                |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+

@@ -70,7 +70,7 @@ Examples of object database systems are ZODB.
 | **Data model**         | PersistentList, PersistentMapping,     |
 |                        | BTree                                  |
 +------------------------+----------------------------------------+
-| **Query langauge**     |                                        |
+| **Query language**     |                                        |
 +------------------------+----------------------------------------+
 | **Transactions,        | :term:`ACID`                           |
 | concurrency**          |                                        |
@@ -81,7 +81,7 @@ Examples of object database systems are ZODB.
 | **Remarks**            |                                        |
 +------------------------+----------------------------------------+
 
-.. _`ZODB`: hhttp://www.zodb.org/
+.. _`ZODB`: https://zodb.org/en/latest/
 .. _`Objectivity/DB`: https://www.objectivity.com/products/objectivitydb/
 .. _`zopefoundation/ZODB`: https://github.com/zopefoundation/ZODB
 .. _`zodb.org/en/latest/tutorial.html`: https://zodb.org/en/latest/tutorial.html

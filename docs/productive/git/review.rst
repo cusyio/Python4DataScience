@@ -223,12 +223,12 @@ help. For relative timestamps you can use ``--date=relative``:
 .. code-block:: console
 
    $ git reflog --date=relative
-   12bc4d4 (HEAD -> main, my-feature) HEAD@{vor 37 Minuten}: merge my-feature-branch: Fast-forward
-   900844a HEAD@{vor 37 Minuten}: checkout: moving from my-feature-branch to main
-   12bc4d4 (HEAD -> main, my-feature-branch) HEAD@{vor 37 Minuten}: commit (amend): Add my feature and more
-   982d93a HEAD@{vor 38 Minuten}: commit: Add my feature
-   900844a HEAD@{vor 39 Minuten}: checkout: moving from main to my-feature-branch
-   900844a HEAD@{vor 40 Minuten}: commit (initial): Initial commit
+   12bc4d4 (HEAD -> main, my-feature) HEAD@{37 minutes ago}: merge my-feature-branch: Fast-forward
+   900844a HEAD@{37 minutes ago}: checkout: moving from my-feature-branch to main
+   12bc4d4 (HEAD -> main, my-feature-branch) HEAD@{37 minutes ago}: commit (amend): Add my feature and more
+   982d93a HEAD@{38 minutes ago}: commit: Add my feature
+   900844a HEAD@{39 minutes ago}: checkout: moving from main to my-feature-branch
+   900844a HEAD@{40 minutes ago}: commit (initial): Initial commit
 
 And for absolute timestamps you can also use ``--date=iso``:
 
