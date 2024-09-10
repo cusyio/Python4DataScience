@@ -11,7 +11,7 @@ experiments.
 
 `evaluate.py
 <https://github.com/veit/dvc-example/blob/main/src/evaluate.py>`_
-calculates the AUC (**A** rea **U** nder the **C** urve). It uses the test data
+calculates the :abbr:`AUC (Area Under the Curve)`. It uses the test data
 set, reads the features from the file ``features/test.pkl`` and creates the
 metrics file ``auc.metric``. It can be identified as a DVC metric with the
 ``-M`` option of `dvc run <https://dvc.org/doc/command-reference/stage/add>`_,

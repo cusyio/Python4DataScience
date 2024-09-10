@@ -93,7 +93,6 @@ Tools
 
 :doc:`git2prov`
     generates PROV data from the information in a Git repository.
-    generiert PROV-Daten aus den Informationen eines Git-Repository.
 :doc:`hermes`
     simplifies the publication of research software by continuously retrieving
     existing metadata in :doc:`cff`, :doc:`codemeta` and :doc:`Git

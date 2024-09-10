@@ -199,7 +199,7 @@ Special data structures
 Select compiler
 ---------------
 
-Faster Cpython
+Faster CPython
 ~~~~~~~~~~~~~~
 
 At PyCon US in May 2021, Guido van Rossum presented `Faster CPython

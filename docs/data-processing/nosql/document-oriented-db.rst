@@ -45,8 +45,8 @@ OrientDB and ArangoDB.
 |                        |                                |* distributed systems:          |                                |                                |                                |
 |                        |                                |  :term:`BASE`                  |                                |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Replication,         | Master-Slave replikation,      | Master-master replication      | Multi-master replication       | Multi-Master-Replikation,      | Master-slave replication,      |
-| skaling**              | Auto-Sharding                  |                                |                                | Sharding                       | sharding                       |
+| **Replication,         | Master-Slave replication,      | Master-master replication      | Multi-master replication       | Multi-Master-Replication,      | Master-slave replication,      |
+| scaling**              | Auto-Sharding                  |                                |                                | Sharding                       | sharding                       |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Remarks**            | `BSON` with a maximum          |                                |                                |                                |                                |
 |                        | document size of 16 MB.        |                                |                                |                                |                                |

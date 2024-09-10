@@ -243,7 +243,7 @@ can activate it globally with:
 
    $ git config --global commit.cleanup scissors
 
-Git then starts each new commit message with the *Scissorsr* line:
+Git then starts each new commit message with the *Scissors* line:
 
 .. code-block:: ini
 
@@ -282,8 +282,8 @@ You should perform the following maintenance work regularly:
 Validate the repo
 ~~~~~~~~~~~~~~~~~
 
-The command ``git fsck`` checks whether all objects in the internal
-datastructure of git are consistently connected with each other.
+The command ``git fsck`` checks whether all objects in the internal data
+structure of git are consistently connected with each other.
 
 Compresses the repo
 ~~~~~~~~~~~~~~~~~~~
@@ -332,7 +332,7 @@ template, for example, in a stage called ``secrets-detection`` in your
 
 The template creates secret detection jobs in your CI/CD pipeline and searches
 the source code of your project for secrets. The results are saved as a `Secret
-Detection Report Artefakt
+Detection Report Artifact
 <https://docs.gitlab.com/ee/ci/yaml/artifacts_reports.html#artifactsreportssecret_detection>`_
 that you can download and analyse later.
 
