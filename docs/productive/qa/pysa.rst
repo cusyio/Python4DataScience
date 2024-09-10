@@ -54,7 +54,7 @@ Pyre can be called, for example with
 The  ``--save-results-to`` option stores detailed results in
 ``./taint-output.json``.
 
-Pysa postprozessor
+Pysa postprocessor
 ------------------
 
 Installation

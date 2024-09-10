@@ -74,11 +74,11 @@ tells you that you should investigate the situation more closely.
 You can also display the activities of a project with badges, for example:
 
 .. image:: https://img.shields.io/github/commit-activity/y/veit/python4datascience
-   :alt: Jährliche Commit-Aktivität
+   :alt: Annual commit activity
 .. image:: https://img.shields.io/github/commit-activity/m/veit/python4datascience
-   :alt: Monatliche Commit-Aktivität
+   :alt: Monthly commit activity
 .. image:: https://img.shields.io/github/commit-activity/w/veit/python4datascience
-   :alt: Wöchentliche Commit-Aktivität
+   :alt: Weekly commit activity
 
 Is there a safety concept for the project?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -175,7 +175,7 @@ Risk: Medium
 
 `Static code analysis <https://en.wikipedia.org/wiki/Static_program_analysis>`_
 tests the source code before the application is executed. This can prevent known
-bug classes from being accidentally introduced into the codebase.
+bug classes from being accidentally introduced into the code base.
 
 To check for vulnerabilities, you can use `bandit
 <https://github.com/PyCQA/bandit>`_, which you can also integrate into your

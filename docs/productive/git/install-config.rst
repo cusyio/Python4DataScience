@@ -73,7 +73,7 @@ Specify your name and email address as follows:
 :samp:`$ git config --global user.email "{EMAIL-ADDRESS}"`
     defines the email address :samp:`{EMAIL-ADDRESS}` that will be linked to your commit transactions.
 
-For better readability, activate the coloring of the command line output:
+For better readability, activate the colouring of the command line output:
 
 :samp:`$ git config --global color.ui auto`
 

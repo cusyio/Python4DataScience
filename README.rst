@@ -130,7 +130,7 @@ Installation
 
    You can find the PDF at ``docs/_build/latex/jupytertutorial.pdf``.
 
-#. Install vnd run ale to check spelling
+#. Install and run ale to check spelling
 
    You can install Vale with:
 
@@ -138,7 +138,7 @@ Installation
 
     $ brew install vale
 
-   You can install the parser for Restructuredtext with:
+   You can install the parser for reStructuredText with:
 
    .. code-block:: console
 
@@ -148,7 +148,7 @@ Installation
       * `Vale installation <https://docs.errata.ai/vale/install>`_
       * `Vale formats <https://docs.errata.ai/vale/scoping#formats>`_
 
-   Now you can check the RestructuredText files with:
+   Now you can check the reStructuredText files with:
 
    .. code-block:: console
 
@@ -176,6 +176,6 @@ suggestions.
 The following guidelines help us to maintain the German translation of the
 tutorial:
 
-* Write commit messages in Englisch
+* Write commit messages in English
 * Start commit messages with a `Gitmoji <https://gitmoji.dev/>`__
 * Stick to English names of files and folders.

@@ -44,10 +44,10 @@ repositories.
    token
    <https://sandbox.zenodo.org/account/settings/applications/tokens/new/>`_ in
    your user profile with the name :samp:`HERMES workflow` and the scopes
-   :guilabel:`deposit:actions` und :guilabel:`deposit:write`:
+   :guilabel:`deposit:actions` and :guilabel:`deposit:write`:
 
    .. image:: zenodo-personal-access-token.png
-      :alt: Zenodo: Neues persönliches Zugangstoken
+      :alt: Zenodo: New personal access token
 
 #. Copy the newly created token to a new `GitHub secret
    <https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository>`_
@@ -55,7 +55,7 @@ repositories.
    Variables --> Actions --> New repository secret`:
 
    .. image:: github-new-action-secret.png
-      :alt: GitHub: Neues Action-Secret
+      :alt: GitHub: New action secret
 
 #. Configure the GitHub action
 

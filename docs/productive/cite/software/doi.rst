@@ -17,7 +17,7 @@ example of the Jupyter tutorial:
    Object Identifier)` for your upload. Leave the form open to upload your
    software later.
 
-#. Create or modify the :doc:`codemeta`- und :doc:`cff` files in your software
+#. Create or modify the :doc:`codemeta`- and :doc:`cff` files in your software
    directory.
 
 #. Include the badge in the :file:`README` file of your software:
@@ -49,4 +49,4 @@ example of the Jupyter tutorial:
 #. Create a new release:
 
    .. figure:: github-release.png
-      :alt: Github releases
+      :alt: GitHub releases
