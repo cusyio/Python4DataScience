@@ -9,9 +9,10 @@ You can get an overview of public repositories with research data e.g. in
 :doc:`opendata`.
 
 In addition to specific Python libraries for accessing
-:doc:`/data-processing/remote-file-systems` and :doc:`/data-processing/geodata`, we will
-introduce you to different :doc:`serialisation formats <serialisation-formats/index>` and
-three tools in more detail that make data accessible:
+:doc:`/data-processing/file-systems` and :doc:`/data-processing/geodata`, we
+will introduce you to different :doc:`serialisation formats
+<serialisation-formats/index>` and three tools in more detail that make data
+accessible:
 
 * :doc:`/data-processing/pandas-io`
 * :doc:`httpx/index`
@@ -61,7 +62,7 @@ Python packages to :doc:`clean up and validate data <../clean-prep/index>`.
     serialisation-formats/index
     intake/index
     httpx/index
-    remote-file-systems
+    file-systems
     geodata
     postgresql/index
     nosql/index
