@@ -44,9 +44,9 @@ The restrictions refer to  ``pd.read_json``, which is only implemented for
 Dask
 ----
 
-:ref:`Dask DataFrame <Dask-DataFrame>` is a large parallel DataFrame made up of
-multiple pandas DataFrames. Here, the ``dask.dataframe`` API is a subset of the
-pandas API, although there are minor changes.
+:ref:`/performance/dask.ipynb#dask-dataframe` is a large parallel DataFrame made
+up of multiple pandas DataFrames. Here, the ``dask.dataframe`` API is a subset
+of the pandas API, although there are minor changes.
 
 .. seealso::
 
