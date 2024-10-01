@@ -28,7 +28,7 @@ and ``$ pipenv run`` will automatically load it:
     Loading .env environment variables...
     …
 
-.. code-block:: python
+.. code-block:: pycon
 
     >>> import os
     >>> os.environ["USERNAME"]
