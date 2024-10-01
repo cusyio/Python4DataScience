@@ -130,6 +130,8 @@ complicated changes in behaviour. For performance tests, we need a test
 programme that can perform multiple runs and determine the minimum time while
 eliminating possible noise:
 
+.. blacken-docs:off
+
 .. code-block:: python
 
    from subprocess import run
@@ -152,6 +154,8 @@ eliminating possible noise:
    else:
        print("Fast enough")
        raise SystemExit(0)
+
+.. blacken-docs:on
 
 The programme executes :samp:`python perftest.py {PARAM}` ten times and measures
 the time for each execution. It then compares the minimum execution time with a

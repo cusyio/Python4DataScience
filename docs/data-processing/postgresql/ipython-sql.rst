@@ -22,7 +22,7 @@ First steps
 
 #. First, ipython-sql is activated in your notebook with
 
-   .. code-block:: python
+   .. code-block:: ipython
 
     In [1]: %load_ext sql
 
@@ -30,13 +30,13 @@ First steps
    <https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls>`_ is
    used to connect to the database:
 
-   .. code-block:: python
+   .. code-block:: ipython
 
     In [2]: %sql postgresql://
 
 #. Then you can create a table, for example:
 
-   .. code-block:: python
+   .. code-block:: ipython
 
     In [3]: %%sql postgresql://
        ....: CREATE TABLE accounts (login, name, email)
@@ -44,7 +44,7 @@ First steps
 
 #. You can query the contents of the ``accounts`` table with
 
-   .. code-block:: python
+   .. code-block:: ipython
 
     In [4]: result = %sql select * from accounts
 
@@ -88,7 +88,7 @@ pandas
 
 If pandas is installed, the ``DataFrame`` method can be used:
 
-.. code-block:: python
+.. code-block:: ipython
 
     In [5]: result = %sql SELECT * FROM accounts
 

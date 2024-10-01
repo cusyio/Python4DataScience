@@ -59,14 +59,14 @@ method, and ``get_thumbnail()`` a property:
         thumbnail_resolution = 128
 
         def __init__(self, path):
-            ...
+            "..."
 
         def crop(self, width, height):
-            ...
+            "..."
 
         @property
         def thumbnail(self):
-            ...
+            "..."
             return thumb
 
 Objects that should be functions

@@ -163,6 +163,8 @@ Spack provides a ``spec`` syntax for describing custom DAGs:
 
 * Spack packages are simple Python scripts:
 
+  .. blacken-docs:off
+
   .. code-block:: python
 
         from spack import *
@@ -197,6 +199,8 @@ Spack provides a ``spec`` syntax for describing custom DAGs:
                 configure("--prefix=" + prefix)
                 make()
                 make("install")
+
+  .. blacken-docs:on
 
 * Dependencies in Spack can be optional:
 
