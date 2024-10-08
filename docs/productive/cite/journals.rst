@@ -152,7 +152,7 @@ Physics and Earth Sciences
 * `AAS: The Astrophysical Journal Supplement Series <https://iopscience.iop.org/journal/0067-0049/>`_
 * `Astronomy and Computing
   <https://www.journals.elsevier.com/astronomy-and-computing>`_
-* `Communications in Computational Physics <http://www.global-sci.com/index/index.html>`_
+* `Communications in Computational Physics <https://www.global-sci.org/cicp>`_
 * `Computational Astrophysics and Cosmology
   <https://comp-astrophys-cosmol.springeropen.com/>`_
 * `Computer Physics Communications
