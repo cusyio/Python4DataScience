@@ -63,8 +63,8 @@ together with software under other free licences. For example, the 3-Clause BSD
 licence is incompatible with the :abbr:`GPL (GNU General Public License)`.
 
 The `EUPL
-<https://joinup.ec.europa.eu/collection/eupl/introduction-eupl-licence>`_, on
-the other hand, is a reciprocal licence that is at least compatible and
+<https://interoperable-europe.ec.europa.eu/collection/eupl/introduction-eupl-licence>`_,
+on the other hand, is a reciprocal licence that is at least compatible and
 interoperable with most other open reciprocal licences: the compatible licence
 obligations take precedence if they conflict with the obligations arising from
 the EUPL.
@@ -159,7 +159,7 @@ Fonts
     .. seealso::
        * `Font Licensing <https://www.fsf.org/blogs/licensing/20050425novalis>`_
 
-`LaTeX ec fonts <https://web.archive.org/web/20130212180815/https://dante.ctan.org/tex-archive/fonts/ec/src/copyrite.txt>`_
+`LaTeX ec fonts <https://ctan.joethei.xyz/fonts/ec/src/copyrite.txt>`_
     Free *European Computer Modern and Text Companion* fonts commonly used with
     Latex.
 `Arphic Public License <https://spdx.org/licenses/Arphic-1999>`_

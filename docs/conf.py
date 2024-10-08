@@ -226,6 +226,7 @@ linkcheck_ignore = [
     r"https://www.reddit.com/r/datasets/",
     r"https://www.sciencedirect.com/journal/",
     r"https://www.siam.org/publications/journals/",
+    r"https://sourceforge.net/",
     r"https://www.tandfonline.com/",
 ]
 

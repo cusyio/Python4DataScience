@@ -97,7 +97,7 @@ Python Code Quality Authority
         Python linter
     `doc8 <https://github.com/PyCQA/doc8>`_
         executes doc8 for linting documents
-    `prospector <https://github.com/landscapeio/prospector>`_
+    `prospector <https://github.com/prospector-dev/prospector>`_
         analyses Python code with prospector
     `isort <https://github.com/PyCQA/isort>`_
         sorts Python imports

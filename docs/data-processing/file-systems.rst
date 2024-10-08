@@ -206,7 +206,7 @@ Specialised libraries
 
 `PyDrive2 <https://docs.iterative.ai/PyDrive2/>`_
     Python wrapper library of the `google-api-python-client
-    <https://github.com/google/google-api-python-client>`_, which simplifies
+    <https://github.com/googleapis/google-api-python-client>`_, which simplifies
     many common Google Drive API tasks.
 
     .. image::
@@ -273,8 +273,8 @@ Dormant projects
 
 `PyDrive <https://pypi.org/project/PyDrive/>`_
     Python wrapper library of the `google-api-python-client
-    <https://github.com/google/google-api-python-client>`_, which simplifies
-    many common Google Drive API tasks.
+    <https://github.com/googleapis/google-api-python-client>`__, which
+    simplifies many common Google Drive API tasks.
 
     .. image::
        https://raster.shields.io/github/stars/googlearchive/PyDrive

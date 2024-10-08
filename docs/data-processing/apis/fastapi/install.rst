@@ -50,11 +50,11 @@ Starlette can use the optional dependencies
     if you want to use the ``TestClient``.
 `aiofiles <https://github.com/Tinche/aiofiles>`_
     if you want to use ``FileResponse`` or ``StaticFiles``.
-`jinja2 <https://jinja.palletsprojects.com/>`_
+`jinja2 <https://jinja.palletsprojects.com/en/stable/>`_
     if you want to use the default template configuration.
-`python-multipart <https://kludex.github.io/python-multipart/>`_
+`python-multipart <https://multipart.fastapiexpert.com>`_
     if you want to support form parsing, with ``request.form()``.
-`itsdangerous <https://itsdangerous.palletsprojects.com/>`_
+`itsdangerous <https://itsdangerous.palletsprojects.com/en/stable/>`_
     required for ``SessionMiddleware`` support.
 `pyyaml <https://pyyaml.org/wiki/PyYAMLDocumentation>`_
     for Starlette’s ``SchemaGenerator`` support.

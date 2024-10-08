@@ -7,11 +7,11 @@ PostGIS
 
 `PostGIS <https://postgis.net/>`_ is an extension for PostgreSQL that includes
 geographic objects and functions. The extension implements i.a. the `Simple
-Feature Access <https://www.ogc.org/standard/sfa/>`_ specification of the `Open
-Geospatial Consortium <https://www.ogc.org>`_. Although PostgreSQL already
-supports geometry types, these are insufficient for geographic tasks. Therefore,
-PostGIS creates its own data types that are better suited for geographic tasks.
-The following geometry types are supported:
+Feature Access <https://www.ogc.org/publications/standard/sfa/>`_ specification
+of the `Open Geospatial Consortium <https://www.ogc.org>`_. Although PostgreSQL
+already supports geometry types, these are insufficient for geographic tasks.
+Therefore, PostGIS creates its own data types that are better suited for
+geographic tasks. The following geometry types are supported:
 
 * OpenGIS with well-known text and well-known binary
 * Extended Well-Known Text and Extended Well-Known Binary also with height
