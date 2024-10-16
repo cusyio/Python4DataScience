@@ -82,7 +82,7 @@ functions, for example if a class contains only one other method apart from
 
    .. code-block:: console
 
-    $ pipenv run pylint --disable=all --enable=R0903 requests
+    $ uv run pylint --disable=all --enable=R0903 requests
     ************* Module requests.auth
     requests/auth.py:72:0: R0903: Too few public methods (1/2) (too-few-public-methods)
     requests/auth.py:100:0: R0903: Too few public methods (1/2) (too-few-public-methods)

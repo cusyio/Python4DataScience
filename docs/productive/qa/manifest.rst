@@ -14,7 +14,7 @@ Installation
 
 .. code-block:: console
 
-    $ pipenv install check-manifest
+    $ uv add check-manifest
 
 Check
 -----
@@ -22,13 +22,13 @@ Check
 .. code-block:: console
 
     $ cd /path/to/MANIFEST.in
-    $ pipenv run check-manifest
+    $ uv run check-manifest
 
 … or for an automatic update
 
 .. code-block:: console
 
-    $ pipenv run check-manifest -uv
+    $ uv run check-manifest -uv
     listing source files under version control: 6 files and directories
     building an sdist: check-manifest-0.7.tar.gz: 4 files and directories
     lists of files in version control and sdist do not match!

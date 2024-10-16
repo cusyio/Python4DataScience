@@ -14,7 +14,7 @@ before commits; they can also be used for other Git hooks:
 
     .. code-block:: console
 
-        $ pipenv run pre-commit install --hook-type post-commit
+        $ uv run pre-commit install --hook-type post-commit
         pre-commit installed at .git/hooks/post-commit
 
     However, since ``post-commit`` does not work on files, all these hooks must
@@ -47,7 +47,7 @@ before commits; they can also be used for other Git hooks:
 
     .. code-block:: console
 
-        $ pipenv run pre-commit install --hook-type post-merge
+        $ uv run pre-commit install --hook-type post-merge
         pre-commit installed at .git/hooks/post-merge
 
     With ``$PRE_COMMIT_IS_SQUASH_MERGE`` you can find out if it was a squash

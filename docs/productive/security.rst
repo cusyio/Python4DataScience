@@ -20,9 +20,9 @@ This check determines whether the project has open, unfixed vulnerabilities in
 its own code base or in its dependencies. An open vulnerability can be easily
 exploited and should be closed as soon as possible.
 
-For such a check, you can use for example :ref:`pipenv check <pipenv_check>`,
-which uses the Python library `safety <https://github.com/pyupio/safety>`_.
-Alternatively, you can use `osv <https://pypi.org/project/osv/>`_ or `pip-audit
+For such a check, you can use for example `safety
+<https://github.com/pyupio/safety>`_. Alternatively, you can use `osv
+<https://pypi.org/project/osv/>`_ or `pip-audit
 <https://pypi.org/project/pip-audit/>`_, which uses the `Open Source
 Vulnerability Database <https://osv.dev>`_.
 
@@ -44,6 +44,8 @@ ignore and a reason, for example:
 Maintenance
 -----------
 
+.. _automatic-update:
+
 Are the dependencies updated automatically?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -55,8 +57,11 @@ automated by checking for outdated or insecure requirements and updating them if
 necessary. You can use `dependabot <https://github.com/dependabot>`_ or `Safety
 CLI <https://safetycli.com>`_ for this purpose.
 
-You can also update your :doc:`/productive/envs/pipenv/index` environments
-automatically with :ref:`pipenv update <pipenv_update>`.
+You can also update your :doc:`/productive/envs/uv/index` environments
+automatically.
+
+.. seealso::
+   * `Update uv.lock <python-basics:update-uv-lock>`_
 
 Are the dependencies still maintained?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -253,6 +258,8 @@ commits.
 Risk assessment of the builds
 -----------------------------
 
+.. _lock-dependencies:
+
 Are dependencies declared and fixed in the project?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -263,11 +270,19 @@ be pinned. A pinned dependency should be explicitly set to a specific hash and
 not just to a mutable version or version range.
 
 :doc:`envs/spack/index` writes these hashes for the respective environment in
-:ref:`spack_lock`, :doc:`envs/pipenv/index` in :ref:`Pipfile.lock
-<pipenv_lock>`. These files should therefore also be checked in with the source
-code.
+:ref:`spack_lock`, :doc:`envs/uv/index` in :ref:`uv_lock`.
 
-This can reduce the following security risks:
+.. tip::
+   Üblicherweise verwalte ich diese Dateien jedoch nur bei
+   :doc:`python-basics:apps` in :doc:`git/index`. Bei
+   :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
+   Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
+
+:doc:`envs/spack/index` writes these hashes for the respective environment in
+:ref:`spack_lock`, :doc:`envs/uv/index` in :ref:`uv_lock`. These files should
+therefore also be checked in with the source code.
+
+This can reduce the following security risks for :doc:`python-basics:apps`:
 
 * Testing and deployment are done with the same software, which reduces
   deployment risks, simplifies debugging and enables reproducibility.

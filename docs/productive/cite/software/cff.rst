@@ -35,7 +35,7 @@ The content of the file can look like this:
       - ipython
       - pandas
       - spack
-      - pipenv
+      - uv
       - ipywidgets
       - "ipython-widget"
       - dvc

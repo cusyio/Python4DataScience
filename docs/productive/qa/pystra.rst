@@ -17,7 +17,7 @@ Installation
 
 .. code-block:: console
 
-    $ pipenv install pystra
+    $ uv add pystra
 
 Reliability analysis
 --------------------

@@ -13,7 +13,7 @@ Installation
 
 .. code-block:: console
 
-    $ pipenv install isort
+    $ uv add isort
 
 Configuration
 -------------

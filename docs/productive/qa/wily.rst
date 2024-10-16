@@ -71,13 +71,13 @@ Wily can be easily installed with
 
 .. code-block:: console
 
-    $ pipenv install wily
+    $ uv add wily
 
 You can then check the installation with
 
 .. code-block:: console
 
-    $ pipenv run wily --help
+    $ uv run wily --help
     Usage: wily [OPTIONS] COMMAND [ARGS]...
       Version: 1.19.0
       🦊 Inspect and search through the complexity of your source code. To get
@@ -130,13 +130,13 @@ Use
 
    .. code-block:: console
 
-        $ pipenv run wily build
+        $ uv run wily build
 
 #. Show metric
 
    .. code-block:: console
 
-        $ pipenv run wily report
+        $ uv run wily report
 
    This outputs both the metric and the delta to the previous revision.
 
@@ -144,7 +144,7 @@ Use
 
    .. code-block:: console
 
-        $ pipenv run wily rank
+        $ uv run wily rank
 
    This shows the ranking of all files in a directory or a single file based on
    the specified metric, if present in ``.wily/``.
@@ -153,7 +153,7 @@ Use
 
    .. code-block:: console
 
-        $ pipenv run wily graph
+        $ uv run wily graph
 
    This displays a graph in the default browser.
 
@@ -161,13 +161,13 @@ Use
 
    .. code-block:: console
 
-        $ pipenv run wily index
+        $ uv run wily index
 
 #. List the metrics available in the Wily operators
 
    .. code-block:: console
 
-        $ pipenv run wily list-metrics
+        $ uv run wily list-metrics
 
 … as pre-commit hook
 ~~~~~~~~~~~~~~~~~~~~
@@ -195,8 +195,8 @@ can also specify other references, for example ``HEAD^1`` with
 
 .. code-block:: console
 
-    $ pipenv run wily build src/
-    $ pipenv run wily diff src/ -r HEAD^1
+    $ uv run wily build src/
+    $ uv run wily diff src/ -r HEAD^1
 
 ----
 

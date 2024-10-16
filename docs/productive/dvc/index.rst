@@ -57,7 +57,7 @@ Finally, external dependencies can also be specified with Pipenv.
 
    .. code-block:: console
 
-        $ pipenv install dvc[ssh]
+        $ uv add dvc[ssh]
 
 Alternatively, DVC can also be installed via other package managers:
 
@@ -74,16 +74,6 @@ Alternatively, DVC can also be installed via other package managers:
    .. code-block:: console
 
       $ brew install iterative/homebrew-dvc/dvc
-
-.. note::
-
-   The following example was created with a current DVC version (1.0.0a9),
-   which partly uses a different syntax than earlier versions. You can
-   currently (8th June 2020) only install this with pip:
-
-    .. code-block:: console
-
-       $ pipenv install dvc[all]==1.0.0a9
 
 .. toctree::
     :hidden:

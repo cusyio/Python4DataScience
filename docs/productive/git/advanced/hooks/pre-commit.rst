@@ -36,7 +36,7 @@ Before you can execute the hooks, the pre-commit framework must be installed:
 
    .. code-block:: console
 
-      $ pipenv install pre-commit
+      $ uv add pre-commit
 
 .. tab:: Debian/Ubuntu
 
@@ -54,13 +54,13 @@ Before you can execute the hooks, the pre-commit framework must be installed:
 
    .. code-block:: console
 
-      $ pipenv install pre-commit
+      $ uv add pre-commit
 
 Check the installation for example with
 
 .. code-block:: console
 
-    $ pipenv run pre-commit -V
+    $ uv run pre-commit -V
     pre-commit 2.21.0
 
 Configuration
@@ -84,7 +84,7 @@ You can also generate such an initial ``.pre-commit-config.yaml`` file with
 
 .. code-block:: console
 
-    $ pipenv run pre-commit sample-config > .pre-commit-config.yaml
+    $ uv run pre-commit sample-config > .pre-commit-config.yaml
 
 If you want to apply ``check-json`` to your Jupyter notebooks, you must first
 configure that the check should also be used for the file suffix ``.ipynb``:
@@ -133,7 +133,7 @@ Run
 
     .. code-block:: console
 
-        $ pipenv run pre-commit run --all-files
+        $ uv run pre-commit run --all-files
         Trim Trailing Whitespace.................................................Passed
         Fix End of Files.........................................................Passed
         Check Yaml...............................................................Passed
@@ -159,3 +159,21 @@ Run
 However, the hooks managed by the pre-commit framework are not limited to being
 executed before commits; they can also be used for other Git hooks, see
 :doc:`advanced`.
+
+.. _pre-commit-uv:
+
+``pre-commit-uv``
+-----------------
+
+Alternatively, you can also use `pre-commit-uv
+<https://pypi.org/project/pre-commit-uv/>`_ to create :term:`virtual
+environments <virtual environment>` with :term:`uv` and install packages for
+pre-commit.
+
+You can install ``pre-commit-uv`` with:
+
+.. code-block:: console
+
+   uv tool install pre-commit --with pre-commit-uv --force-reinstall
+
+You can then call ``pre-commit-uv`` instead of ``pre-commit``.
