@@ -49,7 +49,7 @@ Pyre can be called, for example with
 
 .. code-block:: console
 
-    $ $ pipenv run pyre analyze --save-results-to ./
+    $ $ uv run pyre analyze --save-results-to ./
 
 The  ``--save-results-to`` option stores detailed results in
 ``./taint-output.json``.
@@ -62,7 +62,7 @@ Installation
 
 .. code-block:: console
 
-    $ pipenv install fb-sapp
+    $ uv add fb-sapp
 
 Use
 ~~~
@@ -71,7 +71,7 @@ Use
 
    .. code-block:: console
 
-    $ pipenv run sapp --database-name sapp.db analyze ./taint-output.json
+    $ uv run sapp --database-name sapp.db analyze ./taint-output.json
 
    The results are stored in the local SQLite file ``sapp.db``.
 
@@ -79,7 +79,7 @@ Use
 
    .. code-block:: console
 
-    $ pipenv run sapp --database-name sapp.db explore
+    $ uv run sapp --database-name sapp.db explore
 
    This starts an IPython interface connected to the SQLite database:
 

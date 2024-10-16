@@ -15,7 +15,7 @@ You can easily install ipython-sql in your Jupyter kernel with:
 
 .. code-block:: console
 
-    $ pipenv install ipython-sql
+    $ uv add ipython-sql
 
 First steps
 -----------
