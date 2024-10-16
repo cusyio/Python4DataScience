@@ -10,7 +10,7 @@ Requirements
 
 .. code-block:: console
 
-    $ pipenv install fastapi
+    $ uv add fastapi
     Adding fastapi to Pipfile's [packages]…
     ✔ Installation Succeeded
     Locking [dev-packages] dependencies…
@@ -27,7 +27,7 @@ server, such as `uvicorn <http://www.uvicorn.org/>`_:
 
 .. code-block:: console
 
-    $ pipenv install uvicorn
+    $ uv add uvicorn
     Adding uvicorn to Pipfile's [packages]…
     ✔ Installation Succeeded
     Locking [dev-packages] dependencies…
@@ -69,10 +69,10 @@ They can be installed, e.g. with:
 
 .. code-block:: console
 
-    $ pipenv install fastapi[ujson]
+    $ uv add fastapi[ujson]
 
 Alternatively you can install all of these with:
 
 .. code-block:: console
 
-    $ pipenv install fastapi[all]
+    $ uv add fastapi[all]
