@@ -319,27 +319,33 @@ Check your repositories for unwanted files
 With `Gitleaks <https://github.com/gitleaks/gitleaks>`_ you can regularly check
 your repositories for unintentionally saved access data.
 
-You can also run Gitleaks automatically as a GitLab action. To do this, you need
-to include the `Secret-Detection.gitlab-ci.yml
-<https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml>`_
-template, for example, in a stage called ``secrets-detection`` in your
-:file:`.gitlab-ci.yml` file:
+You can use Gitleaks with the :doc:`advanced/hooks/pre-commit` by entering the
+following in the :file:`.pre-commit-config.yaml` file:
 
 .. code-block:: yaml
 
-    include:
-      - template: Security/Secret-Detection.gitlab-ci.yml
+   repos:
+     - repo: https://github.com/gitleaks/gitleaks
+       rev: v8.21.1
+       hooks:
+         - id: gitleaks
 
-The template creates secret detection jobs in your CI/CD pipeline and searches
-the source code of your project for secrets. The results are saved as a `Secret
-Detection Report Artifact
-<https://docs.gitlab.com/ee/ci/yaml/artifacts_reports.html#artifactsreportssecret_detection>`_
-that you can download and analyse later.
+.. note::
+   To deactivate the Gitleaks hook, you can prefix it with ``SKIP=Gitleaks`` so
+   that Gitleaks is not executed:
 
-.. seealso::
+   .. code-block:: console
 
-    * `GitLab Secret Detection
-      <https://docs.gitlab.com/ee/user/application_security/secret_detection/>`_
+      $ SKIP=gitleaks git commit -m "Add secret"
+      Detect hardcoded secrets................................................Skipped
+
+   Alternatively, you can also append the ``gitleaks:allow`` comment to a line,
+   for example:
+
+   .. code-block:: Python
+
+      class MyClass:
+          client_secret = "Srtub6pZcTSET9V4vUpUg7xPi64sh3NV"  #gitleaks:allow
 
 With :ref:`git-filter-repo <git-filter-repo>` you can remove unwanted files from
 your Git history.
