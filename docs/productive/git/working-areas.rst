@@ -7,7 +7,7 @@
 Workspaces
 ==========
 
-.. figure:: git-workspaces.png
+.. figure:: git-workspaces.svg
    :alt: Git workspaces
 
 Git manages multiple locations or **workspaces** where files are stored:
