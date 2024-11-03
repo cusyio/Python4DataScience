@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cff-version: 1.2.0
-doi: 10.5281/zenodo.12593850
+doi: 10.5281/zenodo.14031392
 title: Python4DataScience
 message: >-
   If you use this tutorial, please cite it using the
@@ -16,10 +16,10 @@ authors:
     affiliation: cusy GmbH
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.12593850
-    description: 'Python4DataScience: 24.2.0'
+    value: 10.5281/zenodo.14031392
+    description: 'Python4DataScience: 24.3.0'
 repository-code: 'https://github.com/cusyio/Python4DataScience'
-url: 'https://www.python4data.science/en/24.2.0/'
+url: 'https://www.python4data.science/en/24.3.0/'
 abstract: >-
   Teaching materials for the cusy training courses on
   Python-based data science workflows.
@@ -33,5 +33,5 @@ keywords:
   - Git
   - DVC
 license: BSD-3-Clause
-version: 24.2.0
-date-released: '2024-04-02'
+version: 24.3.0
+date-released: '2024-11-03'

@@ -5,19 +5,87 @@
 Changelog
 =========
 
-The versions follow `Semantic Versioning <https://semver.org/lang/de/>`_:
-``MAJOR.MINOR.PATCH``.
+All significant changes to this project are documented in this file.
 
-``MAJOR``
-     is increased when incompatible changes are published.
-``MINOR``
-    is increased when new compatible functionalities are released.
-``PATCH``
-    is increased if the changes include only compatible bug fixes.
+The format is based on `Keep a Changelog
+<https://keepachangelog.com/en/1.0.0/>`_ and this project adheres to `Calendar
+Versioning <https://calver.org>`_.
+
+The first number of the version is the year. The second number is incremented
+with each version, starting at 1 for each year. The third number is for
+emergencies when we need to start branches for older versions.
 
 .. _changelog
 
-24.2.0
+`24.3.0 <https://github.com/cusyio/Python4DataScience/compare/24.2.0...24.3.0>`_: 2024-11-03
+--------------------------------------------------------------------------------------------
+
+Added
+~~~~~
+
+* 🔧 Add vale
+
+  * Fix spelling mistakes
+
+* 🔧 Add codespell
+
+  * Add pre-commit check
+  * Fix spelling
+
+* 👷 Build docs and check links
+
+  * Configure linkcheck
+  * Fix external links
+
+* 📝 Add the series of tutorials and trainings
+* 📝 Add automatic building of Docker containers
+* 📝 Add edgy, zopyx-fastapi-auth, and FastAPI Utilities to FastAPI extensions
+
+Removed
+~~~~~~~
+
+* ✏️ Remove link to Objectivity/DB
+* 📝 Move SOLID principles to Python Basics
+
+Changed
+~~~~~~~
+
+* ⬆️ Update to Python 3.13, NumPy 2.1 and pandas 2.2
+
+  * Replace dataframe.applymap with dataframe.apply
+  * Replace pandas.value_counts with pandas.Series(obj).value_counts()
+  * Replace as_index=False for groupby() with reset_index(drop=True)
+  * Add include_groups=False for DataFrameGroupBy.apply
+
+* 🍱 Update git workflow graphic
+* 📝 Switch to the pre-commit framework for gitleaks
+
+* 📝 Switch from pipenv to uv
+
+  * Remove pipenv
+  * Add pre-commit-uv
+  * Add CI/CD-Pipelines
+  * Add dependency bot
+  * Update security
+
+* 🔧 Update gitignore
+
+* 🔧 Add blacken-docs
+
+  * Fix Python syntax
+
+* 📝 Update the file system libraries
+
+* 🔧 Switch to pyproject.toml
+
+* 👷 Update pre-commit github workflow
+* 📝 Update geodata libs
+
+`24.2.0 <https://github.com/cusyio/Python4DataScience/compare/24.1.0...24.2.0>`_: 2024-06-29
+--------------------------------------------------------------------------------------------
+
+Added
+~~~~~
 
 * Git
 
@@ -28,11 +96,32 @@ The versions follow `Semantic Versioning <https://semver.org/lang/de/>`_:
   * 📝 Add warning for git keep
   * 🎨 Improve structure of the git section
 
-* 🎨 Improve structure of the code quality section
-* 🎨 Improve structure of the cite software section
 * 🌱 Add matplotlib for social cards
 
-24.1.0
+Changed
+~~~~~~~
+
+* 🎨 Improve structure of the code quality section
+* 🎨 Improve structure of the cite software section
+
+`24.1.0 <https://github.com/cusyio/Python4DataScience/compare/v1.0.0...24.1.0>`_: 2024-04-02
+--------------------------------------------------------------------------------------------
+
+Added
+~~~~~
+
+* Code smells
+
+  * 📝 Add SOLID principles
+  * 📝 Add the recognition of code smells
+  * 📝 Add intro to code smells
+  * 🎨 Rearrange code reduction with dataclasses and attrs
+  * 📝 Update itertools filterfalse
+
+* 📄 Add SPDX classifier
+
+Changed
+~~~~~~~
 
 * 📝 Update redis licenses, add hint to Redict and Valkey
 
@@ -62,13 +151,3 @@ The versions follow `Semantic Versioning <https://semver.org/lang/de/>`_:
   * 📝 Simplify the json example
 
 * 📝 Switch from the requests lib to httpx
-
-* Code smells
-
-  * 📝 Add SOLID principles
-  * 📝 Add the recognition of code smells
-  * 📝 Add intro to code smells
-  * 🎨 Rearrange code reduction with dataclasses and attrs
-  * 📝 Update itertools filterfalse
-
-* 📄 Add SPDX classifier
