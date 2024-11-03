@@ -60,7 +60,7 @@ All tutorials serve as seminar documents for our harmonised training courses:
 +---------------+--------------------------------------------------------------+
 | 5 days        | `Visualising data with Python`_                              |
 +---------------+--------------------------------------------------------------+
-| 1 days        | `Designing data visualisations`_                             |
+| 1 day         | `Designing data visualisations`_                             |
 +---------------+--------------------------------------------------------------+
 | 2 days        | `Create dashboards`_                                         |
 +---------------+--------------------------------------------------------------+
