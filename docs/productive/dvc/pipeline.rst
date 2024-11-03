@@ -45,6 +45,7 @@ stage is to split the data into training and test data:
 In our case, the work area should have changed to:
 
 .. code-block:: console
+   :emphasize-lines: 5-9
 
       .
       ├── data
@@ -75,10 +76,11 @@ The generated ``dvc.yaml`` file looks like this, for example:
 Since the data in the output directory should never be versioned with Git, ``dvc
 run`` has already written the file ``data/.gitignore``:
 
- .. code-block:: console
+.. code-block:: console
+   :emphasize-lines: 2
 
-      /data.xml
-    + /splitted
+     /data.xml
+   + /splitted
 
 Then the changed data only has to be transferred to Git or DVC:
 
