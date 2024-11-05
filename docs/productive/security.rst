@@ -61,7 +61,7 @@ You can also update your :doc:`/productive/envs/uv/index` environments
 automatically.
 
 .. seealso::
-   * `Update uv.lock <python-basics:update-uv-lock>`_
+   * :ref:`Update uv.lock <python-basics:update-uv-lock>`
 
 Are the dependencies still maintained?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -274,7 +274,7 @@ not just to a mutable version or version range.
 
 .. tip::
    Üblicherweise verwalte ich diese Dateien jedoch nur bei
-   :doc:`python-basics:apps` in :doc:`git/index`. Bei
+   :doc:`python-basics:packs/apps` in :doc:`git/index`. Bei
    :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
    Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
 

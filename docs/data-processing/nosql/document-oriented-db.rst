@@ -19,7 +19,7 @@ OrientDB and ArangoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **GitHub**             | `mongodb/mongo`_               | `apache/couchdb`_              | `basho/riak`_                  | `orientechnologies/orientdb`_  | `arangodb/arangodb`_           |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Docs**               | `www.mongodb.com/docs`_        | `docs.couchdb.org`_            | `docs.riak.com`_               | `orientdb.dev/docs`_           | `docs.arangodb.com/`_          |
+| **Docs**               | `www.mongodb.com/docs`_        | `docs.couchdb.org`_            | `docs.riak.com`_               | `orientdb.dev/docs`_           | `docs.arangodb.com`_           |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Application areas**  | IoT, Mobile apps, CMS,         | Mobile, CRM, CMS, …            | Session storage, Log data,     | Master data management, social | Fraud Detection, IoT,          |
 |                        | `simple geospatial data`_, …   |                                | Sensor data, CMS               | networks, `Time Series`_,      | identity management,           |

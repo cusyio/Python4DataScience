@@ -166,7 +166,7 @@ of dicts in Python.
 Reduce code with ``dataclasses`` and ``attrs``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:doc:`python-basics:dataclasses`
+:doc:`python-basics:oop/dataclasses`
     are intended to simplify the definition of classes that are mainly created to store
     values and can then be accessed via attribute search. Some examples are
     :func:`collections.namedtuple`, :py:class:`typing.NamedTuple`, recipes for `records
