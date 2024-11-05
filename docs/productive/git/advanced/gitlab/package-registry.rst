@@ -9,4 +9,4 @@ You can also publish your distribution packages in the package registry of your
 GitLab project with :term:`twine`.
 
 .. seealso::
-   :doc:`python-basics:libs/gitlab`
+   :doc:`python-basics:packs/gitlab`

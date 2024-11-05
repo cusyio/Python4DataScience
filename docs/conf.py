@@ -183,7 +183,7 @@ intersphinx_mapping = {
 # All HTTP redirections from the source URI to the canonical URI will be treated# as "working".
 linkcheck_allowed_redirects = {
     r"https://app.pganalyze.com/": r"https://app.pganalyze.com/users/sign_in",
-    r"https://doi.org/10.5281/zenodo.12593850": r"https://zenodo.org/records/12593850",
+    r"https://doi.org/10.5281/zenodo.14031392": r"https://zenodo.org/records/14031392",
     r"https://itsdangerous.palletsprojects.com/": r"https://itsdangerous.palletsprojects.com/en/2.2.x/",
     r"https://jinja.palletsprojects.com/": r"https://jinja.palletsprojects.com/en/3.1.x/",
     r"https://www.monetdb.org/Documentation": r"https://www.monetdb.org/documentation-Aug2024/",
@@ -218,6 +218,7 @@ linkcheck_ignore = [
     r"https://doi.org/10.1002/asi.23538",
     r"https://linux.die.net/man/",
     r"https://onlinelibrary.wiley.com/",
+    r"https://opensource.org/",
     r"https://pubs.acs.org/journal/",
     r"https://www.cell.com/",
     r"https://www.journals.elsevier.com/",
