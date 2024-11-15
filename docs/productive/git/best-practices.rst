@@ -347,5 +347,5 @@ following in the :file:`.pre-commit-config.yaml` file:
       class MyClass:
           client_secret = "Srtub6pZcTSET9V4vUpUg7xPi64sh3NV"  #gitleaks:allow
 
-With :ref:`git-filter-repo <git-filter-repo>` you can remove unwanted files from
-your Git history.
+With :ref:`git-filter-repo <git-filter-repo:>` you can remove unwanted files
+from your Git history.

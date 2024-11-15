@@ -284,17 +284,23 @@ With this SHA, the commit can now be restored with :doc:`advanced/cherry-pick`:
 Remove a file from the history
 ------------------------------
 
-A file can be completely removed from the current branches Git history.
-This could be necessary if you accidentally committed passwords or huge files:
+A file can be completely removed from the current branches Git history. This is
+necessary if, for example, you have accidentally added passwords or a very large
+file to the repository.
+
+To do this, you need to install `git-filter-repo
+<https://github.com/newren/git-filter-repo>`__, for example with ``uv add
+git-filter-repo``. Then you can delete your file, for example with
+:samp:`{PATH/SOMEFILE}`:
 
 .. code-block:: console
 
-    $ git filter-repo --invert-paths --path path/somefile
-    $ git push --no-verify --mirror
+   $ git filter-repo --invert-paths --path PATH/SOMEFILE
+   $ git push --no-verify --mirror
 
 .. note::
-    Inform the team members that they should create a clone of the
-    repository again.
+   Inform the team members that they should create a clone of the repository
+   again.
 
 Remove a string from the history
 --------------------------------
