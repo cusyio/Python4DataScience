@@ -5,8 +5,8 @@ We divide our Docker workflow into different layers. This allows us to provide
 new builds more quickly. We start with the layers that change the least so that
 we can cache the artefacts for as long as possible. This is also the reason why
 we keep the installations of the dependencies from :file:`uv.lock` and the
-installation of our :doc:`application <python-basics:apps>` strictly separate –
-our code probably changes faster than that of the dependencies.
+installation of our :doc:`application <python-basics:packs/apps>` strictly
+separate – our code probably changes faster than that of the dependencies.
 
 .. seealso::
    * `Order your layers
@@ -195,7 +195,7 @@ our code probably changes faster than that of the dependencies.
 
    Lines 29–30:
        If your application is not a :doc:`Python package
-       <python-basics:libs/distribution>` installed with ``uv sync``, you must
+       <python-basics:packs/distribution>` installed with ``uv sync``, you must
        copy your application into the container here.
 
    Line 32:

@@ -52,9 +52,9 @@ From Chapter 2, the tutorial follows the prototype of a research project:
     code should be :doc:`packed into programme libraries <productive/packaging>`
     with :doc:`documentation <productive/documenting>`, :doc:`licence(s)
     <productive/licensing>`, :doc:`tests <productive/testing>` and
-    :doc:`logging <productive/logging/index>`. Finally, the chapter includes
-    advice on :doc:`improving code quality <productive/qa/index>` and
-    :doc:`secure operation <productive/security>`.
+    :doc:`python-basics:logging/index`. Finally, the chapter includes advice on
+    :doc:`improving code quality <productive/qa/index>` and :doc:`secure
+    operation <productive/security>`.
 #.  :doc:`web/index` can either generate dashboards from Jupyter notebooks or
     require more comprehensive application logic, such as demonstrated in
     :doc:`pyviz:bokeh/embedding-export/flask`, or provide data via a `RESTful

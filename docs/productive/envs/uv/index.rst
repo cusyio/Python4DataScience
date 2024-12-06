@@ -5,7 +5,7 @@
 
 Both the :ref:`installation of uv  <python-basics:uv>` and the creation of file
 structures for :ref:`libraries <python-basics:uv-package-structure>` or
-:doc:`python-basics:apps` are already described in our
+:doc:`python-basics:packs/apps` are already described in our
 :doc:`python-basics:index` tutorial.
 
 .. _inline-script-metadata:
