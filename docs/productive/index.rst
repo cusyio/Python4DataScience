@@ -33,8 +33,8 @@ There are various tools that support you in creating shareable products. These
 can be tools on the one hand for the :doc:`versioning of the source code
 <git/index>` and the :doc:`training data <dvc/index>` as well as for the
 reproducibility of the :doc:`execution environments <envs/index>`, on the other
-hand for :doc:`testing`, :doc:`logging/index`, :doc:`documenting <documenting>`
-and :doc:`creating packages <python-basics:libs/index>`.
+hand for :doc:`testing`, :doc:`python-basics:logging/index`, :doc:`documenting
+<documenting>` and :doc:`creating packages <python-basics:libs/index>`.
 
 .. seealso::
 
@@ -63,6 +63,6 @@ and :doc:`creating packages <python-basics:libs/index>`.
     licensing
     cite/index
     testing
-    logging/index
+    logging
     qa/index
     security

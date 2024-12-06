@@ -67,7 +67,7 @@ Jobs
     .. seealso::
        * `GitLab Docs: Jobs
          <https://docs.gitlab.com/ee/ci/jobs/index.html>`_
-       * :doc:`python-basics:libs/cibuildwheel`
+       * :doc:`python-basics:packs/cibuildwheel`
        * :ref:`pre-commit Hooks <pre-commit-in-gitlab-ci>`
        * :ref:`Licensing <reuse-in-gitlab-ci>`
 

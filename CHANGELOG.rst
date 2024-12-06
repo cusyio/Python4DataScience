@@ -44,6 +44,7 @@ Added
 Removed
 ~~~~~~~
 
+* 📝 Move logging to Python basics
 * ✏️ Remove link to Objectivity/DB
 * 📝 Move SOLID principles to Python Basics
 
