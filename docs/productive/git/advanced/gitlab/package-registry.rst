@@ -6,7 +6,7 @@ GitLab Package Registry
 =======================
 
 You can also publish your distribution packages in the package registry of your
-GitLab project with :term:`twine`.
+GitLab project with :term:`uv`.
 
 .. seealso::
    :doc:`python-basics:packs/gitlab`
