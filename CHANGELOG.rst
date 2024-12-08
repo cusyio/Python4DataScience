@@ -51,6 +51,7 @@ Removed
 Changed
 ~~~~~~~
 
+* 📝 Update GitLab pipeline with uv
 * ⬆️ Update to Python 3.13, NumPy 2.1 and pandas 2.2
 
   * Replace dataframe.applymap with dataframe.apply
