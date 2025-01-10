@@ -487,6 +487,10 @@ Alternatives
 `licensechecker <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_
     A command line tool that scans installation directories for licences.
 
+.. seealso::
+   * `Debian Copyright Review Tools
+     <https://wiki.debian.org/CopyrightReviewTools>`_
+
 Python package metadata
 -----------------------
 
