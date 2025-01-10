@@ -103,6 +103,11 @@ open licences used for non-software material, from datasets to videos. However,
 they are `not recommended for software
 <https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software>`_.
 
+.. tip::
+   The `DEAL consortium <https://deal-konsortium.de/en/>`_ recommends the CC BY
+   licence for Open Access publications, see also `Why CC BY is the Best Choice
+   for Open Access Publishing <https://deal-konsortium.de/en/why-ccby>`_.
+
 The `Open Knowledge Foundation <https://okfn.org/en/>`_ has also published a set
 of `Open Data Commons <https://opendatacommons.org>`_ licences for
 data/databases:
