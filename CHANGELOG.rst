@@ -17,6 +17,14 @@ emergencies when we need to start branches for older versions.
 
 .. _changelog
 
+`Unreleased <https://github.com/cusyio/Python4DataScience/compare/24.3.0...HEAD>`_
+------------------------------------------------------------------------------------
+
+Added
+~~~~~
+
+* 📝 Add the removal of git lfs
+
 `24.3.0 <https://github.com/cusyio/Python4DataScience/compare/24.2.0...24.3.0>`_: 2024-11-03
 --------------------------------------------------------------------------------------------
 
