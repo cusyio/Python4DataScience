@@ -30,14 +30,14 @@ Git branches
 
     .. note::
 
-        In Git < 2.23, ``git switch`` is not yet available. In this case you
-        still need to use ``git checkout``:
+       In Git < 2.23, ``git switch`` is not yet available. In this case you
+       still need to use ``git checkout``:
 
-        :samp:`$ git checkout [-b] [{BRANCH_NAME}]`
-            changes the working directory to the specified branch.
+       :samp:`$ git checkout [-b] [{BRANCH_NAME}]`
+           changes the working directory to the specified branch.
 
-            ``-b``
-                creates the specified branch if it does not already exist.
+           ``-b``
+               creates the specified branch if it does not already exist.
 
 :samp:`$ git merge {FROM_BRANCH_NAME}`
     connects the specified branch with the branch you are currently in, for
@@ -45,12 +45,12 @@ Git branches
 
     .. code-block:: console
 
-        $ git checkout main
-        $ git merge hotfix
-        Updating f42c576..3a0874c
-        Fast forward
-         setup.py |    1 -
-         1 files changed, 0 insertions(+), 1 deletions(-)
+       $ git switch main
+       $ git merge hotfix
+       Updating f42c576..3a0874c
+       Fast forward
+        setup.py |    1 -
+        1 files changed, 0 insertions(+), 1 deletions(-)
 
     ``Fast forward``
         means that the new commit immediately followed the original commit and
@@ -60,11 +60,11 @@ Git branches
 
         .. code-block:: console
 
-            $ git checkout main
-            $ git merge 'my-feature'
-            Merge made by recursive.
-             setup.py |    1 +
-             1 files changed, 1 insertions(+), 0 deletions(-)
+           $ git switch main
+           $ git merge 'my-feature'
+           Merge made by recursive.
+            setup.py |    1 +
+            1 files changed, 1 insertions(+), 0 deletions(-)
 
     ``recursive``
         is a merge strategy that is used when the merge is only to be done to
@@ -88,12 +88,12 @@ The history can then look like this, for example:
 
 .. code-block:: console
 
-    *   49770a2 (HEAD -> main) Fix merge conflict with my-feature
-    |\
-    | * 9412467 (my-feature) My feature
-    * | 46ab1a2 Hotfix directly in main
-    |/
-    * 0c65f04 Initial commit
+   *   49770a2 (HEAD -> main) Fix merge conflict with my-feature
+   |\
+   | * 9412467 (my-feature) My feature
+   * | 46ab1a2 Hotfix directly in main
+   |/
+   * 0c65f04 Initial commit
 
 .. seealso::
 
@@ -203,7 +203,7 @@ you undo this merge because you realise that it was not finished:
 
 .. code-block:: console
 
-    $ git reset --keep @~
+   $ git reset --keep @~
 
 Later you repeat the merging process:
 
@@ -251,8 +251,8 @@ Delete branches
     ``-D`` instead of ``-d`` forcing the deletion.
 
 .. seealso::
-    * `Git Branching - Branches in a Nutshell
-      <https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell>`_
+   * `Git Branching - Branches in a Nutshell
+     <https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell>`_
 
 Remote branches
 ---------------
