@@ -4,8 +4,11 @@ Dependency bot
 It is good practice to update dependencies regularly to avoid vulnerabilities,
 limit incompatibilities between dependencies and avoid complex upgrades when
 upgrading from a version that is too old. A variety of tools can help you stay
-up to date. :term:`uv` is supported by `Renovate
-<https://docs.renovatebot.com/>`_.
+up to date. :ref:`update-uv-lock` describes how you can use ``uv lock
+--upgrade``  update all dependencies and :samp:`uv lock --upgrade-package
+{PACKAGE}=={VERSION}` to update individual dependencies in a controlled manner.
+However, you can also use `Renovate <https://docs.renovatebot.com/>`_ to help
+you with this.
 
 Renovate uses the :ref:`uv_lock` file to detect that ``uv`` is being used to
 manage dependencies and suggests updates for project dependencies, optional

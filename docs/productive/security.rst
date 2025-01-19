@@ -11,6 +11,8 @@ doing so, we will be guided by the `OpenSSF
 Scorecard <https://securityscorecards.dev/>`_. Alternatively, you can also
 follow :ref:`open_chain`.
 
+.. _check-vulnerabilities:
+
 Check vulnerabilities
 ---------------------
 
@@ -20,8 +22,8 @@ This check determines whether the project has open, unfixed vulnerabilities in
 its own code base or in its dependencies. An open vulnerability can be easily
 exploited and should be closed as soon as possible.
 
-For such a check, you can use for example `safety
-<https://github.com/pyupio/safety>`_. Alternatively, you can use `osv
+For such a check, you can use for example `uv-secure
+<https://pypi.org/project/uv-secure/>`_. Alternatively, you can use `osv
 <https://pypi.org/project/osv/>`_ or `pip-audit
 <https://pypi.org/project/pip-audit/>`_, which uses the `Open Source
 Vulnerability Database <https://osv.dev>`_.
@@ -282,7 +284,8 @@ not just to a mutable version or version range.
 :ref:`spack_lock`, :doc:`envs/uv/index` in :ref:`uv_lock`. These files should
 therefore also be checked in with the source code.
 
-This can reduce the following security risks for :doc:`python-basics:apps`:
+This can reduce the following security risks for
+:doc:`python-basics:packs/apps`:
 
 * Testing and deployment are done with the same software, which reduces
   deployment risks, simplifies debugging and enables reproducibility.
