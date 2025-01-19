@@ -28,6 +28,10 @@ Git branches
     ``-c``
         creates the branch to switch to.
 
+:samp:`$ git switch -`
+    alternates between the last two branches. This makes it much easier to jump
+    back and forth between branches.
+
     .. note::
 
        In Git < 2.23, ``git switch`` is not yet available. In this case you
