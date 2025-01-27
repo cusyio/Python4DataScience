@@ -42,3 +42,6 @@ You can get an overview of public repositories with research data e.g. in
   <https://www.ulb.uni-muenster.de/bibliothek/aktivitaeten/projekte/projekt-life.html>`_
 * `freeCodeCamp open-data <https://github.com/freeCodeCamp/open-data>`_
 * `Reddit Datasets Community <https://www.reddit.com/r/datasets/>`_
+
+.. seealso::
+   * :ref:`Geodata Data repositories <geodata-repositories>`
