@@ -39,7 +39,12 @@ from .compat import (
     is_py2,
 )
 from .compat import json as complexjson
-from .compat import str, urlencode, urlsplit, urlunparse
+from .compat import (
+    str,
+    urlencode,
+    urlsplit,
+    urlunparse,
+)
 from .cookies import _copy_cookie_jar, cookiejar_from_dict, get_cookie_header
 from .exceptions import (
     ChunkedEncodingError,

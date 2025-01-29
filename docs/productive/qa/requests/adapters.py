@@ -11,7 +11,10 @@ and maintain connections.
 import os.path
 import socket
 
-from urllib3.exceptions import ClosedPoolError, ConnectTimeoutError
+from urllib3.exceptions import (
+    ClosedPoolError,
+    ConnectTimeoutError,
+)
 from urllib3.exceptions import HTTPError as _HTTPError
 from urllib3.exceptions import (
     LocationValueError,
@@ -20,7 +23,10 @@ from urllib3.exceptions import (
     ProtocolError,
 )
 from urllib3.exceptions import ProxyError as _ProxyError
-from urllib3.exceptions import ReadTimeoutError, ResponseError
+from urllib3.exceptions import (
+    ReadTimeoutError,
+    ResponseError,
+)
 from urllib3.exceptions import SSLError as _SSLError
 from urllib3.poolmanager import PoolManager, proxy_from_url
 from urllib3.response import HTTPResponse
