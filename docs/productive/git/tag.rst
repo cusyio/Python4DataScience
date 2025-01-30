@@ -10,6 +10,9 @@ allows certain points in the history to be marked for a particular version, for
 example :samp:`v3.9.16`. Tags are like :doc:`branch` that do not change, so have
 no further history of commits.
 
+``git tag``
+-----------
+
 :samp:`$ git tag {TAGNAME}`
     creates a tag, where :samp:`{TAGNAME}` is a semantic label for the current
     state of the Git repository. Git distinguishes between two different types
@@ -34,11 +37,24 @@ no further history of commits.
 
     .. code-block:: console
 
-        v0.9.9
-        v1.0.1
-        v1.0.2
-        v1.1
-        ...
+       0.1.0
+       0.1.1
+       0.1.10
+       0.1.11
+       0.1.12
+       0.1.2
+       …
+
+    .. _tag-sort:
+
+    .. tip::
+       However, the order of the tags does not correspond to what we would
+       actually expect: After ``0.1.1``, we expect ``0.1.2`` and not ``0.1.10``.
+       To achieve this, we can configure Git as follows:
+
+       .. code-block:: console
+
+          git config --global tag.sort version:refname
 
     :samp:`$ git tag -l '{REGEX}'`
         lists only tags that match a regular expression.
@@ -78,9 +94,9 @@ no further history of commits.
         To git@github.com:python/cpython.git
          * [new tag]         v3.9.16 -> v3.9.16
 
-    To push multiple tags at once, pass the :samp:`--tags` option to the
-    :samp:`git push` command. Others get the tags on :samp:`git clone` or
-    :samp:`git pull` of the repo.
+    To send tags to the server, you can use the :samp:`--tags` option for the
+    :samp:`git push` command. Others receive the tags with :samp:`git clone`,
+    :samp:`git pull` or :samp:`git fetch` of the repo.
 
     With ``git push --follow-tags`` you can also share the corresponding
     annotated tags with a commit.
@@ -116,3 +132,28 @@ no further history of commits.
 
         $ git tag -d v3.9.16
         $ git push origin --delete v3.9.16
+
+    .. _prune-tags:
+
+    If tags that have been deleted on the server should also be deleted locally,
+    you can use :samp:`git fetch --prune-tags`. Alternatively, you can also
+    adjust the global configuration with:
+
+    .. code-block:: console
+
+       $ git config --global fetch.pruneTags true
+
+``git describe``
+----------------
+
+The :samp:`git describe {SH}` command finds the most recent tag that can be
+reached from a commit. If the tag points to the commit, only the tag is
+displayed, otherwise the number of additional commits is appended to the tag
+name. The result is an object name that can be used by other Git commands to
+identify the commit. Assuming you have a commit SHA and want to know in which
+version it was first published, you can use the following command:
+
+.. code-block:: console
+
+   $ git describe --contains 39ff38d | sed -E 's/[~^][0-9]*//g'
+   24.1.0

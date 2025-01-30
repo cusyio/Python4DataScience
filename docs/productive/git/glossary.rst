@@ -26,11 +26,19 @@ Git glossary
         <https://en.wikipedia.org/wiki/Secure_Hash_Algorithms>`_.
 
     Fork
-        A copy of a repository on :term:`GitLab` that belongs to another user
-        or group.
+        A copy of a repository on :term:`GitHub` or :term:`GitLab` that belongs
+        to another user or group. This enables :term:`merge requests <Merge
+        request>`.
 
     Git
         Git is a distributed version control system.
+
+    GitHub
+        Web application for version management based on :term:`git`, which also
+        enables collaboration via :term:`Forks <Fork>`. There are also `GitHub
+        Actions <https://docs.github.com/de/actions>`_ and `GitHub Pages
+        <https://pages.github.com>`_ extensions for continuous integration and
+        static websites.
 
     GitLab
         Web application for version management based on :term:`git`. Later,
@@ -61,6 +69,7 @@ Git glossary
 
         .. seealso::
            * :doc:`advanced/gitlab/merge-requests`.
+           * :ref:`Merge  or pull requests <merge-pull-requests>`.
 
     Remote repository
         shared repository, for example on :term:`GitLab`, for exchanging changes

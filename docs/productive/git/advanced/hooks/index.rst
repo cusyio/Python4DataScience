@@ -9,17 +9,20 @@ Git hooks are scripts that are automatically executed when certain events occur
 in a Git repository, including:
 
 +---------------+-------------------------------------------------------+
-| Command       | Hook                                                  |
+| Command       | Hooks                                                 |
 +===============+=======================================================+
-| ``commit``    | ``commit-msg``, ``pre-commit``                        |
+| ``git commit``| `prepare-commit-msg`_, `pre-commit`_, `commit-msg`_,  |
+|               | `post-commit`_                                        |
 +---------------+-------------------------------------------------------+
-| ``merge``     | ``pre-merge``, ``commit-msg``                         |
+| ``git merge`` | `pre-merge-commit`_, `commit-msg`_,  `post-merge`_    |
 +---------------+-------------------------------------------------------+
-| ``rebase``    | ``pre-rebase``                                        |
+| ``git rebase``| `pre-rebase`_, `post-rewrite`_                        |
 +---------------+-------------------------------------------------------+
-| ``pull``      | ``pre-merge``, ``commit-msg``                         |
+| ``git pull``  | `post-merge`_                                         |
 +---------------+-------------------------------------------------------+
-| ``push``      | ``pre-push``                                          |
+| ``git push``  | `pre-push`_, `pre-receive`_, `update`_,               |
+|               | `post-update`_, `proc-receive`_, `post-receive`_,     |
+|               | `push-to-checkout`_                                   |
 +---------------+-------------------------------------------------------+
 
 They can be located either in local or server-side repositories. This allows Git
@@ -30,19 +33,21 @@ created, some sample scripts are already created there:
 
 .. code-block:: console
 
-    .git/hooks/
-    ├── applypatch-msg.sample
-    ├── commit-msg.sample
-    ├── fsmonitor-watchman.sample
-    ├── post-update.sample
-    ├── pre-applypatch.sample
-    ├── pre-commit.sample
-    ├── pre-merge-commit.sample
-    ├── prepare-commit-msg.sample
-    ├── pre-push.sample
-    ├── pre-rebase.sample
-    ├── pre-receive.sample
-    └── update.sample
+   .git/hooks
+   ├── applypatch-msg.sample
+   ├── commit-msg.sample
+   ├── fsmonitor-watchman.sample
+   ├── post-update.sample
+   ├── pre-applypatch.sample
+   ├── pre-commit.sample
+   ├── pre-merge-commit.sample
+   ├── pre-push.sample
+   ├── pre-rebase.sample
+   ├── pre-receive.sample
+   ├── prepare-commit-msg.sample
+   ├── push-to-checkout.sample
+   ├── sendemail-validate.sample
+   └── update.sample
 
 For the scripts to be executed, only the suffix ``.sample`` must be removed and,
 if necessary, the file permission must be executable, for example with
@@ -54,6 +59,9 @@ be interpreted.
 
 However, the scripts cannot be copied into the server-side repository.
 
+.. seealso::
+   * `Hooks <https://git-scm.com/docs/githooks#_hooks>`_
+
 .. toctree::
     :hidden:
 
@@ -63,3 +71,19 @@ However, the scripts cannot be copied into the server-side repository.
     ci
     skip
     template
+
+.. _`prepare-commit-msg`: https://git-scm.com/docs/githooks#_prepare_commit_msg
+.. _`pre-commit`: https://git-scm.com/docs/githooks#_pre_commit
+.. _`post-commit`: https://git-scm.com/docs/githooks#_post_commit
+.. _`commit-msg`: https://git-scm.com/docs/githooks#_commit_msg
+.. _`pre-merge-commit`: https://git-scm.com/docs/githooks#_pre_merge_commit
+.. _`post-merge`: https://git-scm.com/docs/githooks#_post_merge
+.. _`pre-rebase`: https://git-scm.com/docs/githooks#_pre_rebase
+.. _`post-rewrite`: https://git-scm.com/docs/githooks#_post_rewrite
+.. _`pre-push`: https://git-scm.com/docs/githooks#_pre_push
+.. _`pre-receive`: https://git-scm.com/docs/githooks#pre-receive
+.. _`update`: https://git-scm.com/docs/githooks#update
+.. _`post-update`: https://git-scm.com/docs/githooks#post-update
+.. _`proc-receive`: https://git-scm.com/docs/githooks#proc-receive
+.. _`post-receive`: https://git-scm.com/docs/githooks#post-receive
+.. _`push-to-checkout`: https://git-scm.com/docs/githooks#_push_to_checkout

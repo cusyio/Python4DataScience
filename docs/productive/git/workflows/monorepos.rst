@@ -256,6 +256,8 @@ the search:
      <https://github.blog/engineering/improve-git-monorepo-performance-with-a-file-system-monitor/>`_
    * `Scaling monorepo maintenance
      <https://github.blog/open-source/git/scaling-monorepo-maintenance/>`_
+   * `fsmonitor-watchman
+     <https://git-scm.com/docs/githooks#_fsmonitor_watchman>`_
 
 Scalar
 ------
@@ -263,8 +265,8 @@ Scalar
 ``scalar``, a repository management tool for large repositories from `Microsoft
 <https://devblogs.microsoft.com/devops/introducing-scalar/>`_, has been part of
 the Git core installation since version 2.38. To use it, you can either clone a
-new repository with :samp:`scalar clone {/path/to/repo}` or apply ``scalar`` to
-an existing clone with :samp:`scalar register {/path/to/repo}`.
+new repository with :samp:`scalar clone {/PATH/TO/REPO}` or apply ``scalar`` to
+an existing clone with :samp:`scalar register {/PATH TO/REPO}`.
 
 Other options of ``scalar clone`` are:
 
@@ -276,17 +278,17 @@ Other options of ``scalar clone`` are:
     Download only metadata of the branch that will be checked out.
 
 With ``scalar list`` you can see which repositories are currently tracked by
-Scalar and with :samp:`scalar unregister {/path/to/repo}` the repository is
+Scalar and with :samp:`scalar unregister {/PATH/TO/REPO}` the repository is
 removed from this list.
 
 By default, `Sparse-Checkout <https://git-scm.com/docs/git-sparse-checkout>`_ is
 enabled and only the files in the root of the git repository are shown. Use
-``git sparse-checkout set`` to expand the set of directories you want to see, or
-``git sparse-checkout disable`` to show all files. If you don’t know which
-directories are available in the repository, you can run ``git ls-tree -d
---name-only HEAD`` to find the directories in the root directory, or :samp:`git
-ls-tree -d --name-only HEAD {/path/to/repo}` to find the directories in
-:samp:`{/path/to/repo}`.
+:samp:`git sparse-checkout set {LIST OF FILES AND DIRECTORIES}` to expand the
+set of files and directories you want to see, or ``git sparse-checkout disable``
+to show all files. If you don’t know which directories are available in the
+repository, you can run ``git ls-tree -d --name-only HEAD`` to find the
+directories in the root directory, or :samp:`git ls-tree -d --name-only HEAD
+{/PATH/TO/REPO}` to find the directories in :samp:`{/PATH/TO/REPO}`.
 
 .. seealso::
    `git ls-tree <https://git-scm.com/docs/git-ls-tree>`_

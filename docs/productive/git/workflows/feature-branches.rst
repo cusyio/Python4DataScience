@@ -20,6 +20,8 @@ components.
    * Martin Fowler: `Feature Branch
      <https://martinfowler.com/bliki/FeatureBranch.html>`_
 
+.. _merge-pull-requests:
+
 Merge or pull requests
 ----------------------
 

@@ -15,6 +15,17 @@ work on them together. Merge requests contain:
 * discussion posts
 * the list of commits
 
+.. tip::
+   If you have created a fork, do not issue the merge requests from the ``main``
+   branch. This avoids the following difficulties:
+
+   * You can then work on several merge requests instead of just one.
+   * If your merge request has been accepted, you can no longer make a ``git
+     pull`` because you have conflicting commits.
+   * If the ``main`` branch of the target repository is protected, people with
+     the maintainer role can no longer edit the merge request. All changes would
+     then have to go through you.
+
 .. seealso::
    * `Merge requests <https://docs.gitlab.com/ee/user/project/merge_requests/>`_
 

@@ -77,6 +77,7 @@ environment:
 To get started, follow the instructions in `Git-Friendly Jupyter
 <https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html>`_.
 
+.. _nbstrip_jq:
 
 ``jq``
 ------
@@ -119,12 +120,12 @@ A typical call is:
 
 .. code-block:: console
 
-    jq --indent 1  \
-      '(.cells [] | select (has ("output")) | .outputs) = []
-      | (.cells [] | select (has ("execution_count")) | .execution_count) = null
-      | .metadata = {"language_info": {"name": "python", "pygments_lexer": "ipython3"}}
-      | .Cells []. metadata = {}
-      '  example.ipynb
+   jq --indent 1  \
+     '(.cells [] | select (has ("output")) | .outputs) = []
+     | (.cells [] | select (has ("execution_count")) | .execution_count) = null
+     | .metadata = {"language_info": {"name": "python", "pygments_lexer": "ipython3"}}
+     | .Cells []. metadata = {}
+     '  example.ipynb
 
 Each line within the single quotation marks defines a filter – the first selects
 all entries from the cells list and deletes the output. The next entry resets all
@@ -139,20 +140,20 @@ Set up
 
 #. To make your work easier, you can create an alias in the ``~/.bashrc`` file:
 
-   .. code-block:: bash
+   .. code-block:: console
 
-    alias nbstrip_jq="jq --indent 1 \
-        '(.cells[] | select(has(\"outputs\")) | .outputs) = []  \
-        | (.cells[] | select(has(\"execution_count\")) | .execution_count) = null  \
-        | .metadata = {\"language_info\": {\"name\": \"python\", \"pygments_lexer\": \"ipython3\"}} \
-        | .cells[].metadata = {} \
-        '"
+      alias nbstrip_jq="jq --indent 1 \
+          '(.cells[] | select(has(\"outputs\")) | .outputs) = []  \
+          | (.cells[] | select(has(\"execution_count\")) | .execution_count) = null  \
+          | .metadata = {\"language_info\": {\"name\": \"python\", \"pygments_lexer\": \"ipython3\"}} \
+          | .cells[].metadata = {} \
+          '"
 
 #. Then you can conveniently enter the following in the terminal:
 
    .. code-block:: console
 
-    $ nbstrip_jq example.ipynb > stripped.ipynb
+      $ nbstrip_jq example.ipynb > stripped.ipynb
 
 #. If you start with an existing notebook, you should first add a ``filter``
    commit by simply reading in the newly filtered version of your notebook
@@ -163,29 +164,30 @@ Set up
 #. If you want to use this filter for all Git repositories, you can also
    configure your Git globally:
 
-   #. First you add the following to your ``~/.gitconfig`` file:
+   #. First you add the following to your :file:`~/.config/git/config` file:
 
       .. code-block:: ini
 
-        [core]
-        attributesfile = ~/.gitattributes
+         [core]
+         attributesfile = ~/.config/git/attributes
 
-        [filter "nbstrip_jq"]
-        clean = "jq --indent 1 \
-                '(.cells[] | select(has(\"outputs\")) | .outputs) = []  \
-                | (.cells[] | select(has(\"execution_count\")) | .execution_count) = null  \
-                | .metadata = {\"language_info\": {\"name\": \"python\", \"pygments_lexer\": \"ipython3\"}} \
-                | .cells[].metadata = {} \
-                '"
-        smudge = cat
-        required = true
+         [filter "nbstrip_jq"]
+         clean = "jq --indent 1 \
+                 '(.cells[] | select(has(\"outputs\")) | .outputs) = []  \
+                 | (.cells[] | select(has(\"execution_count\")) | .execution_count) = null  \
+                 | .metadata = {\"language_info\": {\"name\": \"python\", \"pygments_lexer\": \"ipython3\"}} \
+                 | .cells[].metadata = {} \
+                 '"
+         smudge = cat
+         required = true
 
       ``clean``
           is applied when adding changes to the stage area.
       ``smudge``
           is used when resetting the workspace by changes from the stage area.
 
-   #. Then you have to specify the following in the ``~/.gitattributes`` file:
+   #. Then you have to specify the following in the ``~/.config/git/attributes``
+      file:
 
       .. code-block:: ini
 
@@ -217,7 +219,6 @@ Set up
           done
           unset nbfile
       }
-
 
 ReviewNB
 --------

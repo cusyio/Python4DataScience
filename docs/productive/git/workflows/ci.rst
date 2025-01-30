@@ -30,21 +30,28 @@ the current working directory. Git usually clones the entire history of the
 repository, so this process takes longer and longer over time. Unless you use
 so-called shallow clones, where only the current snapshot of the repository is
 pulled down with :ref:`git-clone-depth` and only the relevant branch with
-:ref:`git-clone-branch`. This shortens the build time, especially for
-repositories with a long history and many branches.
+:ref:`git-clone-branch`, for example :samp:`git clone --depth 1 -b {MYBRANCH}
+{REPOSITORY-URL}`. This shortens the build time, especially for repositories
+with a long history and many branches.
 
-In doing so, since version 1.9, Git can make simple changes to files, such as
-updating a version number, without pushing the entire history.
+Alternatively, you can use ``--shallow-since`` to download repositories only
+from a specific date, for example :samp:`git
+clone --shallow-since {1.week.ago} {REPOSITORY-URL}` or :samp:`git clone
+--shallow-since {2025-01-21}`.
+
+Since version 1.9, Git can also make simple changes to files, such as updating a
+version number, in shallow clones without having to download the entire history.
 
 .. warning::
-    In a shallow clone, git fetch can result in an almost complete commit
-    history being downloaded. Other git operations can also lead to unexpected
-    results and negate the supposed advantages of shallow clones, so we
-    recommend using shallow clones only for builds and deleting the repository
-    immediately afterwards.
+   In a shallow clone, however, ``git fetch`` can lead to an almost complete
+   commit history being downloaded. Other Git operations can also lead to
+   unexpected results and cancel out the supposed advantages of shallow clones,
+   so we recommend completing your shallow clone repositories with ``git fetch
+   --unshallow`` for more extensive operations. You can then use ``git rev-parse
+   --is-shallow-repository`` to find out whether your repository is actually
+   complete.
 
-However, if you want to continue using the repositories, the following tip may
-be helpful.
+I will show you another way to reuse your repositories in the following section.
 
 Cache the repo on build servers
 -------------------------------

@@ -166,11 +166,11 @@ Follow us
 Pull-Requests
 -------------
 
-If you have suggestions for improvements and additions, I recommend that you
-create a `Fork <https://github.com/cusyio/python4datascience/fork>`_ of my
+If you have suggestions for improvements and additions, we recommend that you
+create a `Fork <https://github.com/cusyio/python4datascience/fork>`_ of our
 `GitHub Repository <https://github.com/cusyio/python4datascience/>`_ and make
 your changes there. You are also welcome to make a *pull request*. If the
-changes contained therein are small and atomic, I’ll be happy to look at your
+changes contained therein are small and atomic, we will be happy to look at your
 suggestions.
 
 The following guidelines help us to maintain the German translation of the

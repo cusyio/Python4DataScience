@@ -133,6 +133,11 @@ this task was performed by ``git reset``, which also has other tasks:
     deployed changes with the contents of the previous commit. If nothing is
     provided, only the previous commit message is rewritten.
 
+    ``--no-edit``
+        skips the editing of the commit message.
+    ``--date now``
+        updates the commit date.
+
 Reference for common reset commands
 -----------------------------------
 
