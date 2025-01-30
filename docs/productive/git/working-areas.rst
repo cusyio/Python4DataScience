@@ -28,7 +28,30 @@ stash
 Basic Git commands
 ------------------
 
-The following basic Git commands move changes between these workspaces.
+The following basic Git commands are used to move changes between these
+workspaces.
+
+
+.. hint::
+   Shell commands use a Bash-compatible syntax. They should therefore be
+   compatible with the most common shells used for Git:
+
+   * Windows: Git Bash
+   * WSL: Bash
+   * Linux: Bash or Zsh
+   * macOS: Zsh
+
+   You may have to adjust the syntax slightly if you use a different shell, for
+   example PowerShell.
+
+.. hint::
+   This book concentrates on the command line and only deals with :abbr:`GUI
+   (Graphical user interface)`’s in passing. The command line is the most
+   powerful way to use Git. GUIs implement only a subset of what is possible
+   with Git and the shell. Nevertheless, a hybrid approach is possible and
+   widely used with many GUIs: You can use a GUI for tasks, and the CLI for
+   full performance. You can select a suitable GUI tool in `GUI Clients
+   <https://git-scm.com/downloads/guis>`_.
 
 ``git add``
     adds files from the working directory to the staging area.

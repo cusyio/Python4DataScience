@@ -24,7 +24,7 @@ Then we can use :doc:`pandas:reference/api/pandas.DataFrame.to_csv` in
     :language: python
 
 Now add the following section to your global Git configuration
-:file:`~/.gitconfig`:
+:file:`~/.config/git/config`:
 
 .. code-block:: ini
 
@@ -32,8 +32,8 @@ Now add the following section to your global Git configuration
         textconv=python3 /PATH/TO/exceltocsv.py
         binary=true
 
-Finally, in the global :file:`~/.gitattributes` file, our ``excel`` converter is
-linked to :file:`*.xlsx` files:
+Finally, in the global :file:`~/.config/git/attributes` file, our ``excel``
+converter is linked to :file:`*.xlsx` files:
 
 .. code-block:: ini
 
@@ -56,15 +56,16 @@ For this, ``pdftohtml`` is additionally required. It can be installed with
 
       $ brew install pdftohtml
 
-Add the following section to the global Git configuration :file:`~/.gitconfig`:
+Add the following section to the global Git configuration
+:file:`~/.config/git/config`:
 
 .. code-block:: ini
 
     [diff "pdf"]
         textconv=pdftohtml -stdout
 
-Finally, in the global :file:`~/.gitattributes` file, our ``pdf`` converter is
-linked to :file:`*.pdf` files:
+Finally, in the global :file:`~/.config/git/attributes` file, our ``pdf``
+converter is linked to :file:`*.pdf` files:
 
 .. code-block:: ini
 
@@ -73,10 +74,12 @@ linked to :file:`*.pdf` files:
 Now, when ``git diff`` is called, the PDF files are first converted and then a
 diff is performed over the outputs of the converter.
 
-… for Word documents
---------------------
+.. _pandoc-to-markdown:
 
-Differences in Word documents can also be displayed. For this purpose `Pandoc
+… for documents
+---------------
+
+Differences in documents can also be displayed. For this purpose `Pandoc
 <https://pandoc.org/>`_ can be used, which can be easily installed with
 
 .. tab:: Debian/Ubuntu
@@ -97,24 +100,92 @@ Differences in Word documents can also be displayed. For this purpose `Pandoc
    <https://github.com/jgm/pandoc/releases/>`_.
 
 Then add the following section to your global Git configuration
-:file:`~/.gitconfig`:
+:file:`~/.config/git/attributes`:
 
 .. code-block:: ini
 
-    [diff "word"]
-        textconv=pandoc --to=markdown
-        binary=true
-        prompt=false
+   [diff "pandoc-to-markdown"]
+       textconv = pandoc --to markdown
+       cachetextconv = true
 
-Finally, in the global :file:`~/.gitattributes` file, our ``word`` converter is
-linked to :file:`*.docx` files:
+Finally, in the global :file:`~/.config/git/attributes` file, our
+``pandoc-to-markdown`` converter is linked to :file:`*.docx`, :file:`*.odt` and
+:file:`*.rtf` files:
 
 .. code-block:: ini
 
-    *.docx diff=word
+   *.docx diff=pandoc-to-markdown
+   *.odt diff=pandoc-to-markdown
+   *.rtf diff=pandoc-to-markdown
+
+.. tip::
+   :doc:`Jupyter Notebooks <jupyter-tutorial:notebook/index>` write to a JSON
+   file :ref:`*.ipynb <jupyter-tutorial:whats-an-ipynb-file>`, which is quite
+   dense and difficult to read, especially with diffs. The Markdown
+   representation of Pandoc simplifies this:
+
+   .. code-block:: ini
+
+      *.ipynb diff=pandoc-to-markdown
 
 The same procedure can be used to obtain useful diffs from other binaries, for
 example ``*.zip``, ``*.jar`` and other archives with ``unzip`` or for changes in
 the meta information of images with ``exiv2``. There are also conversion tools
 for converting ``*.odt``, ``*.doc`` and other document formats into plain text.
 For binary files for which there is no converter, strings are often sufficient.
+
+.. _exiftool:
+
+… for media files
+-----------------
+
+`ExifTool <https://exiftool.org>`_ can be used to convert the metadata of media
+files to text.
+
+.. tab:: Debian/Ubuntu
+
+   .. code-block:: console
+
+      $ sudo apt install libimage-exiftool-perl
+
+.. tab:: macOS
+
+   .. code-block:: console
+
+      $ brew install exiftool
+
+.. tab:: Windows
+
+   .. code-block:: ps1
+
+      > choco install exiftool
+
+.. seealso::
+   * `Installing ExifTool <https://exiftool.org/install.html>`_
+
+You can then add the following section to the global Git configuration file
+:file:`~/.config/git/config`:
+
+.. code-block:: ini
+
+   [diff "exiftool"]
+   textconv = exiftool --composite -x 'Exiftool:*'
+   cachetextconv = true
+   xfuncname = "^-.*$"
+
+Finally, in :file:`~/.config/git/attributes` the ``exiftool`` converter is
+linked to file endings of media files:
+
+.. code-block:: ini
+
+   *.avif diff=exiftool
+   *.bmp diff=exiftool
+   *.gif diff=exiftool
+   *.jpeg diff=exiftool
+   *.jpg diff=exiftool
+   *.png diff=exiftool
+   *.webp diff=exiftool
+
+.. seealso::
+   ``exiftool`` can process many more media files. You can find a complete list
+   in `Supported File Types <https://exiftool.org/#supported>`_.

@@ -7,6 +7,7 @@ Working with Git
 
 Start working on a project
 --------------------------
+.. _git-init:
 
 Start your own project
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -20,12 +21,34 @@ Start your own project
 
         If no project name is given, the current directory is initialised.
 
+    .. tip::
+       The default branch in Git is ``master``. However, as `this term is
+       offensive to some people
+       <https://sfconservancy.org/news/2020/jun/23/gitbranchname/>`_, the
+       default branch name can be configured in Git ≥ 2.28:
+
+       .. code-block:: console
+
+          $ git config --global init.defaultBranch main
+
+    Most Git hosts also use *main* as the standard for new repositories.
+
 Work on a project
 ~~~~~~~~~~~~~~~~~
 
-:samp:`$ git clone {PROJECT_URL}`
+:samp:`$ git clone {SOURCE}`
     downloads a project with all branches and the entire history from the remote
-    repository.
+    repository, for example:
+
+    .. code-block:: console
+
+       $ git clone https://github.com/cusyio/Python4DataScience.git
+
+    or
+
+    .. code-block:: console
+
+       $ git clone git@github.com:cusyio/Python4DataScience.git
 
     ``--depth``
         indicates the number of commits to be downloaded.
@@ -49,6 +72,73 @@ Work on a project
        `git status -v
        <https://git-scm.com/docs/git-status#Documentation/git-status.txt--v>`_
 
+    ``git status -s|--short``
+        shows the status in short format, for example
+
+        .. code-block:: console
+
+           $ git status -s
+            M docs/productive/git/work.rst
+           ?? Python4DataScience.txt
+
+        The preceding letters indicate the status of the file.
+
+    ``git status`` gives a lot of advice on what to do with the files in the
+    individual states:
+
+    .. code-block:: console
+
+       $ git status
+       On branch main
+       Your branch and 'origin/main' have diverged,
+       and have 1 and 1 different commits each, respectively.
+         (use "git pull" if you want to integrate the remote branch with yours)
+
+       Changes not staged for commit:
+         (use "git add <file>..." to update what will be committed)
+         (use "git restore <file>..." to discard changes in working directory)
+           modified:   docs/productive/git/work.rst
+       Untracked files:
+         (use "git add <file>..." to include in what will be committed)
+           Python4DataScience.txt
+
+       no changes added to commit (use "git add" and/or "git commit -a")
+
+    .. _git-statushints:
+
+    If you are familiar with Git, you may find these hints unnecessary. Then you
+    can deactivate these messages with the ``advice.statusHints`` option:
+
+    .. code-block:: console
+
+       $ git config --global advice.statusHints false
+
+    From now on, calling ``git status`` will no longer display any hints:
+
+    .. code-block:: console
+
+       $ git status
+       On branch main
+       Your branch and 'origin/main' have diverged,
+       and have 1 and 1 different commits each, respectively.
+
+       Changes not staged for commit:
+           modified:   docs/productive/git/work.rst
+
+       Untracked files:
+           Python4DataScience.txt
+
+       no changes added to commit (use "git add" and/or "git commit -a")
+
+    Also when calling ``git-switch`` and ``git-checkout`` as well as when
+    writing commit messages, no more hints are displayed.
+
+    .. tip::
+       Although there are many other `advice.*
+       <https://git-scm.com/docs/git-config#Documentation/git-config.txt-advice>`_
+       options, most of them are quite insignificant, so they should only be
+       excluded when they start to interfere.
+
 :samp:`$ git add {PATH}`
     adds one or more files to the stage area.
 
@@ -62,16 +152,30 @@ Work on a project
 
     .. code-block:: console
 
-        $ git diff docs/productive/git/work.rst
-        diff --git a/docs/productive/git/work.rst b/docs/productive/git/work.rst
-        index e2a5ea6..fd84434 100644
-        --- a/docs/productive/git/work.rst
-        +++ b/docs/productive/git/work.rst
-        @@ -46,7 +46,7 @@
+       $ git diff docs/productive/git/work.rst
+       diff --git a/docs/productive/git/work.rst b/docs/productive/git/work.rst
+       index e2a5ea6..fd84434 100644
+       --- a/docs/productive/git/work.rst
+       +++ b/docs/productive/git/work.rst
+       @@ -46,7 +46,7 @@
 
-         :samp:`$ git diff {FILE}`
-        -    shows differences between work and stage areas.
-        +    shows differences between work and stage areas, for example:
+        :samp:`$ git diff {FILE}`
+       -    shows differences between work and stage areas.
+       +    shows differences between work and stage areas, for example:
+
+    By default, Git adds the prefixes ``a/`` and ``b/`` in front of the file
+    paths to the diff format.
+
+    .. tip::
+       These prefixes are intended to mark the paths as * old*  and * new* , but
+       they prevent the file paths from being easily copied – some terminals
+       also allow you to click on file paths to open them – but the prefixes
+       prevent this. You can change this with a new function in Git 2.45:
+
+       .. code-block:: console
+
+          $ git config --global diff.srcPrefix './'
+          $ git config --global diff.dstPrefix './'
 
     ``index e2a5ea6..fd84434 100644`` displays some internal Git metadata that
     you will probably never need. The numbers correspond to the hash
@@ -112,6 +216,9 @@ Work on a project
     ``--word-diff``
         shows the changed words.
 
+    .. seealso::
+       * :ref:`git-name-only`
+
 :samp:`$ git restore {FILE}`
     changes files in the working directory to a state previously known to Git. By
     default, Git checks out ``HEAD``, the last commit of the current branch.
@@ -130,8 +237,13 @@ Work on a project
         writes a commit message directly from the command line.
     ``--dry-run --short``
         shows what would be committed with the status in short format.
+    :samp:`-m '{FILE}'`
+        passes file names or `globbing
+        <https://en.wikipedia.org/wiki/Glob_(programming)>`_ patterns to ``git
+        commit`` to commit changes to these files, skipping any changes that
+        already exist in the staging area with git add.
 
-``$ git reset [--hard|--soft] [TARGET_REFERENCE]``
+:samp:`$ git reset [--hard|--soft] [{TARGET_REFERENCE}]`
     resets the history to an earlier commit.
 :samp:`$ git rm {PATH}`
     removes a file from the work and stage areas.
@@ -177,6 +289,25 @@ Work on a project
         +---------------+-----------------------------------------------+
         | ``?``         | Help                                          |
         +---------------+-----------------------------------------------+
+
+        .. _git-singlekey:
+
+        .. tip::
+           Usually you have to press the :kbd:`↩︎` key after every command with a
+           letter. However, you can switch off this overhead:
+
+           .. code-block:: console
+
+              $ git config --global interactive.singleKey true
+
+        .. _git-autostash:
+
+        You can also automatically apply stash for merge and rebase:
+
+        .. code-block:: console
+
+           $ git config --global merge.autoStash true
+           $ git config --global rebase.autoStash true
 
     ``branch``
         creates a branch from hidden files, for example:

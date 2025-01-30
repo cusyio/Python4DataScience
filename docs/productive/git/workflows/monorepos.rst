@@ -256,6 +256,8 @@ the search:
      <https://github.blog/engineering/improve-git-monorepo-performance-with-a-file-system-monitor/>`_
    * `Scaling monorepo maintenance
      <https://github.blog/open-source/git/scaling-monorepo-maintenance/>`_
+   * `fsmonitor-watchman
+     <https://git-scm.com/docs/githooks#_fsmonitor_watchman>`_
 
 Scalar
 ------
