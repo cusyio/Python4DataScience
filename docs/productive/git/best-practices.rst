@@ -176,6 +176,11 @@ the commit later.
    * `Visual Studio Code Extension
      <https://marketplace.visualstudio.com/items?itemName=seatonjiang.gitmoji-vscode>`_
 
+.. _gitlab-references:
+
+GitLab-specific references
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 GitLab also interprets certain commit messages as links, for example:
 
 .. code-block:: console
@@ -255,6 +260,10 @@ Git then starts each new commit message with the *Scissors* line:
    # ...
    #
 
+.. seealso::
+   * `GitLab-specific references
+     <https://docs.gitlab.com/ee/user/markdown.html#gitlab-specific-references>`_
+
 Specify co-authors
 ~~~~~~~~~~~~~~~~~~
 
@@ -294,6 +303,8 @@ Save storage space with the command ``git gc`` or ``git gc --aggressive``.
     * `git gc <https://git-scm.com/docs/git-gc>`_
     * `Git Internals - Maintenance and Data Recovery
       <https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery>`_
+
+ .. _fetch-prune:
 
 Clean up remote tracking branches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -347,5 +358,5 @@ following in the :file:`.pre-commit-config.yaml` file:
       class MyClass:
           client_secret = "Srtub6pZcTSET9V4vUpUg7xPi64sh3NV"  #gitleaks:allow
 
-With :ref:`git-filter-repo <git-filter-repo:>` you can remove unwanted files
-from your Git history.
+With :ref:`git-filter-repo <git-filter-repo>` you can remove unwanted files from
+your Git history.

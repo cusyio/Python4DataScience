@@ -60,6 +60,8 @@ Git 2.38 ships with a new ``--update-refs`` option for ``git rebase`` that will
 perform such updates for you without you having to manually update each branch
 and without subsequent branches losing their history.
 
+.. _rebase-updaterefs:
+
 If you want to use this option on every rebase, you can run ``git config
 --global rebase.updateRefs true`` to make Git behave as if the ``--update-refs``
 option is always specified.

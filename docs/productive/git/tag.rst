@@ -10,6 +10,9 @@ allows certain points in the history to be marked for a particular version, for
 example :samp:`v3.9.16`. Tags are like :doc:`branch` that do not change, so have
 no further history of commits.
 
+``git tag``
+-----------
+
 :samp:`$ git tag {TAGNAME}`
     creates a tag, where :samp:`{TAGNAME}` is a semantic label for the current
     state of the Git repository. Git distinguishes between two different types
@@ -116,3 +119,18 @@ no further history of commits.
 
         $ git tag -d v3.9.16
         $ git push origin --delete v3.9.16
+
+``git describe``
+----------------
+
+The :samp:`git describe {SH}` command finds the most recent tag that can be
+reached from a commit. If the tag points to the commit, only the tag is
+displayed, otherwise the number of additional commits is appended to the tag
+name. The result is an object name that can be used by other Git commands to
+identify the commit. Assuming you have a commit SHA and want to know in which
+version it was first published, you can use the following command:
+
+.. code-block:: console
+
+   $ git describe --contains 39ff38d | sed -E 's/[~^][0-9]*//g'
+   24.1.0

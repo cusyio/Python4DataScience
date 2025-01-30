@@ -77,6 +77,7 @@ environment:
 To get started, follow the instructions in `Git-Friendly Jupyter
 <https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html>`_.
 
+.. _nbstrip_jq:
 
 ``jq``
 ------
@@ -163,12 +164,12 @@ Set up
 #. If you want to use this filter for all Git repositories, you can also
    configure your Git globally:
 
-   #. First you add the following to your ``~/.gitconfig`` file:
+   #. First you add the following to your :file:`~/.config/git/config` file:
 
       .. code-block:: ini
 
         [core]
-        attributesfile = ~/.gitattributes
+        attributesfile = ~/.config/git/attributes
 
         [filter "nbstrip_jq"]
         clean = "jq --indent 1 \
@@ -185,7 +186,8 @@ Set up
       ``smudge``
           is used when resetting the workspace by changes from the stage area.
 
-   #. Then you have to specify the following in the ``~/.gitattributes`` file:
+   #. Then you have to specify the following in the ``~/.config/git/attributes``
+      file:
 
       .. code-block:: ini
 
