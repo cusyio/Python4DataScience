@@ -26,6 +26,19 @@ Added
 * 📝 Add csv.Sniffer methods
 * 📝 Add the removal of git lfs
 
+
+Changed
+~~~~~~~
+
+* 📝 Update git section
+
+  * Add diff source and destination prefix
+  * Add default branch config for init
+  * Add git-symbolic-ref
+  * Add Git Credential Store for Linux
+  * Update shallow clones
+  * Add shell config and command line tools
+
 `24.3.0 <https://github.com/cusyio/Python4DataScience/compare/24.2.0...24.3.0>`_: 2024-11-03
 --------------------------------------------------------------------------------------------
 

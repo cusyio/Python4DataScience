@@ -13,6 +13,8 @@ Git branches
     ``-l``
         restricts the branches to those that correspond to a specific pattern.
 
+.. _committerdate:
+
 :samp:`$ git branch --sort=-committerdate`
     sorts the branches according to the commit date.
 
@@ -106,6 +108,8 @@ The history can then look like this, for example:
    * `Git Tools - Advanced Merging
      <https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging>`_
 
+.. _merge-conflictstyle:
+
 Improved conflict display with zdiff3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -161,6 +165,8 @@ Here is the same merge with this style:
 The common base is now displayed between the markers ``|||||||`` and
 ``=======`` with the SHA value of the common base. This additional context is
 often useful for resolving a conflict.
+
+.. _rerere:
 
 ``rerere`` to reuse recorded conflict resolutions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -246,6 +252,44 @@ repository in an :file:`rr-cache` directory. You should note two things here:
        determines how long entries for unresolved conflicts are kept. The
        default value is 15 days.
 
+.. _merge-aliases:
+
+Aliases for faster resolution of merge conflicts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Resolving conflicts when merging can be time-consuming, but aliases can speed up
+the process.
+
+You can use the `--diff-filter
+<https://git-scm.com/docs/diff-options#Documentation/diff-options.txt-code--diff-filterACDMRTUXBcode>`_
+option for ``git diff`` to display only the files that are not merged:
+
+.. code-block:: console
+
+   $ git diff --name-only --diff-filter U
+
+You can also create a `Git command alias
+<https://git-scm.com/docs/git-config#Documentation/git-config.txt-alias>`_:
+
+.. code-block:: console
+
+   $ git config --global alias.list-unmerged '!git diff --name-only --diff-filter U'
+
+And to edit the non-merged files, you can create a `Git command alias
+<https://git-scm.com/docs/git-config#Documentation/git-config.txt-alias>`_:
+
+.. code-block:: console
+
+   $ git config --global alias.edit-unmerged '!git diff --name-only --diff-filter U | xargs -r $(git var GIT_EDITOR)'
+
+Now you can edit all unmerged files with ``git edit-unmerged`` and then add all
+files to the staging area with ``git add -u``.
+
+.. seealso::
+   I took the editor variable from the `gitalias
+   <https://github.com/GitAlias/gitalias/tree/main>`_ project. And maybe you’ll
+   find more ideas for your alias there.
+
 Delete branches
 ---------------
 
@@ -284,6 +328,8 @@ If you want to add all branches of a local repository to the remote repo, you
 can do this with:
 
 :samp:`$ git push --set-upstream origin --all`
+
+.. _push-autoSetupRemote:
 
 You can configure the following so that this happens automatically for branches
 without a tracking upstream:
@@ -363,3 +409,12 @@ Team members can delete their locally still existing references to the
 .. code-block:: console
 
    $ git fetch origin --prune
+
+.. tip::
+   With `git symbolic-ref <https://git-scm.com/docs/git-symbolic-ref>`_ you can
+   create aliases, for example:
+
+   .. code-block:: console
+
+      $ git symbolic-ref refs/heads/main refs/heads/master
+      $ git symbolic-ref refs/remotes/origin/main refs/remotes/origin/master

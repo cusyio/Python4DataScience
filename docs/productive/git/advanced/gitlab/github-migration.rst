@@ -137,7 +137,6 @@ GitHub syntax for conditions and expressions
        steps:
          - run: echo "Deploy to production server"
 
-
 GitLab syntax for conditions and expressions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
