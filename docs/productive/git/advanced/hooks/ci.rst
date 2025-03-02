@@ -39,8 +39,8 @@ Examples for GitHub Actions
           pre-commit:
             runs-on: ubuntu-latest
             steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-python@v3
+            - uses: actions/checkout@v4
+            - uses: actions/setup-python@v5
             - uses: actions/cache@v3
               with:
                 path: ~/.cache/pre-commit
