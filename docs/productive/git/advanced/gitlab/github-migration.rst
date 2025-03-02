@@ -43,7 +43,7 @@ GitHub Actions syntax for jobs
    jobs:
      my_job:
        steps:
-         - uses: actions/checkout@v3
+         - uses: actions/checkout@v4
          - run: echo "Run my script here"
 
 GitLab CI/CD syntax for jobs
@@ -308,8 +308,8 @@ GitHub Actions syntax for databases and service containers
 
         steps:
           - name: Python
-            uses: actions/checkout@v3
-            uses: actions/setup-python@v4
+            uses: actions/checkout@v4
+            uses: actions/setup-python@v5
             with:
               python-version: '3.10'
 
@@ -344,7 +344,7 @@ Mapping
 +-----------------------------------------------+-----------------------------------------------+
 | ``actions/upload-artifact@v2``                | ``artifacts``                                 |
 +-----------------------------------------------+-----------------------------------------------+
-| ``actions/cache@v2``                          | ``cache``                                     |
+| ``actions/cache@v4``                          | ``cache``                                     |
 +-----------------------------------------------+-----------------------------------------------+
 | ``actions/download-artifact@v2``              | ``dependencies``                              |
 +-----------------------------------------------+-----------------------------------------------+
