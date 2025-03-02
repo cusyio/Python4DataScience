@@ -419,7 +419,7 @@ You can easily integrate REUSE into your continuous integration workflow:
           test:
             runs-on: ubuntu-latest
             steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - name: REUSE Compliance Check
               uses: fsfe/reuse-action@v2
 
