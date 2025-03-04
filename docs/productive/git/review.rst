@@ -15,131 +15,131 @@ Review
 Filter and sort
 ~~~~~~~~~~~~~~~
 
-.. glossary::
+:samp:`$ git log [-n {COUNT}]`
+   lists the commit history of the current branch.
 
-   :samp:`$ git log [-n {COUNT}]`
-       lists the commit history of the current branch.
+   ``-n``
+       limits the number of commits to the specified number.
 
-       ``-n``
-           limits the number of commits to the specified number.
+:samp:`$ git log [--after="{YYYY-MM-DD}"] [--before="{YYYY-MM-DD}"]`
+   Commit history filtered by date.
 
-   :samp:`$ git log [--after="{YYYY-MM-DD}"] [--before="{YYYY-MM-DD}"]`
-       Commit history filtered by date.
+   Relative specifications such as ``1 week ago`` or ``yesterday`` are also
+   permitted.
 
-       Relative specifications such as ``1 week ago`` or ``yesterday`` are also
-       permitted.
+:samp:`$ git log --author="{VEIT}"`
+   filters the commit history by author.
 
-   :samp:`$ git log --author="{VEIT}"`
-       filters the commit history by author.
+   It is also possible to search for several authors at the same time, for
+   example:
 
-       It is also possible to search for several authors at the same time, for
-       example:
+   :samp:`$ git log --author="{VEIT\|VSC}"`
 
-       :samp:`$ git log --author="{VEIT\|VSC}"`
+:samp:`$ git log --grep="{TERM}" [-i]`
+   filters the commit history for regular expressions in the commit message.
 
-   :samp:`$ git log --grep="{TERM}" [-i]`
-       filters the commit history for regular expressions in the commit message.
+   ``-i``
+       ignores upper and lower case.
 
-       ``-i``
-           ignores upper and lower case.
+:samp:`$ git log -S"{FOO}" [-i]`
+   filters commits for specific lines in the source code.
 
-   :samp:`$ git log -S"{FOO}" [-i]`
-       filters commits for specific lines in the source code.
+   ``-i``
+       ignores upper and lower case.
 
-       ``-i``
-           ignores upper and lower case.
+:samp:`$ git log -G"{BA*}"`
+   filters commits for regular expressions in the source code.
 
-   :samp:`$ git log -G"{BA*}"`
-       filters commits for regular expressions in the source code.
+:samp:`$ git log -- {PATH}`
+   filters the commit history for specific files.
 
-   :samp:`$ git log -- {PATH}`
-       filters the commit history for specific files.
+:samp:`$ git log {MAIN}..{FEATURE}`
+   filters for different commits in different branches, in our case between
+   the :samp:`MAIN` and :samp:`FEATURE` branches.
+
+   However, this is not the same as :samp:`git log {FEATURE}..{MAIN}`. Let’s
+   take the following example:
+
+   .. code-block::
+
+      A - B main
+       \
+        C - D feature
 
    :samp:`$ git log {MAIN}..{FEATURE}`
-       filters for different commits in different branches, in our case between
-       the :samp:`MAIN` and :samp:`FEATURE` branches.
+       shows changes in :samp:`{FEATURE}` that are not contained in
+       :samp:`{MAIN}`, that is, commits ``C`` and ``D``.
+   :samp:`$ git log {FEATURE}..{MAIN}`
+       shows changes in :samp:`{MAIN}` that are not contained in
+       :samp:`{FEATURE}`, that is, commit ``B``.
+   :samp:`$ git log {MAIN}...{FEATURE}`
+       shows the changes on both sides, that is, commits ``B``, ``C`` and
+       ``D``.
 
-       However, this is not the same as :samp:`git log {FEATURE}..{MAIN}`. Let’s
-       take the following example:
+:samp:`$ git log --follow {PATH/TO/FILE}`
+   This ensures that the log shows changes to a single file, even if it has
+   been renamed or moved.
 
-       .. code-block::
+   You can activate ``--follow`` for individual file calls by default by
+   activating the ``log.follow`` option in your global configuration:
 
-          A - B main
-           \
-            C - D feature
+   .. code-block:: console
 
-       :samp:`$ git log {MAIN}..{FEATURE}`
-           shows changes in :samp:`{FEATURE}` that are not contained in
-           :samp:`{MAIN}`, that is, commits ``C`` and ``D``.
-       :samp:`$ git log {FEATURE}..{MAIN}`
-           shows changes in :samp:`{MAIN}` that are not contained in
-           :samp:`{FEATURE}`, that is, commit ``B``.
-       :samp:`$ git log {MAIN}...{FEATURE}`
-           shows the changes on both sides, that is, commits ``B``, ``C`` and
-           ``D``.
+      $ git config --global log.follow true
 
-   :samp:`$ git log --follow {PATH/TO/FILE}`
-       This ensures that the log shows changes to a single file, even if it has
-       been renamed or moved.
+   Then you no longer have to enter ``--follow``, but only the file name.
 
-       You can activate ``--follow`` for individual file calls by default by
-       activating the ``log.follow`` option in your global configuration:
+``$ git log -L``
+   With the `-L
+   <https://git-scm.com/docs/git-log#Documentation/git-log.txt--Lltstartgtltendgtltfilegt>`_
+   option, you can perform a refined search by checking the log of only part
+   of a file:
 
-       .. code-block:: console
+   * :samp:`$ git log -L {LINE_START_INT|LINE_START_REGEX},{LINE_END_INT|LINE_END_REGEX}:{PATH/TO/FILE}`
+   * :samp:`$ git log -L :{FUNCNAME_REGEX}:{PATH/TO/FILE}`
 
-          $ git config --global log.follow true
+   This function allows you to thoroughly search through the history of a single
+   function, class or other code block. It is ideal for finding out when
+   something was created and how it was changed so that you can correct,
+   refactor or delete it with confidence.
 
-       Then you no longer have to enter ``--follow``, but only the file name.
+   For more comprehensive investigations, you can also track multiple blocks.
+   You can use multiple ``-L`` options at once.
 
-   :samp:`$ git log -L {LINE_START_INT|LINE_START_REGEX},{LINE_END_INT|LINE_END_REGEX}:{PATH/TO/FILE}`
-   :samp:`$ git log -L :{FUNCNAME_REGEX}:{PATH/TO/FILE}`
-       With the `-L
-       <https://git-scm.com/docs/git-log#Documentation/git-log.txt--Lltstartgtltendgtltfilegt>`_
-       option, you can perform a refined search by checking the log of only part
-       of a file. This function allows you to thoroughly search through the
-       history of a single function, class or other code block. It is ideal for
-       finding out when something was created and how it was changed so that you
-       can correct, refactor or delete it with confidence.
-
-           For more comprehensive investigations, you can also track multiple
-           blocks. You can use multiple ``-L`` options at once.
-
-   :samp:`$ git log --reverse`
-       The log usually displays the latest commit first. You can reverse this
-       with ``--reverse``. This is particularly useful if you are analysing with
-       the ``-S`` and ``-G`` options already mentioned. By reversing the order
-       of the commits, you can quickly find the first commit that added a
-       specific string to the codebase.
+:samp:`$ git log --reverse`
+   The log usually displays the latest commit first. You can reverse this
+   with ``--reverse``. This is particularly useful if you are analysing with
+   the ``-S`` and ``-G`` options already mentioned. By reversing the order
+   of the commits, you can quickly find the first commit that added a
+   specific string to the codebase.
 
 View
 ~~~~
 
-.. glossary::
+:samp:`$ git log --stat --patch|-p`
+   ``--stat``
+       A summary of the number of changed lines per file is added to the
+       usual metadata.
+   ``--patch|-p``
+       adds the complete commit diff to the output.
 
-   :samp:`$ git log --stat --patch|-p`
-       ``--stat``
-           A summary of the number of changed lines per file is added to the
-           usual metadata.
-       ``--patch|-p``
-           adds the complete commit diff to the output.
+:samp:`$ git log --oneline --decorate --graph --all|{FEATURE}`
+   display the history graph with references, one commit per line.
 
-   :samp:`$ git log --oneline --decorate --graph --all|{FEATURE}`
-       display the history graph with references, one commit per line.
+   ``--oneline``
+       One commit per line.
+   ``--decorate``
+       The prefixes ``refs/heads/``, ``refs/tags/`` and  ``refs/remotes/``
+       are not output.
+   ``--graph``
+       The log usually smoothes historical branches and displays commits one
+       after the other. This hides the parallel structure of the history
+       when merging branches. ``--graph`` displays the history of the
+       branches in ASCII format.
 
-       ``--oneline``
-           One commit per line.
-       ``--decorate``
-           The prefixes ``refs/heads/``, ``refs/tags/`` and  ``refs/remotes/``
-           are not output.
-       ``--graph``
-           The log usually smoothes historical branches and displays commits one
-           after the other. This hides the parallel structure of the history
-           when merging branches. ``--graph`` displays the history of the
-           branches in ASCII format.
-
-       :samp:`--all|{FEATURE}`
-           ``--all`` shows the log for all branches; :samp:`{FEATURE}` only
-           shows the commits of this branch.
+   :samp:`--all|{FEATURE}`
+       ``--all`` shows the log for all branches; :samp:`{FEATURE}` only
+       shows the commits of this branch.
 
 .. _reflog:
 
@@ -162,13 +162,11 @@ Let’s look at the basics of using reflog and some typical use cases.
 Show the reflog for ``HEAD``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. glossary::
-
-   :samp:`$ git reflog`
-       If no options are specified, the command displays the reflog for ``HEAD``
-       by default. It is short for ``git reflog show HEAD``. git reflog has
-       other subcommands to manage the log, but show is the default command if
-       no subcommand is passed.
+:samp:`$ git reflog`
+    If no options are specified, the command displays the reflog for ``HEAD`` by
+    default. It is short for ``git reflog show HEAD``. git reflog has other
+    subcommands to manage the log, but show is the default command if no
+    subcommand is passed.
 
 .. code-block:: console
    :linenos:
