@@ -37,6 +37,10 @@ repos:
     rev: 25.1.0
     hooks:
     - id: black
+  - repo: https://github.com/tonybaloney/perflint
+    rev: 0.8.1
+    hooks:
+    - id: perflint
   - repo: https://github.com/adamchainz/blacken-docs
     rev: "1.19.1"
     hooks:

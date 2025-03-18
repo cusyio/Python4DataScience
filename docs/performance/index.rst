@@ -62,8 +62,8 @@ Performance measurements
 ------------------------
 
 Once you have worked with your code, it can be useful to examine its efficiency
-more closely. The :doc:`ipython-profiler` or :doc:`scalene` can be used for
-this.
+more closely. :mod:`cProfile`, :doc:`ipython-profiler` or :doc:`scalene` can be
+used for this.
 
 .. seealso::
     * `airspeed velocity (asv) <https://asv.readthedocs.io/en/stable/>`_
