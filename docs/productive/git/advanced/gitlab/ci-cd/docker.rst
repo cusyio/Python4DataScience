@@ -1,7 +1,11 @@
+.. SPDX-FileCopyrightText: 2024–2025 Veit Schiele
+..
+.. SPDX-License-Identifier: BSD-3-Clause
+
 Building Docker containers
 ==========================
 
-We use :doc:`ci-cd`, to create our Python Docker containers.
+We use :doc:`index`, to create our Python Docker containers.
 
 #. First, we define the Python version in our :ref:`pyproject-toml` file of the
    project:
