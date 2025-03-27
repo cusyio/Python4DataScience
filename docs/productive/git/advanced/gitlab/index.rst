@@ -13,8 +13,8 @@ as well as a Wiki and Snippets. The GitLab Community Edition (CE) is developed
 as open source software under the MIT licence and can be installed on-premises.
 
 The GitLab CI tools enable automated builds and deployments without the need for
-external integrations, for example building a Docker container with the Python
-version of the project.
+external integrations, for example :doc:`building a Docker container with the
+Python version of the project <ci-cd/docker>`.
 
 If a PaaS solution such as `Kubernetes
 <https://en.wikipedia.org/wiki/Kubernetes>`_ is already in use, GitLab-CI/CD can
@@ -34,7 +34,5 @@ integrated, for example with Asana, Jira, Microsoft Teams, Slack, etc.
 
    roles-permissions
    merge-requests
-   ci-cd
-   docker
-   github-migration
+   ci-cd/index
    package-registry

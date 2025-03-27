@@ -16,11 +16,11 @@ The three main approaches to this continuous development are:
 Continuous Integration
     runs a series of scripts sequentially or in parallel that your application
     automatically builds and tests, for example after each ``git pull`` in a
-    :doc:`feature branch <../../workflows/feature-branches>`. This is to make it
-    less likely that you will introduce bugs into your application.
+    :doc:`feature branch <../../../workflows/feature-branches>`. This is to make
+    it less likely that you will introduce bugs into your application.
 
     If the checks work as expected, you can make a :doc:`merge request
-    <merge-requests>`; if the checks fail, you can revert the changes if
+    <../merge-requests>`; if the checks fail, you can revert the changes if
     necessary.
 
     .. seealso::
@@ -151,7 +151,7 @@ Show pipelines
 
 You can find the current and historical pipeline runs on the
 :menuselection:`CI/CD --> Pipelines` page of your project. You can also access
-pipelines for a :doc:`merge request <merge-requests>` by navigating to their
+pipelines for a :doc:`merge request <../merge-requests>` by navigating to their
 :guilabel:`Pipelines` tab. Select a pipeline to open the *Pipeline Details* page
 and view the jobs that have been run for that pipeline. From here you can cancel
 a running pipeline, retry *jobs* in a failed pipeline or delete a pipeline.
@@ -170,3 +170,12 @@ a running pipeline, retry *jobs* in a failed pipeline or delete a pipeline.
      <https://docs.gitlab.com/ee/ci/variables/index.html>`_
    * `GitLab Docs: Predefined variables reference
      <https://docs.gitlab.com/ee/ci/variables/predefined_variables.html>`_
+
+.. toctree::
+   :hidden:
+
+   pages
+   npm
+   docker
+   buildah
+   github-migration

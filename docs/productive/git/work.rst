@@ -257,6 +257,15 @@ Work on a project
     To be able to distinguish your hidden changes as well as possible, the
     following two options are recommended:
 
+        .. _git-autostash:
+
+        You can also automatically apply stash for merge and rebase:
+
+        .. code-block:: console
+
+           $ git config --global merge.autoStash true
+           $ git config --global rebase.autoStash true
+
     ``git stash -p|--patch``
         allows you to partially hide changes, for example:
 
@@ -304,14 +313,8 @@ Work on a project
 
               $ git config --global interactive.singleKey true
 
-        .. _git-autostash:
-
-        You can also automatically apply stash for merge and rebase:
-
-        .. code-block:: console
-
-           $ git config --global merge.autoStash true
-           $ git config --global rebase.autoStash true
+    :samp:`git stash save {MESSAGE}`
+         adds a message to the changes.
 
     :samp:`git stash branch {BRANCHNAME}`
         creates a branch from hidden files, for example:

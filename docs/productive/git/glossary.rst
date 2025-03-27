@@ -42,8 +42,9 @@ Git glossary
 
     GitLab
         Web application for version management based on :term:`git`. Later,
-        :doc:`advanced/gitlab/ci-cd`, a system for continuous integration,
-        GitLab Runner, Container Registry and many other things were added.
+        :doc:`advanced/gitlab/ci-cd/index`, a system for continuous integration,
+        GitLab Runner, :doc:`advanced/gitlab/package-registry`,
+        :doc:`advanced/gitlab/ci-cd/pages` and many other things were added.
 
         .. seealso::
            * :doc:`advanced/gitlab/index`

@@ -11,7 +11,7 @@ work on them together. Merge requests contain:
 
 * A description of the request
 * Code changes and code reviews
-* Information about :doc:`CI/CD pipelines <ci-cd>`
+* Information about :doc:`CI/CD-Pipelines <ci-cd/index>`
 * discussion posts
 * the list of commits
 
@@ -38,11 +38,11 @@ Merge request workflows
    reports <https://docs.gitlab.com/ee/ci/testing/code_quality.html>`_.
 #. You verify your changes with `reports from unit tests
    <https://docs.gitlab.com/ee/ci/testing/unit_test_reports.html>`_ in
-   :doc:`GitLab CI/CD <ci-cd>`.
+   :doc:`GitLab CI/CD <ci-cd/index>`.
 #. You avoid using dependencies whose licence is incompatible with your project
    with :ref:`licence compliance reports <reuse-in-gitlab-ci>`.
 #. You request `approval
    <https://docs.gitlab.com/ee/user/project/merge_requests/approvals/index.html>`_
    of your changes.
-#. When the merge request is approved, :doc:`GitLab CI/CD <ci-cd>` will deploy
-   the changes to the ``production`` environment.
+#. When the merge request is approved, :doc:`GitLab CI/CD <ci-cd/index>` will
+   deploy the changes to the ``production`` environment.
