@@ -26,8 +26,8 @@ Before you can execute the hooks, the pre-commit framework must be installed:
 
 .. tab:: Windows
 
-   Before the pre-commit framework can be installed with Pipenv, the `Microsoft
-   Build Tools for C++
+   Before the pre-commit framework can be installed with :term:`uv`, the
+   `Microsoft Build Tools for C++
    <https://visualstudio.microsoft.com/de/visual-cpp-build-tools/>`_ must be
    downloaded and executed so that the *Desktop development with C++* can be
    selected and installed with the standard options.

@@ -48,7 +48,7 @@ External dependencies can also be specified with :ref:`dvc remote <dvc-remote>`.
 Installation
 ------------
 
-Finally, external dependencies can also be specified with Pipenv.
+Finally, external dependencies can also be specified with :term:`uv`.
 
 .. note::
    You have to explicitly state the extras. This can be ``[ssh]``, ``[s3]``,
