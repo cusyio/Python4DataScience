@@ -176,19 +176,36 @@ Fonts
 Hardware
 ~~~~~~~~
 
-Designs for `open source hardware <https://www.oshwa.org/definition/>`_ are
-covered by the CERN Open Hardware licences:
+In addition to the `GNU General Public License (GPL)
+<http://www.gnu.org/licenses/gpl.html/>` and the `Creative Commons licences
+<https://creativecommons.org/licenses/>`_, the `Open Source Hardware Association
+(OSHWA) <https://www.oshwa.org/definition/>`_ also accepts the following
+specialised licences:
 
 `CERN-OHL-P-2.0 <https://ohwr.org/cern_ohl_p_v2.txt>`_
-    permissive
+    Permissive variant
 `CERN-OHL-W-2.0 <https://ohwr.org/cern_ohl_w_v2.txt>`_
-    weakly reciprocal
+    Weakly reciprocal variant
 `CERN-OHL-S-2.0 <https://ohwr.org/cern_ohl_s_v2.txt>`_
-    strongly reciprocal
+    Copyleft or strongly reciprocal variant
+`TAPR <https://tapr.org/the-tapr-open-hardware-license/>`_
+    Copyleft licence
+`Solderpad Hardware License <https://solderpad.org>`_
+    Permissive licence based on the `Apache 2.0 licence
+    <https://www.apache.org/licenses/LICENSE-2.0.html>`_
 
 .. seealso::
+   * `Licensing Open Source Hardware
+     <https://larszimmermann.de/licensing-open-source-hardware-by-michael-weinberg/>`_
+     by Michael Weinberg
+   * `OSHW 101 <https://oshwa.org/oshw-101/>`_
    * `Certified Open Source Hardware Projects
      <https://certification.oshwa.org/list.html>`_
+   * `OSHWA Certification Process - Hardware
+     <https://certification.oshwa.org/process/hardware.html>`_
+   * `Licensing Open Hardware <https://zenodo.org/records/7195720>`_
+     by Santosh Ilhamparuth
+   * `Free and Open Source Silicon Foundation <https://fossi-foundation.org>`_
 
 Choosing a suitable license
 ---------------------------
