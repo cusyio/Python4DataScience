@@ -108,6 +108,11 @@ they are `not recommended for software
    licence for Open Access publications, see also `Why CC BY is the Best Choice
    for Open Access Publishing <https://deal-konsortium.de/en/why-ccby>`_.
 
+   :abbr:`RADAR (Research Data Repository)`, a cross-disciplinary repository for
+   archiving and publishing research data, recommends only one of the `CC
+   licences
+   <https://radar.products.fiz-karlsruhe.de/en/radarfeatures/lizenzen-fuer-forschungsdaten#cc-licenses>`_.
+
 The `Open Knowledge Foundation <https://okfn.org/en/>`_ has also published a set
 of `Open Data Commons <https://opendatacommons.org>`_ licences for
 data/databases:
@@ -130,6 +135,48 @@ When using the `Community Data License Agreement – Permissive, Version 2.0 <ht
 
 Another possible licence for artistic works is the `Free Art License 1.3
 <https://artlibre.org/licence/lal/en/>`_.
+
+Machine learning models
+~~~~~~~~~~~~~~~~~~~~~~~
+
+It’s an open question whether :abbr:`AI (Artificial Intelligence)`/:abbr:`ML
+(Machine Learning)` model weights are copyrightable at all. US copyright law
+expressly excludes *‘any idea, procedure, process, system, method of operation,
+concept, principle, or discovery, however described, explained, illustrated, or
+embodied in such work’* from copyrightable works, and the US Copyright Office
+has stated that this exclusion extends to *‘scientific or technical methods or
+discoveries’*, *‘mathematical principles’* and *‘formulas or algorithms’*.
+
+It’s not yet clear whether model weights can be considered works of human
+authorship or rather the results of automated processes. These questions have
+yet to be decided by the courts.
+
+While many :abbr:`ML (Machine Learning)` models use open software licences such
+as MIT or Apache 2.0, there are a number of ML model-specific licences that have
+been developed for a company or specific models:
+
+* `Microsoft Data Use Agreement for Open AI Model Development
+  <https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Rjfq>`_
+* `OPT-175B
+  <https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MODEL_LICENSE.md>`_
+* `BigScience BLOOM RAIL v1.0
+  <https://bigscience.huggingface.co/blog/the-bigscience-rail-license>`_
+* `BigScience OpenRAIL-M (Responsible AI License
+  <https://www.licenses.ai/blog/2022/8/26/bigscience-open-rail-m-license>`_
+
+  RAIL-D
+      contains usage restrictions that only apply to the data.
+  RAIL-A
+      contains usage restrictions that only apply to the
+      application/executability.
+  RAIL-M
+      contains usage restrictions that only apply to the model.
+  RAIL-S
+      contains usage restrictions that only apply to the source code.
+
+.. seealso::
+   * `Licensing Machine Learning models
+     <https://book.the-turing-way.org/reproducible-research/licensing/licensing-ml>`_ by The Turing Way Community
 
 Documentation
 ~~~~~~~~~~~~~
@@ -176,19 +223,36 @@ Fonts
 Hardware
 ~~~~~~~~
 
-Designs for `open source hardware <https://www.oshwa.org/definition/>`_ are
-covered by the CERN Open Hardware licences:
+In addition to the `GNU General Public License (GPL)
+<http://www.gnu.org/licenses/gpl.html/>`_ and the `Creative Commons licences
+<https://creativecommons.org/licenses/>`_, the `Open Source Hardware Association
+(OSHWA) <https://www.oshwa.org/definition/>`_ also accepts the following
+specialised licences:
 
 `CERN-OHL-P-2.0 <https://ohwr.org/cern_ohl_p_v2.txt>`_
-    permissive
+    Permissive variant
 `CERN-OHL-W-2.0 <https://ohwr.org/cern_ohl_w_v2.txt>`_
-    weakly reciprocal
+    Weakly reciprocal variant
 `CERN-OHL-S-2.0 <https://ohwr.org/cern_ohl_s_v2.txt>`_
-    strongly reciprocal
+    Copyleft or strongly reciprocal variant
+`TAPR <https://tapr.org/the-tapr-open-hardware-license/>`_
+    Copyleft licence
+`Solderpad Hardware License <https://solderpad.org>`_
+    Permissive licence based on the `Apache 2.0 software licence
+    <https://www.apache.org/licenses/LICENSE-2.0.html>`_
 
 .. seealso::
+   * `Licensing Open Source Hardware
+     <https://larszimmermann.de/licensing-open-source-hardware-by-michael-weinberg/>`_
+     by Michael Weinberg
+   * `OSHW 101 <https://oshwa.org/oshw-101/>`_
    * `Certified Open Source Hardware Projects
      <https://certification.oshwa.org/list.html>`_
+   * `OSHWA Certification Process - Hardware
+     <https://certification.oshwa.org/process/hardware.html>`_
+   * `Licensing Open Hardware <https://zenodo.org/records/7195720>`_
+     by Santosh Ilhamparuth
+   * `Free and Open Source Silicon Foundation <https://fossi-foundation.org>`_
 
 Choosing a suitable license
 ---------------------------
