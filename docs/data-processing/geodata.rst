@@ -5,6 +5,112 @@
 Geodata
 =======
 
+File formats
+------------
+
+.. _pmtiles:
+
+PMTiles
+~~~~~~~
+
+`PMTiles <https://docs.protomaps.com>`_ is a general format for tile data
+addressed by Z/X/Y coordinates. This can be cartographic vector tiles,
+:ref:`remote sensing data <remote-sensing>`, JPEG images or similar.
+
+`HTTP Range Requests
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests>`_ are used
+for reading in order to retrieve only the relevant tiles or metadata within a
+PMTiles archive. The arrangement of tiles and directories is designed to
+minimise the number of requests when moving and zooming.
+
+However, PMTiles is a read-only format: it is not possible to update part of the
+archive without rewriting the entire file. If you need transactional updates,
+you should use a database such as SQLite or :doc:`postgresql/postgis/index` and
+`ST_asMVT <https://postgis.net/docs/ST_AsMVT.html>`_.
+
+.. seealso::
+   * `GitHub Repository <https://github.com/protomaps/PMTiles>`_
+   * `PMTiles Version 3 Specification
+     <https://github.com/protomaps/PMTiles/blob/main/spec/v3/spec.md>`_
+   * `pmtiles Python package
+     <https://github.com/protomaps/PMTiles/tree/main/python/pmtiles>`_
+
+Mapbox Vector Tiles (MVT)
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `Mapbox Vector Tiles
+<https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/>`_ file
+format stores each tile in a directory tree like :file:`/Z/X/Y.mvt`. This works
+well for small tile sets, but updating an entire global pyramid of ~300 million
+tiles is very inefficient. :ref:`pmtiles`, on the other hand, is a single file
+with tiles de-duplicated, reducing the size of global vector basemaps by ~70%.
+
+For writing, the :ref:`gdal` library with `SQLite <https://www.sqlite.org>`_ and
+`GEOS <https://libgeos.org>`_ support must be installed. The :ref:`mbtiles` are
+stored in SQLite like mbtiles and can be processed with the MBTiles driver.
+
+.. seealso::
+   * `Mapbox Vector Tile specification
+     <https://github.com/mapbox/vector-tile-spec>`_
+   * `MVT: Mapbox Vector Tiles
+     <https://gdal.org/en/stable/drivers/vector/mvt.html>`_
+
+.. _mbtiles:
+
+MBTiles
+~~~~~~~
+
+`MBTiles <https://docs.mapbox.com/help/glossary/mbtiles/>`_ is a container
+format for tile data based on SQLite. It is optimised for local access, not for
+access via HTTP like :ref:`pmtiles`.
+
+.. seealso::
+   * `MBTiles specification <https://github.com/mapbox/mbtiles-spec>`_
+
+.. _geodata-repositories:
+
+Cloud Optimized GeoTIFF (COG)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`Cloud Optimized GeoTIFF <https://cogeo.org>`_ is a raster TIFF file that, like
+:ref:`pmtiles`, is optimised for reading from a cloud storage. :ref:`pmtiles`
+can also deliver other tile data, for example vector tiles. However, COG is
+backwards compatible with most GIS programmes that work with GeoTIFF.
+
+.. seealso::
+   * `OGC Cloud Optimized GeoTIFF Standard
+     <https://docs.ogc.org/is/21-026/21-026.html>`_
+
+.. _geoparquet:
+
+GeoParquet
+~~~~~~~~~~
+
+`Parquet <https://parquet.apache.org>`_ is an open-source, column-orientated
+data file format that was developed for the efficient storage and retrieval of
+data. It offers efficient data compression and encoding methods with optimised
+processing of large, complex data. `GeoParquet <https://geoparquet.org>`_
+extends Parquet with interoperable geodata types (point, line, polygon).
+
+
+* :doc:`pyviz:matplotlib/geopandas/index` supports the `reading
+  <https://geopandas.org/en/stable/docs/reference/api/geopandas.read_parquet.html>`_
+  and `writing
+  <https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.to_parquet.html>`_
+  of GeoParquet.
+* `GeoParquet Downloader Plugin
+  <https://plugins.qgis.org/plugins/qgis_plugin_gpq_downloader/>`_ for `QGIS
+  <https://qgis.org>`_ enables streaming downloads of large GeoParquet datasets.
+* `DuckDB <https://duckdb.org>`_ allows the reading and writing of GeoParquet
+  files with the `Spatial Extension
+  <https://duckdb.org/docs/stable/extensions/spatial/overview.html>`_.
+
+.. seealso::
+   * `GeoParquet specification <https://github.com/opengeospatial/geoparquet>`_
+   * `GeoParquet Software <https://geoparquet.org/#implementations>`_
+   * `validate_geoparquet.py
+     <https://github.com/OSGeo/gdal/blob/master/swig/python/gdal-utils/osgeo_utils/samples/validate_geoparquet.py>`_
+
 .. _geodata-repositories:
 
 Data repositories
@@ -29,6 +135,8 @@ Software
 
 Reading and writing
 ~~~~~~~~~~~~~~~~~~~
+
+.. _gdal:
 
 `Geospatial Data Abstraction Library (GDAL) <https://gdal.org/en/latest/>`_
     provides a low-level but more powerful API for reading and writing hundreds
@@ -136,6 +244,8 @@ Reading and writing
 
 .. seealso::
    :ref:`geo-wrappers`
+
+.. _remote-sensing:
 
 Remote sensing
 ~~~~~~~~~~~~~~
