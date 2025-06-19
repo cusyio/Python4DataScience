@@ -21,6 +21,7 @@ docs = [
     "ipython",
     "ipywidgets",
     "nbsphinx",
+    "notebook",
     "sphinxcontrib-svg2pdfconverter",
     "sphinxext.opengraph", # matplotlib is required for social cards
     "matplotlib",
