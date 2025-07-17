@@ -14,24 +14,25 @@ classifiers = [
 ]
 dependencies = []
 
-[project.optional-dependencies]
+[dependency-groups]
 docs = [
-    "sphinx<8.2",
     "furo",
     "ipython",
     "ipywidgets",
+    "matplotlib",
     "nbsphinx",
     "notebook",
+    "sphinx<8.2",
+    "sphinx-copybutton",
+    "sphinx-lint",
+    "sphinx-notfound-page",
+    "sphinx_inline_tabs",
     "sphinxcontrib-svg2pdfconverter",
     "sphinxext.opengraph", # matplotlib is required for social cards
-    "matplotlib",
-    "sphinx-copybutton",
-    "sphinx_inline_tabs",
-    "sphinx-lint",
 ]
 
 dev = [
-    "Python4DataScience[docs]",
+    { include-group = "docs" },
     "pre-commit",
     "codespell",
     "vale",
