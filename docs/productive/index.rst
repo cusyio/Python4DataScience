@@ -19,6 +19,9 @@ this is unfortunately not sufficient to reproduce such an environment.
 
 .. [#] Karl Popper in *The Logic of Scientific Discovery*, 1959
 
+.. figure:: replication_crisis_2x.png
+   :alt: XKCD #3117: Replication Crisis
+
 In order for others to be able to use your code, it should meet some conditions:
 
 * You should not silently rely on specific resources and environments
