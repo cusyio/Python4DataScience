@@ -52,6 +52,18 @@ hand for :doc:`testing`, :doc:`python-basics:logging/index`, :doc:`documenting
      * `Slides <https://zenodo.org/records/3707745>`_
    * `Dryad: Best practices for creating reusable data publications
      <https://datadryad.org/stash/best_practices>`_
+   * Project templates:
+
+     * `GIN-Tonic: Research folder structure standard
+       <https://gin-tonic.netlify.app/standard/>`_
+     * `The Turing Way: Reproducible project template
+       <https://github.com/the-turing-way/reproducible-project-template>`_
+     * `TIER Protocol 4.0
+       <https://www.projecttier.org/tier-protocol/protocol-4-0/>`_
+     * `Materials Data Science and Informatics:
+       <https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter>`_
+     * `YODA: Best practices for data analyses in a dataset
+       <https://handbook.datalad.org/en/latest/basics/101-127-yoda.html>`_
 
 .. toctree::
     :hidden:
