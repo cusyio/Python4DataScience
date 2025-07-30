@@ -89,9 +89,8 @@ the public domain of software.
 Non-software licences
 ---------------------
 
-Open source software licences can also be used for works that are not software.
-They are often also the best choice, especially if the works in question are
-edited and versioned as source code.
+Open source software licences are often used for works that are not software.
+However, they are often not the best choice.
 
 Data, media, :abbr:`etc. (et cetera)`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,37 +103,49 @@ they are `not recommended for software
 <https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software>`_.
 
 .. tip::
-   The `DEAL consortium <https://deal-konsortium.de/en/>`_ recommends the CC BY
-   licence for Open Access publications, see also `Why CC BY is the Best Choice
-   for Open Access Publishing <https://deal-konsortium.de/en/why-ccby>`_.
+   * The `DEAL consortium <https://deal-konsortium.de/en/>`_ recommends the CC
+     BY licence for Open Access publications of research results, see also `Why
+   CC BY is the Best Choice for Open Access Publishing
+   <https://deal-konsortium.de/en/why-ccby>`_.
 
-   :abbr:`RADAR (Research Data Repository)`, a cross-disciplinary repository for
-   archiving and publishing research data, recommends only one of the `CC
-   licences
-   <https://radar.products.fiz-karlsruhe.de/en/radarfeatures/lizenzen-fuer-forschungsdaten#cc-licenses>`_.
+   * :abbr:`RADAR (Research Data Repository)`, a cross-disciplinary repository
+     for archiving and publishing research data, recommends only one of the `CC
+     licences
+     <https://radar.products.fiz-karlsruhe.de/en/radarfeatures/lizenzen-fuer-forschungsdaten#cc-licenses>`_.
 
-The `Open Knowledge Foundation <https://okfn.org/en/>`_ has also published a set
-of `Open Data Commons <https://opendatacommons.org>`_ licences for
-data/databases:
+* The `Open Knowledge Foundation <https://okfn.org/en/>`_ has also published a
+  set of `Open Data Commons <https://opendatacommons.org>`_ licences for
+  data/databases:
 
-`Open Data Commons Open Database License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_
-    Attribution and sharing under equal terms.
-`Open Data Commons Attribution License (ODC-By) v1.0 <https://opendatacommons.org/licenses/by/1-0/>`_
-    Attribution.
-`Open Data Commons Public Domain Dedication and License (PDDL) v1.0 <https://opendatacommons.org/licenses/pddl/1-0/>`_
-    The PDDL places the data in the public domain and waives all rights.
+  `Open Data Commons Open Database License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_
+      Attribution and sharing under equal terms.
+  `Open Data Commons Attribution License (ODC-By) v1.0 <https://opendatacommons.org/licenses/by/1-0/>`_
+      Attribution.
+  `Open Data Commons Public Domain Dedication and License (PDDL) v1.0 <https://opendatacommons.org/licenses/pddl/1-0/>`_
+      The PDDL places the data in the public domain and waives all rights.
 
-`GovData <https://www.govdata.de>`_ has submitted the *Data Licence Germany* in two variants:
+* `GovData <https://www.govdata.de>`_ has submitted the *Data Licence Germany*
+  in two variants:
 
-* `Datenlizenz Deutschland – Namensnennung – Version 2.0
-  <https://www.govdata.de/dl-de/by-2-0>`_
-* `Datenlizenz Deutschland – Zero – Version 2.0
-  <https://www.govdata.de/dl-de/zero-2-0>`_
+  * `Datenlizenz Deutschland – Namensnennung – Version 2.0
+    <https://www.govdata.de/dl-de/by-2-0>`_
+  * `Datenlizenz Deutschland – Zero – Version 2.0
+    <https://www.govdata.de/dl-de/zero-2-0>`_
 
-When using the `Community Data License Agreement – Permissive, Version 2.0 <https://cdla.dev/permissive-2-0/>`_ the copyright notices must be retained.
+* The Community Data License Agreement <https://cdla.dev>_ can be used in four
+  different ways:
 
-Another possible licence for artistic works is the `Free Art License 1.3
-<https://artlibre.org/licence/lal/en/>`_.
+  * `Community Data License Agreement – Permissive, Version 2.0
+    <https://cdla.dev/permissive-2-0/>`_
+  * `Community Data License Agreement – Sharing, Version 1.0
+    <https://cdla.dev/sharing-1-0/>`_
+  * `Open Use of Data Agreement, Version 1.0
+    <https://cdla.dev/open-use-of-data-agreement-v1-0/>`_
+  * `Computational Use of Data Agreement, Version 1.0
+    <https://cdla.dev/computational-use-of-data-agreement-v1-0/>`_
+
+* Another possible licence for artistic works is the `Free Art License 1.3
+  <https://artlibre.org/licence/lal/en/>`_.
 
 Machine learning models
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -164,19 +175,95 @@ been developed for a company or specific models:
 * `BigScience OpenRAIL-M (Responsible AI License
   <https://www.licenses.ai/blog/2022/8/26/bigscience-open-rail-m-license>`_
 
-  RAIL-D
+  There are other `Responsible AI Licenses (RAIL) <https://www.licenses.ai>`_
+  with various restrictions on use:
+
+  OpenRAIL-D
       contains usage restrictions that only apply to the data.
-  RAIL-A
+  OpenRAIL-A
       contains usage restrictions that only apply to the
       application/executability.
-  RAIL-M
+  OpenRAIL-M
       contains usage restrictions that only apply to the model.
-  RAIL-S
+
+      .. seealso::
+         `RAIL-M
+         <https://www.licenses.ai/blog/2022/8/26/bigscience-open-rail-m-license>`_
+
+  OpenRAIL-S
       contains usage restrictions that only apply to the source code.
+
+AI models that are licensed under an open source licence but whose training data
+and programmes have **not** been published are not compliant with the `Debian
+Free Software Guidelines (DFSG)
+<https://de.wikipedia.org/wiki/Debian_Free_Software_Guidelines>`_, see also
+`Interpretation of DFSG on Artificial Intelligence (AI) Models
+<https://www.debian.org/vote/2025/vote_002>`_.
+
+.. _osaid:
+
+For the `Open Source Initiative (OSI) <https://opensource.org/>`__, the
+definition of open source AI also goes far beyond the use of a model – it must
+also be understandable how the model was created, and the model must also be
+able to be modified and shared with others for any purpose. These four freedoms
+are fulfilled with
+
+Open Data
+    Sufficiently detailed information about the data used to train the system so
+    that an essentially equivalent system can be built
+Open Code
+    The complete source code used to train and operate the system under licences
+    approved by the OSI
+Open Weights
+    Model parameters, such as weights or other configuration settings under
+    licences approved by the OSI
+
+Accordingly, the OSI developed `OSAID 1.0
+<https://opensource.org/ai/open-source-ai-definition>`_, which applies to the
+following models:
+
+* EleutherAI: `Pythia <https://github.com/EleutherAI/pythia>`_, `GPT-J
+  <https://www.eleuther.ai/artifacts/gpt-j>`_
+* The Allen Institute for Artificial Intelligence: `OLMo 2
+  <https://allenai.org/olmo>`_, `Molmo <https://allenai.org/blog/molmo>`_
+* LLM360: `K2
+  <https://huggingface.co/collections/LLM360/k2-6622ae6911e3eb6219690039>`_,
+  `Amber
+  <https://huggingface.co/collections/LLM360/amber-65e7333ff73c7bbb014f2f2f>`_,
+  `CrystalCoder <https://huggingface.co/LLM360/Crystal>`_
+* Google: `T5
+  <https://github.com/google-research/text-to-text-transfer-transformer>`_
+
+Presumably the following models would also fulfil the requirements if they were
+to change their legal conditions:
+
+* BigScience: `Bloom <https://huggingface.co/bigscience/bloom>`_
+* BigCode: `StarCoder 2 <https://github.com/bigcode-project/starcoder2>`_
+* Technology Innovation Institute: `Falcon
+  <https://huggingface.co/collections/tiiuae/falcon-h1-6819f2795bc406da60fab8df>`_
+
+However, there are also some models that have been analysed and failed because
+they lack required components and/or legal agreements:
+
+* Meta: Llama2
+* xAI: Grok
+* Microsoft: Phi-2
+* Mistral AI: Mixtral
 
 .. seealso::
    * `Licensing Machine Learning models
-     <https://book.the-turing-way.org/reproducible-research/licensing/licensing-ml>`_ by The Turing Way Community
+     <https://book.the-turing-way.org/reproducible-research/licensing/licensing-ml>`_
+     by The Turing Way Community
+   * Alek Tarkowski, Open Future in partnership with the Open Source Initiative:
+     `Data Governance in Open Source AI
+     <https://opensource.org/wp-content/uploads/2025/02/2025-OSI-DataGovernanceOSAI-final-v5.pdf>`_
+
+Databases
+~~~~~~~~~
+
+One of the few licences for databases is the `Open Data Commons Open Database
+License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_, which is
+used, for example, by `OpenStreetMap (OSM) <https://www.openstreetmap.org>`_.
 
 Documentation
 ~~~~~~~~~~~~~
