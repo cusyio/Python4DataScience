@@ -321,6 +321,64 @@ General purposes
     .. image::
        https://raster.shields.io/github/license/pyproj4/pyproj
 
+.. _geopython:
+
+`geopython <https://geopython.github.io/>`_
+    is a GitHub organization that covers Python projects related to geodata.
+
+    `pygeoapi <https://github.com/geopython/pygeoapi>`_
+        is a Python server implementation of the `OGC-API
+        <https://ogcapi.ogc.org>`_ standard suite.
+
+        .. image::
+           https://raster.shields.io/github/stars/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/contributors/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/commit-activity/y/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/license/geopython/pygeoapi
+
+    `OWSLib <https://github.com/geopython/OWSLib>`_
+        is a Python package for client programming using the `Open Geospatial
+        Consortium (OGC) Web Service <https://www.ogc.org/standards/owc/>`_
+        interface standards and associated content models.
+
+        .. image::
+           https://raster.shields.io/github/stars/geopython/OWSLib
+        .. image::
+           https://raster.shields.io/github/contributors/geopython/OWSLib
+        .. image::
+           https://raster.shields.io/github/commit-activity/y/geopython/OWSLib
+        .. image::
+           https://raster.shields.io/github/license/geopython/OWSLib
+
+    `pycsw <https://github.com/geopython/pycsw>`_
+        is an `OGC CSW <https://www.ogc.org/standards/cat/>`_ server
+        implementation written in Python that fully implements the `OpenGIS
+        Catalogue Service <https://www.ogc.org/standards/cat/>`_.
+
+        .. image::
+           https://raster.shields.io/github/stars/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/contributors/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/commit-activity/y/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/license/geopython/pygeoapi
+
+    `pygeometa <https://github.com/geopython/pygeometa>`_
+        can be used to generate metadata for spatial data sets.
+
+        .. image::
+           https://raster.shields.io/github/stars/geopython/pygeometa
+        .. image::
+           https://raster.shields.io/github/contributors/geopython/pygeometa
+        .. image::
+           https://raster.shields.io/github/commit-activity/y/geopython/pygeometa
+        .. image::
+           https://raster.shields.io/github/license/geopython/pygeometa
+
 `pgeocode <https://pypi.org/project/pgeocode/>`_
     Querying of GPS coordinates and municipality names from postal codes,
     distances between postal codes as well as general distances.
