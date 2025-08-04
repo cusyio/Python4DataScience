@@ -22,8 +22,8 @@
 import os
 import re
 
-# Set canonical URL from the Read the Docs Domain
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+# Set canonical URL for the sitemap
+html_baseurl = "https://python4data.science/en/latest/"
 
 html_context = {}
 # Tell Jinja2 templates the build is running on Read the Docs
@@ -54,6 +54,7 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx_copybutton",
     "sphinx_inline_tabs",
+    "sphinx_sitemap",
     "sphinxcontrib.cairosvgconverter",
     "sphinxext.opengraph",
 ]
@@ -246,3 +247,13 @@ def setup(app):
 # -- graphviz configuration --------------------------------------------------
 
 graphviz_output_format = "svg"
+
+# -- sitemap configuration ---------------------------------------------------
+
+sitemap_url_scheme = "{link}"
+sitemap_excludes = [
+    "404.html",
+    "search.html",
+    "genindex.html",
+]
+sitemap_show_lastmod = True
