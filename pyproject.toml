@@ -26,6 +26,7 @@ docs = [
     "sphinx-copybutton",
     "sphinx-lint",
     "sphinx-notfound-page",
+    "sphinx-sitemap",
     "sphinx_inline_tabs",
     "sphinxcontrib-svg2pdfconverter",
     "sphinxext.opengraph", # matplotlib is required for social cards
