@@ -102,6 +102,8 @@ Python Code Quality Authority
     `isort <https://github.com/PyCQA/isort>`_
         sorts Python imports
 
+.. _nbqa:
+
 `nbQA <https://github.com/nbQA-dev/nbQA>`_
     runs isort, pyupgrade, mypy, pylint, flake8 and more on Jupyter notebooks:
 
