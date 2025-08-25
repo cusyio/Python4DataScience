@@ -184,8 +184,10 @@ Risk: Medium
 tests the source code before the application is executed. This can prevent known
 bug classes from being accidentally introduced into the code base.
 
+.. _bandit:
+
 To check for vulnerabilities, you can use `bandit
-<https://github.com/PyCQA/bandit>`_, which you can also integrate into your
+<https://github.com/PyCQA/bandit>`__, which you can also integrate into your
 :file:`.pre-commit-hooks.yaml`:
 
 .. code-block:: yaml
