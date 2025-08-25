@@ -40,7 +40,7 @@ Checker
     is a wrapper around `PyFlakes <https://pypi.org/project/pyflakes/>`_,
     `pycodestyle <https://pypi.org/project/pycodestyle/>`_ and `McCabe
     <https://pypi.org/project/mccabe/>`_. However, automatic formatting, for
-    example with :doc:`black`, is even more convenient.
+    example with :doc:`ruff`, is even more convenient.
 :doc:`mypy`
     is a static type checker.
 :doc:`pytype`
@@ -76,6 +76,10 @@ Checker
 Formatter
 ---------
 
+:doc:`ruff`
+    is an extremely fast Python linter and code formatter written in Rust that
+    can enforce the rules of :doc:`flake8`, :doc:`isort`, :doc:`black`, `Bandit
+    <https://github.com/PyCQA/bandit>`_, and others.
 :doc:`black`
     formats your code in a nice and deterministic format.
 :doc:`isort`
@@ -88,6 +92,7 @@ Formatter
    :titlesonly:
    :maxdepth: 0
 
+   ruff
    black
    isort
    prettier
