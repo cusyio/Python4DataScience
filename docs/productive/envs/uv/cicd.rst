@@ -6,9 +6,8 @@ CI/CD pipelines
 GitLab CI/CD
 ------------
 
-For :doc:`GitLab CI/CD pipelines
-</productive/git/advanced/gitlab/ci-cd/index>`>` there are various Docker images
-with pre-installed ``uv``: Available images
+For :doc:`/productive/git/advanced/gitlab/ci-cd/index` pipelines there are
+various Docker images with pre-installed ``uv``: `Available images
 <https://docs.astral.sh/uv/guides/integration/docker/#available-images>`_.
 
 .. code-block:: yaml
