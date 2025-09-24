@@ -51,10 +51,14 @@ Declare, lock and automatically update dependencies
 
 :ref:`update-uv-lock` describes how you can use ``uv lock --upgrade`` to update
 all dependencies and :samp:`uv lock --upgrade-package {PACKAGE}=={VERSION}` to
-update individual dependencies in a controlled manner. We describe how you can
-regularly update the dependencies of your project automatically in
-:doc:`dependency-bot`. These measures significantly increase the security of
-your project.
+update individual dependencies in a controlled manner.
+
+:doc:`claude-cursor` describes how you can create a configuration so that Claude
+Code or Cursor also uses uv reliably.
+
+We describe how you can regularly update the dependencies of your project
+automatically in :doc:`dependency-bot`. These measures significantly increase
+the security of your project.
 
 .. seealso::
    * :ref:`lock-dependencies`
@@ -73,4 +77,5 @@ Python environments.
 
    cicd
    dependency-bot
+   claude-cursor
    docker
