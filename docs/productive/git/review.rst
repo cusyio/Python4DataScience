@@ -269,3 +269,11 @@ controlled by two ``gc.*`` options:
 
 You can increase these options to a longer time frame, but this is rarely
 useful.
+
+``fsck``
+--------
+
+`git fsck <https://git-scm.com/docs/git-fsck>`_ is the last resort when a commit
+is no longer in the reflog (for example, if you have *‘lost’* it with ``git
+stash drop``). With ``git fsck``, you can list all commit IDs that are not
+referenced.
