@@ -61,7 +61,7 @@ Check the installation for example with
 .. code-block:: console
 
     $ uv run pre-commit -V
-    pre-commit 2.21.0
+    pre-commit 4.3.0
 
 Configuration
 -------------
@@ -73,7 +73,7 @@ directory of your project can be used to configure plugins for this project.
 
     repos:
       - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v3.2.0
+        rev: v6.0.0
         hooks:
         -   id: trailing-whitespace
         -   id: end-of-file-fixer
@@ -94,7 +94,7 @@ configure that the check should also be used for the file suffix ``.ipynb``:
 
     repos:
       - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v3.2.0
+        rev: v6.0.0
         hooks:
         …
         - id: check-json
