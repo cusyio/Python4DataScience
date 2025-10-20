@@ -2,62 +2,74 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Manage data with ``DVC``
-========================
+Managing data with DVC
+======================
 
-For data analysis, and especially machine learning, it is extremely valuable to
-be able to reproduce different versions of analyses that have been carried out
-with different data sets and parameters. However, in order to obtain
-reproducible analyses, both the data and the model (including the algorithms,
-parameters, :abbr:`etc. (et cetera)`) must be versioned. Versioning data for
-reproducible analysis is a bigger problem than versioning models because of the
-size of the data. Tools like `DVC <https://dvc.org/>`_ help manage data by
-allowing users to transfer it to a remote data store using a :doc:`Git
-<../git/index>` like workflow. This simplifies the retrieval of certain versions
-of data in order to reproduce an analysis.
+For data analysis, and especially for machine learning, it is extremely valuable
+to be able to reproduce different versions of analyses that were performed with
+different data sets and parameters. However, in order to obtain reproducible
+analyses, both the data and the model (including algorithms, parameters,
+:abbr:`etc. (et cetera)`) must be versioned. Due to the size of the data,
+versioning data for reproducible analyses is a bigger problem than versioning
+models. Tools such as `DVC <https://dvc.org/>`_ help with data management by
+allowing users to transfer data to a remote data storage location using a
+:doc:`Git <../git/index>`-like workflow. This simplifies the retrieval of
+specific versions of data to reproduce an analysis.
 
-DVC was developed to be able to use :abbr:`ML (Machine Learning)` models and
-data sets together and to manage them in a comprehensible manner. It works with
-different version managements, but does not need them. In contrast to `DataLad
-<https://www.datalad.org/>`_/`git-annex <https://git-annex.branchable.com/>`_,
-for example, it is not limited to Git as version management, but can also be
-used together with Mercurial, see `github.com/crobarcro/dvc/dvc/scm.py
-<https://github.com/crobarcro/dvc/blob/master/dvc/scm.py>`_. It also uses its
-own system for storing files with support for :abbr:`SSH /Secure Shell)` and
-:abbr:`HDFS (Hadoop Distributed File System)`, among others.
-
-DataLad, on the other hand, focuses more on discovering and consuming datasets,
-which are then easily managed with Git. DVC, on the other hand, stores each step
-in the pipeline in a separate ``.dvc`` file that can then be managed by Git.
-
-These ``.dvc`` files, however, allow practical tools for manipulating and
-visualizing DAGs, see, for example, :doc:`visualisation of DAGs
-<pipeline>`.
-
-External dependencies can also be specified with :ref:`dvc remote <dvc-remote>`.
+DVC was developed to enable the sharing and traceable management of :abbr:`ML
+(Machine Learning)` models and data sets. It uses its own system for storing
+files with support for :abbr:`SSH (Secure Shell)` and :abbr:`HDFS (Hadoop
+Distributed File System)`, among others.
 
 .. tip::
-   `Versioned and reproducible storage of code and data
-   <https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data>`_
+   `cusy seminar: Storing code and data in a versioned and reproducible manner
+   <https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data.html>`_
 
 .. seealso::
-   * `Tutorial <https://dvc.org/doc/start>`_
+   * `Get Started with DVC <https://dvc.org/doc/start>`_
    * `Documentation <https://dvc.org/doc>`_
    * `Git Repository <https://github.com/iterative/dvc>`_
+
+Comparison with related technologies
+------------------------------------
+
+git-annex
+~~~~~~~~~
+
+`git-annex <https://git-annex.branchable.com/>`_ focuses more on discovering and
+using datasets, which are then easily managed with Git. DVC, on the other hand,
+stores the data generated at each step of the pipeline in :file:`.dvc` files,
+which can then be managed by Git. DVC also provides handy tools for manipulating
+and visualising data pipelines, see for example :doc:`dvc status <dag>`.
+Finally, :ref:`dvc remote <dvc-remote>` can also be used to specify external
+dependencies.
+
+Workflow management systems such as Airflow and Luigi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DVC focuses on data science workflows and modelling; therefore, DVC pipelines
+are much lighter, easier to create and modify than with `Airflow
+<https://airflow.incubator.apache.org>`_ and `Luigi
+<https://luigi.readthedocs.io/en/stable/>`_. However, DVC lacks advanced
+features such as execution monitoring, optimisation and fault tolerance. DVC is
+also a pure command line tool with no graphical user interface, and it does not
+run daemons or servers. `CML <https://cml.dev>`_ attempts to fill some of these
+gaps in a lightweight manner with GitHub, GitLab, or Bitbucket. However, DVC and
+CML are well suited for iterative machine learning processes; and once a good
+model has been found with the two, you are still free to integrate the pipeline
+into Luigi or Airflow.
 
 Installation
 ------------
 
-Finally, external dependencies can also be specified with :term:`uv`.
+DVC can be installed with  :term:`uv`. Please note, however, that you must
+explicitly specify the extras. These can be ``[ssh]``, ``[s3]``, ``[gs]``,
+``[azure]``, and ``[oss]`` or ``[all]``. For ``ssh``, the command looks like
+this:
 
-.. note::
-   You have to explicitly state the extras. This can be ``[ssh]``, ``[s3]``,
-   ``[gs]``, ``[azure]``, and ``[oss]`` or ``[all]``. For ``ssh`` the command
-   looks like this:
+.. code-block:: console
 
-   .. code-block:: console
-
-        $ uv add dvc[ssh]
+    $ uv add dvc[ssh]
 
 Alternatively, DVC can also be installed via other package managers:
 
@@ -76,13 +88,15 @@ Alternatively, DVC can also be installed via other package managers:
       $ brew install iterative/homebrew-dvc/dvc
 
 .. toctree::
-    :hidden:
+   :hidden:
 
-    init
-    pipeline
-    params
-    metrics
-    dag
-    reproduce
-    integration
-    fds
+   init
+   data
+   pipeline
+   params
+   metrics
+   experiments
+   dag
+   reproduce
+   integration
+   fds
