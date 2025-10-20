@@ -5,91 +5,114 @@
 Pipelines
 =========
 
-Connect code and data
----------------------
+Connecting code and data
+------------------------
 
-Commands like ``dvc add``, ``dvc push`` and ``dvc pull`` can be made
+Commands such as ``dvc add``, ``dvc push``, and ``dvc pull`` can be executed
 independently of changes in the Git repository and therefore only provide the
-basis for managing large amounts of data and models. In order to actually
-achieve reproducible results, code and data must be linked together.
+basis for managing large amounts of data and models. To achieve truly
+reproducible results, code and data must be connected.
 
 .. figure:: combine-git-dvc.png
-   :alt: Connect Git and DVC
+   :alt: Connecting Git and DVC
 
    Design: André Henze, Berlin
 
-With ``dvc run`` you can create individual processing levels, each level being
-described by a source code file managed with Git as well as other dependencies
-and output data. All stages together then form the DVC pipeline.
+With ``dvc stage``, you can create individual processing stages, each of which
+is described by a source code file managed with Git, as well as other
+dependencies and output data. All stages together then form the DVC pipeline.
 
 In our example `dvc-example <https://github.com/veit/dvc-example>`_, the first
 stage is to split the data into training and test data:
 
 .. code-block:: console
 
-    $ dvc run -n split -d src/split.py -d data/data.xml -o data/splitted \
-        python src/split.py data/data.xml
+   $ uv run dvc stage add \
+       -n prepare \
+       -p prepare.seed,prepare.split \
+       -d src/dvc_example/prepare.py -d data/data.xml \
+       -o data/prepared \
+       uv run python src/dvc_example/prepare.py data/data.xml
 
 ``-n``
-    indicates the name of the processing stage.
-``-d``
-    dependencies on the reproducible command.
+    specifies the name of the processing stage.
+``-p``
+    specifies the parameters from the :file:`params.yaml` file to be used for
+    this stage.
 
-    The next time ``dvc repo`` is called to reproduce the results, DVC checks
-    these dependencies and decides whether they need to be updated or run again
-    to get more current results.
+    .. seealso::
+       :doc:`params`
+
+``-d``
+    specifies dependencies for the reproducible command.
+
+    When ``dvc repro`` is called to reproduce the results next time, DVC checks
+    these dependencies and decides whether they are up to date or need to be
+    re-executed to obtain more recent results.
 
 ``-o``
-    specifies the output file or directory.
+    specifies the output file or output directory.
 
-In our case, the work area should have changed to:
-
-.. code-block:: console
-   :emphasize-lines: 5-9
-
-      .
-      ├── data
-      │   ├── data.xml
-      │   ├── data.xml.dvc
-    + │   └── splitted
-    + │       ├── test.tsv
-    + │       └── train.tsv
-    + ├── dvc.lock
-    + ├── dvc.yaml
-      ├── requirements.txt
-      └── src
-          └── split.py
-
-The generated ``dvc.yaml`` file looks like this, for example:
+The generated :file:`dvc.yaml` file then looks like this:
 
 .. code-block:: yaml
 
-    stages:
-      split:
-        cmd: uv run python src/split.py data/data.xml
-        deps:
-        - data/data.xml
-        - src/split.py
-        outs:
-        - data/splitted
+   stages:
+     prepare:
+       cmd: uv run python src/dvc_example/prepare.py data/data.xml
+       deps:
+       - data/data.xml
+       - src/dvc_example/prepare.py
+       params:
+       - prepare.seed
+       - prepare.split
+       outs:
+       - data/prepared
 
-Since the data in the output directory should never be versioned with Git, ``dvc
-run`` has already written the file ``data/.gitignore``:
-
-.. code-block:: console
-   :emphasize-lines: 2
-
-     /data.xml
-   + /splitted
-
-Then the changed data only has to be transferred to Git or DVC:
+If you now call ``uv run dvc repro``, the files :file:`test.tsv` and
+:file:`train.tsv` will be created in :file:`data/prepared`, and :file:`dvc.lock`
+will be written. The directory structure will then look like this:
 
 .. code-block:: console
+   :emphasize-lines: 10, 13-18, 23
 
-    $ git add data/.gitignore dvc.yaml
-    $ git commit -m "Create split stage"
-    $ dvc push
+   ├── .dvc
+   ├── .dvcignore
+   ├── .git
+   ├── .gitignore
+   ├── .pre-commit-config.yaml
+   ├── .python-version
+   ├── .venv
+   ├── README.md
+   ├── data
+   │   ├── .gitignore
+   │   ├── data.xml
+   │   ├── data.xml.dvc
+   │   └── prepared
+   │       ├── test.tsv
+   │       └── train.tsv
+   ├── dvc.lock
+   ├── dvc.yaml
+   ├── params.yaml
+   ├── pyproject.toml
+   ├── src
+   │   └── dvc_example
+   │       ├── __init__.py
+   │       └── prepare.py
+   └── uv.lock
 
-If several phases are now created with ``dvc run`` and the output of one command
-being specified as a dependency of another, a `DVC dag
-<https://dvc.org/doc/command-reference/dag>`_ is created.
+.. seealso::
+   `dvc repro <https://dvc.org/doc/command-reference/repro>`_
+
+The new and modified programme and configuration files should now be managed in
+Git:
+
+.. code-block:: console
+
+   $ git add data/.gitignore dvc.lock dvc.yaml src/dvc_example/prepare.py
+   $ git commit -m ':sparkles: Add prepare step'
+
+.. hint::
+   DVC knows from the pipeline definition that the files in
+   :file:`data/prepared` were generated in the ``prepare`` stage. You can
+   restore them at any time with ``uv run dvc repro`` or ``uv run dvc commit``.
