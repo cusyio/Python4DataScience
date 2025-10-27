@@ -3,12 +3,13 @@ name = "python4datascience"
 version = "24.2.0"
 description = "Teaching materials for the cusy training courses on Python-based data science workflows: https://cusy.io/en/seminars"
 readme = "README.rst"
+license = "BSD-3-Clause"
+license-files = [ "LICENSE" ]
 authors = [
   { name = "Veit Schiele", email = "veit@cusy.io" },
 ]
 requires-python = ">=3.9"
 classifiers = [
-  "License :: OSI Approved :: BSD License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.9",
