@@ -1,50 +1,54 @@
 [project]
-name = "Python4DataScience"
+name = "python4datascience"
 version = "24.2.0"
-authors = [
-  { name="Veit Schiele", email="veit@cusy.io" },
-]
 description = "Teaching materials for the cusy training courses on Python-based data science workflows: https://cusy.io/en/seminars"
 readme = "README.rst"
+authors = [
+  { name = "Veit Schiele", email = "veit@cusy.io" },
+]
 requires-python = ">=3.9"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: BSD License",
-    "Operating System :: OS Independent",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
 ]
-dependencies = []
+dependencies = [  ]
+
+urls."Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
+urls."Homepage" = "https://github.com/cusyio/Python4DataScience/"
 
 [dependency-groups]
-docs = [
-    "furo",
-    "ipython",
-    "ipywidgets",
-    "matplotlib",
-    "nbsphinx",
-    "notebook",
-    "sphinx<8.2",
-    "sphinx-copybutton",
-    "sphinx-lint",
-    "sphinx-notfound-page",
-    "sphinx-sitemap",
-    "sphinx_inline_tabs",
-    "sphinxcontrib-svg2pdfconverter",
-    "sphinxext.opengraph", # matplotlib is required for social cards
-]
-
 dev = [
-    { include-group = "docs" },
-    "pre-commit",
-    "codespell",
-    "vale",
+  "codespell",
+  "pre-commit",
+  "reuse>=5.0.2",
+  "vale",
+  { include-group = "docs" },
 ]
-
-[project.urls]
-"Homepage" = "https://github.com/cusyio/Python4DataScience/"
-"Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
+docs = [
+  "furo",
+  "ipython",
+  "ipywidgets",
+  "matplotlib",
+  "nbsphinx",
+  "notebook",
+  "sphinx<8.2",
+  "sphinx-copybutton",
+  "sphinx-inline-tabs",
+  "sphinx-lint",
+  "sphinx-notfound-page",
+  "sphinx-sitemap",
+  "sphinxcontrib-svg2pdfconverter",
+  "sphinxext-opengraph",            # matplotlib is required for social cards
+]
 
 [tool.setuptools]
-packages = []
+packages = [  ]
 
 [tool.codespell]
 skip = "*.csv, *.html, *.pdf, *.ipynb, ./docs/_build/*, ./styles/*"
