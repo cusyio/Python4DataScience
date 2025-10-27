@@ -158,7 +158,7 @@ Run
 
 However, the hooks managed by the pre-commit framework are not limited to being
 executed before commits; they can also be used for other Git hooks, see
-:doc:`advanced`.
+:doc:`hooks`.
 
 .. _pre-commit-uv:
 
