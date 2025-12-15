@@ -1,0 +1,67 @@
+{
+    "creation_metadata": {
+        "local_time": "2025-12-15 19:19:41",
+        "utc_time": "2025-12-15 18:18:41",
+        "creator": "TDDA 2.0.09",
+        "host": "fay.local",
+        "user": "veit",
+        "n_records": 146397,
+        "n_selected": 146397
+    },
+    "fields": {
+        "timestamp": {
+            "type": "string",
+            "min_length": 19,
+            "max_length": 19,
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "username": {
+            "type": "string",
+            "min_length": 3,
+            "max_length": 21,
+            "max_nulls": 0
+        },
+        "temperature": {
+            "type": "int",
+            "min": 5,
+            "max": 29,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "heartrate": {
+            "type": "int",
+            "min": 60,
+            "max": 89,
+            "sign": "positive",
+            "max_nulls": 0
+        },
+        "build": {
+            "type": "string",
+            "min_length": 36,
+            "max_length": 36,
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "latest": {
+            "type": "int",
+            "min": 0,
+            "max": 1,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "note": {
+            "type": "string",
+            "min_length": 4,
+            "max_length": 8,
+            "allowed_values": [
+                "interval",
+                "sleep",
+                "test",
+                "update",
+                "user",
+                "wake"
+            ]
+        }
+    }
+}
