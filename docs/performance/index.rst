@@ -62,8 +62,20 @@ Performance measurements
 ------------------------
 
 Once you have worked with your code, it can be useful to examine its efficiency
-more closely. :mod:`cProfile`, :doc:`ipython-profiler` or :doc:`scalene` can be
-used for this.
+more closely. `cProfile
+<https://docs.python.org/3.14/library/profile.html#module-cProfile>`_,
+:doc:`ipython-profiler` or :doc:`scalene` can be used for this.
+
+.. versionadded:: Python3.15
+   :pep:`799` will provide a special profiling module that organises the
+   profiling tools integrated in Python under a uniform namespace. This module
+   contains:
+
+   :mod:`profiling.tracing`
+       deterministic function call tracing, which has been moved from `cProfile
+       <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_.
+   :mod:`profiling.sampling`
+       the new statistical sampling profiler :doc:`tachyon`.
 
 .. seealso::
     * `airspeed velocity (asv) <https://asv.readthedocs.io/en/stable/>`_
@@ -81,6 +93,7 @@ used for this.
 
     ipython-profiler.ipynb
     scalene.ipynb
+    tachyon
 
 Search for existing implementations
 -----------------------------------
@@ -219,6 +232,20 @@ benefit.
 If you don’t want to wait with your project until the release of Python 3.11 in
 the final version probably on 24 October 2022, you can also have a look at the
 following Python interpreters:
+
+Python JIT compiler
+~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: Python3.15
+   The `JIT <https://en.wikipedia.org/wiki/Just-in-time_compilation>`_ compiler
+   in Python 3.15 shows an average performance increase of 3–4% compared to the
+   standard CPython interpreter, with performance measurements varying between
+   -20 and over 100% on x86-64 Linux and AArch64 macOS systems.
+
+   .. seealso::
+      * `The JIT Compiler
+        <https://github.com/python/cpython/blob/main/Tools/jit/README.md>`_
+      * :ref:`whatsnew315-jit`
 
 Cython
 ~~~~~~

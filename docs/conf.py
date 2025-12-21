@@ -155,7 +155,7 @@ intersphinx_mapping = {
         "https://jupyter-tutorial.readthedocs.io/en/latest",
         None,
     ),
-    "python": ("https://docs.python.org/3", None),
+    "python": ("https://docs.python.org/3.15", None),
     "ipython": ("https://ipython.readthedocs.io/en/latest", None),
     "pytest": ("https://docs.pytest.org/en/latest", None),
     "jupyter-notebook": (
