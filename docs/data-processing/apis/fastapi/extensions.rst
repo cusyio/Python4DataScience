@@ -19,19 +19,7 @@ Administration
     .. image:: https://raster.shields.io/github/commit-activity/y/aminalaee/sqladmin
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/aminalaee/sqladmin
-       :alt: License
-
-`edgy <https://github.com/dymmond/edgy>`_
-    Edgy is an ORM where your models are 100% Pydantic.
-
-    .. image:: https://raster.shields.io/pypi/dm/edgy
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/dymmond/edgy
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/dymmond/edgy
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/dymmond/edgy
-       :alt: License
+       :alt: Licence
 
 `Piccolo Admin <https://github.com/piccolo-orm/piccolo_admin>`_
     Simple but powerful admin interface over Piccolo tables that lets you easily
@@ -44,6 +32,30 @@ Administration
     .. image:: https://raster.shields.io/github/commit-activity/y/piccolo-orm/piccolo_admin
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/piccolo-orm/piccolo_admin
+       :alt: Licence
+
+`msgpack-asgi <https://github.com/florimondmanca/msgpack-asgi>`_
+    Automatic negotiation of MessagePack content in ASGI applications
+
+    .. image:: https://raster.shields.io/pypi/dm/piccolo_admin
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/florimondmanca/msgpack-asgi
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/florimondmanca/msgpack-asgi
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/florimondmanca/msgpack-asgi
+       :alt: Licence
+
+`edgy <https://github.com/dymmond/edgy>`_
+    ORM where your models are 100% Pydantic
+
+    .. image:: https://raster.shields.io/pypi/dm/edgy
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/dymmond/edgy
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/dymmond/edgy
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/dymmond/edgy
        :alt: License
 
 Authentication
@@ -73,29 +85,20 @@ Authentication
     .. image:: https://raster.shields.io/github/license/yezz123/AuthX
        :alt: License
 
-`FastAPI simple security <https://github.com/mrtolkien/fastapi_simple_security>`_
-    API key-based security package focused on ease of use
+`AuthTuna <https://github.com/shashstormer/authtuna>`_
+    Authentication library for simple authentication up to `SSO
+    <https://en.wikipedia.org/wiki/Single_sign-on>`_, `RBAC
+    <https://en.wikipedia.org/wiki/Role-based_access_control>`_ and `Passkeys
+    <https://en.wikipedia.org/wiki/WebAuthn#Passkey_branding>`_
 
-    .. image:: https://raster.shields.io/pypi/dm/piccolo_admin
+    .. image:: https://raster.shields.io/pypi/dm/authtuna
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/mrtolkien/fastapi_simple_security
+    .. image:: https://raster.shields.io/github/contributors/shashstormer/authtuna
        :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/mrtolkien/fastapi_simple_security
+    .. image:: https://raster.shields.io/github/commit-activity/y/shashstormer/authtuna
        :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/mrtolkien/fastapi_simple_security
-       :alt: License
-
-`fastapi-auth <https://github.com/zopyx/fastapi-auth>`_
-    Quickly adds a customisable registration and authentication system
-
-    .. image:: https://raster.shields.io/pypi/dm/fastapi-auth
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/zopyx/fastapi-auth
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/zopyx/fastapi-auth
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/zopyx/fastapi-auth
-       :alt: License
+    .. image:: https://raster.shields.io/github/license/shashstormer/authtuna
+       :alt: Licence
 
 ORMs
 ----
@@ -127,21 +130,7 @@ ORMs
     .. image:: https://raster.shields.io/github/license/tortoise/tortoise-orm
        :alt: License
 
-`FastAPI-SQLAlchemy <https://github.com/mfreeborn/fastapi-sqlalchemy>`_
-    Easy integration between FastAPI,
-    :doc:`/data-processing/postgresql/sqlalchemy` and application
-
-
-    .. image:: https://raster.shields.io/pypi/dm/fastapi-sqlalchemy
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/mfreeborn/fastapi-sqlalchemy
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/mfreeborn/fastapi-sqlalchemy
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/mfreeborn/fastapi-sqlalchemy
-       :alt: License
-
-`ormar <https://collerek.github.io/ormar/latest/fastapi/>`_
+`ormar <https://github.com/collerek/ormar/>`_
     Asynchronous mini-ORM, with which you only need to maintain one set of
     models and migrate them with :doc:`/data-processing/postgresql/alembic` if
     necessary (→ `example
@@ -159,14 +148,15 @@ ORMs
     .. image:: https://raster.shields.io/github/license/collerek/ormar
        :alt: License
 
-`ORM <https://github.com/encode/orm>`_
-    async ORM, which builds on SQLAlchemy Core, `Databases
-    <https://github.com/encode/databases>`_ and `TypeSystem
-    <https://github.com/encode/typesystem>`_
+`Prisma Client Python <https://github.com/RobertCraigie/prisma-client-py>`_
+    Building on the TypeScript ORM `Prisma
+    <https://github.com/prisma/prisma>`_ with support for PostgreSQL, MySQL,
+    SQLite, MongoDB and SQL Server (→ `Example
+    <https://github.com/RobertCraigie/prisma-client-py/tree/main/examples/fastapi-basic>`__)
 
-    .. image:: https://raster.shields.io/pypi/dm/orm
+    .. image:: https://raster.shields.io/pypi/dm/piccolo
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/encode/orm
+    .. image:: https://raster.shields.io/github/contributors/piccolo-orm/piccolo_admin
        :alt: Contributors
     .. image:: https://raster.shields.io/github/commit-activity/y/piccolo-orm/piccolo_admin
        :alt: Commit activity
@@ -186,15 +176,14 @@ ORMs
     .. image:: https://raster.shields.io/github/license/piccolo-orm/piccolo
        :alt: License
 
-`Prisma Client Python <https://github.com/RobertCraigie/prisma-client-py>`_
-    Building on the TypeScript ORM `Prisma
-    <https://github.com/prisma/prisma>`_ with support for PostgreSQL, MySQL,
-    SQLite, MongoDB and SQL Server (→ `Example
-    <https://github.com/RobertCraigie/prisma-client-py/tree/main/examples/fastapi-basic>`__)
+`ORM <https://github.com/encode/orm>`_
+    async ORM, which builds on SQLAlchemy Core, `Databases
+    <https://github.com/encode/databases>`_ and `TypeSystem
+    <https://github.com/encode/typesystem>`_
 
-    .. image:: https://raster.shields.io/pypi/dm/piccolo
+    .. image:: https://raster.shields.io/pypi/dm/orm
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/piccolo-orm/piccolo_admin
+    .. image:: https://raster.shields.io/github/contributors/encode/orm
        :alt: Contributors
     .. image:: https://raster.shields.io/github/commit-activity/y/piccolo-orm/piccolo_admin
        :alt: Commit activity
@@ -204,24 +193,7 @@ ORMs
 SQL Query Builders
 ------------------
 
-`Databases <https://github.com/encode/databases>`_
-    Simple asyncio support for the database drivers `asyncpg
-    <https://github.com/MagicStack/asyncpg>`_, `aiopg
-    <https://github.com/aio-libs/aiopg>`_, `aiomysql
-    <https://github.com/aio-libs/aiomysql>`_, `asyncmy
-    <https://github.com/long2ice/asyncmy>`_ and `aiosqlite
-    <https://github.com/omnilib/aiosqlite>`_
-
-    .. image:: https://raster.shields.io/pypi/dm/databases
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/encode/databases
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/encode/databases
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/encode/databases
-       :alt: License
-
-`FastAPI Filter <https://fastapi-filter.netlify.app/>`_
+`FastAPI Filter <https://fastapi-filter.netlify.app>`_
     Querystring filters for the Api endpoints and the Swagger user interface.
     The supported backends are :doc:`../../postgresql/sqlalchemy` and
     :ref:`MongoEngine <mongoengine>`.
@@ -233,7 +205,7 @@ SQL Query Builders
     .. image:: https://raster.shields.io/github/commit-activity/y/arthurio/fastapi-filter
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/arthurio/fastapi-filter
-       :alt: Lizenz
+       :alt: Licence
 
 ODMs
 ----
@@ -250,7 +222,7 @@ ODMs
     .. image:: https://raster.shields.io/github/commit-activity/y/MongoEngine/mongoengine
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/MongoEngine/mongoengine
-       :alt: License
+       :alt: Licence
 
 `Beanie <https://github.com/BeanieODM/beanie>`_
     Asynchronous Python object document mapper (ODM) for MongoDB, based on
@@ -264,7 +236,7 @@ ODMs
     .. image:: https://raster.shields.io/github/commit-activity/y/roman-right/beanie
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/roman-right/beanie
-       :alt: License
+       :alt: Licence
 
 `ODMantic <https://github.com/art049/odmantic/>`_
     Asynchronous ODM (Object Document Mapper) for MongoDB based on Python type
@@ -277,7 +249,7 @@ ODMs
     .. image:: https://raster.shields.io/github/commit-activity/y/art049/odmantic
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/art049/odmantic
-       :alt: License
+       :alt: Licence
 
 Code generators
 ---------------
@@ -295,7 +267,7 @@ Code generators
     .. image:: https://raster.shields.io/github/commit-activity/y/koxudaxi/fastapi-code-generator
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/koxudaxi/fastapi-code-generator
-       :alt: License
+       :alt: Licence
 
 Utilities
 ---------
@@ -314,7 +286,7 @@ Caching
     .. image:: https://raster.shields.io/github/commit-activity/y/long2ice/fastapi-cache
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/long2ice/fastapi-cache
-       :alt: License
+       :alt: Licence
 
 E-mail
 ~~~~~~
@@ -330,7 +302,7 @@ E-mail
     .. image:: https://raster.shields.io/github/commit-activity/y/sabuhish/fastapi-mail
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/sabuhish/fastapi-mail
-       :alt: License
+       :alt: Licence
 
 GraphQL
 ~~~~~~~
@@ -345,22 +317,10 @@ GraphQL
     .. image:: https://raster.shields.io/github/commit-activity/y/strawberry-graphql/strawberry
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/strawberry-graphql/strawberry
-       :alt: License
+       :alt: Licence
 
 Logging
 ~~~~~~~
-
-`ASGI Correlation ID middleware <https://github.com/snok/asgi-correlation-id>`_
-    Middleware to load or generate correlation IDs for each incoming request
-
-    .. image:: https://raster.shields.io/pypi/dm/asgi-correlation-id
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/snok/asgi-correlation-id
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/snok/asgi-correlation-id
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/snok/asgi-correlation-id
-       :alt: License
 
 `starlette context <https://github.com/tomwojcik/starlette-context>`_
     Middleware for Starlette that allows you to store and access the contextual
@@ -373,22 +333,10 @@ Logging
     .. image:: https://raster.shields.io/github/commit-activity/y/tomwojcik/starlette-context
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/tomwojcik/starlette-context
-       :alt: License
+       :alt: Licence
 
 Prometheus
 ~~~~~~~~~~
-
-`starlette_exporter <https://github.com/stephenhillier/starlette_exporter>`_
-    Prometheus export programme for Starlette and FastAPI
-
-    .. image:: https://raster.shields.io/pypi/dm/starlette_exporter
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/stephenhillier/starlette_exporter
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/stephenhillier/starlette_exporter
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/stephenhillier/starlette_exporter
-       :alt: License
 
 `Prometheus FastAPI Instrumentator <https://github.com/trallnag/prometheus-fastapi-instrumentator>`_
     Configurable and modular Prometheus instrumentator
@@ -400,19 +348,7 @@ Prometheus
     .. image:: https://raster.shields.io/github/commit-activity/y/trallnag/prometheus-fastapi-instrumentator
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/trallnag/prometheus-fastapi-instrumentator
-       :alt: License
-
-`Starlette Prometheus <https://github.com/perdy/starlette-prometheus>`_
-    Prometheus integration for Starlette
-
-    .. image:: https://raster.shields.io/pypi/dm/starlette-prometheus
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/perdy/starlette-prometheus
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/perdy/starlette-prometheus
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/perdy/starlette-prometheus
-       :alt: License
+       :alt: Licence
 
 Templating
 ~~~~~~~~~~
@@ -427,7 +363,7 @@ Templating
     .. image:: https://raster.shields.io/github/commit-activity/y/mikeckennedy/fastapi-chameleon
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/mikeckennedy/fastapi-chameleon
-       :alt: License
+       :alt: Licence
 
 Pagination
 ~~~~~~~~~~
@@ -443,7 +379,7 @@ Pagination
     .. image:: https://raster.shields.io/github/commit-activity/y/uriyyo/fastapi-pagination
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/uriyyo/fastapi-pagination
-       :alt: License
+       :alt: Licence
 
 Websockets
 ~~~~~~~~~~
@@ -458,7 +394,7 @@ Websockets
     .. image:: https://raster.shields.io/github/commit-activity/y/permitio/fastapi_websocket_rpc
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/permitio/fastapi_websocket_rpc
-       :alt: License
+       :alt: Licence
 
 `FastAPI Websocket Pub/Sub <https://github.com/permitio/fastapi_websocket_pubsub>`_
     Fast and permanent pub/sub channel via websockets
@@ -470,35 +406,10 @@ Websockets
     .. image:: https://raster.shields.io/github/commit-activity/y/permitio/fastapi_websocket_pubsub
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/permitio/fastapi_websocket_pubsub
-       :alt: License
+       :alt: Licence
 
 Other tools
 -----------
-
-`FastAPI Utilities <https://github.com/dmontagu/fastapi-utils>`_
-    Utilities to reduce boilerplate and reuse common functionality across
-    projects.
-
-    .. image:: https://raster.shields.io/pypi/dm/fastapi-utils
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/dmontagu/fastapi-utils
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/dmontagu/fastapi-utils
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/dmontagu/fastapi-utils
-       :alt: License
-
-`Fastapi Camelcase <https://github.com/nf1s/fastapi-camelcase>`_
-    Provision of a class of request and response bodies for FastAPI
-
-    .. image:: https://raster.shields.io/pypi/dm/fastapi-camelcase
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/nf1s/fastapi-camelcase
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/nf1s/fastapi-camelcase
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/nf1s/fastapi-camelcase
-       :alt: License
 
 `Pydantic-SQLAlchemy <https://github.com/tiangolo/pydantic-sqlalchemy>`_
     Creating Pydantic models from SQLAlchemy models
@@ -510,7 +421,7 @@ Other tools
     .. image:: https://raster.shields.io/github/commit-activity/y/tiangolo/pydantic-sqlalchemy
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/tiangolo/pydantic-sqlalchemy
-       :alt: License
+       :alt: Licence
 
 `fastapi-plugins <https://github.com/madkote/fastapi-plugins>`_
     Production-ready plug-ins for the FastAPI framework, including for caching
@@ -523,39 +434,25 @@ Other tools
     .. image:: https://raster.shields.io/github/commit-activity/y/madkote/fastapi-plugins
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/madkote/fastapi-plugins
-       :alt: License
-
-`fastapi_profiler <https://github.com/sunhailin-Leo/fastapi_profiler>`_
-    FastAPI middleware based on `pyinstrument
-    <https://github.com/joerick/pyinstrument>`_ for performance testing
-
-    .. image:: https://raster.shields.io/pypi/dm/fastapi_profiler
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/sunhailin-Leo/fastapi_profiler
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/sunhailin-Leo/fastapi_profiler
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/sunhailin-Leo/fastapi_profiler
-       :alt: License
-
-`manage-fastapi <https://github.com/ycd/manage-fastapi>`_
-    Project generator and manager for FastAPI
-
-    .. image:: https://raster.shields.io/pypi/dm/manage-fastapi
-       :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/ycd/manage-fastapi
-       :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/ycd/manage-fastapi
-       :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/ycd/manage-fastapi
-       :alt: License
+       :alt: Licence
 
 Dormant projects
 ----------------
 
+`FastAPI simple security <https://github.com/mrtolkien/fastapi_simple_security>`_
+    API key-based security package focused on ease of use
+
+    .. image:: https://raster.shields.io/pypi/dm/piccolo_admin
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/mrtolkien/fastapi_simple_security
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/mrtolkien/fastapi_simple_security
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/mrtolkien/fastapi_simple_security
+       :alt: Licence
+
 `FastAPI Security <https://github.com/jacobsvante/fastapi-security>`_
     Authentication and authorisation
-
 
     .. image:: https://raster.shields.io/pypi/dm/fastapi-security
        :alt: Downloads
@@ -564,7 +461,7 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/jacobsvante/fastapi-security
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/jacobsvante/fastapi-security
-       :alt: License
+       :alt: Licence
 
 `FastAPIwee <https://github.com/Ignisor/FastAPIwee>`_
     Easy way to create a REST API based on `PeeWee
@@ -577,7 +474,49 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/Ignisor/FastAPIwee
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/Ignisor/FastAPIwee
+       :alt: Licence
+
+`fastapi-auth <https://github.com/zopyx/fastapi-auth>`_
+    Quickly adds a customisable registration and authentication system
+
+    .. image:: https://raster.shields.io/pypi/dm/fastapi-auth
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/zopyx/fastapi-auth
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/zopyx/fastapi-auth
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/zopyx/fastapi-auth
        :alt: License
+
+`Databases <https://github.com/encode/databases>`_
+    Simple asyncio support for the database drivers `asyncpg
+    <https://github.com/MagicStack/asyncpg>`_, `aiopg
+    <https://github.com/aio-libs/aiopg>`_, `aiomysql
+    <https://github.com/aio-libs/aiomysql>`_, `asyncmy
+    <https://github.com/long2ice/asyncmy>`_ and `aiosqlite
+    <https://github.com/omnilib/aiosqlite>`_
+
+    .. image:: https://raster.shields.io/pypi/dm/databases
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/encode/databases
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/encode/databases
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/encode/databases
+       :alt: Licence
+
+`FastAPI-SQLAlchemy <https://github.com/mfreeborn/fastapi-sqlalchemy>`_
+    Easy integration between FastAPI,
+    :doc:`/data-processing/postgresql/sqlalchemy` and application
+
+    .. image:: https://raster.shields.io/pypi/dm/fastapi-sqlalchemy
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/mfreeborn/fastapi-sqlalchemy
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/mfreeborn/fastapi-sqlalchemy
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/mfreeborn/fastapi-sqlalchemy
+       :alt: Licence
 
 `GINO <https://github.com/python-gino/gino>`_
     Lightweight asynchronous ORM built on SQLAlchemy Core for Python
@@ -586,7 +525,6 @@ Dormant projects
     <https://github.com/aio-libs/aiomysql>`_ (→ `example
     <https://github.com/leosussan/fastapi-gino-arq-uvicorn>`_)
 
-
     .. image:: https://raster.shields.io/pypi/dm/gino
        :alt: Downloads
     .. image:: https://raster.shields.io/github/contributors/python-gino/gino
@@ -594,7 +532,7 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/python-gino/gino
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/python-gino/gino
-       :alt: License
+       :alt: Licence
 
 `asyncpgsa <https://github.com/CanopyTax/asyncpgsa>`_
     Python wrapper around `asyncpg <https://github.com/MagicStack/asyncpg>`_ for
@@ -607,7 +545,7 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/CanopyTax/asyncpgsa
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/CanopyTax/asyncpgsa
-       :alt: License
+       :alt: Licence
 
 `FastAPI-based API Client Generator <https://github.com/dmontagu/fastapi_client>`_
     mypy- and IDE-friendly API client from an OpenAPI specification using the
@@ -621,11 +559,10 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/dmontagu/fastapi_client
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/dmontagu/fastapi_client
-       :alt: License
+       :alt: Licence
 
 `FastAPI Cache <https://github.com/comeuplater/fastapi_cache>`_
     Lightweight cache system
-
 
     .. image:: https://raster.shields.io/pypi/dm/fastapi_cache
        :alt: Downloads
@@ -634,7 +571,7 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/comeuplater/fastapi_cache
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/comeuplater/fastapi_cache
-       :alt: License
+       :alt: Licence
 
 `fastapi-jinja <https://github.com/AGeekInside/fastapi-jinja>`_
     Integration of the Jinja template language
@@ -646,7 +583,7 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/AGeekInside/fastapi-jinja
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/AGeekInside/fastapi-jinja
-       :alt: License
+       :alt: Licence
 
 `fastapi-socketio <https://github.com/pyropy/fastapi-socketio>`_
     Easy integration of `socket.io in <https://socket.io/>`_ into your FastAPI
@@ -659,7 +596,7 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/pyropy/fastapi-socketio
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/pyropy/fastapi-socketio
-       :alt: License
+       :alt: Licence
 
 `fastapi-versioning <https://github.com/DeanWay/fastapi-versioning>`_
     API versioning for FastAPI web applications
@@ -671,7 +608,7 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/DeanWay/fastapi-versioning
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/DeanWay/fastapi-versioning
-       :alt: License
+       :alt: Licence
 
 `Jupter Notebook REST API <https://github.com/Invictify/Jupter-Notebook-REST-API>`_
     Run Jupyter notebooks as REST API endpoint
@@ -683,19 +620,19 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/Invictify/Jupter-Notebook-REST-API
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/Invictify/Jupter-Notebook-REST-API
-       :alt: License
+       :alt: Licence
 
-`msgpack-asgi <https://github.com/florimondmanca/msgpack-asgi>`_
-    Automatic negotiation of MessagePack content in ASGI applications
+`ASGI Correlation ID middleware <https://github.com/snok/asgi-correlation-id>`_
+    Middleware to load or generate correlation IDs for each incoming request
 
-    .. image:: https://raster.shields.io/pypi/dm/piccolo_admin
+    .. image:: https://raster.shields.io/pypi/dm/asgi-correlation-id
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/florimondmanca/msgpack-asgi
+    .. image:: https://raster.shields.io/github/contributors/snok/asgi-correlation-id
        :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/florimondmanca/msgpack-asgi
+    .. image:: https://raster.shields.io/github/commit-activity/y/snok/asgi-correlation-id
        :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/florimondmanca/msgpack-asgi
-       :alt: License
+    .. image:: https://raster.shields.io/github/license/snok/asgi-correlation-id
+       :alt: Licence
 
 `fastapi-serviceutils <https://github.com/skallfass/fastapi_serviceutils>`_
     Optimised logging, exception handling and configuration
@@ -707,4 +644,78 @@ Dormant projects
     .. image:: https://raster.shields.io/github/commit-activity/y/skallfass/fastapi_serviceutils
        :alt: Commit activity
     .. image:: https://raster.shields.io/github/license/skallfass/fastapi_serviceutils
-       :alt: License
+       :alt: Licence
+
+`starlette_exporter <https://github.com/stephenhillier/starlette_exporter>`_
+    Prometheus export programme for Starlette and FastAPI
+
+    .. image:: https://raster.shields.io/pypi/dm/starlette_exporter
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/stephenhillier/starlette_exporter
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/stephenhillier/starlette_exporter
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/stephenhillier/starlette_exporter
+       :alt: Licence
+
+`Starlette Prometheus <https://github.com/perdy/starlette-prometheus>`_
+    Prometheus integration for Starlette
+
+    .. image:: https://raster.shields.io/pypi/dm/starlette-prometheus
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/perdy/starlette-prometheus
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/perdy/starlette-prometheus
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/perdy/starlette-prometheus
+       :alt: Licence
+
+`FastAPI Utilities <https://github.com/dmontagu/fastapi-utils>`_
+    Utilities to reduce boilerplate and reuse common functionality across
+    projects.
+
+    .. image:: https://raster.shields.io/pypi/dm/fastapi-utils
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/dmontagu/fastapi-utils
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/dmontagu/fastapi-utils
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/dmontagu/fastapi-utils
+       :alt: Licence
+
+`Fastapi Camelcase <https://github.com/nf1s/fastapi-camelcase>`_
+    Provision of a class of request and response bodies for FastAPI
+
+    .. image:: https://raster.shields.io/pypi/dm/fastapi-camelcase
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/nf1s/fastapi-camelcase
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/nf1s/fastapi-camelcase
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/nf1s/fastapi-camelcase
+       :alt: Licence
+
+`fastapi_profiler <https://github.com/sunhailin-Leo/fastapi_profiler>`_
+    FastAPI middleware based on `pyinstrument
+    <https://github.com/joerick/pyinstrument>`_ for performance testing
+
+    .. image:: https://raster.shields.io/pypi/dm/fastapi_profiler
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/sunhailin-Leo/fastapi_profiler
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/sunhailin-Leo/fastapi_profiler
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/sunhailin-Leo/fastapi_profiler
+       :alt: Licence
+
+`manage-fastapi <https://github.com/ycd/manage-fastapi>`_
+    Project generator and manager for FastAPI
+
+    .. image:: https://raster.shields.io/pypi/dm/manage-fastapi
+       :alt: Downloads
+    .. image:: https://raster.shields.io/github/contributors/ycd/manage-fastapi
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/ycd/manage-fastapi
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/ycd/manage-fastapi
+       :alt: Licence
