@@ -24,10 +24,10 @@ it is usually counterproductive to worry about the efficiency of the code.
 k-Means example
 ---------------
 
-In the following, I show examples of the `k-means algorithm
-<https://en.wikipedia.org/wiki/K-means_clustering>`_ to form a previously known
-number of groups from a set of objects. This can be achieved in the following
-three steps:
+In the following, I will provide examples of the `k-means algorithm
+<https://en.wikipedia.org/wiki/K-means_clustering>`_ algorithm, which is used to
+form a predefined number of clusters from a set of objects. This can be achieved
+using MacQueen’s algorithm in the following three steps:
 
 #. Choose the first :samp:`k` elements as cluster centres
 #. Assign each new element to the cluster with the least increase in variance.
@@ -40,6 +40,7 @@ A possible implementation with pure Python could look like this:
 .. literalinclude:: py_kmeans.py
    :caption: py_kmeans.py
    :name: py_kmeans.py
+   :lines: 6-
 
 We can create sample data with:
 
@@ -62,9 +63,21 @@ Performance measurements
 ------------------------
 
 Once you have worked with your code, it can be useful to examine its efficiency
-more closely. `cProfile
-<https://docs.python.org/3.14/library/profile.html#module-cProfile>`_,
-:doc:`ipython-profiler` or :doc:`scalene` can be used for this.
+more closely. :doc:`cProfile <tracing>`, :doc:`ipython-profiler`, :doc:`scalene`
+or :doc:`tprof` can be used for this. So far, I usually carry out the following
+steps:
+
+#. I profile the entire programme with :doc:`cProfile <tracing>` or `py-spy
+   <https://github.com/benfred/py-spy>`_ to find slow functions.
+#. If necessary, I can use the `line_profiler
+   <https://github.com/pyutils/line_profiler>`_ to identify the slow sections
+   within the function
+#. If the slow function is computationally intensive, I try one of the following
+   optimisations; however, if the application is data-intensive (dictionaries,
+   strings, I/O), I take a closer look at the architecture.
+#. Then I optimise a slow function.
+#. Finally, I create a new profile and filter out the result of my optimised
+   version so that I can compare the results.
 
 .. versionadded:: Python3.15
    :pep:`799` will provide a special profiling module that organises the
@@ -72,8 +85,8 @@ more closely. `cProfile
    contains:
 
    :mod:`profiling.tracing`
-       deterministic function call tracing, which has been moved from `cProfile
-       <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_.
+       deterministic function call tracing, which has been moved from
+       :doc:`cProfile <tracing>`.
    :mod:`profiling.sampling`
        the new statistical sampling profiler :doc:`tachyon`.
 
@@ -91,12 +104,14 @@ more closely. `cProfile
     :titlesonly:
     :maxdepth: 0
 
+    tracing
     ipython-profiler.ipynb
     scalene.ipynb
+    tprof
     tachyon
 
-Search for existing implementations
------------------------------------
+1. Search for existing implementations
+--------------------------------------
 
 You should not try to reinvent the wheel: If there are existing implementations,
 you should use them. There are even two implementations for the k-means
@@ -128,8 +143,8 @@ create a considerable overhead in your project if you are not already using
 <https://ml.dask.org>`_ elsewhere. In the following, I will therefore show you
 further possibilities to optimise your own code.
 
-Find anti-patterns
-------------------
+2. Find anti-patterns
+---------------------
 
 Then you can use :doc:`perflint` to search your code for the most common
 performance anti-patterns in Python.
@@ -144,31 +159,39 @@ performance anti-patterns in Python.
 .. seealso::
    * `Effective Python <https://effectivepython.com>`_
 
-Vectorisations with NumPy
--------------------------
+3. Vectorisations with NumPy
+----------------------------
 
 :doc:`../workspace/numpy/index` moves repetitive operations into a statically
 typed compiled layer, combining the fast development time of Python with the
-fast execution time of C. You may be able to use
-:doc:`../workspace/numpy/ufunc`, :doc:`vectorisation
-<../workspace/numpy/vectorisation>` and
-:doc:`../workspace/numpy/indexing-slicing` in all combinations to move
-repetitive operations into compiled code to avoid slow loops.
+fast execution time of C.
 
-With NumPy we can do without some loops:
++---------------+---------------+----------+
+| Version       | Spectral-norm | vs 3.14x |
++===============+===============+==========+
+| CPython 3.14  | 14,046ms      |          |
+| – Basis       |               |          |
++---------------+---------------+----------+
+| NumPy         | 27ms          | 520x     |
++---------------+---------------+----------+
+
+You may be able to use :doc:`../workspace/numpy/ufunc`, :doc:`vectorisation
+<../workspace/numpy/vectorisation>`, :doc:`../workspace/numpy/indexing-slicing`
+in various combinations to move repetitive operations into compiled code and
+thus avoid slow loops, for example:
 
 .. literalinclude:: np_kmeans.py
    :caption: np_kmeans.py
    :name: np_kmeans.py
-   :lines: 1-8
+   :lines: 5-12
 
 The advantages of NumPy are that the Python overhead only occurs per array and
 not per array element. However, because NumPy uses a specific language for array
 operations, it also requires a different mindset when writing code. Finally, the
 batch operations can also lead to excessive memory consumption.
 
-Special data structures
------------------------
+4. Special data structures
+--------------------------
 
 :doc:`../workspace/pandas/index`
     for SQL-like :doc:`../workspace/pandas/group-operations` and
@@ -179,7 +202,7 @@ Special data structures
     .. literalinclude:: pd_kmeans.py
        :caption: pd_kmeans.py
        :name: pd_kmeans.py
-       :lines: 2-4, 11-15
+       :lines: 5-8, 16-19
 
 `scipy.spatial <https://docs.scipy.org/doc/scipy/reference/spatial.html>`_
     for spatial queries like distances, nearest neighbours, k-Means :abbr:`etc
@@ -190,7 +213,7 @@ Special data structures
     .. literalinclude:: sp_kmeans.py
        :caption: sp_kmeans.py
        :name: sp_kmeans.py
-       :lines: 6-9
+       :lines: 5-13
 
 `scipy.sparse <https://docs.scipy.org/doc/scipy/reference/sparse.html>`_
     `sparse matrices <https://en.wikipedia.org/wiki/Sparse_matrix>`_
@@ -209,8 +232,8 @@ Special data structures
 
     parallelise-pandas
 
-Select compiler
----------------
+5. Select compiler
+------------------
 
 Faster CPython
 ~~~~~~~~~~~~~~
@@ -226,8 +249,47 @@ particular is likely to benefit from the changes; code already written in C,
 I/O-heavy processes and multithreaded code, on the other hand, are unlikely to
 benefit.
 
+And indeed, the cPython versions have become significantly more efficient since
+then:
+
++------------------+---------+
+| Version          |         |
++==================+=========+
+| CPython 3.10.4   | 1.422x  |
++------------------+---------+
+| CPython 3.12.0   | 1.093x  |
++------------------+---------+
+| CPython 3.13.0   | 1.024x  |
++------------------+---------+
+| CPython 3.15.0a0 |         |
+| – Basis          |         |
++------------------+---------+
+
 .. seealso::
-    * `Faster CPython <https://web.archive.org/web/20221007175548/https://faster-cpython.readthedocs.io/>`__
+   * `Faster CPython
+     <https://web.archive.org/web/20221007175548/https://faster-cpython.readthedocs.io/>`__
+   * `Faster CPython Benchmark Infrastructure
+     <https://github.com/faster-cpython/benchmarking-public?tab=readme-ov-file>`_
+
+Free-threaded Python was also included in another comparison:
+
++---------------+---------+---------+---------------+----------+
+| Version       | N-body  | vs 3.14 | Spectral-norm | vs 3.14x |
++===============+=========+=========+===============+==========+
+| CPython 3.10  | 1,663ms | 0.75x   | 16,826ms      | 0.83x    |
++---------------+---------+---------+---------------+----------+
+| CPython 3.11  | 1,200ms | 1.04x   | 13,430ms      | 1.05x    |
++---------------+---------+---------+---------------+----------+
+| CPython 3.13  | 1,134ms | 1.10x   | 13,637ms      | 1.03x    |
++---------------+---------+---------+---------------+----------+
+| CPython 3.14  | 1,242ms |         | 14,046ms      |          |
+| – Basis       |         |         |               |          |
++---------------+---------+---------+---------------+----------+
+| CPython 3.14t | 1,513ms | 0.82x   | 14,551ms      | 0.97x    |
++---------------+---------+---------+---------------+----------+
+
+– Surce: `The Optimization Ladder
+<https://cemrehancavdar.com/2026/03/10/optimization-ladder/>`_
 
 If you don’t want to wait with your project until the release of Python 3.11 in
 the final version probably on 24 October 2022, you can also have a look at the
@@ -247,12 +309,32 @@ Python JIT compiler
         <https://github.com/python/cpython/blob/main/Tools/jit/README.md>`_
       * :ref:`whatsnew315-jit`
 
++------------------+---------+
+| Version          |         |
++==================+=========+
+| CPython 3.15.0a0 | 1.001x  |
+| (JIT)            |         |
++------------------+---------+
+| CPython 3.15.0a0 |         |
+| – Basis          |         |
++------------------+---------+
+
 Cython
 ~~~~~~
 
 For intensive numerical operations, Python can be very slow, even if you have
 avoided all anti-patterns and used vectorisations with NumPy. In this case,
 translating code into `Cython <https://cython.org>`_ can be helpful.
+
++---------------+---------+---------+---------------+----------+
+| Version       | N-body  | vs 3.14 | Spectral-norm | vs 3.14x |
++===============+=========+=========+===============+==========+
+| CPython 3.14  | 1,242ms |         | 14,046ms      |          |
+| – Basis       |         |         |               |          |
++---------------+---------+---------+---------------+----------+
+| Cython        | 10ms    | 124x    | 142ms         | 99x      |
++---------------+---------+---------+---------------+----------+
+
 Unfortunately, the code often has to be restructured and thus increases in
 complexity. Explicit type annotations and the provision of code also become more
 cumbersome.
@@ -262,7 +344,7 @@ Our example could then look like this:
 .. literalinclude:: cy_kmeans.pyx
    :caption: cy_kmeans.pyx
    :name: cy_kmeans.pyx
-   :lines: 1-28
+   :lines: 5-32
 
 .. seealso::
     * `Cython Tutorials
@@ -277,13 +359,27 @@ scientific Python and NumPy code into fast machine code, for example:
 .. literalinclude:: nb_kmeans.py
    :caption: nb_kmeans.py
    :name: nb_kmeans.py
-   :lines: 1-25
+   :lines: 5-29
 
 However, Numba requires `LLVM <https://en.wikipedia.org/wiki/LLVM>`_ and some
 Python constructs are not supported.
 
-Task planner
-------------
++---------------+---------+---------+---------------+----------+
+| Version       | N-body  | vs 3.14 | Spectral-norm | vs 3.14x |
++===============+=========+=========+===============+==========+
+| CPython 3.14  | 1,242ms |         | 14,046ms      |          |
+| – Basis       |         |         |               |          |
++---------------+---------+---------+---------------+----------+
+| Numba         | 22ms    | 56x     | 104ms         | 135x     |
++---------------+---------+---------+---------------+----------+
+
+.. seealso::
+   * `Speeding up NumPy with parallelism
+     <https://pythonspeed.com/articles/numpy-parallelism/>`_ by Itamar
+     Turner-Trauring
+
+6. Task planner
+---------------
 
 :doc:`jupyter-tutorial:hub/ipyparallel/index`, :doc:`dask` and `Ray
 <https://docs.ray.io/en/latest/>`_ can distribute tasks in a cluster. In doing
@@ -319,7 +415,7 @@ Our example could look like this with Dask:
 .. literalinclude:: ds_kmeans.py
    :caption: ds_kmeans.py
    :name: ds_kmeans.py
-   :lines: 1-
+   :lines: 5-
 
 .. toctree::
     :hidden:
@@ -328,8 +424,8 @@ Our example could look like this with Dask:
 
     dask.ipynb
 
-Multithreading, Multiprocessing and Async
------------------------------------------
+7. Multithreading, Multiprocessing and Async
+--------------------------------------------
 
 After a brief :doc:`overview <multiprocessing-threading-async>`, three examples
 of :doc:`threading <threading-example>`, :doc:`multiprocessing
