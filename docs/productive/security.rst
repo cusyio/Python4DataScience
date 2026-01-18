@@ -92,8 +92,8 @@ Is there a safety concept for the project?
 
 Risk: Medium
 
-Ideally, a :file:`SECURITY.md` or similar file should have been published with
-the project. This file should contain information
+Ideally, a :ref:`python-basics:security` or similar file should have been
+published with the project. This file should contain information
 
 * how a security vulnerability can be reported without it becoming publicly
   visible,
