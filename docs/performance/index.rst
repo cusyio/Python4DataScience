@@ -62,9 +62,15 @@ Performance measurements
 ------------------------
 
 Once you have worked with your code, it can be useful to examine its efficiency
-more closely. `cProfile
-<https://docs.python.org/3.14/library/profile.html#module-cProfile>`_,
-:doc:`ipython-profiler` or :doc:`scalene` can be used for this.
+more closely. :doc:`cProfile <tracing>`, :doc:`ipython-profiler`, :doc:`scalene`
+or :doc:`tprof` can be used for this. So far, I usually carry out the following
+steps:
+
+#. I profile the entire programme with :doc:`cProfile <tracing>` or `py-spy
+   <https://github.com/benfred/py-spy>`_ to find slow functions.
+#. Then I optimise a slow function.
+#. Finally, I create a new profile and filter out the result of my optimised
+   version so that I can compare the results.
 
 .. versionadded:: Python3.15
    :pep:`799` will provide a special profiling module that organises the
@@ -72,8 +78,8 @@ more closely. `cProfile
    contains:
 
    :mod:`profiling.tracing`
-       deterministic function call tracing, which has been moved from `cProfile
-       <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_.
+       deterministic function call tracing, which has been moved from
+       :doc:`cProfile <tracing>`.
    :mod:`profiling.sampling`
        the new statistical sampling profiler :doc:`tachyon`.
 
@@ -91,8 +97,10 @@ more closely. `cProfile
     :titlesonly:
     :maxdepth: 0
 
+    tracing
     ipython-profiler.ipynb
     scalene.ipynb
+    tprof
     tachyon
 
 Search for existing implementations
