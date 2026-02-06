@@ -21,6 +21,10 @@ it is usually counterproductive to worry about the efficiency of the code.
        <http://www.literateprogramming.com/>`_, in Computer Programming as an
        Art (1974)
 
+.. seealso::
+   * `Speed up your data science and scientific computing code
+     <https://pythonspeed.com/datascience/>`_
+
 k-Means example
 ---------------
 
@@ -189,6 +193,11 @@ The advantages of NumPy are that the Python overhead only occurs per array and
 not per array element. However, because NumPy uses a specific language for array
 operations, it also requires a different mindset when writing code. Finally, the
 batch operations can also lead to excessive memory consumption.
+
+.. seealso::
+   * `Speeding up NumPy with parallelism
+     <https://pythonspeed.com/articles/numpy-parallelism/>`_ by Itamar
+     Turner-Trauring
 
 4. Special data structures
 --------------------------
@@ -372,11 +381,6 @@ Python constructs are not supported.
 +---------------+---------+---------+---------------+----------+
 | Numba         | 22ms    | 56x     | 104ms         | 135x     |
 +---------------+---------+---------+---------------+----------+
-
-.. seealso::
-   * `Speeding up NumPy with parallelism
-     <https://pythonspeed.com/articles/numpy-parallelism/>`_ by Itamar
-     Turner-Trauring
 
 6. Task planner
 ---------------
