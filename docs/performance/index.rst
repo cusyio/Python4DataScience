@@ -21,6 +21,10 @@ it is usually counterproductive to worry about the efficiency of the code.
        <http://www.literateprogramming.com/>`_, in Computer Programming as an
        Art (1974)
 
+.. seealso::
+   * `Speed up your data science and scientific computing code
+     <https://pythonspeed.com/datascience/>`_
+
 k-Means example
 ---------------
 
@@ -289,6 +293,11 @@ scientific Python and NumPy code into fast machine code, for example:
 
 However, Numba requires `LLVM <https://en.wikipedia.org/wiki/LLVM>`_ and some
 Python constructs are not supported.
+
+.. seealso::
+   * `Speeding up NumPy with parallelism
+     <https://pythonspeed.com/articles/numpy-parallelism/> by Itamar
+     Turner-Trauring`_
 
 Task planner
 ------------
