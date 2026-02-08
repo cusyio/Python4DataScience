@@ -302,6 +302,8 @@ Delete branches
    * `Git Branching - Branches in a Nutshell
      <https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell>`_
 
+.. _remote-branches:
+
 Remote branches
 ---------------
 
