@@ -576,7 +576,7 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
         else:
             # Multi-part file uploads.
             if files:
-                (body, content_type) = self._encode_files(files, data)
+                body, content_type = self._encode_files(files, data)
             else:
                 if data:
                     body = self._encode_params(data)
