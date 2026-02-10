@@ -66,7 +66,11 @@ Performance measurements
 ------------------------
 
 Once you have worked with your code, it can be useful to examine its efficiency
-more closely. :doc:`cProfile <tracing>`, :doc:`ipython-profiler`, :doc:`scalene`
+more closely. :doc:`cProfile <tracing>`, :doc:`ipython-profiler`,
+:doc:`scalene`, :doc:`tprof` or :doc:`memray` can be used for this. So far, I
+usually carry out the following steps:
+
+:doc:`cProfile <tracing>`, :doc:`ipython-profiler`, :doc:`scalene`
 or :doc:`tprof` can be used for this. So far, I usually carry out the following
 steps:
 
@@ -105,6 +109,7 @@ steps:
     ipython-profiler.ipynb
     scalene.ipynb
     tprof
+    memray
     tachyon
 
 Search for existing implementations
