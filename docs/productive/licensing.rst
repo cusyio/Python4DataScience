@@ -257,6 +257,9 @@ they lack required components and/or legal agreements:
    * Alek Tarkowski, Open Future in partnership with the Open Source Initiative:
      `Data Governance in Open Source AI
      <https://opensource.org/wp-content/uploads/2025/02/2025-OSI-DataGovernanceOSAI-final-v5.pdf>`_
+   * `Rethinking open source generative AI: open-washing and the EU AI Act
+     <https://pure.mpg.de/rest/items/item_3588217_2/component/file_3588218/content>`_
+     by Andreas Liesenfeld and Mark Dingemanse
 
 Databases
 ~~~~~~~~~
