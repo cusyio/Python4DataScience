@@ -7,6 +7,7 @@ Open data
 
 You can get an overview of public repositories with research data e.g. in
 
+* `NFDI4DS Portal <https://meta4ds.fokus.fraunhofer.de/datasets?locale=en>`_
 * `Registry of research data repositories (re3data) <https://www.re3data.org/>`_
 * `Awesome Public Datasets
   <https://github.com/awesomedata/awesome-public-datasets>`_
@@ -45,3 +46,5 @@ You can get an overview of public repositories with research data e.g. in
 
 .. seealso::
    * :ref:`Geodata Data repositories <geodata-repositories>`
+   * `Open Data <https://www.authorsalliance.org/resources/open-data/>`_ by
+     Authors Alliance

@@ -67,8 +67,6 @@ access via HTTP like :ref:`pmtiles`.
 .. seealso::
    * `MBTiles specification <https://github.com/mapbox/mbtiles-spec>`_
 
-.. _geodata-repositories:
-
 Cloud Optimized GeoTIFF (COG)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
