@@ -18,8 +18,7 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
 ]
-dependencies = [  ]
-
+dependencies = []
 urls."Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
 urls."Homepage" = "https://github.com/cusyio/Python4DataScience/"
 
@@ -49,8 +48,8 @@ docs = [
 ]
 
 [tool.setuptools]
-packages = [  ]
+packages = []
 
 [tool.codespell]
 skip = "*.csv, *.html, *.pdf, *.ipynb, ./docs/_build/*, ./styles/*"
-ignore-words-list = "AAS, ans, comit, fo, Groth, Ned, Redict, redict, reStructedText, splitted"
+ignore-words-list = "AAS, ans, bund, comit, fo, Groth, nd, Ned, ORE, Redict, redict, registr, reStructedText, splitted"

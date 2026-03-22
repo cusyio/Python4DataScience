@@ -13,7 +13,7 @@ File formats
 PMTiles
 ~~~~~~~
 
-`PMTiles <https://docs.protomaps.com>`_ is a general format for tile data
+`PMTiles <https://docs.protomaps.com>`__ is a general format for tile data
 addressed by Z/X/Y coordinates. This can be cartographic vector tiles,
 :ref:`remote sensing data <remote-sensing>`, JPEG images or similar.
 
@@ -60,7 +60,7 @@ stored in SQLite like mbtiles and can be processed with the MBTiles driver.
 MBTiles
 ~~~~~~~
 
-`MBTiles <https://docs.mapbox.com/help/glossary/mbtiles/>`_ is a container
+`MBTiles <https://docs.mapbox.com/help/glossary/mbtiles/>`__ is a container
 format for tile data based on SQLite. It is optimised for local access, not for
 access via HTTP like :ref:`pmtiles`.
 
@@ -87,7 +87,7 @@ GeoParquet
 `Parquet <https://parquet.apache.org>`_ is an open-source, column-orientated
 data file format that was developed for the efficient storage and retrieval of
 data. It offers efficient data compression and encoding methods with optimised
-processing of large, complex data. `GeoParquet <https://geoparquet.org>`_
+processing of large, complex data. `GeoParquet <https://geoparquet.org>`__
 extends Parquet with interoperable geodata types (point, line, polygon).
 
 
@@ -109,24 +109,11 @@ extends Parquet with interoperable geodata types (point, line, polygon).
    * `validate_geoparquet.py
      <https://github.com/OSGeo/gdal/blob/master/swig/python/gdal-utils/osgeo_utils/samples/validate_geoparquet.py>`_
 
-.. _geodata-repositories:
-
 Data repositories
 -----------------
 
-`Norwegian Polar Data Centre: Datasets <https://data.npolar.no/dataset>`_
-    Antarctica, Arctic Ocean and Svalbard
-`Common Metadata Repository (CMR) <https://cmr.earthdata.nasa.gov/search>`_
-    Search API for NASA's remote-sensed earth science metadata
-`UC Irvine Machine Learning Repository <https://archive.ics.uci.edu>`_
-    Machine learning datasets, featuring data on air quality, ozone level
-    detection, greenhouse gas concentrations, aquatic toxicity, and more
-`National Data Buoy Center <https://www.ndbc.noaa.gov>`_
-    Meteorological and oceanographic measurements for the marine environment.
-
 .. seealso::
-   `List of GIS data sources
-   <https://en.wikipedia.org/wiki/List_of_GIS_data_sources>`_
+   :ref:`geodata-repositories`
 
 Software
 --------
@@ -321,7 +308,7 @@ General purposes
 
 .. _geopython:
 
-`geopython <https://geopython.github.io/>`_
+`geopython <https://geopython.github.io/>`__
     is a GitHub organization that covers Python projects related to geodata.
 
     `pygeoapi <https://github.com/geopython/pygeoapi>`_
