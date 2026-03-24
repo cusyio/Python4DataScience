@@ -6,10 +6,6 @@
 Open data
 =========
 
-.. seealso::
-   * `Authors Alliance: Open Data
-     <https://www.authorsalliance.org/resources/open-data/>`_
-
 A topic-based overview of public repositories containing research data.
 
 Agricultural sciences

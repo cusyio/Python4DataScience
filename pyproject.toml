@@ -52,4 +52,4 @@ packages = []
 
 [tool.codespell]
 skip = "*.csv, *.html, *.pdf, *.ipynb, ./docs/_build/*, ./styles/*"
-ignore-words-list = "AAS, ans, bund, comit, fo, Groth, nd, Ned, ORE, Redict, redict, registr, reStructedText, splitted"
+ignore-words-list = "AAS, ans, bund, comit, fo, Groth, nd, Ned, ORE, ore, Redict, redict, registr, reStructedText, splitted"
