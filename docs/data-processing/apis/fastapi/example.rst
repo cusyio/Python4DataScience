@@ -16,7 +16,6 @@ Create a file :file:`main.py` with:
 
     from fastapi import FastAPI
 
-
     app = FastAPI()
 
 
@@ -76,7 +75,6 @@ Now we modify the file ``main.py`` to receive a body from a ``PUT`` request:
     from pydantic import BaseModel
 
     from fastapi import FastAPI
-
 
     app = FastAPI()
 

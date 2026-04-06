@@ -82,12 +82,10 @@ Cursor
     .. code-block:: python
 
         cursor = conn.cursor()
-        cursor.execute(
-            """
+        cursor.execute("""
             SELECT column1, column2
             FROM tableA
-        """
-        )
+        """)
         for column1, column2 in cursor.fetchall():
             print(column1, column2)
 

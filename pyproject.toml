@@ -20,7 +20,7 @@ classifiers = [
 ]
 dependencies = []
 urls."Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
-urls."Homepage" = "https://github.com/cusyio/Python4DataScience/"
+urls.Homepage = "https://github.com/cusyio/Python4DataScience/"
 
 [dependency-groups]
 dev = [
