@@ -46,6 +46,8 @@ Line 23
    * `Using uv in GitLab CI/CD
      <https://docs.astral.sh/uv/guides/integration/gitlab/>`_
 
+.. _github-actions:
+
 GitHub Actions
 --------------
 
