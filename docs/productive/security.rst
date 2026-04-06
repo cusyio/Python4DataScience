@@ -71,10 +71,10 @@ Are the dependencies still maintained?
 Risk: High
 
 This indicates possible unpatched security vulnerabilities. Therefore, it should
-be checked regularly whether a project has been archived. Conversely, the OSSF
-scorecard assumes that with at least one commit a week for 90 days, the project
-is very actively maintained. However, a lack of active maintenance is not
-necessarily always a problem: smaller utilities in particular usually do not
+be checked regularly whether a project has been archived. Conversely, the
+OpenSSF scorecard assumes that with at least one commit a week for 90 days, the
+project is very actively maintained. However, a lack of active maintenance is
+not necessarily always a problem: smaller utilities in particular usually do not
 need to be maintained, or only very rarely. So a lack of active maintenance only
 tells you that you should investigate the situation more closely.
 
@@ -126,24 +126,13 @@ with their :ref:`SPDX <standard_format_licensing>` licence identifier followed
 by an appropriate file extension as described in the :ref:`REUSE <reuse>`
 specification.
 
-Are the best practices of the :abbr:`OpenSSF (Open Source Security Foundation)` being followed?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OpenSSF Best Practices Badge
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Risk: Low
 
-The `Open Source Security Foundation (OpenSSF) Best Practices Program
-<https://github.com/ossf/wg-best-practices-os-developers/>`_ includes a set of
-security-oriented best practices for open source software development:
-
-* the vulnerability reporting procedure is published on the project page
-* a working build system automatically rebuilds the software from source code
-* a general policy that tests are added to an automated test suite when
-  important new features are added
-* various cryptography criteria are met, if applicable
-* at least one static code analysis tool applied to each planned major
-  production release
-
-You can also get a corresponding badge with the `OpenSSF Best Practices Badge Program <https://www.bestpractices.dev/en>`_.
+You can also get a corresponding badge with the `OpenSSF Best Practices Badge
+Program <https://www.bestpractices.dev/en>`_.
 
 Continuous testing
 ------------------
@@ -155,6 +144,9 @@ Risk: Low
 
 Before code is merged into pull or merge requests, tests should be performed to
 help detect errors early and reduce the number of vulnerabilities in a project.
+
+.. seealso::
+   * :ref:`coverage-github-actions`
 
 Does the project use fuzzing tools?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -172,31 +164,20 @@ find the same vulnerabilities.
 * Is `ClusterFuzzLite <https://google.github.io/clusterfuzzlite/>`_ used in the
   repository?
 * Are custom language-specific fuzzing features present in the repository, for
-  example with `atheris <https://pypi.org/project/atheris/>`_ or `OneFuzz
-  <https://github.com/microsoft/onefuzz>`_?
+  example with `atheris <https://pypi.org/project/atheris/>`_?
 
 Does your project use static code analysis tools?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Risk: Medium
 
-`Static code analysis <https://en.wikipedia.org/wiki/Static_program_analysis>`_
-tests the source code before the application is executed. This can prevent known
-bug classes from being accidentally introduced into the code base.
+:term:`Static test procedures` test the source code before the application is
+run. This can prevent known types of errors from being inadvertently introduced
+into the codebase.
 
-.. _bandit:
-
-To check for vulnerabilities, you can use `bandit
-<https://github.com/PyCQA/bandit>`__, which you can also integrate into your
-:file:`.pre-commit-hooks.yaml`:
-
-.. code-block:: yaml
-
-    repos:
-    - repo: https://github.com/PyCQA/bandit
-      rev: '1.7.5'
-      hooks:
-      - id: bandit
+To check for vulnerabilities, you can use `Bandit
+<https://github.com/PyCQA/bandit>`__ with :doc:`qa/ruff`, which you can also
+integrate into Jupyter Notebooks, IDEs and the pre-commit framework.
 
 You can also use :doc:`/productive/qa/pysa` for `taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_ analyses.
