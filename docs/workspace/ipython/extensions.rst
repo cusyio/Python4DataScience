@@ -54,19 +54,18 @@ Writing IPython extensions
 An IPython extension is an importable Python module that has special functions
 for loading and unloading:
 
-.. blacken-docs:off
-
 .. code-block:: python
 
     def load_ipython_extension(ipython):
         # The `ipython` argument is the currently active `InteractiveShell`
         # instance, which can be used in any way. This allows you to register
         # new magics or aliases, for example.
+        pass
+
 
     def unload_ipython_extension(ipython):
         # If you want your extension to be unloadable, put that logic here.
-
-.. blacken-docs:on
+        pass
 
 .. seealso::
-    * :label:`defining_magics`
+   * :label:`defining_magics`

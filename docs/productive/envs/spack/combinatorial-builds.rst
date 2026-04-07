@@ -169,32 +169,47 @@ Spack provides a ``spec`` syntax for describing custom DAGs:
 
         from spack import *
 
+
         class Dyninst(Package):
-            """API for dynamic binary instrumentation.""”
+            """API for dynamic binary instrumentation."""
+
             homepage = "https://paradyn.org"
 
-            version('8.2.1', 'abf60b7faabe7a2e’, url="http://www.paradyn.org/release8.2/DyninstAPI-8.2.1.tgz")
-            version('8.1.2', 'bf03b33375afa66f’, url="http://www.paradyn.org/release8.1.2/DyninstAPI-8.1.2.tgz")
-            version('8.1.1', 'd1a04e995b7aa709’, url="http://www.paradyn.org/release8.1/DyninstAPI-8.1.1.tgz")
+            version(
+                "8.2.1",
+                "abf60b7faabe7a2e",
+                url="http://www.paradyn.org/release8.2/DyninstAPI-8.2.1.tgz",
+            )
+            version(
+                "8.1.2",
+                "bf03b33375afa66f",
+                url="http://www.paradyn.org/release8.1.2/DyninstAPI-8.1.2.tgz",
+            )
+            version(
+                "8.1.1",
+                "d1a04e995b7aa709",
+                url="http://www.paradyn.org/release8.1/DyninstAPI-8.1.1.tgz",
+            )
 
             depends_on("libelf")
             depends_on("libdwarf")
             depends_on("boost@1.42:")
 
             def install(self, spec, prefix):
-                libelf = spec['libelf'].prefix
-                libdwarf = spec['libdwarf'].prefix
+                libelf = spec["libelf"].prefix
+                libdwarf = spec["libdwarf"].prefix
 
-                with working_dir('spack-build', create=True):
-                    cmake('..',
-                        '-DBoost_INCLUDE_DIR=%s' % spec['boost'].prefix.include,
-                        '-DBoost_LIBRARY_DIR=%s' % spec['boost'].prefix.lib,
-                        '-DBoost_NO_SYSTEM_PATHS=TRUE’
-                        *std_cmake_args)
+                with working_dir("spack-build", create=True):
+                    cmake(
+                        "..",
+                        "-DBoost_INCLUDE_DIR=%s" % spec["boost"].prefix.include,
+                        "-DBoost_LIBRARY_DIR=%s" % spec["boost"].prefix.lib,
+                        "-DBoost_NO_SYSTEM_PATHS=TRUE" * std_cmake_args,
+                    )
                     make()
                     make("install")
 
-            @when('@:8.1')
+            @when("@:8.1")
             def install(self, spec, prefix):
                 configure("--prefix=" + prefix)
                 make()
@@ -258,7 +273,7 @@ Spack provides a ``spec`` syntax for describing custom DAGs:
                 mpich: aa4ar6ifj23yijqmdabeakpejcli72t3
               hash: 33hjjhxi7p6gyzn5ptgyes7sghyprujh
               variants: {}
-              version: '1.0'
+              version: "1.0"
             - adept-utils:
               arch: linux-x86_64
               compiler:

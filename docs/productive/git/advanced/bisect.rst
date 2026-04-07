@@ -130,32 +130,28 @@ complicated changes in behaviour. For performance tests, we need a test
 programme that can perform multiple runs and determine the minimum time while
 eliminating possible noise:
 
-.. blacken-docs:off
-
 .. code-block:: python
 
    from subprocess import run
    from time import perf_counter
 
-
    times = []
    for _ in range(10):
        start = perf_counter()
        run(
-           [./perftest, PARAM],
+           "./perftest",
+           PARAM,
            check=True,
            capture_output=True,
        )
        elapsed = perf_counter() - start
        times.append(elapsed)
-   if min(times) > X.0:
+   if min(times) > 2.0:
        print("Too slow")
        raise SystemExit(1)
    else:
        print("Fast enough")
        raise SystemExit(0)
-
-.. blacken-docs:on
 
 The programme executes :samp:`python perftest.py {PARAM}` ten times and measures
 the time for each execution. It then compares the minimum execution time with a

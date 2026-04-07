@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020 Veit Schiele
+#
+# SPDX-License-Identifier: BSD-3-Clause
 [project]
 name = "python4datascience"
 version = "24.2.0"
@@ -20,7 +23,7 @@ classifiers = [
 ]
 dependencies = []
 urls."Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
-urls."Homepage" = "https://github.com/cusyio/Python4DataScience/"
+urls.Homepage = "https://github.com/cusyio/Python4DataScience/"
 
 [dependency-groups]
 dev = [
@@ -49,6 +52,9 @@ docs = [
 
 [tool.setuptools]
 packages = []
+
+[tool.black]
+line-length = 79
 
 [tool.codespell]
 skip = "*.csv, *.html, *.pdf, *.ipynb, ./docs/_build/*, ./styles/*"
