@@ -182,11 +182,36 @@ Risk: Medium
 run. This can prevent known types of errors from being inadvertently introduced
 into the codebase.
 
-To check for vulnerabilities, you can use `Bandit
-<https://github.com/PyCQA/bandit>`__ with :doc:`qa/ruff`, which you can also
-integrate into Jupyter Notebooks, IDEs and the pre-commit framework.
+.. _bandit:
 
-You can also use :doc:`/productive/qa/pysa` for `taint
+`Bandit <https://github.com/PyCQA/bandit>`__, which you can use with
+:doc:`qa/ruff`, allows you to check for the following vulnerabilities, amongst
+others:
+
++--------+-----------------------------------------------------------------------+
+| Rule   | Description                                                           |
++--------+-----------------------------------------------------------------------+
+| `S105`_| Hard-coded secrets                                                    |
++--------+-----------------------------------------------------------------------+
+| `S301`_| :doc:`/data-processing/serialisation-formats/pickle/index` and other  |
+|        | insecure deserialisation                                              |
++--------+-----------------------------------------------------------------------+
+| `S307`_| Use of :func:`eval` with untrusted input                              |
++--------+-----------------------------------------------------------------------+
+| `S113`_| Missing timeouts                                                      |
++--------+-----------------------------------------------------------------------+
+| `S324`_| Weak cryptography, such as MD5 collisions                             |
++--------+-----------------------------------------------------------------------+
+| `S608`_| SQL injection via string formatting                                   |
++--------+-----------------------------------------------------------------------+
+
+.. seealso:
+   `flake8-bandit <https://docs.astral.sh/ruff/rules/#flake8-bandit-s>`_
+
+You can also integrate Bandit into Jupyter Notebooks, IDEs and the pre-commit
+framework.
+
+In addition, you can use :doc:`/productive/qa/pysa` for `taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_ analyses.
 
 For GitHub repositories you can also use `CodeQL <https://codeql.github.com>`_;
@@ -289,3 +314,11 @@ reduce this risk by
 * automated tools that notify you when dependencies in your project are out of
   date
 * update applications that lock dependencies quickly.
+
+.. _S105: https://docs.astral.sh/ruff/rules/hardcoded-password-string/
+.. _S301: https://docs.astral.sh/ruff/rules/suspicious-pickle-usage/
+.. _S307: https://docs.astral.sh/ruff/rules/suspicious-eval-usage/
+.. _S113: https://docs.astral.sh/ruff/rules/request-without-timeout/
+.. _S324: https://docs.astral.sh/ruff/rules/hashlib-insecure-hash-function/
+.. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
+.. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
