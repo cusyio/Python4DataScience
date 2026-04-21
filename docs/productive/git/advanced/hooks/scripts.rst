@@ -162,3 +162,7 @@ Miscellaneous
 
 .. seealso::
     * `Supported hooks <https://pre-commit.com/hooks.html>`_
+    * `Sourcegraph: file:^\.pre-commit-config\.yaml$
+      <https://sourcegraph.com/search?q=context:global+file:%5E.pre-commit-hooks.yaml>`_
+    * `Sourcegraph: file:^\.pre-commit-hooks\.yaml$ \"types: [python]\"
+      <https://sourcegraph.com/search?q=context:global+file:%5E.pre-commit-hooks.yaml%24+%22types:+%5Bpython%5D%22>`_

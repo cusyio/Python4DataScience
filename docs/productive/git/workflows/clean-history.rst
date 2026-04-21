@@ -1,9 +1,16 @@
-Change commits for a clean log
-==============================
+Rewriting history
+=================
 
-With ``git commit --fixup`` and ``git rebase --autosquash`` you can correct a
-series of commits relatively easily. To demonstrate this with an example, I
-present the following scenario:
+There are several commands in Git for rewriting history. ``git rebase -i`` is
+the best known and most flexible: you can reorder, merge, edit and remove
+commits. However, this flexibility comes with a degree of complexity: your
+`working tree <https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-workingtree>`_ and `index <https://git-scm.com/docs/gitglossary#def_index>`_
+are updated, and conflicts may arise that need to be resolved before you can
+continue working.
+
+With ``git commit --fixup`` and ``git rebase --autosquash``, on the other hand,
+you can correct a series of commits relatively easily. Let’s demonstrate this
+with an example below:
 
 #. We have two commits in our ``my-feature`` branch: one for the actual
    function, the other for the associated tests:
@@ -63,7 +70,9 @@ present the following scenario:
       31a140a (my-feature) Add test for my new feature
       132ae9b Add new feature
 
-#. The changes can now be sent to our remote branch with ``git push -f``.
+#. The changes can now be pushed to our remote branch using ``git push
+   --force-with-lease``. The ``--force-with-lease`` option ensures that any
+   existing changes on the remote branch are not overwritten.
 
 …with ``git commit --fixup`` and ``git rebase --autosquash``
 ------------------------------------------------------------
@@ -116,3 +125,29 @@ In Git, however, there is an even easier way to correct a previous commit: with
 
       Further options can be found in the `Git commit documentation
       <https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordltcommitgt>`_.
+
+``git history``
+---------------
+
+.. version-added:: 2.54
+
+   Git 2.54 introduces ``git history`` on an experimental basis, meaning that
+   the interface is still subject to further development. ``git history`` makes
+   it easier to correct typos in previous commit messages and to split commits
+   into two parts:
+
+   :samp:`git history reword {SHA}`
+       opens your editor with the message of the specified commit and rewrites
+       it directly, updating all branches descended from that commit. Unlike
+       :doc:`../rebase`, it does not access your working tree or your index.
+   :samp:`git history split {SHA}`
+       interactively splits a commit into two parts, allowing you to select
+       which parts should be moved into a new parent commit. The interface is
+       the same as that of ``git add --p``. After selecting the blocks, Git
+       creates a new commit with these changes as a predecessor to the original
+       commit, which retains all unselected blocks, and rewrites all downstream
+       branches so that they point to the updated history.
+
+   .. warning::
+      ``history`` does not support histories containing merge commits, nor can
+      it perform operations that would result in a merge conflict.

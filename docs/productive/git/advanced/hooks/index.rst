@@ -25,8 +25,8 @@ in a Git repository, including:
 |               | `push-to-checkout`_                                   |
 +---------------+-------------------------------------------------------+
 
-They can be located either in local or server-side repositories. This allows Git
-repositories to be customised and user-defined actions to be triggered.
+They can be located in either local or server-side repositories, allowing you to
+customise Git repositories and trigger user-defined actions.
 
 Git hooks are located in the :file:`.git/hooks/` directory. When a repository is
 created, some sample scripts are already created there:
@@ -57,10 +57,34 @@ The integrated scripts are shell and Perl scripts, but any scripting language
 can be used. The Shebang line (:samp:`#!/bin/sh`) determines how the file is to
 be interpreted.
 
-However, the scripts cannot be copied into the server-side repository.
+However, the scripts are not copied to the Git server using `git push`. To be
+able to use scripts across multiple repositories, the :doc:`pre-commit` is
+therefore recommended.
 
 .. seealso::
    * `Hooks <https://git-scm.com/docs/githooks#_hooks>`_
+
+Configuration-based hooks
+-------------------------
+
+.. version-added:: 2.54
+
+   Git 2.54 now introduces a new way to define hooks in your configuration
+   files: instead of placing a script in :file:`.git/hooks/pre-commit`, you can
+   now specify the following:
+
+   .. code-block:: ini
+
+      [hook "ruff check"]
+         event = pre-commit
+         command = ~/bin/ruff check --fix --exit-non-zero-on-fix
+
+   However, this configuration can be specified not only for each project, but
+   also globally or system-wide in :file:`~/.gitconfig` or in
+   :file:`/etc/gitconfig`.
+
+   Use ``git hook list pre-commit`` to find out which hooks are configured and
+   where they come from.
 
 .. toctree::
     :hidden:
