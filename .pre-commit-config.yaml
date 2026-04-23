@@ -24,7 +24,7 @@ repos:
     - id: end-of-file-fixer
     - id: trailing-whitespace
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: 6e10264313f53d6247a8b1b984f5b5ccf50ba539 # v2.21.0
+    rev: 91de51aef61c5f2383f03da25604e3d65a8309e0 # v2.21.1
     hooks:
     - id: pyproject-fmt
   - repo: https://github.com/abravalheri/validate-pyproject

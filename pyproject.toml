@@ -40,7 +40,7 @@ docs = [
   "matplotlib",
   "nbsphinx",
   "notebook",
-  "sphinx<8.2",                     # furo requires sphinx < 8.2
+  "sphinx",
   "sphinx-copybutton",
   "sphinx-inline-tabs",
   "sphinx-lint",
