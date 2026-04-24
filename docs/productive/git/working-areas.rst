@@ -1,4 +1,4 @@
-.. SPDX-FileCopyrightText: 2020 Veit Schiele
+.. SPDX-FileCopyrightText: 2020 cusy GmbH
 ..
 .. SPDX-FileContributor: Modified by Kristian Rother
 ..
