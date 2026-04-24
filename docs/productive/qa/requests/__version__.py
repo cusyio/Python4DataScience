@@ -1,3 +1,4 @@
+# REUSE-IgnoreStart
 # .-. .-. .-. . . .-. .-. .-. .-.
 # |(  |-  |.| | | |-  `-.  |  `-.
 # ' ' `-' `-`.`-' `-' `-'  '  `-'
@@ -12,3 +13,4 @@ __author_email__ = "me@kennethreitz.org"
 __license__ = "Apache 2.0"
 __copyright__ = "Copyright 2020 Kenneth Reitz"
 __cake__ = "\u2728 \U0001f370 \u2728"
+# REUSE-IgnoreEnd

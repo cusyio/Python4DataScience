@@ -1,4 +1,4 @@
-.. SPDX-FileCopyrightText: 2020 Veit Schiele
+.. SPDX-FileCopyrightText: 2020 cusy GmbH
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
@@ -370,7 +370,7 @@ Git glossary
            100644 blob 669784da1fe0818e9abb795f73b7faf393832f2e .gitignore
            100644 blob 0a66f9a9ab72e3a99994803de8337f523b1b93d0 config
            $ git cat-file -p 36d2dc5a5228cbf65b8cfe913565c9be49db1a3d
-           # SPDX-FileCopyrightText: 2019 Veit Schiele
+           # SPDX-FileCopyrightText: 2019 cusy GmbH
            #
            # SPDX-License-Identifier: BSD-3-Clause
            ...

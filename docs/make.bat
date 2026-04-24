@@ -1,4 +1,4 @@
-REM SPDX-FileCopyrightText: 2019 Veit Schiele
+REM SPDX-FileCopyrightText: 2019 cusy GmbH
 REM
 REM SPDX-License-Identifier: BSD-3-Clause
 
