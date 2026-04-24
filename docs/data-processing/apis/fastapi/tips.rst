@@ -1,4 +1,4 @@
-.. SPDX-FileCopyrightText: 2024 Veit Schiele
+.. SPDX-FileCopyrightText: 2024 cusy GmbH
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 

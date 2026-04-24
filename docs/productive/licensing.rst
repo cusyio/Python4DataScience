@@ -1,4 +1,4 @@
-.. SPDX-FileCopyrightText: 2020 Veit Schiele
+.. SPDX-FileCopyrightText: 2020 cusy GmbH
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
@@ -466,11 +466,15 @@ information between projects and people. You can choose the appropriate SPDX
 identifiers from the `SPDX License List <https://spdx.org/licenses/>`_ and then
 add to the header of your licence files:
 
+.. REUSE-IgnoreStart
+
 .. code-block::
 
     # SPDX-FileCopyrightText: [year] [copyright holder] <[email address]>
     #
     # SPDX-License-Identifier: [identifier]
+
+.. REUSE-IgnoreEnd
 
 Check conformity
 ----------------
