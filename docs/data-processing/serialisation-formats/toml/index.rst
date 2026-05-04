@@ -39,7 +39,6 @@ Overview
 
     import toml
 
-
     config = toml.load("pyproject.toml")
 
 .. seealso::

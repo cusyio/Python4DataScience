@@ -94,7 +94,9 @@ class HTTPBasicAuth(AuthBase):
         return not self == other
 
     def __call__(self, r):
-        r.headers["Authorization"] = _basic_auth_str(self.username, self.password)
+        r.headers["Authorization"] = _basic_auth_str(
+            self.username, self.password
+        )
         return r
 
 
@@ -102,7 +104,9 @@ class HTTPProxyAuth(HTTPBasicAuth):
     """Attaches HTTP Proxy Authentication to a given Request object."""
 
     def __call__(self, r):
-        r.headers["Proxy-Authorization"] = _basic_auth_str(self.username, self.password)
+        r.headers["Proxy-Authorization"] = _basic_auth_str(
+            self.username, self.password
+        )
         return r
 
 
@@ -220,12 +224,16 @@ class HTTPDigestAuth(AuthBase):
         self._thread_local.last_nonce = nonce
 
         # XXX should the partial digests be encoded too?
-        base = 'username="%s", realm="%s", nonce="%s", uri="%s", ' 'response="%s"' % (
-            self.username,
-            realm,
-            nonce,
-            path,
-            respdig,
+        base = (
+            'username="%s", realm="%s", nonce="%s", uri="%s", '
+            'response="%s"'
+            % (
+                self.username,
+                realm,
+                nonce,
+                path,
+                respdig,
+            )
         )
         if opaque:
             base += ', opaque="%s"' % opaque
@@ -265,7 +273,9 @@ class HTTPDigestAuth(AuthBase):
         if "digest" in s_auth.lower() and self._thread_local.num_401_calls < 2:
             self._thread_local.num_401_calls += 1
             pat = re.compile(r"digest ", flags=re.IGNORECASE)
-            self._thread_local.chal = parse_dict_header(pat.sub("", s_auth, count=1))
+            self._thread_local.chal = parse_dict_header(
+                pat.sub("", s_auth, count=1)
+            )
 
             # Consume content and release the original connection
             # to allow our new request to reuse the same one.
@@ -292,7 +302,9 @@ class HTTPDigestAuth(AuthBase):
         self.init_per_thread_state()
         # If we have a saved nonce, skip the 401
         if self._thread_local.last_nonce:
-            r.headers["Authorization"] = self.build_digest_header(r.method, r.url)
+            r.headers["Authorization"] = self.build_digest_header(
+                r.method, r.url
+            )
         try:
             self._thread_local.pos = r.body.tell()
         except AttributeError:

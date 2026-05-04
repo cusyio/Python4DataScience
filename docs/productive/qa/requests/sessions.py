@@ -33,7 +33,12 @@ from .exceptions import (
 from .hooks import default_hooks, dispatch_hook
 
 # formerly defined here, reexposed here for backward compatibility
-from .models import DEFAULT_REDIRECT_LIMIT, REDIRECT_STATI, PreparedRequest, Request
+from .models import (
+    DEFAULT_REDIRECT_LIMIT,
+    REDIRECT_STATI,
+    PreparedRequest,
+    Request,
+)
 from .status_codes import codes
 from .structures import CaseInsensitiveDict
 from .utils import (
@@ -72,7 +77,8 @@ def merge_setting(request_setting, session_setting, dict_class=OrderedDict):
 
     # Bypass if not a dictionary (e.g. verify)
     if not (
-        isinstance(session_setting, Mapping) and isinstance(request_setting, Mapping)
+        isinstance(session_setting, Mapping)
+        and isinstance(request_setting, Mapping)
     ):
         return request_setting
 
@@ -190,7 +196,8 @@ class SessionRedirectMixin(object):
 
             if len(resp.history) >= self.max_redirects:
                 raise TooManyRedirects(
-                    "Exceeded {} redirects.".format(self.max_redirects), response=resp
+                    "Exceeded {} redirects.".format(self.max_redirects),
+                    response=resp,
                 )
 
             # Release the connection back into the pool.
@@ -227,7 +234,11 @@ class SessionRedirectMixin(object):
                 codes.permanent_redirect,
             ):
                 # https://github.com/psf/requests/issues/3490
-                purged_headers = ("Content-Length", "Content-Type", "Transfer-Encoding")
+                purged_headers = (
+                    "Content-Length",
+                    "Content-Type",
+                    "Transfer-Encoding",
+                )
                 for header in purged_headers:
                     prepared_request.headers.pop(header, None)
                 prepared_request.body = None
@@ -274,7 +285,9 @@ class SessionRedirectMixin(object):
                     **adapter_kwargs,
                 )
 
-                extract_cookies_to_jar(self.cookies, prepared_request, resp.raw)
+                extract_cookies_to_jar(
+                    self.cookies, prepared_request, resp.raw
+                )
 
                 # extract redirect url, if any, for the next loop
                 url = self.get_redirect_target(resp)
@@ -337,7 +350,9 @@ class SessionRedirectMixin(object):
             username, password = None, None
 
         if username and password:
-            headers["Proxy-Authorization"] = _basic_auth_str(username, password)
+            headers["Proxy-Authorization"] = _basic_auth_str(
+                username, password
+            )
 
         return new_proxies
 
@@ -689,7 +704,9 @@ class Session(SessionRedirectMixin):
         kwargs.setdefault("stream", self.stream)
         kwargs.setdefault("verify", self.verify)
         kwargs.setdefault("cert", self.cert)
-        kwargs.setdefault("proxies", self.rebuild_proxies(request, self.proxies))
+        kwargs.setdefault(
+            "proxies", self.rebuild_proxies(request, self.proxies)
+        )
 
         # It's possible that users might accidentally send a Request object.
         # Guard against that specific failure case.
@@ -745,7 +762,9 @@ class Session(SessionRedirectMixin):
         if not allow_redirects:
             try:
                 r._next = next(
-                    self.resolve_redirects(r, request, yield_requests=True, **kwargs)
+                    self.resolve_redirects(
+                        r, request, yield_requests=True, **kwargs
+                    )
                 )
             except StopIteration:
                 pass
@@ -772,9 +791,9 @@ class Session(SessionRedirectMixin):
             # Look for requests environment configuration and be compatible
             # with cURL.
             if verify is True or verify is None:
-                verify = os.environ.get("REQUESTS_CA_BUNDLE") or os.environ.get(
-                    "CURL_CA_BUNDLE"
-                )
+                verify = os.environ.get(
+                    "REQUESTS_CA_BUNDLE"
+                ) or os.environ.get("CURL_CA_BUNDLE")
 
         # Merge all the kwargs.
         proxies = merge_setting(proxies, self.proxies)
@@ -782,7 +801,12 @@ class Session(SessionRedirectMixin):
         verify = merge_setting(verify, self.verify)
         cert = merge_setting(cert, self.cert)
 
-        return {"verify": verify, "proxies": proxies, "stream": stream, "cert": cert}
+        return {
+            "verify": verify,
+            "proxies": proxies,
+            "stream": stream,
+            "cert": cert,
+        }
 
     def get_adapter(self, url):
         """
@@ -795,7 +819,9 @@ class Session(SessionRedirectMixin):
                 return adapter
 
         # Nothing matches :-/
-        raise InvalidSchema("No connection adapters were found for {!r}".format(url))
+        raise InvalidSchema(
+            "No connection adapters were found for {!r}".format(url)
+        )
 
     def close(self):
         """Closes all adapters and as such the session"""
