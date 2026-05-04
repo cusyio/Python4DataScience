@@ -7,7 +7,9 @@ except ImportError:
 
     import charset_normalizer as chardet
 
-    warnings.filterwarnings("ignore", "Trying to detect", module="charset_normalizer")
+    warnings.filterwarnings(
+        "ignore", "Trying to detect", module="charset_normalizer"
+    )
 
 # This code exists for backwards compatibility reasons.
 # I don't like it either. Just look the other way. :)
@@ -23,7 +25,7 @@ for package in ("urllib3", "idna"):
 target = chardet.__name__
 for mod in list(sys.modules):
     if mod == target or mod.startswith(target + "."):
-        sys.modules["requests.packages." + target.replace(target, "chardet")] = (
-            sys.modules[mod]
-        )
+        sys.modules[
+            "requests.packages." + target.replace(target, "chardet")
+        ] = sys.modules[mod]
 # Kinda cool, though, right?

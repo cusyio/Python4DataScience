@@ -292,7 +292,9 @@ _CREATEACCOUNTRESULT.fields_by_name["account"].message_type = _ACCOUNT
 _GETACCOUNTSREQUEST.fields_by_name["account"].message_type = _ACCOUNT
 _GETACCOUNTSRESULT.fields_by_name["account"].message_type = _ACCOUNT
 DESCRIPTOR.message_types_by_name["Account"] = _ACCOUNT
-DESCRIPTOR.message_types_by_name["CreateAccountRequest"] = _CREATEACCOUNTREQUEST
+DESCRIPTOR.message_types_by_name["CreateAccountRequest"] = (
+    _CREATEACCOUNTREQUEST
+)
 DESCRIPTOR.message_types_by_name["CreateAccountResult"] = _CREATEACCOUNTRESULT
 DESCRIPTOR.message_types_by_name["GetAccountsRequest"] = _GETACCOUNTSREQUEST
 DESCRIPTOR.message_types_by_name["GetAccountsResult"] = _GETACCOUNTSRESULT

@@ -52,7 +52,6 @@ We can create sample data with:
 
     from sklearn.datasets import make_blobs
 
-
     points, labels_true = make_blobs(
         n_samples=1000, centers=3, random_state=0, cluster_std=0.60
     )
@@ -133,7 +132,6 @@ algorithm:
 
      from sklearn.cluster import KMeans
 
-
      KMeans(10).fit_predict(points)
 
 * `dask_ml.cluster.KMeans
@@ -142,7 +140,6 @@ algorithm:
   .. code-block:: python
 
      from dask_ml.cluster import KMeans
-
 
      KMeans(10).fit(points).predict(points)
 

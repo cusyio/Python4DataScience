@@ -39,12 +39,7 @@ from .compat import (
     is_py2,
 )
 from .compat import json as complexjson
-from .compat import (
-    str,
-    urlencode,
-    urlsplit,
-    urlunparse,
-)
+from .compat import str, urlencode, urlsplit, urlunparse
 from .cookies import _copy_cookie_jar, cookiejar_from_dict, get_cookie_header
 from .exceptions import (
     ChunkedEncodingError,
@@ -223,7 +218,9 @@ class RequestHooksMixin(object):
         if isinstance(hook, Callable):
             self.hooks[event].append(hook)
         elif hasattr(hook, "__iter__"):
-            self.hooks[event].extend(h for h in hook if isinstance(h, Callable))
+            self.hooks[event].extend(
+                h for h in hook if isinstance(h, Callable)
+            )
 
     def deregister_hook(self, event, hook):
         """Deregister a previously registered hook.
@@ -445,9 +442,7 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
             raise InvalidURL(*e.args)
 
         if not scheme:
-            error = (
-                "Invalid URL {0!r}: No schema supplied. Perhaps you meant http://{0}?"
-            )
+            error = "Invalid URL {0!r}: No schema supplied. Perhaps you meant http://{0}?"
             error = error.format(to_native_string(url, "utf8"))
 
             raise MissingSchema(error)
@@ -501,7 +496,9 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
             else:
                 query = enc_params
 
-        url = requote_uri(urlunparse([scheme, netloc, path, None, query, fragment]))
+        url = requote_uri(
+            urlunparse([scheme, netloc, path, None, query, fragment])
+        )
         self.url = url
 
     def prepare_headers(self, headers):
@@ -795,7 +792,9 @@ class Response(object):
         """True if this Response is a well-formed HTTP redirect that could have
         been processed automatically (by :meth:`Session.resolve_redirects`).
         """
-        return "location" in self.headers and self.status_code in REDIRECT_STATI
+        return (
+            "location" in self.headers and self.status_code in REDIRECT_STATI
+        )
 
     @property
     def is_permanent_redirect(self):
@@ -836,7 +835,9 @@ class Response(object):
             # Special case for urllib3.
             if hasattr(self.raw, "stream"):
                 try:
-                    for chunk in self.raw.stream(chunk_size, decode_content=True):
+                    for chunk in self.raw.stream(
+                        chunk_size, decode_content=True
+                    ):
                         yield chunk
                 except ProtocolError as e:
                     raise ChunkedEncodingError(e)
@@ -858,7 +859,8 @@ class Response(object):
             raise StreamConsumedError()
         elif chunk_size is not None and not isinstance(chunk_size, int):
             raise TypeError(
-                "chunk_size must be an int, it is instead a %s." % type(chunk_size)
+                "chunk_size must be an int, it is instead a %s."
+                % type(chunk_size)
             )
         # simulate reading small chunks of the content
         reused_chunks = iter_slices(self._content, chunk_size)
@@ -913,12 +915,16 @@ class Response(object):
         if self._content is False:
             # Read the contents.
             if self._content_consumed:
-                raise RuntimeError("The content for this response was already consumed")
+                raise RuntimeError(
+                    "The content for this response was already consumed"
+                )
 
             if self.status_code == 0 or self.raw is None:
                 self._content = None
             else:
-                self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+                self._content = (
+                    b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+                )
 
         self._content_consumed = True
         # don't need to release the connection; that's been handled by urllib3
@@ -983,7 +989,9 @@ class Response(object):
             encoding = guess_json_utf(self.content)
             if encoding is not None:
                 try:
-                    return complexjson.loads(self.content.decode(encoding), **kwargs)
+                    return complexjson.loads(
+                        self.content.decode(encoding), **kwargs
+                    )
                 except UnicodeDecodeError:
                     # Wrong UTF codec detected; usually because it's not UTF-8
                     # but some other 8-bit codec.  This is an RFC violation,

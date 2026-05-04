@@ -23,10 +23,7 @@ from urllib3.exceptions import (
     ProtocolError,
 )
 from urllib3.exceptions import ProxyError as _ProxyError
-from urllib3.exceptions import (
-    ReadTimeoutError,
-    ResponseError,
-)
+from urllib3.exceptions import ReadTimeoutError, ResponseError
 from urllib3.exceptions import SSLError as _SSLError
 from urllib3.poolmanager import PoolManager, proxy_from_url
 from urllib3.response import HTTPResponse
@@ -81,7 +78,13 @@ class BaseAdapter(object):
         super(BaseAdapter, self).__init__()
 
     def send(
-        self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None
+        self,
+        request,
+        stream=False,
+        timeout=None,
+        verify=True,
+        cert=None,
+        proxies=None,
     ):
         """Sends PreparedRequest object. Returns Response object.
 
@@ -435,12 +438,20 @@ class HTTPAdapter(BaseAdapter):
         username, password = get_auth_from_url(proxy)
 
         if username:
-            headers["Proxy-Authorization"] = _basic_auth_str(username, password)
+            headers["Proxy-Authorization"] = _basic_auth_str(
+                username, password
+            )
 
         return headers
 
     def send(
-        self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None
+        self,
+        request,
+        stream=False,
+        timeout=None,
+        verify=True,
+        cert=None,
+        proxies=None,
     ):
         """Sends PreparedRequest object. Returns Response object.
 
@@ -474,7 +485,9 @@ class HTTPAdapter(BaseAdapter):
             proxies=proxies,
         )
 
-        chunked = not (request.body is None or "Content-Length" in request.headers)
+        chunked = not (
+            request.body is None or "Content-Length" in request.headers
+        )
 
         if isinstance(timeout, tuple):
             try:
@@ -516,7 +529,9 @@ class HTTPAdapter(BaseAdapter):
                 low_conn = conn._get_conn(timeout=DEFAULT_POOL_TIMEOUT)
 
                 try:
-                    low_conn.putrequest(request.method, url, skip_accept_encoding=True)
+                    low_conn.putrequest(
+                        request.method, url, skip_accept_encoding=True
+                    )
 
                     for header, value in request.headers.items():
                         low_conn.putheader(header, value)
