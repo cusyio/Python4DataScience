@@ -2,7 +2,6 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-import numpy as np
 import pandas as pd
 
 
@@ -16,7 +15,7 @@ def find_labels(points, centers):
 def compute_centers(points, labels):
     """Calculate the cluster centres."""
     df = pd.DataFrame(points)
-    return df.groupby(labels).mean().values
+    return df.groupby(labels).mean().to_numpy()
 
 
 def kmeans(points, n_clusters):

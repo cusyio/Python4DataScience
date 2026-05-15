@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import numba
+import numpy as np
 
 
 @numba.jit(nopython=True)
@@ -37,11 +38,16 @@ def compute_centers(points, labels):
     centers = [[0 for i in range(n_dims)] for j in range(n_centers)]
     counts = [0 for j in range(n_centers)]
 
-    for label, point in zip(labels, points):
+    for label, point in zip(labels, points, strict=True):
         counts[label] += 1
-        centers[label] = [a + b for a, b in zip(centers[label], point)]
+        centers[label] = [
+            a + b for a, b in zip(centers[label], point, strict=True)
+        ]
 
-    return [[x / count for x in center] for center, count in zip(centers, counts)]
+    return [
+        [x / count for x in center]
+        for center, count in zip(centers, counts, strict=True)
+    ]
 
 
 def kmeans(points, n_clusters):

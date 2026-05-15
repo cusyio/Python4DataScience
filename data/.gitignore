@@ -2,7 +2,9 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
+/example.webm
+/ignore-iot_constraints.tdda
+/iot_example.json
+/iris.csv
 /fortune500.csv
 /Big.Buck.Bunny.mp4
-/example.webm
-/iris.csv

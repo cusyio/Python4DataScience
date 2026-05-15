@@ -22,39 +22,54 @@ the data structure could look like this:
     fastapi-example
     ├── LICENSE
     ├── README.rst
-    ── alembic.ini
-    ── app
-       ├── __init__.py
-       ├── alembic
-       │   ├── README
-       │   ├── env.py
-       │   ├── script.py.mako
-       │   └── versions
-       │       └── 3512b954651e_initialize_models.py
-       ├── api
-       │   ├── __init__.py
-       │   ├── deps.py
-       │   ├── main.py
-       │   └── routes
-       │       ├── __init__.py
-       │       ├── items.py
-       │       └── utils.py
-       ├── core
-       │   ├── __init__.py
-       │   ├── config.py
-       │   └── db.py
-       ├── crud.py
-       ├── main.py
-       ├── models.py
-       ├── tests
-       │    ├── __init__.py
-       │    ├── api
-       │    │   ├── __init__.py
-       │    │   └── routes
-       │    │       ├── __init__.py
-       │    │       └── test_items.py
-       │    ├── conftest.py
-       │    └── crud
-       │        ├── __init__.py
-       │        └── test_items.py
-       └── pyproject.toml
+    ├── alembic.ini
+    └── app
+        ├── __init__.py
+        ├── alembic
+        │   ├── README
+        │   ├── env.py
+        │   ├── script.py.mako
+        │   └── versions
+        │       └── 3512b954651e_initialize_models.py
+        ├── api
+        │   ├── __init__.py
+        │   ├── deps.py
+        │   ├── main.py
+        │   └── routes
+        │       ├── __init__.py
+        │       ├── items.py
+        │       └── utils.py
+        ├── core
+        │   ├── __init__.py
+        │   ├── config.py
+        │   └── db.py
+        ├── crud.py
+        ├── main.py
+        ├── models.py
+        ├── tests
+        │    ├── __init__.py
+        │    ├── api
+        │    │   ├── __init__.py
+        │    │   └── routes
+        │    │       ├── __init__.py
+        │    │       └── test_items.py
+        │    ├── conftest.py
+        │    └── crud
+        │        ├── __init__.py
+        │        └── test_items.py
+        └── pyproject.toml
+
+:file:`app/`
+    Highest level of the app, contains the FastAPI app as well as the
+    configuration, database connection and database migration steps
+:file:`app/api`
+    The FastAPI app
+:file:`models.py`
+    The database model
+:file:`tests/`
+    Tests outside the application code
+:file:`pyproject.toml`
+    Tests outside the application code
+
+Use Pydantic intensively for data validation
+--------------------------------------------

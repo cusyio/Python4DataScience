@@ -22,6 +22,7 @@
 import os
 import re
 
+
 # Set canonical URL for the sitemap
 html_baseurl = "https://python4data.science/en/latest/"
 
@@ -35,7 +36,8 @@ author = "Veit Schiele"
 copyright = f"2019–2025, {author}"
 
 # The full version, including alpha/beta/rc tags
-release = re.sub("^v", "", os.popen("git describe --abbrev=0").read().strip())
+git_tag = "git describe --abbrev=0"
+release = re.sub("^v", "", os.popen(git_tag).read().strip())
 
 
 # -- General configuration ---------------------------------------------------
@@ -173,7 +175,7 @@ intersphinx_mapping = {
     "spack": ("https://spack-tutorial.readthedocs.io/en/latest", None),
     "ipyparallel": ("https://ipyparallel.readthedocs.io/en/latest", None),
     "bokeh": ("https://docs.bokeh.org/en/latest", None),
-    "pandas": ("https://pandas.pydata.org/pandas-docs/stable", None),
+    "pandas": ("https://pandas.pydata.org/docs/", None),
     "pyviz": ("https://pyviz-tutorial.readthedocs.io/en/latest", None),
     "python-basics": (
         "https://python-basics-tutorial.readthedocs.io/en/latest",
