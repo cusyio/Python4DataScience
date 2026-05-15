@@ -10,7 +10,7 @@ Requirements
 
 * Interpreter for Spack:
 
-  * Python 2.7 or Python 3.5–3.9
+  * Python 3.10–3.14
 
 * Building software
 
@@ -53,9 +53,6 @@ branch to the branch of the current release, in our case to `v0.17.1`:
 
     $ git clone https://github.com/spack/spack.git
     Cloning into 'spack'...
-    ...
-    $ cd spack
-    $ git switch v0.19
 
 Configure the shell
 -------------------

@@ -2,31 +2,27 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-from pathlib import Path
 
+import accounts_server
 import grpc
 import pytest
+
 from accounts_pb2 import CreateAccountRequest, GetAccountsRequest
+from accounts_pb2_grpc import AccountsStub, add_AccountsServicer_to_server
 
 
 @pytest.fixture(scope="module")
 def grpc_add_to_server():
-    from accounts_pb2_grpc import add_AccountsServicer_to_server
-
     return add_AccountsServicer_to_server
 
 
 @pytest.fixture(scope="module")
 def grpc_servicer():
-    from accounts_server import AccountsService
-
-    return AccountsService()
+    return accounts_server.AccountsService()
 
 
 @pytest.fixture(scope="module")
 def grpc_stub(grpc_channel):
-    from accounts_pb2_grpc import AccountsStub
-
     return AccountsStub(grpc_channel)
 
 
@@ -36,7 +32,10 @@ def test_create_account(grpc_stub):
     request = CreateAccountRequest(account_name=value)
     response = grpc_stub.CreateAccount(request)
 
-    assert f"{response.account}" == f'account_id: 1{nl}account_name: "test-data"{nl}'
+    assert (
+        f"{response.account}"
+        == f'account_id: 1{nl}account_name: "test-data"{nl}'
+    )
 
 
 def test_get_accounts(grpc_stub):
@@ -63,8 +62,10 @@ def grpc_server(_grpc_server, grpc_addr, my_ssl_key_path, my_ssl_cert_path):
 
 @pytest.fixture(scope="module")
 def my_channel_ssl_credentials(my_ssl_cert_path):
-    # If we're using self-signed certificate it's necessarily to pass root certificate to channel
-    return grpc.ssl_channel_credentials(root_certificates=my_ssl_cert_path.read_bytes())
+    """For self-signed certificate root certificate in channel are required."""
+    return grpc.ssl_channel_credentials(
+        root_certificates=my_ssl_cert_path.read_bytes()
+    )
 
 
 @pytest.fixture(scope="module")

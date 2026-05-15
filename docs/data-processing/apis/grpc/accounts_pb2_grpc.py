@@ -9,7 +9,7 @@ import accounts_pb2 as accounts__pb2
 import grpc
 
 
-class AccountsStub(object):
+class AccountsStub:
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -30,20 +30,22 @@ class AccountsStub(object):
         )
 
 
-class AccountsServicer(object):
+class AccountsServicer:
     """Missing associated documentation comment in .proto file."""
 
-    def CreateAccount(self, request, context):
+    def CreateAccount(self, context):
         """Missing associated documentation comment in .proto file."""
+        msg = "Method not implemented!"
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details("Method not implemented!")
-        raise NotImplementedError("Method not implemented!")
+        context.set_details(msg)
+        raise NotImplementedError(msg)
 
-    def GetAccounts(self, request, context):
+    def GetAccounts(self, context):
         """Missing associated documentation comment in .proto file."""
+        msg = "Method not implemented!"
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details("Method not implemented!")
-        raise NotImplementedError("Method not implemented!")
+        context.set_details(msg)
+        raise NotImplementedError(msg)
 
 
 def add_AccountsServicer_to_server(servicer, server):
@@ -66,7 +68,7 @@ def add_AccountsServicer_to_server(servicer, server):
 
 
 # This class is part of an EXPERIMENTAL API.
-class Accounts(object):
+class Accounts:
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -104,8 +106,8 @@ class Accounts(object):
         target,
         options=(),
         channel_credentials=None,
-        call_credentials=None,
         insecure=False,
+        call_credentials=None,
         compression=None,
         wait_for_ready=None,
         timeout=None,

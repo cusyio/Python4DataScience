@@ -14,7 +14,7 @@ But how do you get rid of Git LFS in such a repository?
 The following steps allow you to get rid of Git LFS:
 
 #. Use ``git lfs ls-files`` to get a list of all files managed by Git LFS.
-#. Next, we make sure that we have checked out all large files with  
+#. Next, we make sure that we have checked out all large files with
 
    .. code-block:: console
 
@@ -28,7 +28,7 @@ The following steps allow you to get rid of Git LFS:
       file.
    #. You can then stop Git tracking for each deleted entry in the
       :file:`.gitattributes` file, for example with :samp:`git lfs untrack
-      '*.{png}'`. 
+      '*.{png}'`.
 
       Alternatively, you can also use ``cut -f 1 < .gitattributes | xargs "git
       lfs untrack {}"`` for all files managed with Git LFS.

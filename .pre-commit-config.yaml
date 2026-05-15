@@ -31,27 +31,17 @@ repos:
     rev: 4b2e70d08cb2ccd26d1fba73588de41c7a5d50b7 # v0.25
     hooks:
     - id: validate-pyproject
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: 5e2fb545eba1ea9dc051f6f962d52fe8f76a9794 # v0.15.13
+    hooks:
+      - id: ruff-check
+        args: [--fix, --exit-non-zero-on-fix]
+      - id: ruff-format
   - repo: https://github.com/sphinx-contrib/sphinx-lint
     rev: c883505f64b59c3c5c9375191e4ad9f98e727ccd # v1.0.2
     hooks:
     - id: sphinx-lint
       types: [rst]
-  - repo: https://github.com/pycqa/isort
-    rev: dac090ce4d9ee313d086e2e89ab1acb8c2664fa1 # 9.0.0a3
-    hooks:
-    - id: isort
-      additional_dependencies: ["toml"]
-      entry: isort --profile=black
-      name: isort (python)
-  - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: fa505ab9c3e0fedafe1709fd7ac2b5f8996c670d # 26.3.1
-    hooks:
-    - id: black
-  - repo: https://github.com/tonybaloney/perflint
-    rev: 22f831509bc7765ce272ad6fcb99398d86a26a52 # 0.8.1
-    hooks:
-    - id: perflint
-      exclude: ^docs/
   - repo: https://github.com/adamchainz/blacken-docs
     rev: fda77690955e9b63c6687d8806bafd56a526e45f # 1.20.0
     hooks:

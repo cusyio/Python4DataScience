@@ -2,19 +2,29 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-from typing import Optional
+"""FastAPI application for items."""
 
 from pydantic import BaseModel
 
 from fastapi import FastAPI
 
+
 app = FastAPI()
 
 
 class Item(BaseModel):
+    """Defines the Item type with the attributes name, price and is_offer.
+
+    Args:
+        name (str): The name of the item.
+        price (float): The price of the item.
+        is_offer (bool): Is the item on offer? Defaults to None.
+
+    """
+
     name: str
     price: float
-    is_offer: Optional[bool] = None
+    is_offer: bool | None = None
 
 
 @app.get("/")
@@ -23,7 +33,7 @@ def read_root():
 
 
 @app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
+def read_item(item_id: int, q: str | None = None):
     return {"item_id": item_id, "q": q}
 
 

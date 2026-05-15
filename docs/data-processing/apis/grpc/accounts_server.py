@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import logging
+
 from concurrent import futures
 
 import accounts_pb2 as accounts_messages
@@ -19,7 +20,7 @@ class AccountsService(accounts_service.AccountsServicer):
         )
         return accounts_messages.CreateAccountResult(account=account)
 
-    def GetAccounts(self, request, context):
+    def GetAccounts(self, request):
         for account in request.account:
             account = accounts_messages.Account(
                 account_name=account.account_name,

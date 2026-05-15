@@ -52,7 +52,6 @@ We can create sample data with:
 
     from sklearn.datasets import make_blobs
 
-
     points, labels_true = make_blobs(
         n_samples=1000, centers=3, random_state=0, cluster_std=0.60
     )
@@ -133,7 +132,6 @@ algorithm:
 
      from sklearn.cluster import KMeans
 
-
      KMeans(10).fit_predict(points)
 
 * `dask_ml.cluster.KMeans
@@ -142,7 +140,6 @@ algorithm:
   .. code-block:: python
 
      from dask_ml.cluster import KMeans
-
 
      KMeans(10).fit(points).predict(points)
 
@@ -192,7 +189,7 @@ thus avoid slow loops, for example:
 .. literalinclude:: np_kmeans.py
    :caption: np_kmeans.py
    :name: np_kmeans.py
-   :lines: 5-12
+   :lines: 6-10
 
 The advantages of NumPy are that the Python overhead only occurs per array and
 not per array element. However, because NumPy uses a specific language for array
@@ -216,7 +213,7 @@ batch operations can also lead to excessive memory consumption.
     .. literalinclude:: pd_kmeans.py
        :caption: pd_kmeans.py
        :name: pd_kmeans.py
-       :lines: 5-8, 16-19
+       :lines: 5-18
 
 `scipy.spatial <https://docs.scipy.org/doc/scipy/reference/spatial.html>`_
     for spatial queries like distances, nearest neighbours, k-Means :abbr:`etc
@@ -227,7 +224,7 @@ batch operations can also lead to excessive memory consumption.
     .. literalinclude:: sp_kmeans.py
        :caption: sp_kmeans.py
        :name: sp_kmeans.py
-       :lines: 5-13
+       :lines: 5-14
 
 `scipy.sparse <https://docs.scipy.org/doc/scipy/reference/sparse.html>`_
     `sparse matrices <https://en.wikipedia.org/wiki/Sparse_matrix>`_
@@ -373,7 +370,7 @@ scientific Python and NumPy code into fast machine code, for example:
 .. literalinclude:: nb_kmeans.py
    :caption: nb_kmeans.py
    :name: nb_kmeans.py
-   :lines: 5-29
+   :lines: 5-30
 
 However, Numba requires `LLVM <https://en.wikipedia.org/wiki/LLVM>`_ and some
 Python constructs are not supported.
