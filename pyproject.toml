@@ -153,5 +153,5 @@ lint.isort.lines-after-imports = 2
 lint.isort.lines-between-types = 1
 
 [tool.codespell]
-skip = "*.csv, *.html, *.pdf, *.ipynb, ./docs/_build/*, ./styles/*"
 ignore-words-list = "AAS, ans, bund, comit, fo, Groth, nd, Ned, ORE, ore, Redict, redict, registr, reStructedText, splitted"
+skip = "*.csv, *.html, *.pdf, *.ipynb, ./docs/_build/*, ./styles/*"
