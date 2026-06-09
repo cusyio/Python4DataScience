@@ -29,26 +29,76 @@ This check determines whether the project has open, unfixed vulnerabilities in
 its own code base or in its dependencies. An open vulnerability can be easily
 exploited and should be closed as soon as possible.
 
-For such a check, you can use for example `uv-secure
-<https://pypi.org/project/uv-secure/>`_. Alternatively, you can use `osv
-<https://pypi.org/project/osv/>`_ or `pip-audit
-<https://pypi.org/project/pip-audit/>`_, which uses the `Open Source
-Vulnerability Database <https://osv.dev>`_.
+For such a check, you can use for example ``uv audit`` Alternatively, you can
+use `osv <https://pypi.org/project/osv/>`_ or `pip-audit
+<https://pypi.org/project/pip-audit/>`_.
+
+``uv audit`` is a new command introduced in uv≥0.11.19 that checks the
+dependencies in your project for known vulnerabilities in the `OSV
+<https://osv.dev>`_ database and ‘undesirable’ project statuses, such as
+*deprecated*:
+
+.. code-block:: console
+
+   $ uv audit
+   warning: `uv audit` is experimental and may change without warning. Pass `--preview-features audit-command` to disable this warning.
+   Resolved 115 packages in 16ms
+   Found 12 known vulnerabilities and no adverse project statuses in 114 packages
+
+   Vulnerabilities:
+
+   idna 3.12 has 1 known vulnerability:
+   - GHSA-65pc-fj4g-8rjx: Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix
+     Fixed in: 3.15
+     Advisory information: https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx
+   …
+
+``uv add``, ``uv sync``, and so on can now be run during every synchronisation
+process to check for previously identified malware. This feature is not enabled
+by default, but it can be easily enabled by setting  ``UV_MALWARE_CHECK=1`` in
+the shell.
+
+.. seealso::
+   * `uv audit <https://docs.astral.sh/uv/reference/cli/#uv-audit>`_
+   * `uv audit settings <https://docs.astral.sh/uv/reference/settings/#audit>`_
 
 If a vulnerability is found in a dependency, you should update to a
 non-vulnerable version; if no update is available, you should consider removing
 the dependency.
 
-If you believe that the vulnerability does not affect your project, an
-:file:`osv-scanner.toml` file can be created for ``osv``, including the ID to
-ignore and a reason, for example:
+If you believe that the security vulnerability does not affect your project, you
+can define exceptions for ``uv audit`` in the :file:`pyproject.toml` file, for
+example:
 
 .. code-block:: toml
+   :caption: pyproject.toml
 
-   [[IgnoredVulns]]
-   id = "GO-2022-1059"
-   # ignoreUntil = 2022-11-09 # Optional exception expiry date
-   reason = "No external http servers are written in Go lang."
+   [tool.uv.audit]
+   ignore = ["PYSEC-2022-43017", "GHSA-5239-wwwm-4pmq"]
+
+or better still:
+
+.. code-block:: toml
+   :caption: pyproject.toml
+
+   [tool.uv.audit]
+   ignore-until-fixed = ["PYSEC-2022-43017"]
+
+.. seealso::
+   * `ignore <https://docs.astral.sh/uv/reference/settings/#audit_ignore>`_
+   * `ignore-until-fixed
+     <https://docs.astral.sh/uv/reference/settings/#audit_ignore-until-fixed>`_
+
+You can also add the vulnerability analysis using ``uv-audit`` to your
+:doc:`pre-commit <git/advanced/hooks/pre-commit>` checks:
+
+.. code-block:: yaml
+
+   - repo: https://github.com/astral-sh/uv-pre-commit
+     rev: 73c2d77a42a113aee9e4b748c24937f09557b82d # 0.11.24
+     hooks:
+     - id: uv-audit
+       files: ^(uv\.lock|pyproject\.toml)$
 
 Maintenance
 -----------

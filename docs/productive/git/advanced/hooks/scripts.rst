@@ -73,6 +73,9 @@ Linters and formatters
     `prettier <https://github.com/pre-commit/mirrors-prettier>`_
         provides `prettier <https://github.com/prettier/prettier>`__
 
+`ruff-pre-commit <https://github.com/astral-sh/ruff-pre-commit>`_
+    pre-commit-Hook für :doc:`../../../qa/ruff`
+
 `black <https://github.com/psf/black>`_
     for formatting Python code
 
