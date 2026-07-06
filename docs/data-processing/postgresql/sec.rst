@@ -44,9 +44,8 @@ easily activated with
 
     CREATE EXTENSION pgcrypto;
 
-For this reason, secure passwords should be assigned when they are created,
-which can then get saved e.g. in `Vault <https://www.vaultproject.io/>`_ or
-similar:
+For this reason, strong passwords should be created, which can then be used, for
+example, in `Vault <https://developer.hashicorp.com/vault>`_ or similar:
 
 .. code-block:: postgresql
 

@@ -65,8 +65,7 @@ Jobs
     define what needs to be done, for example compiling code or testing.
 
     .. seealso::
-       * `GitLab Docs: Jobs
-         <https://docs.gitlab.com/ee/ci/jobs/index.html>`_
+       * `GitLab Docs: Jobs <https://docs.gitlab.com/ci/jobs/>`_
        * :doc:`python-basics:packs/cibuildwheel`
        * :ref:`pre-commit Hooks <pre-commit-in-gitlab-ci>`
        * :ref:`Licensing <reuse-in-gitlab-ci>`
@@ -77,12 +76,11 @@ Stages
 
     .. seealso::
        `GitLab Docs: CI/CD YAML syntax reference
-       <https://docs.gitlab.com/ee/ci/yaml/index.html#stages>`_
+       <https://docs.gitlab.com/ci/yaml/#stages>`_
 
 *Jobs* are executed by so-called `runners
-<https://docs.gitlab.com/ee/ci/runners/index.html>`_. Several *jobs* in a
-*stage* are executed in parallel, provided there are enough simultaneous runners
-available.
+<https://docs.gitlab.com/ci/runners/>`_. Several *jobs* in a *stage* are
+executed in parallel, provided there are enough simultaneous runners available.
 
 If all *jobs* in a *stage* are successful, the pipeline continues with the next
 *stage*.
@@ -163,13 +161,13 @@ a running pipeline, retry *jobs* in a failed pipeline or delete a pipeline.
 
 .. seealso::
    * `GitLab Docs: Customize pipeline configuration
-     <https://docs.gitlab.com/ee/ci/yaml/index.html>`_
+     <https://docs.gitlab.com/ci/yaml/>`_
    * `GitLab Docs: Scheduled pipelines
-     <https://docs.gitlab.com/ee/ci/pipelines/schedules.html>`_
+     <https://docs.gitlab.com/ci/pipelines/schedules/>`_
    * `GitLab Docs: GitLab CI/CD variables
-     <https://docs.gitlab.com/ee/ci/variables/index.html>`_
+     <https://docs.gitlab.com/ci/variables/>`_
    * `GitLab Docs: Predefined variables reference
-     <https://docs.gitlab.com/ee/ci/variables/predefined_variables.html>`_
+     <https://docs.gitlab.com/ci/variables/predefined_variables/>`_
 
 .. toctree::
    :hidden:

@@ -61,7 +61,7 @@ you should use the `lockFileMaintenance
 <https://docs.renovatebot.com/configuration-options/#lockfilemaintenance>`_
 option in the :file:`renovate.json5` file in your repository, for example:
 
-.. code-block:: json5
+.. code-block::
    :caption: renovate.json5
 
    {
@@ -73,11 +73,11 @@ option in the :file:`renovate.json5` file in your repository, for example:
 
 However, Renovate does not automatically recognise files with
 :ref:`inline-script-metadata`. You must explicitly specify these Python scripts
-with `fileMatch
-<https://docs.renovatebot.com/configuration-options/#filematch>`_, for example
-with:
+with `managerFilePatterns
+<https://docs.renovatebot.com/configuration-options/#managerfilepatterns>`_, for
+example with:
 
-.. code-block:: json5
+.. code-block::
    :caption: renovate.json5
    :emphasize-lines: 4-5
 

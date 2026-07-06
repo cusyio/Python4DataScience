@@ -23,29 +23,32 @@ High-level APIs
 
     Integrated file systems:
 
-    * `AppFS <https://www.pyfilesystem.org/page/appfs/>`_ for predefined storage
-      locations in operating systems where applications can store data
-    * `FTPFS <https://www.pyfilesystem.org/page/ftpfs/>`_ for working with FTP
-      servers
-    * `MemoryFS <https://www.pyfilesystem.org/page/memoryfs/>`_ for caches, temporary data storage, unit tests, :abbr:`etc. (et cetera)` that exist in the
-      working memory
-    * `MountFS <https://www.pyfilesystem.org/page/mountfs/>`_ for a virtual file
-      system that can mount other file systems
-    * `MultiFS <https://www.pyfilesystem.org/page/multifs/>`_ for a virtual file
-      system that combines other file systems
-    * `OSFS <https://www.pyfilesystem.org/page/osfs/>`_ for the OS file system
-    * `TarFS <https://www.pyfilesystem.org/page/tarfs/>`_ reads and writes
-      compressed tar archives
-    * `TempFS <https://www.pyfilesystem.org/page/tempfs/>`_ contains temporary
-      data
-    * `ZipFS <https://www.pyfilesystem.org/page/zipfs/>`_ reads and writes Zip
-      files
+    * `AppFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/appfs.html>`_
+      for predefined storage locations in operating systems where applications
+      can store data
+    * `FTPFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/ftpfs.html>`_
+      for working with FTP servers
+    * `MemoryFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/memoryfs.html>`_
+      for caches, temporary data storage, unit tests, :abbr:`etc. (et cetera)`
+      that exist in the working memory
+    * `MountFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/mountfs.html>`_
+      for a virtual file system that can mount other file systems
+    * `MultiFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/multifs.html>`_
+      for a virtual file system that combines other file systems
+    * `OSFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/osfs.html>`_
+      for the OS file system
+    * `TarFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/zipfs.html>`_
+      reads and writes compressed tar archives
+    * `TempFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/tempfs.html?highlight=tempfs#module-fs.tempfs>`_
+      contains temporary data
+    * `ZipFS <https://pyfilesystem2.readthedocs.io/en/latest/reference/zipfs.html>`_
+      reads and writes Zip files
 
     File systems of the PyFilesystem organization on GitHub:
 
-    * `DropBoxFS <https://www.pyfilesystem.org/page/dropboxfs/>`_
-    * `S3FS <https://www.pyfilesystem.org/page/s3fs/>`_
-    * `WebDavFS <https://www.pyfilesystem.org/page/index-of-filesystems/>`_
+    * `DropBoxFS <https://github.com/PyFilesystem/fs.dropboxfs>`_
+    * `S3FS <https://github.com/PyFilesystem/s3fs>`_
+    * `WebDavFS <https://github.com/PyFilesystem/webdavfs>`_
 
     File systems from third-party developers:
 
@@ -59,8 +62,6 @@ High-level APIs
     * `fs.smbfs <https://github.com/althonos/fs.smbfs>`_ for Samba
     * `fs.sshfs <https://github.com/althonos/fs.sshfs>`_ for  SSH with
       :ref:`paramiko`
-    * `mp-fs-wsgidav <https://github.com/mikespub-org/mp-fs-wsgidav>`_ for
-      WsgiDAV
 
 .. _fsspec:
 
@@ -91,11 +92,11 @@ High-level APIs
     * `boxfs <https://github.com/IBM/boxfs>`_ for access to Box file storage
     * `dropbox <https://github.com/fsspec/dropboxdrivefs>`_ for access to
       Dropbox shares
-    * `dvc <https://github.com/iterative/dvc>`_ for accessing a DVC repository
+    * `dvc <https://github.com/treeverse/dvc>`_ for accessing a DVC repository
       as a file system
     * `gcsfs <https://github.com/fsspec/gcsfs>`_ for Google Cloud Storage
-    * `gdrive <https://github.com/fsspec/gdrivefs>`_ for access to Google Drive
-      and shares
+    * `gdrive <https://github.com/fsspec/gdrive-fsspec>`_ for access to Google
+      Drive and shares
     * `huggingface_hub
       <https://huggingface.co/docs/huggingface_hub/main/en/guides/hf_file_system>`_
       for access to the Hugging Face Hub file system
@@ -192,7 +193,7 @@ Specialised libraries
     .. image::
        https://raster.shields.io/github/license/aliyun/aliyun-oss-python-sdk
 
-`minio <https://min.io/docs/minio/linux/developers/python/minio-py.html>`_
+`minio <https://docs.min.io/aistor/developers/sdk/python/>`_
     MinIO Python Client SDK for Amazon S3 compatible cloud storage.
 
     .. image::

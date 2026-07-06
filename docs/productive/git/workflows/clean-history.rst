@@ -124,7 +124,7 @@ In Git, however, there is an even easier way to correct a previous commit: with
       --fixup:amend={SHA}`.
 
       Further options can be found in the `Git commit documentation
-      <https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordltcommitgt>`_.
+      <https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordcommit>`_.
 
 ``git history``
 ---------------

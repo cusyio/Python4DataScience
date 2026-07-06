@@ -102,7 +102,7 @@ will be written. The directory structure will then look like this:
    └── uv.lock
 
 .. seealso::
-   `dvc repro <https://dvc.org/doc/command-reference/repro>`_
+   `dvc repro <https://doc.dvc.org/command-reference/repro>`_
 
 The new and modified programme and configuration files should now be managed in
 Git:

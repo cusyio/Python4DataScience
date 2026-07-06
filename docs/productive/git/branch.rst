@@ -261,7 +261,7 @@ Resolving conflicts when merging can be time-consuming, but aliases can speed up
 the process.
 
 You can use the `--diff-filter
-<https://git-scm.com/docs/diff-options#Documentation/diff-options.txt-code--diff-filterACDMRTUXBcode>`_
+<https://git-scm.com/docs/diff-options#Documentation/diff-options.txt---diff-filterACDMRTUXB>`_
 option for ``git diff`` to display only the files that are not merged:
 
 .. code-block:: console

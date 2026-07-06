@@ -9,6 +9,8 @@ So far, we have looked at how you can use Git to manage the different states of
 your code. Now we want to show you the :ref:`data <git-data-model>` and
 :ref:`storage models <git-storage-model>` that underlie Git.
 
+.. _git-data-model:
+
 Data Model
 ----------
 

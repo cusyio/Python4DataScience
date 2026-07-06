@@ -10,7 +10,7 @@ different permissions. If the person is in both a project group and the project,
 the highest role is used.
 
 .. seealso::
-   * `Permissions and roles <https://docs.gitlab.com/ee/user/permissions.html>`_
+   * `Permissions and roles <https://docs.gitlab.com/user/permissions/>`_
 
 Members of a project
 --------------------
@@ -71,9 +71,9 @@ usually enforced on the branch by default:
 
 .. seealso::
    * `Protected branches
-     <https://docs.gitlab.com/ee/user/project/protected_branches.html>`_
+     <https://docs.gitlab.com/user/project/repository/branches/protected/>`_
    * `Pipeline security on protected branches
-     <https://docs.gitlab.com/ee/ci/pipelines/index.html#pipeline-security-on-protected-branches>`_
+     <https://docs.gitlab.com/ci/pipelines/#pipeline-security-on-protected-branches>`_
 
 Configure protected branches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -39,7 +39,7 @@ This adds a new level to the :file:`dvc.yaml` file:
 Line 39
     `evaluate.py
     <https://github.com/veit/dvc-example/blob/main/src/dvc_example/evaluate.py>`_
-    uses `DVCLive <https://dvc.org/doc/dvclive>`_ to write metrics (for example,
+    uses `DVCLive <https://doc.dvc.org/dvclive>`_ to write metrics (for example,
     :abbr:`AUC (Area Under the Curve` and :abbr:`ROC (Receiver Operating
     Characteristic` curve) to the  :file:`eval` directory, which DVC can analyse
     to compare and visualise them across iterations. Typically, DVCLive
@@ -48,8 +48,8 @@ Line 39
 
     .. seealso::
        * `Visualizing Plots
-         <https://dvc.org/doc/user-guide/experiment-management/visualizing-plots>`_
-       * `DVCLive <https://dvc.org/doc/dvclive>`_
+         <https://doc.dvc.org/user-guide/experiment-management/visualizing-plots>`_
+       * `DVCLive <https://doc.dvc.org/dvclive>`_
 
 Line 41
     The metrics and plots are stored in the :file:`eval` directory, so these
@@ -72,7 +72,7 @@ Now we can run our evaluations and save the results:
 
 .. _metrics:
 
-With `dvc metrics <https://dvc.org/doc/command-reference/metrics>`_, you can
+With `dvc metrics <https://doc.dvc.org/command-reference/metrics>`_, you can
 also generate metrics via the command line:
 
 ``dvc metrics show``
@@ -85,7 +85,7 @@ also generate metrics via the command line:
        eval/metrics.json  0.9014           0.95704           0.93196         0.97743
 
     .. seealso::
-       `dvc metrics show <https://dvc.org/doc/command-reference/metrics/show>`_
+       `dvc metrics show <https://doc.dvc.org/command-reference/metrics/show>`_
 
 ``dvc metrics diff``
     shows changes in metrics between commits, for example:
@@ -100,7 +100,7 @@ also generate metrics via the command line:
        eval/metrics.json  roc_auc.train   -       0.97743      -
 
     .. seealso::
-       `dvc metrics diff <https://dvc.org/doc/command-reference/metrics/diff>`_
+       `dvc metrics diff <https://doc.dvc.org/command-reference/metrics/diff>`_
 
 .. _plots:
 
@@ -111,8 +111,8 @@ also generate metrics via the command line:
        :file: plots.html
 
 .. seealso::
-   * `dvc plots show <https://dvc.org/doc/command-reference/plots/show>`_
-   * `dvc plots diff <https://dvc.org/doc/command-reference/plots/diff>`_
+   * `dvc plots show <https://doc.dvc.org/command-reference/plots/show>`_
+   * `dvc plots diff <https://doc.dvc.org/command-reference/plots/diff>`_
 
 Compare metrics
 ---------------

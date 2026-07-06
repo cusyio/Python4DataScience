@@ -166,7 +166,7 @@ Set up
 
    #. First you add the following to your :file:`~/.config/git/config` file:
 
-      .. code-block:: ini
+      .. code-block::
 
          [core]
          attributesfile = ~/.config/git/attributes

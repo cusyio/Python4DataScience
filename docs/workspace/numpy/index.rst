@@ -32,7 +32,7 @@ the main functionality of NumPy:
 
 .. tip::
    `cusy seminar: Numerical calculations with NumPy
-   <https://cusy.io/en/our-training-courses/numerical-calculations-with-numpy>`_
+   <https://cusy.io/en/our-training-courses/numerical-calculations-with-numpy.html>`_
 
 .. seealso::
     * `Home

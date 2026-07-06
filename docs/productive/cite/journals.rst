@@ -42,8 +42,8 @@ Biology
   <https://journals.sagepub.com/home/bbia>`_
 * `Biophysical Journal
   <https://www.cell.com/biophysj/home>`_
-* `BMC Bioinformatics <https://bmcbioinformatics.biomedcentral.com/>`_
-* `BMC Systems Biology <https://bmcneurosci.biomedcentral.com/>`_
+* `BMC Bioinformatics <https://link.springer.com/journal/12859>`_
+* `BMC Systems Biology <https://link.springer.com/journal/12868>`_
 * `Bone <https://www.sciencedirect.com/journal/bone>`_
 * `Computer Methods and Programs in Biomedicine
   <https://www.journals.elsevier.com/computer-methods-and-programs-in-biomedicine>`_
@@ -51,9 +51,9 @@ Biology
   <https://currentprotocols.onlinelibrary.wiley.com/journal/1934340x>`_
 * `Database: The Journal of Biological Databases and Curation
   <https://academic.oup.com/database>`_
-* `Ecography <http://www.ecography.org/>`_
+* `Ecography <https://nso-journals.org/ecography>`_
 * `eLife <https://elifesciences.org/articles/tools-resources>`_
-* `Epidemiology <https://journals.lww.com/epidem/pages/default.aspx>`_
+* `Epidemiology <https://www.ovid.com/jnls/epidem>`_
 * `Evolutionary Bioinformatics
   <https://journals.sagepub.com/home/evb>`_
 * `F1000 Research <https://f1000research.com/>`_
@@ -81,7 +81,7 @@ Chemistry
   <https://pubs.acs.org/journal/jctcce>`_
 * `Journal of Chemical Information and Modelling
   <https://pubs.acs.org/journal/jcisd8>`_
-* `Journal of Cheminformatics <https://jcheminf.biomedcentral.com/>`_
+* `Journal of Cheminformatics <https://link.springer.com/journal/13321>`_
 * `Journal of Computational Chemistry
   <https://onlinelibrary.wiley.com/journal/1096987x>`_
 * `Molecular Simulation <https://www.tandfonline.com/loi/gmos20>`_
@@ -92,7 +92,7 @@ Human and social sciences
 -------------------------
 
 * `Digital Humanities Quarterly
-  <http://www.digitalhumanities.org/dhq/>`_
+  <https://dhq.digitalhumanities.org/>`_
 * `Journal of Artificial Societies and Social Simulation
   <https://www.jasss.org/JASSS.html>`_
 * `Journal of Economic Dynamics and Control
@@ -152,9 +152,9 @@ Physics and Earth Sciences
 * `AAS: The Astrophysical Journal Supplement Series <https://iopscience.iop.org/journal/0067-0049/>`_
 * `Astronomy and Computing
   <https://www.journals.elsevier.com/astronomy-and-computing>`_
-* `Communications in Computational Physics <https://www.global-sci.org/cicp>`_
+* `Communications in Computational Physics <https://www.global-sci.com/cicp>`_
 * `Computational Astrophysics and Cosmology
-  <https://comp-astrophys-cosmol.springeropen.com/>`_
+  <https://link.springer.com/journal/40668/volumes-and-issues>`_
 * `Computer Physics Communications
   <https://www.sciencedirect.com/journal/computer-physics-communications>`_
 * `Computers and Geosciences

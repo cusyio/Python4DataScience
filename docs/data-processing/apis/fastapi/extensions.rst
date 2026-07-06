@@ -8,7 +8,7 @@ Extensions
 Administration
 --------------
 
-`SQLAlchemy Admin for Starlette/FastAPI <https://github.com/aminalaee/sqladmin>`_
+`SQLAlchemy Admin for Starlette/FastAPI <https://github.com/smithyhq/sqladmin>`_
     Flexible admin interface for :doc:`/data-processing/postgresql/sqlalchemy`
     models.
 
@@ -130,22 +130,23 @@ ORMs
     .. image:: https://raster.shields.io/github/license/tortoise/tortoise-orm
        :alt: License
 
-`ormar <https://github.com/collerek/ormar/>`_
+`ormar <https://github.com/ormar-orm/ormar>`_
     Asynchronous mini-ORM, with which you only need to maintain one set of
     models and migrate them with :doc:`/data-processing/postgresql/alembic` if
     necessary (→ `example
-    <https://collerek.github.io/ormar/latest/fastapi/>`__); it is also supported
-    by `fastapi-users <https://github.com/fastapi-users/fastapi-users>`_,
-    `fastapi-crudrouter <https://github.com/awtkns/fastapi-crudrouter>`_ and
-    `fastapi-pagination <https://github.com/uriyyo/fastapi-pagination>`_
+    <https://ormar-orm.github.io/ormar/latest/fastapi/>`__); it is also
+    supported by `fastapi-users
+    <https://github.com/fastapi-users/fastapi-users>`_, `fastapi-crudrouter
+    <https://github.com/awtkns/fastapi-crudrouter>`_ and `fastapi-pagination
+    <https://github.com/uriyyo/fastapi-pagination>`_
 
     .. image:: https://raster.shields.io/pypi/dm/ormar
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/collerek/ormar
+    .. image:: https://raster.shields.io/github/contributors/ormar-orm/ormar
        :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/collerek/ormar
+    .. image:: https://raster.shields.io/github/commit-activity/y/ormar-orm/ormar
        :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/collerek/ormar
+    .. image:: https://raster.shields.io/github/license/ormar-orm/ormar
        :alt: License
 
 `Prisma Client Python <https://github.com/RobertCraigie/prisma-client-py>`_
@@ -227,7 +228,7 @@ ODMs
 `Beanie <https://github.com/BeanieODM/beanie>`_
     Asynchronous Python object document mapper (ODM) for MongoDB, based on
     `Motor <https://motor.readthedocs.io/en/stable/>`_ and `Pydantic
-    <https://docs.pydantic.dev/latest/>`__
+    <https://pydantic.dev/docs/validation/latest/get-started/>`__
 
     .. image:: https://raster.shields.io/pypi/dm/beanie
        :alt: Downloads
@@ -240,7 +241,7 @@ ODMs
 
 `ODMantic <https://github.com/art049/odmantic/>`_
     Asynchronous ODM (Object Document Mapper) for MongoDB based on Python type
-    hints and `pydantic <https://docs.pydantic.dev/latest/>`__
+    hints and `pydantic <https://pydantic.dev/docs/validation/latest/get-started/>`__
 
     .. image:: https://raster.shields.io/pypi/dm/odmantic
        :alt: Downloads
@@ -670,17 +671,17 @@ Dormant projects
     .. image:: https://raster.shields.io/github/license/perdy/starlette-prometheus
        :alt: Licence
 
-`FastAPI Utilities <https://github.com/dmontagu/fastapi-utils>`_
+`FastAPI Utilities <https://github.com/fastapiutils/fastapi-utils>`_
     Utilities to reduce boilerplate and reuse common functionality across
     projects.
 
     .. image:: https://raster.shields.io/pypi/dm/fastapi-utils
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/dmontagu/fastapi-utils
+    .. image:: https://raster.shields.io/github/contributors/fastapiutils/fastapi-utils
        :alt: Contributors
-    .. image:: https://raster.shields.io/github/commit-activity/y/dmontagu/fastapi-utils
+    .. image:: https://raster.shields.io/github/commit-activity/y/fastapiutils/fastapi-utils
        :alt: Commit activity
-    .. image:: https://raster.shields.io/github/license/dmontagu/fastapi-utils
+    .. image:: https://raster.shields.io/github/license/fastapiutils/fastapi-utils
        :alt: Licence
 
 `Fastapi Camelcase <https://github.com/nf1s/fastapi-camelcase>`_

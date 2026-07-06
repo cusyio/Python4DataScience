@@ -22,7 +22,7 @@ required.
      <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598>`_
    * Karl Fogel: `Producing Open Source Software <https://producingoss.com/>`_
    * `Forschungsdaten veröffentlichen
-     <https://forschungsdaten.info/themen/rechte-und-pflichten/forschungsdaten-veroeffentlichen/>`_
+     <https://forschungsdaten.info/fdm-allgemein/rechte-und-pflichten/forschungsdaten-veroeffentlichen>`_
 
 Proprietary software licenses
 -----------------------------
@@ -105,8 +105,8 @@ they are `not recommended for software
 .. tip::
    * The `DEAL consortium <https://deal-konsortium.de/en/>`_ recommends the CC
      BY licence for Open Access publications of research results, see also `Why
-   CC BY is the Best Choice for Open Access Publishing
-   <https://deal-konsortium.de/en/why-ccby>`_.
+     CC BY is the Best Choice for Open Access Publishing
+     <https://deal-konsortium.de/en/why-ccby>`_.
 
    * :abbr:`RADAR (Research Data Repository)`, a cross-disciplinary repository
      for archiving and publishing research data, recommends only one of the `CC
@@ -167,7 +167,7 @@ as MIT or Apache 2.0, there are a number of ML model-specific licences that have
 been developed for a company or specific models:
 
 * `Microsoft Data Use Agreement for Open AI Model Development
-  <https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Rjfq>`_
+  <https://web.archive.org/web/20250228025544/https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Rjfq>`_
 * `OPT-175B
   <https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MODEL_LICENSE.md>`_
 * `BigScience BLOOM RAIL v1.0
@@ -196,8 +196,8 @@ been developed for a company or specific models:
 AI models that are licensed under an open source licence but whose training data
 and programmes have **not** been published are not compliant with the `Debian
 Free Software Guidelines (DFSG)
-<https://de.wikipedia.org/wiki/Debian_Free_Software_Guidelines>`_, see also
-`Interpretation of DFSG on Artificial Intelligence (AI) Models
+<https://en.wikipedia.org/wiki/The_Open_Source_Definition#Debian_Free_Software_Guidelines>`_,
+see also `Interpretation of DFSG on Artificial Intelligence (AI) Models
 <https://www.debian.org/vote/2025/vote_002>`_.
 
 .. _osaid:
@@ -226,10 +226,8 @@ following models:
   <https://www.eleuther.ai/artifacts/gpt-j>`_
 * The Allen Institute for Artificial Intelligence: `OLMo 2
   <https://allenai.org/olmo>`_, `Molmo <https://allenai.org/blog/molmo>`_
-* LLM360: `K2
-  <https://huggingface.co/collections/LLM360/k2-6622ae6911e3eb6219690039>`_,
-  `Amber
-  <https://huggingface.co/collections/LLM360/amber-65e7333ff73c7bbb014f2f2f>`_,
+* LLM360: `K2 <https://huggingface.co/collections/LLM360/k2-v1>`_,
+  `Amber <https://huggingface.co/collections/LLM360/amber>`_,
   `CrystalCoder <https://huggingface.co/LLM360/Crystal>`_
 * Google: `T5
   <https://github.com/google-research/text-to-text-transfer-transformer>`_
@@ -240,7 +238,7 @@ to change their legal conditions:
 * BigScience: `Bloom <https://huggingface.co/bigscience/bloom>`_
 * BigCode: `StarCoder 2 <https://github.com/bigcode-project/starcoder2>`_
 * Technology Innovation Institute: `Falcon
-  <https://huggingface.co/collections/tiiuae/falcon-h1-6819f2795bc406da60fab8df>`_
+  <https://huggingface.co/collections/tiiuae/falcon-h1>`_
 
 However, there are also some models that have been analysed and failed because
 they lack required components and/or legal agreements:
@@ -314,10 +312,10 @@ Hardware
 ~~~~~~~~
 
 In addition to the `GNU General Public License (GPL)
-<http://www.gnu.org/licenses/gpl.html/>`_ and the `Creative Commons licences
+<https://www.gnu.org/licenses/gpl-3.0.html>`_ and the `Creative Commons licences
 <https://creativecommons.org/licenses/>`_, the `Open Source Hardware Association
-(OSHWA) <https://www.oshwa.org/definition/>`_ also accepts the following
-specialised licences:
+(OSHWA) <https://oshwa.org/definition/>`_ also accepts the following specialised
+licences:
 
 `CERN-OHL-P-2.0 <https://ohwr.org/cern_ohl_p_v2.txt>`_
     Permissive variant
@@ -333,7 +331,7 @@ specialised licences:
 
 .. seealso::
    * `Licensing Open Source Hardware
-     <https://larszimmermann.de/licensing-open-source-hardware-by-michael-weinberg/>`_
+     <https://www.oreilly.com/library/view/building-open-source/9780133373912/ch03.html>`_
      by Michael Weinberg
    * `OSHW 101 <https://oshwa.org/oshw-101/>`_
    * `Certified Open Source Hardware Projects
@@ -453,7 +451,7 @@ badge for you, which you can include in your ``README`` file, for example
 |License|
 
 .. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
-   :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSE
+   :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSES/BSD-3-Clause.txt
 
 .. _standard_format_licensing:
 
@@ -586,7 +584,7 @@ Alternatives
 
 .. _open_chain:
 
-`ISO/IEC 5230/OpenChain <https://de.wikipedia.org/wiki/ISO/IEC_5230>`_
+`ISO/IEC 5230/OpenChain <https://en.wikipedia.org/wiki/ISO/IEC_5230>`_
     recommends :ref:`REUSE <reuse>` as a component to improve license and
     copyright clarity, but sets higher requirements to achieve full compliance.
 
@@ -603,10 +601,14 @@ Alternatives
        * `Reference-Material
          <https://github.com/OpenChain-Project/Reference-Material>`_
 
-`ScanCode <https://aboutcode.org/scancode/>`_
+`ScanCode Toolkit <https://github.com/aboutcode-org/scancode-toolkit>`_
     offers a range of tools and applications for scanning software codebases and
     packages to determine the origin and licence (provenance) of open source
     software (and other third-party software).
+
+    .. seealso::
+       * `Scan code with ScanCode
+         <https://aboutcode.org/projects/#scancode-projects>`_
 
     `DeltaCode <https://github.com/aboutcode-org/deltacode>`_
         compares two codebase scans to detect significant changes.

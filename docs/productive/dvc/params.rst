@@ -81,4 +81,4 @@ to the Git repository:
    $ git add data/.gitignore dvc.lock dvc.yaml src/dvc_example/featurization.py
 
 .. seealso::
-   `dvc params <https://dvc.org/doc/command-reference/params>`_
+   `dvc params <https://doc.dvc.org/command-reference/params>`_

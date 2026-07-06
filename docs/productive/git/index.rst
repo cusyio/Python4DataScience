@@ -23,7 +23,7 @@ secure and flexible.
 
 .. tip::
    `Versioned and reproducible storage of code and data
-   <https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data>`_
+   <https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data.html>`_
 
 Performance
 -----------

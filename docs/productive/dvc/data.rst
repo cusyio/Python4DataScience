@@ -22,7 +22,7 @@ This adds the file :file:`data/data.xml` to :file:`data/.gitignore` and writes
 the meta information to :file:`data/data.xml.dvc`.
 
 .. seealso::
-   `.dvc Files <https://dvc.org/doc/user-guide/project-structure/dvc-files>`_
+   `.dvc Files <https://doc.dvc.org/user-guide/project-structure/dvc-files>`_
 
 To manage different versions of your project data with Git, simply add :file:`data/.gitignore` and :file:`data/data.xml.dvc`:
 
@@ -33,7 +33,7 @@ To manage different versions of your project data with Git, simply add :file:`da
 
 .. seealso::
    `External Dependencies and Outputs
-   <https://dvc.org/doc/user-guide/pipelines/external-dependencies-and-outputs>`_
+   <https://doc.dvc.org/user-guide/pipelines/external-dependencies-and-outputs>`_
 
 Saving and retrieving data
 --------------------------
@@ -63,7 +63,7 @@ another project using ``dvc import``, for example:
    Importing 'get-started/data.xml (https://github.com/iterative/dataset-registry)' -> 'data/data.xml'
 
 This loads the file from the `dataset-registry
-<https://github.com/iterative/dataset-registry>`_ into our :file:`data`
+<https://github.com/treeverse/dataset-registry>`_ into our :file:`data`
 directory, adds it to :file:`.gitignore`, and creates :file:`data.xml.dvc`.
 
 You can use ``dvc update`` to update these data sources before reproducing a
@@ -76,15 +76,15 @@ pipeline that depends on them, for example:
 
 .. seealso::
    * `Discovering and accessing data
-     <https://dvc.org/doc/user-guide/data-management/discovering-and-accessing-data>`_
+     <https://doc.dvc.org/user-guide/data-management/discovering-and-accessing-data>`_
    * `External Data
-     <https://dvc.org/doc/user-guide/data-management/importing-external-data>`_
+     <https://doc.dvc.org/user-guide/data-management/importing-external-data>`_
 
 Deleting data
 -------------
 
 If you want to remove files or directories from DVC management, you can do so
-with `dvc remove <https://dvc.org/doc/command-reference/remove>`_:
+with `dvc remove <https://doc.dvc.org/command-reference/remove>`_:
 
 .. code-block::
 

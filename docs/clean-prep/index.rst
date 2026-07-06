@@ -18,7 +18,7 @@ Expectations <https://greatexpectations.io/>`_ or `MobyDQ
 
 .. tip::
    `cusy seminar: Cleanse and validate data with Python
-   <https://cusy.io/en/our-training-courses/cleanse-and-validate-data-with-python>`_
+   <https://cusy.io/en/our-training-courses/cleanse-and-validate-data-with-python.html>`_
 
 Overview
 --------
@@ -27,7 +27,7 @@ Overview
     :header: "Name", "Stars", "Mitwirkende", "Commit-Aktivität", "Lizenz"
 
     "`scikit-learn <https://github.com/scikit-learn/scikit-learn>`_",".. image:: https://raster.shields.io/github/stars/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/contributors/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/commit-activity/y/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/license/scikit-learn/scikit-learn"
-    "`ydata-profiling <https://github.com/ydataai/ydata-profiling>`_",".. image:: https://raster.shields.io/github/stars/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/contributors/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/commit-activity/y/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/license/ydataai/ydata-profiling"
+    "`fg-data-profiling <https://github.com/Data-Centric-AI-Community/fg-data-profiling>`_",".. image:: https://raster.shields.io/github/stars/Data-Centric-AI-Community/fg-data-profiling",".. image:: https://raster.shields.io/github/contributors/Data-Centric-AI-Community/fg-data-profiling",".. image:: https://raster.shields.io/github/commit-activity/y/Data-Centric-AI-Community/fg-data-profiling",".. image:: https://raster.shields.io/github/license/Data-Centric-AI-Community/fg-data-profiling"
     "`fuzzywuzzy <https://github.com/seatgeek/fuzzywuzzy>`_",".. image:: https://raster.shields.io/github/stars/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/contributors/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/commit-activity/y/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/license/seatgeek/fuzzywuzzy"
     "`Hypothesis <https://github.com/HypothesisWorks/hypothesis>`_",".. image:: https://raster.shields.io/github/stars/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/contributors/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/commit-activity/y/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/license/HypothesisWorks/hypothesis"
     "`marshmallow <https://github.com/marshmallow-code/marshmallow>`_",".. image:: https://raster.shields.io/github/stars/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/contributors/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/commit-activity/y/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/license/marshmallow-code/marshmallow"

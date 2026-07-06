@@ -47,7 +47,7 @@ separate – our code probably changes faster than that of the dependencies.
        which makes troubleshooting easier.
 
        .. seealso::
-          * https://github.com/containers/podman/issues/8477
+          * https://github.com/podman-container-tools/podman/issues/8477
 
 #. We then build a :ref:`virtual Python environment <venv>` with our application
    in the :file:`/app` directory and copy it to our runtime container. One of

@@ -35,7 +35,7 @@ compare your current working directory with the last commit (``HEAD``):
 ``dvc exp``
 -----------
 
-With `dvc exp <https://dvc.org/doc/command-reference/exp>`_, you can also set
+With `dvc exp <https://doc.dvc.org/command-reference/exp>`_, you can also set
 the parameters in the command line, for example:
 
 .. code-block:: console
@@ -97,7 +97,7 @@ for the experiments:
 
 .. seealso::
    * `Get Started: Experimenting Using Pipelines
-     <https://dvc.org/doc/start/experiments/experiment-pipelines>`_
+     <https://doc.dvc.org/start/experiments/experiment-pipelines>`_
    * `Running Experiments
-     <https://dvc.org/doc/user-guide/experiment-management/running-experiments#the-experiments-queue>`_
-   * `dvc queue <https://dvc.org/doc/command-reference/queue>`_
+     <https://doc.dvc.org/user-guide/experiment-management/running-experiments#the-experiments-queue>`_
+   * `dvc queue <https://doc.dvc.org/command-reference/queue>`_

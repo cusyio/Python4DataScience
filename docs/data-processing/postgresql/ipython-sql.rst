@@ -81,7 +81,7 @@ With ``%config SqlMagic`` you can display the current configuration:
    If ``autopandas`` is set to ``True``, ``displaylimit`` is not applied. In
    this case, the ``max_rows`` option of pandas can be used as described in the
    `pandas documentation
-   <https://pandas.pydata.org/pandas-docs/version/0.18.1/options.html#frequently-used-options>`_.
+   <https://pandas.pydata.org/docs/user_guide/options.html#frequently-used-options>`_.
 
 pandas
 ------

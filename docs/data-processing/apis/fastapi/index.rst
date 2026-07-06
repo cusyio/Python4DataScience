@@ -10,8 +10,8 @@ FastAPI is a web framework for building APIs with Python 3.6+ based type hints.
 Key features are:
 
 * very high performance thanks to `pydantic
-  <https://docs.pydantic.dev/latest/>`_ for the data part and `Starlette
-  <https://www.starlette.io/>`_ for the web part.
+  <https://pydantic.dev/docs/validation/latest/get-started/>`_ for the data part
+  and `Starlette <https://www.starlette.io/>`_ for the web part.
 
 * fast and easy to code
 * validation for most Python data types, including

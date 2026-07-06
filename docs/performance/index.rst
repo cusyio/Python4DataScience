@@ -401,9 +401,8 @@ so, they have different focuses:
   * A `backend for joblib
     <https://docs.ray.io/en/latest/ray-more-libs/joblib.html>`_ supports
     distributed `scikit-learn <https://scikit-learn.org/stable/>`_ programs.
-  * `XGBoost-Ray
-    <https://docs.ray.io/en/latest/train/examples/xgboost/xgboost_example.html>`_
-    is a backend for distributed `XGBoost
+  * `XGBoost-Ray <https://docs.ray.io/en/latest/train/api/api.html#xgboost>`_ is
+    a backend for distributed `XGBoost
     <https://xgboost.readthedocs.io/en/latest/>`_.
   * `LightGBM-Ray
     <https://docs.ray.io/en/latest/tune/examples/lightgbm_example.html>`_ is a
@@ -412,8 +411,8 @@ so, they have different focuses:
   * `Collective Communication Lib
     <https://docs.ray.io/en/latest/ray-more-libs/ray-collective.html>`_ offers a
     set of native collective primitives for `Gloo
-    <https://github.com/facebookincubator/gloo>`_ and the `NVIDIA Collective
-    Communication Library (NCCL)
+    <https://github.com/pytorch/gloo>`_ and the `NVIDIA Collective Communication
+    Library (NCCL)
     <https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html>`_.
 
 Our example could look like this with Dask:

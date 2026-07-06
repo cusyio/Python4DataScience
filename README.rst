@@ -15,11 +15,11 @@ Status
    :target: https://github.com/cusyio/python4datascience/graphs/contributors
 .. image:: https://img.shields.io/github/license/cusyio/Python4DataScience.svg
    :alt: License
-   :target: https://github.com/cusyio/python4datascience/blob/main/LICENSE
+   :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSES/BSD-3-Clause.txt
 .. image:: https://results.pre-commit.ci/badge/github/cusyio/Python4DataScience/main.svg
    :target: https://results.pre-commit.ci/repo/github/649815375
    :alt: pre-commit.ci status
-.. image:: https://readthedocs.org/projects/python4datascience/badge/?version=latest
+.. image:: https://app.readthedocs.org/projects/python4datascience/badge/?version=latest
    :alt: Docs
    :target: https://www.python4data.science/en/latest/
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo..14031392.svg
