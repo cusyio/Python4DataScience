@@ -12,7 +12,7 @@ extend to deal with new types in the future.
 
 .. tip::
    `Design patterns in Python
-   <https://cusy.io/en/our-training-courses/design-patterns-in-python>`_
+   <https://cusy.io/en/our-training-courses/design-patterns-in-python.html>`_
 
 Recognising code smells
 -----------------------

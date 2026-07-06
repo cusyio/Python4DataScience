@@ -21,7 +21,7 @@ in the core distribution:
 
 * `PL/Java <https://tada.github.io/pljava/>`_
 * `PL/Lua <https://github.com/pllua/pllua>`_
-* `PL/R  <http://www.joeconway.com/plr.html>`_
+* `PL/R  <https://joeconway.com/plr/>`_
 * `PL/sh <https://github.com/petere/plsh>`_
 * `PL/v8 <https://github.com/plv8/plv8>`_
 

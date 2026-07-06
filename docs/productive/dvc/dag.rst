@@ -8,7 +8,7 @@ Display pipelines
 DVC represents a pipeline internally as directed acyclic graphs (DAGs).
 
 .. seealso::
-   `DVC DAG <https://dvc.org/doc/user-guide/pipelines/running-pipelines#dag>`_
+   `DVC DAG <https://doc.dvc.org/user-guide/pipelines/running-pipelines#dag>`_
 
 You can use ``dvc dag`` to visualise or export pipelines:
 
@@ -75,7 +75,7 @@ have been changed:
            modified:           eval
 
 .. seealso::
-   `dvc status <https://man.dvc.org/status>`_
+   `dvc status <https://doc.dvc.org/command-reference/status>`_
 
 In :doc:`CI jobs <../git/advanced/gitlab/ci-cd/index>`, it is usually necessary
 to check whether the pipeline is up to date without retrieving or executing

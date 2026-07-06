@@ -107,8 +107,8 @@ Git glossary
 
     ``HEAD``
         The ``HEAD`` pointer represents your current working directory and can
-        be moved to different :term:`branches <branch>`, :term:`tags <tag>` or
-        :term: commits <commit>` using ``git switch``.
+        be moved to different :term:`branches <branch>`, :term:`tags <Tag
+        object>` or :term: commits <commit>` using ``git switch``.
 
     Index
     Staging area
@@ -158,11 +158,11 @@ Git glossary
         .. _start-object
 
         All :term:`commits <Commit>`, :term:`trees <Tree>`, :term:`blobs
-        <Blob>`, and :term:`tags <Tag>` in a Git repository are stored as Git
-        objects, which never change after they are created and have a unique ID,
-        such as ``3a5c279ea2f5d18498b61c229571d2449305a0``. This means that you
-        can use an object’s ID to restore its contents at any time, as long as
-        the object has not been deleted.
+        <Blob>`, and :term:`tags <Tag object>` in a Git repository are stored as
+        Git objects, which never change after they are created and have a unique
+        ID, such as ``3a5c279ea2f5d18498b61c229571d2449305a0``. This means that
+        you can use an object’s ID to restore its contents at any time, as long
+        as the object has not been deleted.
 
         .. seealso::
            * `Git Internals - Git Objects
@@ -235,7 +235,7 @@ Git glossary
         .. _start-refs
 
         References are a way to give commits a name that is easier to remember,
-        such as for :doc:`branches <Branch>`, :doc:`tags <Tag>`,
+        such as for :term:`branches <Branch>`, :term:`tags <Tag object>`,
         :ref:`remote-branches`, and so on. Git often uses ``ref`` as an
         abbreviation for such references. The most important references are:
 
@@ -279,7 +279,7 @@ Git glossary
         .. _start-reflog
 
         Every time a :term:`branch`, a :ref:`remote tracking branch
-        <remote-branches>, or :term:`HEAD` is updated, Git updates a log called
+        <remote-branches>`, or :term:`HEAD` is updated, Git updates a log called
         *reflog* for that reference, for example in
         :file:`.git/logs/refs/heads/main`:
 

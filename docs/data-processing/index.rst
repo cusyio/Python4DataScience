@@ -20,14 +20,14 @@ accessible:
 
 .. tip::
    `Read, write and provide data with Python
-   <https://cusy.io/en/our-training-courses/read-write-and-provide-data-with-python>`_
+   <https://cusy.io/en/our-training-courses/read-write-and-provide-data-with-python.html>`_
 
 .. seealso::
     `pandas I/O API <https://pandas.pydata.org/docs/user_guide/io.html>`_
         The pandas I/O API is a set of top level ``reader`` functions that
         return a  pandas object. In most cases corresponding ``write`` methods
         are also available.
-    `Scrapy <https://scrapy.org/>`_
+    `Scrapy <https://www.scrapy.org/>`_
         Framework for extracting data from websites as JSON, CSV or XML files.
     `Pattern <https://github.com/clips/pattern>`_
         Python module for data mining, natural language processing, ML and

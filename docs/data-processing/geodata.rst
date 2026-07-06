@@ -18,9 +18,9 @@ addressed by Z/X/Y coordinates. This can be cartographic vector tiles,
 :ref:`remote sensing data <remote-sensing>`, JPEG images or similar.
 
 `HTTP Range Requests
-<https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests>`_ are used
-for reading in order to retrieve only the relevant tiles or metadata within a
-PMTiles archive. The arrangement of tiles and directories is designed to
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Range_requests>`_ are
+used for reading in order to retrieve only the relevant tiles or metadata within
+a PMTiles archive. The arrangement of tiles and directories is designed to
 minimise the number of requests when moving and zooming.
 
 However, PMTiles is a read-only format: it is not possible to update part of the
@@ -99,9 +99,9 @@ extends Parquet with interoperable geodata types (point, line, polygon).
 * `GeoParquet Downloader Plugin
   <https://plugins.qgis.org/plugins/qgis_plugin_gpq_downloader/>`_ for `QGIS
   <https://qgis.org>`_ enables streaming downloads of large GeoParquet datasets.
-* `DuckDB <https://duckdb.org>`_ allows the reading and writing of GeoParquet
+* `DuckDB <https://duckdb.org/>`_ allows the reading and writing of GeoParquet
   files with the `Spatial Extension
-  <https://duckdb.org/docs/stable/extensions/spatial/overview.html>`_.
+  <https://duckdb.org/docs/current/core_extensions/spatial/overview>`_.
 
 .. seealso::
    * `GeoParquet specification <https://github.com/opengeospatial/geoparquet>`_
@@ -294,8 +294,8 @@ General purposes
 ~~~~~~~~~~~~~~~~
 
 `pyproj <https://github.com/pyproj4/pyproj>`_
-    Python interface to `PROJ <https://proj.org/>`_, a library for cartographic
-    projections and coordinate transformations.
+    Python interface to `PROJ <https://proj.org/en/stable/>`_, a library for
+    cartographic projections and coordinate transformations.
 
     .. image::
        https://raster.shields.io/github/stars/pyproj4/pyproj
@@ -451,7 +451,7 @@ Spatiotemporal statistics
     .. image::
        https://raster.shields.io/github/license/rasterio/rasterio
 
-`eofs <https://ajdawson.github.io/eofs/latest/>`_
+`eofs <https://ajdawson.github.io/eofs/>`_
     :abbr:`EOF (Empirical orthogonal functions)` analysis of spatial-temporal
     data.
 
@@ -586,7 +586,7 @@ Meteorology
     .. image::
        https://raster.shields.io/github/license/NCAR/wrf-python
 
-`windspharm <https://ajdawson.github.io/windspharm/latest/>`_
+`windspharm <https://ajdawson.github.io/windspharm/>`_
     Computations on global wind fields in spherical geometry.
 
     .. image::

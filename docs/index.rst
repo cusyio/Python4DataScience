@@ -28,8 +28,8 @@ subsequently effectively analyse your data. We also offer the `Jupyter Tutorial
 <https://jupyter-tutorial.readthedocs.io/en/latest/index.html>`_ and the `PyViz
 Tutorial <https://pyviz-tutorial.readthedocs.io/de/latest/index.html>`_ as well
 as the instructions for `data visualisation
-<https://www.cusy.design/de/latest/viz/index.html>`_ from the `cusy Design
-System <https://www.cusy.design/de/latest/index.html>`_.
+<https://www.cusy.design/viz/index.html>`_ from the `cusy Design System
+<https://www.cusy.design/index.html>`_.
 
 All tutorials serve as seminar documents for our harmonised training courses:
 
@@ -72,37 +72,37 @@ All tutorials serve as seminar documents for our harmonised training courses:
 +---------------+--------------------------------------------------------------+
 
 .. _`Introduction to Python`:
-   https://cusy.io/en/our-training-courses/introduction-to-python
+   https://cusy.io/en/our-training-courses/introduction-to-python.html
 .. _`Advanced Python`:
-   https://cusy.io/en/our-training-courses/advanced-python
+   https://cusy.io/en/our-training-courses/advanced-python.html
 .. _`Design patterns in Python`:
-   https://cusy.io/en/our-training-courses/design-patterns-in-python
+   https://cusy.io/en/our-training-courses/design-patterns-in-python.html
 .. _`Efficient testing with Python`:
-   https://cusy.io/en/our-training-courses/efficient-testing-with-python
+   https://cusy.io/en/our-training-courses/efficient-testing-with-python.html
 .. _`Software documentation with Sphinx`:
-   https://cusy.io/en/our-training-courses/software-documentation-with-sphinx
+   https://cusy.io/en/our-training-courses/software-documentation-with-sphinx.html
 .. _`Technical writing`:
-   https://cusy.io/en/our-training-courses/technical-writing
+   https://cusy.io/en/our-training-courses/technical-writing.html
 .. _`Jupyter notebooks for efficient data science workflows`:
-   https://cusy.io/en/our-training-courses/jupyter-notebooks-for-efficient-data-science-workflows
+   https://cusy.io/en/our-training-courses/jupyter-notebooks-for-efficient-data-science-workflows.html
 .. _`Numerical calculations with NumPy`:
-   https://cusy.io/en/our-training-courses/numerical-calculations-with-numpy
+   https://cusy.io/en/our-training-courses/numerical-calculations-with-numpy.html
 .. _`Analysing data with pandas`:
-   https://cusy.io/en/our-training-courses/analysing-data-with-pandas
+   https://cusy.io/en/our-training-courses/analysing-data-with-pandas.html
 .. _`Read, write and provide data with Python`:
-   https://cusy.io/en/our-training-courses/read-write-and-provide-data-with-python
+   https://cusy.io/en/our-training-courses/read-write-and-provide-data-with-python.html
 .. _`Cleanse and validate data with Python`:
-   https://cusy.io/en/our-training-courses/cleanse-and-validate-data-with-python
+   https://cusy.io/en/our-training-courses/cleanse-and-validate-data-with-python.html
 .. _`Visualising data with Python`:
-   https://cusy.io/en/our-training-courses/visualising-data-with-python
+   https://cusy.io/en/our-training-courses/visualising-data-with-python.html
 .. _`Designing data visualisations`:
-   https://cusy.io/en/our-training-courses/designing-data-visualisations
+   https://cusy.io/en/our-training-courses/designing-data-visualisations.html
 .. _`Create dashboards`:
-   https://cusy.io/en/our-training-courses/create-dashboards
+   https://cusy.io/en/our-training-courses/create-dashboards.html
 .. _`Versioned and reproducible storage of code and data`:
-   https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data
+   https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data.html
 .. _`News from Python for data science`:
-   https://cusy.io/en/our-training-courses/news-from-python-for-data-science
+   https://cusy.io/en/our-training-courses/news-from-python-for-data-science.html
 
 .. toctree::
     :hidden:

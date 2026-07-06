@@ -27,7 +27,7 @@ work on them together. Merge requests contain:
      then have to go through you.
 
 .. seealso::
-   * `Merge requests <https://docs.gitlab.com/ee/user/project/merge_requests/>`_
+   * `Merge requests <https://docs.gitlab.com/user/project/merge_requests/>`_
 
 Merge request workflows
 -----------------------
@@ -35,14 +35,14 @@ Merge request workflows
 #. You check out a new branch and submit your changes through a merge request.
 #. You gather feedback from your team.
 #. You work on the implementation and optimise the code with `code quality
-   reports <https://docs.gitlab.com/ee/ci/testing/code_quality.html>`_.
+   reports <https://docs.gitlab.com/ci/testing/code_quality/>`_.
 #. You verify your changes with `reports from unit tests
-   <https://docs.gitlab.com/ee/ci/testing/unit_test_reports.html>`_ in
-   :doc:`GitLab CI/CD <ci-cd/index>`.
+   <https://docs.gitlab.com/ci/testing/unit_test_reports/>`_ in :doc:`GitLab
+   CI/CD <ci-cd/index>`.
 #. You avoid using dependencies whose licence is incompatible with your project
    with :ref:`licence compliance reports <reuse-in-gitlab-ci>`.
 #. You request `approval
-   <https://docs.gitlab.com/ee/user/project/merge_requests/approvals/index.html>`_
-   of your changes.
+   <https://docs.gitlab.com/user/project/merge_requests/approvals/>`_ of your
+   changes.
 #. When the merge request is approved, :doc:`GitLab CI/CD <ci-cd/index>` will
    deploy the changes to the ``production`` environment.

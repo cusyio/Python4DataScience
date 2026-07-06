@@ -43,7 +43,7 @@ Overview
         Indexed databases of ``pickle`` objects
     `Uwe Korn: The implications of pickling ML models <https://uwekorn.com/2021/04/26/implications-of-pickling-ml-models.html>`_
         Alternatives to ``pickle`` for ML models
-    `Ned Batchelder: Pickle’s nine flaws <https://nedbatchelder.com/blog/202006/pickles_nine_flaws.html>`_
+    `Ned Batchelder: Pickle’s nine flaws <https://nedbatchelder.com/blog/202006/pickles_nine_flaws>`_
         Disadvantages of ``pickle`` and alternatives
 
 .. _`Don’t pickle your data`:

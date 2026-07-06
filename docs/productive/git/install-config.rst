@@ -802,7 +802,7 @@ delete it:
        <https://git-scm.com/docs/git-config#Documentation/git-config.txt-helpautoCorrect>`_
 .. [#] `pager.cmd <https://git-scm.com/docs/git-config#Documentation/git-config.txt-pagerltcmdgt>`_
 .. [#] `git status --ignored
-   <https://git-scm.com/docs/git-status#Documentation/git-status.txt---ignoredltmodegt>`_
+   <https://git-scm.com/docs/git-status#Documentation/git-status.txt---ignoredmode>`_
 .. [#] `git check-ignore
    <https://git-scm.com/docs/git-check-ignore>`_
 .. [#] `git ls-files --ignored

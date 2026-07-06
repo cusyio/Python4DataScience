@@ -26,9 +26,9 @@ Distributed File System)`, among others.
    <https://cusy.io/en/our-training-courses/versioned-and-reproducible-storage-of-code-and-data.html>`_
 
 .. seealso::
-   * `Get Started with DVC <https://dvc.org/doc/start>`_
-   * `Documentation <https://dvc.org/doc>`_
-   * `Git Repository <https://github.com/iterative/dvc>`_
+   * `Get Started with DVC <https://doc.dvc.org/start>`_
+   * `Documentation <https://doc.dvc.org/>`_
+   * `Git Repository <https://github.com/treeverse/dvc>`_
 
 Comparison with related technologies
 ------------------------------------

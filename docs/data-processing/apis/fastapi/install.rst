@@ -23,7 +23,7 @@ Optional requirements
 ~~~~~~~~~~~~~~~~~~~~~
 
 For production you also need an `ASGI <https://asgi.readthedocs.io/en/latest/>`_
-server, such as `uvicorn <http://www.uvicorn.org/>`_:
+server, such as `uvicorn <https://uvicorn.dev/>`_:
 
 .. code-block:: console
 

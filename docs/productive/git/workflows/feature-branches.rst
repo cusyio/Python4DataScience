@@ -53,8 +53,7 @@ repository.
      <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>`_
    * `Making a Pull Request
      <https://www.atlassian.com/git/tutorials/making-a-pull-request>`_
-   * `Merge requests
-     <https://docs.gitlab.com/ee/user/project/merge_requests/>`_
+   * `Merge requests <https://docs.gitlab.com/user/project/merge_requests/>`_
 
 GitHub Flow
 -----------

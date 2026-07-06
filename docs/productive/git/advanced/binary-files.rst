@@ -161,7 +161,7 @@ files to text.
       > choco install exiftool
 
 .. seealso::
-   * `Installing ExifTool <https://exiftool.org/install.html>`_
+   * `Installing ExifTool <https://exiftool.sourceforge.net/install.html>`_
 
 You can then add the following section to the global Git configuration file
 :file:`~/.config/git/config`:

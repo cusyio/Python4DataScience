@@ -114,7 +114,7 @@ Outdated dependencies make a project vulnerable to attacks on known
 vulnerabilities. Therefore, the process of updating dependencies should be
 automated by checking for outdated or insecure requirements and updating them if
 necessary. You can use `dependabot <https://github.com/dependabot>`_ or `Safety
-CLI <https://safetycli.com>`_ for this purpose.
+<https://www.getsafety.com/>`_ for this purpose.
 
 You can also update your :doc:`/productive/envs/uv/index` environments
 automatically.
@@ -162,7 +162,7 @@ published with the project. This file should contain information
      open source projects
      <https://github.com/ossf/oss-vulnerability-guide/blob/main/maintainer-guide.md>`_
    * `Adding a security policy to your repository
-     <https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository>`_
+     <https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/add-security-policy>`_
    * `Runbook
      <https://github.com/ossf/oss-vulnerability-guide/blob/main/runbook.md>`_
 

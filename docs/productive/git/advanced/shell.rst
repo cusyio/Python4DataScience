@@ -6,7 +6,7 @@ In this chapter I would like to introduce you to two powerful shell extensions:
 .. tab:: oh-my-zsh
 
    `oh-my-zsh <https://ohmyz.sh>`_ can be used for the `Z Shell
-   <https://zsh.sourceforge.io>`_.
+   <https://zsh.sourceforge.io/>`_.
 
    .. seealso::
       * `Getting Started <https://github.com/ohmyzsh/ohmyzsh#getting-started>`_

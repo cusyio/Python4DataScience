@@ -6,8 +6,8 @@ repositories, but these may not exceed the additional storage of 1 GiB.
 Purchasing additional quotas from GitHub is then quite expensive.
 
 .. seealso::
-   * `About storage and bandwidth usage
-     <https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage>`_
+   * `Git Large File Storage billing
+     <https://docs.github.com/en/billing/concepts/product-billing/git-lfs>`_
 
 But how do you get rid of Git LFS in such a repository?
 

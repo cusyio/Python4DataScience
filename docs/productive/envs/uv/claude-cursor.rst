@@ -44,14 +44,13 @@ package management?
       with Claude Code automatically receives the same configuration.
 
    .. seealso::
-      * `Claude Docs <https://docs.claude.com/en/home>`_
-      * `Manage Claude's memory
-        <https://docs.claude.com/en/docs/claude-code/memory>`_
+      * `Claude Docs <https://code.claude.com/docs>`_
+      * `Manage Claude's memory <https://code.claude.com/docs/en/memory>`_
 
 .. tab:: Cursor
 
-   `Cursor Rules <https://cursor.com/docs/context/rules>`_ can be used to use uv
-   instead of pip.
+   `Cursor Rules <https://cursor.com/docs/rules>`_ can be used to use uv instead
+   of pip.
 
    This assumes that Cursor and uv are already installed on your system and you
    have already created a uv-based Python project, for example, with :ref:`uv

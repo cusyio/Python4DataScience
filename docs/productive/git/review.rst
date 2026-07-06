@@ -91,7 +91,7 @@ Filter and sort
 
 ``$ git log -L``
    With the `-L
-   <https://git-scm.com/docs/git-log#Documentation/git-log.txt--Lltstartgtltendgtltfilegt>`_
+   <https://git-scm.com/docs/git-log#Documentation/git-log.txt--Lstartendfile>`_
    option, you can perform a refined search by checking the log of only part
    of a file:
 

@@ -37,7 +37,7 @@ data managed with DVC:
        └── train.tsv
 
 You can then easily reproduce the results with `dvc repro
-<https://dvc.org/doc/command-reference/repro>`_:
+<https://doc.dvc.org/command-reference/repro>`_:
 
 .. code-block:: console
 
