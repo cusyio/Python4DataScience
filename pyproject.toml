@@ -3,11 +3,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 [project]
 name = "python4datascience"
-version = "24.2.0"
-description = """\
-  Unterrichtsmaterialien für die Cusy-Schulungen zu Python-basierten Data-Science-Workflows: \
-  https://cusy.io/de/seminars\
-  """
+version = "26.1.0"
+description = "Teaching materials for the Cusy training courses on Python-based data science workflows: https://cusy.io/en/seminars"
 readme = "README.rst"
 license = "BSD-3-Clause"
 license-files = [ "LICENSE" ]
