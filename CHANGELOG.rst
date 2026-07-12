@@ -20,6 +20,11 @@ emergencies when we need to start branches for older versions.
 `Unreleased <https://github.com/cusyio/Python4DataScience/compare/26.1.0...HEAD>`_
 ----------------------------------------------------------------------------------
 
+Added
+~~~~~
+
+* 📝 Add protobuf-py
+
 Changed
 ~~~~~~~
 
