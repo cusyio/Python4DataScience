@@ -33,17 +33,16 @@ Use
    $ uv run perflint src/ --load-plugins=perflint
 
 … as pre-commit hook
-~~~~~~~~~~~~~~~~~x~~~
+~~~~~~~~~~~~~~~~~~~~
 
-perflint can also be used with the
-:doc:`/productive/git/advanced/hooks/pre-commit`:
+perflint can also be used with the :doc:`/productive/git/advanced/hooks/prek`:
 
 .. code-block:: yaml
    :caption: .pre-commit-config.yaml
 
    repos:
      - repo: https://github.com/tonybaloney/perflint
-       rev: 0.8.1
+       rev: 22f831509bc7765ce272ad6fcb99398d86a26a52 # 0.8.1
        hooks:
        - id: perflint
 

@@ -330,14 +330,14 @@ Check your repositories for unwanted files
 With `Gitleaks <https://github.com/gitleaks/gitleaks>`_ you can regularly check
 your repositories for unintentionally saved access data.
 
-You can use Gitleaks with the :doc:`advanced/hooks/pre-commit` by entering the
+You can use Gitleaks with the :doc:`advanced/hooks/prek` by entering the
 following in the :file:`.pre-commit-config.yaml` file:
 
 .. code-block:: yaml
 
    repos:
      - repo: https://github.com/gitleaks/gitleaks
-       rev: v8.21.1
+       rev: 6eaad039603a4de39fddd1cf5f727391efe9974e # v8.30.0
        hooks:
          - id: gitleaks
 

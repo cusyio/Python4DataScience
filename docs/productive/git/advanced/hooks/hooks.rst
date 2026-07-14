@@ -5,8 +5,8 @@
 Supported git hooks
 ===================
 
-The hooks managed by the pre-commit framework are not limited to being executed
-before commits; they can also be used for other Git hooks:
+The hooks managed by prek are not limited to being executed before commits; they
+can also be used for other Git hooks:
 
 * :ref:`commit-msg <commit-msg-hook>`
 * :ref:`post-checkout <post-checkout-hook>`
@@ -26,8 +26,8 @@ before commits; they can also be used for other Git hooks:
 
     .. code-block:: console
 
-       $ uv run pre-commit install --hook-type commit-msg
-       pre-commit installed at .git/hooks/commit-msg
+       $ uv run prek install --hook-type commit-msg
+       prek installed at .git/hooks/commit-msg
 
     The ``commit-msg`` hook can be configured with ``stages: [commit-msg]``,
     passing the name of a file containing the current contents of the commit
@@ -45,12 +45,12 @@ before commits; they can also be used for other Git hooks:
     * viewing differences from the previous ``HEAD``
     * changing the metadata of the working directory.
 
-    In pre-commit it can be used with:
+    In prek it can be used with:
 
     .. code-block:: console
 
-        $ uv run pre-commit install --hook-type post-checkout
-        pre-commit installed at .git/hooks/post-checkout
+        $ uv run prek install --hook-type post-checkout
+        prek installed at .git/hooks/post-checkout
 
     Since ``post-checkout does`` not act on files, ``always_run`` must be set
     for all ``post-checkout`` scripts, for example:
@@ -85,8 +85,8 @@ before commits; they can also be used for other Git hooks:
 
     .. code-block:: console
 
-        $ uv run pre-commit install --hook-type post-merge
-        pre-commit installed at .git/hooks/post-merge
+        $ uv run prek install --hook-type post-merge
+        prek installed at .git/hooks/post-merge
 
     With ``$PRE_COMMIT_IS_SQUASH_MERGE`` you can find out if it was a squash
     merge.
@@ -100,8 +100,8 @@ before commits; they can also be used for other Git hooks:
 
     .. code-block:: console
 
-        $ uv run pre-commit install --hook-type post-rewrite
-        pre-commit installed at .git/hooks/post-rewrite
+        $ uv run prek install --hook-type post-rewrite
+        prek installed at .git/hooks/post-rewrite
 
     Since ``post-rewrite`` does not affect files, ``always_run: true`` must be
     set.
@@ -115,23 +115,23 @@ before commits; they can also be used for other Git hooks:
     As of Git 2.24, there is a `pre-merge-commit
     <https://git-scm.com/docs/githooks#_pre_merge_commit>`_ hook that is
     triggered after a merge is successful but before the merge commit is
-    created. You can use it with the pre-commit framework with:
+    created. You can use it with prek with:
 
     .. code-block:: console
 
-        $ uv run pre-commit install --hook-type pre-merge-commit
-        pre-commit installed at .git/hooks/pre-merge-commit
+        $ uv run prek install --hook-type pre-merge-commit
+        prek installed at .git/hooks/pre-merge-commit
 
 .. _pre-push-hook:
 
 ``pre-push``
     To use the `pre-push <https://git-scm.com/docs/githooks#_pre_push>`_ hook
-    with the pre-commit framework, enter the following:
+    with prek, enter the following:
 
     .. code-block:: console
 
-        $ uv run pre-commit install --hook-type pre-push
-        pre-commit installed at .git/hooks/pre-push
+        $ uv run prek install --hook-type pre-push
+        prek installed at .git/hooks/pre-push
 
     The following environment variables are provided for this purpose:
 
@@ -160,8 +160,8 @@ before commits; they can also be used for other Git hooks:
 
     .. code-block:: console
 
-       $ uv run pre-commit install --hook-type pre-rebase
-       pre-rebase installed at .git/hooks/pre-rebase
+       $ uv run prek install --hook-type pre-rebase
+       prek installed at .git/hooks/pre-rebase
 
     ``pre-rebase`` hooks cannot be applied to files, and therefore they must be
     set as ``always_run: true``, otherwise they will always be skipped.
@@ -174,8 +174,8 @@ before commits; they can also be used for other Git hooks:
 
     .. code-block:: console
 
-       $ uv run pre-commit install --hook-type post-commit
-       pre-commit installed at .git/hooks/post-commit
+       $ uv run prek install --hook-type post-commit
+       prek installed at .git/hooks/post-commit
 
     However, since ``post-commit`` does not work on files, all these hooks must
     set ``always_run``:
@@ -195,12 +195,12 @@ before commits; they can also be used for other Git hooks:
 ``prepare-commit-msg``
     `prepare-commit-msg
     <https://git-scm.com/docs/githooks#_prepare_commit_msg>`_ can be used with
-    pre-commit with:
+    prek with:
 
     .. code-block:: console
 
-        $ uv run pre-commit install --hook-type prepare-commit-msg
-        pre-commit installed at .git/hooks/prepare-commit-msg
+        $ uv run prek install --hook-type prepare-commit-msg
+        prek installed at .git/hooks/prepare-commit-msg
 
     The ``prepare-commit-msg`` hook is configured with ``stages:
     [prepare-commit-msg]``, passing the name of a file that contains the initial

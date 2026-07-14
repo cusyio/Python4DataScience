@@ -100,13 +100,13 @@ file, for example:
 Integration with version control
 --------------------------------
 
-With :doc:`../git/advanced/hooks/pre-commit`, `check-manifest` can be part of your Git
+With :doc:`../git/advanced/hooks/prek`, `check-manifest` can be part of your Git
 workflow. To do this, add the following to your `.pre-commit-config.yaml` file:
 
 .. code-block:: yaml
 
     repos:
     -   repo: https://github.com/mgedmin/check-manifest
-        rev: "0.39"
+        rev: 61edb7590386f8b78000219b503e81e24b48c712 # 0.51
         hooks:
         -   id: check-manifest

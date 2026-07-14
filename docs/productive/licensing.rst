@@ -534,14 +534,14 @@ You can easily integrate REUSE into your continuous integration workflow:
 .. tab:: Pre-commit
 
     You can automatically run ``reuse lint`` as a :doc:`pre-commit hook
-    <git/advanced/hooks/pre-commit>` on every commit by adding the following to your
+    <git/advanced/hooks/prek>` on every commit by adding the following to your
     :file:`.pre-commit-config.yaml`:
 
     .. code-block:: yaml
 
         repos:
         - repo: https://github.com/fsfe/reuse-tool
-          rev: v2.1.0
+          rev: a1bb792acda6fd0724936b4ebbdbc8eceb9c0459 # v6.2.0
           hooks:
           - id: reuse
 

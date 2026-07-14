@@ -19,8 +19,8 @@ than twice as long to fix as high quality code, and that low quality code had a
 In the following, I will show you some :doc:`code-smells` and then some tools
 with which you can perform automated static analyses and reformat the code. You
 can integrate some of these tools into your editor as well as via the
-:doc:`../git/advanced/hooks/pre-commit`. Finally, I’ll introduce you to
-:doc:`rope`, a tool that supports you with refactorings.
+:doc:`../git/advanced/hooks/prek`. Finally, I’ll introduce you to :doc:`rope`, a
+tool that supports you with refactorings.
 
 .. seealso::
    * `PyCQA Meta Documentation <https://meta.pycqa.org/>`_

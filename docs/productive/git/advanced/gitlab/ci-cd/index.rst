@@ -67,7 +67,7 @@ Jobs
     .. seealso::
        * `GitLab Docs: Jobs <https://docs.gitlab.com/ci/jobs/>`_
        * :doc:`python-basics:packs/cibuildwheel`
-       * :ref:`pre-commit Hooks <pre-commit-in-gitlab-ci>`
+       * :ref:`pre-commit checks <prek-in-gitlab-ci>`
        * :ref:`Licensing <reuse-in-gitlab-ci>`
 
 Stages

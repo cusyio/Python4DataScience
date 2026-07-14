@@ -20,6 +20,13 @@ emergencies when we need to start branches for older versions.
 `Unreleased <https://github.com/cusyio/Python4DataScience/compare/26.1.0...HEAD>`_
 ----------------------------------------------------------------------------------
 
+Changed
+~~~~~~~
+
+* 👷🔧📝 Switch to prek
+
+  * Remove pre-commit
+  * Fix Python syntax
 
 `26.1.0 <https://github.com/cusyio/Python4DataScience/compare/24.3.0...26.1.0>`_: 2026-07-08
 --------------------------------------------------------------------------------------------

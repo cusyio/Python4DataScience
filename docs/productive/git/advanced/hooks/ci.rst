@@ -2,85 +2,78 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-pre-commit in CI pipelines
-==========================
+prek in CI pipelines
+====================
 
 Pre-commit can also be used for :abbr:`CI (continuous integration)`.
 
-.. _gh-action-pre-commit-example:
+.. _gh-action-prek-example:
 
-Examples for GitHub Actions
----------------------------
-
-`pre-commit ci <https://pre-commit.ci>`_
-    Service that adds the *pre-commit ci* app to your GitHub repository at
-    :samp:`https://github.com/{PROFILE}/{REPOSITORY}/installations`.
-
-    Besides automatically changing pull requests, the app also `autoupdate
-    <https://pre-commit.com/#pre-commit-autoupdate>`_ to keep your configuration
-    up to date.
-
-    You can add further installations under `Install pre-commit ci
-    <https://github.com/login?integration=pre-commit-ci&return_to=%2Fapps%2Fpre-commit-ci%2Finstallations%2Fnew>`_.
+Example for GitHub Actions
+--------------------------
 
 :file:`.github/workflows/pre-commit.yml`
     Alternative configuration as a GitHub workflow, for example:
 
-    .. code-block:: yaml
+.. code-block:: yaml
+   :caption: .github/workflows/prek.yml
 
-        name: pre-commit
+   name: prek
 
-        on:
-          pull_request:
-          push:
-            branches: [main]
+   on:
+     pull_request:
+     push:
+       branches: [main]
 
-        jobs:
-          pre-commit:
-            runs-on: ubuntu-latest
-            steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-python@v5
-            - uses: actions/cache@v4
-              with:
-                path: ~/.cache/pre-commit
-                key: pre-commit|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
-            - uses: pre-commit/action@v3.0.1
+   concurrency:
+     group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+     cancel-in-progress: true
 
-    .. seealso::
+   permissions: {}
 
-        * `pre-commit/action <https://github.com/pre-commit/action>`_
+   jobs:
+     prek:
+       name: prek
+       # External pull requests should be checked, but not our own internal pull
+       # requests again, as these are already checked by the push on the branch.
+       # Without this if condition, the checks would be performed twice, as
+       # internal pull requests correspond to both the push and pull_request
+       # events.
+       if:
+         github.event_name == 'push' ||
+         github.event.pull_request.head.repo.full_name != github.repository
+       runs-on: ubuntu-latest
+       steps:
+       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+         with:
+           persist-credentials: false
+       - uses: j178/prek-action@e98a699c41eb69ab013a45817a0406469a748f8d # v2.0.5
 
-.. _pre-commit-in-gitlab-ci:
+.. _prek-in-gitlab-ci:
 
 Example for GitLab Actions
 --------------------------
 
 .. code-block:: yaml
 
-    stages:
-      - validate
+   :caption: .gitlab-ci.yml
 
-    pre-commit:
-      stage: validate
-      image:
-        name: python:3.12
-      variables:
-        PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
-      only:
-        refs:
-          - merge_requests
-          - tags
-          - main
-      cache:
-        paths:
-          - ${PRE_COMMIT_HOME}
-      before_script:
-        - pip install pre-commit
-      script:
-        - pre-commit run --all-files
+   stages:
+     - validate
+
+   prek:
+     stage: validate
+     image:
+       name: python:3.14
+     only:
+       refs:
+         - merge_requests
+         - tags
+         - main
+     script:
+       - uvx prek run --all-files
 
 .. seealso::
 
-    For more information on fine-tuning caching, see `Good caching practices
-    <https://docs.gitlab.com/ci/caching/#good-caching-practices>`_.
+   For more information on fine-tuning caching, see `Good caching practices
+   <https://docs.gitlab.com/ci/caching/#good-caching-practices>`_.

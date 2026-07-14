@@ -58,8 +58,8 @@ can be used. The Shebang line (:samp:`#!/bin/sh`) determines how the file is to
 be interpreted.
 
 However, the scripts are not copied to the Git server using `git push`. To be
-able to use scripts across multiple repositories, the :doc:`pre-commit` is
-therefore recommended.
+able to use scripts across multiple repositories, the :doc:`prek` is therefore
+recommended.
 
 .. seealso::
    * `Hooks <https://git-scm.com/docs/githooks#_hooks>`_
@@ -70,8 +70,8 @@ Configuration-based hooks
 .. version-added:: 2.54
 
    Git 2.54 now introduces a new way to define hooks in your configuration
-   files: instead of placing a script in :file:`.git/hooks/pre-commit`, you can
-   now specify the following:
+   files: instead of placing a script in :file:`.git/hooks/prek`, you can now
+   specify the following:
 
    .. code-block:: ini
 
@@ -89,8 +89,8 @@ Configuration-based hooks
 .. toctree::
     :hidden:
 
-    pre-commit
-    scripts
+    prek
+    checks
     hooks
     ci
     skip

@@ -90,18 +90,18 @@ The corresponding configuration file :file:`.dvc/config` then looks like this:
    `Remote Storage
    <https://doc.dvc.org/user-guide/data-management/remote-storage>`_
 
-Configure pre-commit
---------------------
+Configure prek
+--------------
 
-You can check the data managed by DVC with the pre-commit framework before every
-``git commit`` and ``git push``, as well as after every ``git checkout``. With
-``dvc config --use-pre-commit-tool``, the :file:`.pre-commit-config.yaml` file
-receives the following checks:
+You can check the data managed by DVC with prek before every ``git commit`` and
+``git push``, as well as after every ``git checkout``. With ``dvc config
+--use-pre-commit-tool``, the :file:`.pre-commit-config.yaml` file receives the
+following checks:
 
 .. code-block:: yaml
 
     - repo: https://github.com/iterative/dvc
-      rev: 3.63.0
+      rev: 356dfa03278058b02df42124f243c2c345329dae # 3.67.1
       hooks:
       - id: dvc-pre-commit
         additional_dependencies:
@@ -128,7 +128,7 @@ the ``pre-push`` and ``post-checkout`` hooks:
 
 .. code-block:: console
 
-   $ pre-commit install --hook-type pre-commit --hook-type pre-push --hook-type post-checkout
-   pre-commit installed at .git/hooks/pre-commit
-   pre-commit installed at .git/hooks/pre-push
-   pre-commit installed at .git/hooks/post-checkout
+   $ uv run prek install --hook-type pre-commit --hook-type pre-push --hook-type post-checkout
+   prek installed at `.git/hooks/pre-commit`
+   prek installed at `.git/hooks/pre-push`
+   prek installed at `.git/hooks/post-checkout`

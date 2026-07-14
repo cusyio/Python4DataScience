@@ -28,7 +28,7 @@ urls.Homepage = "https://github.com/cusyio/Python4DataScience/"
 [dependency-groups]
 dev = [
   "codespell",
-  "pre-commit",
+  "prek",
   "vale",
   { include-group = "docs" },
 ]

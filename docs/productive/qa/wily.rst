@@ -169,23 +169,24 @@ Use
 
         $ uv run wily list-metrics
 
-… as pre-commit hook
-~~~~~~~~~~~~~~~~~~~~
+… as prek hook
+~~~~~~~~~~~~~~
 
-You can also use Wily as a :doc:`../git/advanced/hooks/pre-commit`. To do this, you would
-have to add the following to the ``pre-commit-config.yaml`` configuration file, for example:
+You can also use Wily as a :doc:`../git/advanced/hooks/prek`. To do this, you
+would have to add the following to the ``pre-commit-config.yaml`` configuration
+file, for example:
 
 .. code-block:: yaml
 
     repos:
-    -   repo: local
-        hooks:
-        -   id: wily
-            name: wily
-            entry: wily diff
-            verbose: true
-            language: python
-            additional_dependencies: [wily]
+    - repo: local
+      hooks:
+      - id: wily
+        name: wily
+        entry: wily diff
+        verbose: true
+        language: python
+        additional_dependencies: [wily]
 
 … in a CI/CD pipeline
 ~~~~~~~~~~~~~~~~~~~~~
