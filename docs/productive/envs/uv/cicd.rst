@@ -15,9 +15,12 @@ various Docker images with pre-installed ``uv``: `Available images
    :linenos:
 
    variables:
-     UV_VERSION: 0.4
-     PYTHON_VERSION: 3.12
-     BASE_LAYER: bookworm-slim
+    UV_VERSION: 0.11
+    PYTHON_VERSION: 3.14
+    BASE_LAYER: trixie-slim
+    # GitLab CI creates a separate mountpoint for the build directory,
+    # so we need to copy instead of using hard links.
+    UV_LINK_MODE: copy
 
 
    stages:
@@ -38,7 +41,7 @@ various Docker images with pre-installed ``uv``: `Available images
        # YOUR UV COMMANDS
        - uv cache prune --ci
 
-Line 23
+Line 25
     This reduces the cache size, see also `Caching in continuous integration
     <https://docs.astral.sh/uv/concepts/cache/#caching-in-continuous-integration>`_.
 
@@ -66,12 +69,13 @@ installed packages:
        runs-on: ubuntu-latest
 
        steps:
-         - uses: actions/checkout@v4
+       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+         with:
+           persist-credentials: false
 
-         - name: Install uv
-           uses: astral-sh/setup-uv@v3
-           with:
-             version: "0.4.24"
+       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+         with:
+           persist-credentials: false
 
 You can then install either a single Python version or a matrix with uv:
 
@@ -88,33 +92,31 @@ or
 .. code-block:: yaml
    :caption: ci.yml
 
-        - name: Set up Python
-          uses: actions/setup-python@v5
-          with:
-            python-version-file: ".python-version"
+   - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+     with:
+       python-version-file: .python-version
 
 or
 
 .. code-block:: yaml
    :caption: ci.yml
 
-   name: ci
-
    strategy:
      matrix:
        python-version:
-         - "3.9"
+
          - "3.10"
          - "3.11"
          - "3.12"
          - "3.13"
+         - "3.14"
 
-   jobs:
-     test:
-       name: python
-       # ...
-         - name: Set up Python ${{ matrix.python-version }}
-           run: uv python install ${{ matrix.python-version }}
+   steps:
+     - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+     - name: Install uv and set the Python version
+       uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+       with:
+         python-version: ${{ matrix.python-version }}
 
 .. seealso::
    * `Using uv in GitHub Actions
@@ -130,11 +132,11 @@ and commands can be executed in the environment with ``uv run``, for example for
 .. code-block:: yaml
    :caption: ci.yml
 
-         - name: Install the project
-           run: uv sync --all-extras --dev
+   - name: Install the project
+     run: uv sync --group tests
 
-         - name: Run tests
-           run: uv run pytest tests
+   - name: Run tests
+     run: uv run pytest
 
 Caching
 ~~~~~~~
@@ -144,18 +146,19 @@ The uv cache improves runtimes:
 .. code-block:: yaml
    :caption: ci.yml
 
-         - name: Enable caching
-           uses: astral-sh/setup-uv@v3
-           with:
-             enable-cache: true
+   - name: Enable caching
+     uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+     with:
+       enable-cache: true
 
 Invalidates the cache if :file:`uv.lock` changes:
 
 .. code-block:: yaml
    :caption: ci.yml
 
-         - name: Define a cache dependency glob
-           uses: astral-sh/setup-uv@v3
-           with:
-             enable-cache: true
-             cache-dependency-glob: "uv.lock"
+   - name: Define a cache dependency glob
+     uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+
+     with:
+       enable-cache: true
+       cache-dependency-glob: "uv.lock"
