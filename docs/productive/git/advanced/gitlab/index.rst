@@ -19,7 +19,8 @@ Python version of the project <ci-cd/docker>`.
 If a PaaS solution such as `Kubernetes
 <https://en.wikipedia.org/wiki/Kubernetes>`_ is already in use, GitLab-CI/CD can
 be used to automatically deploy, test and scale apps. The
-:doc:`/productive/security` of your project can also be checked automatically.
+:doc:`/productive/security/index` of your project can also be checked
+automatically.
 
 GitLab is a completely packaged platform, while GitHub can be extended with apps
 from the Marketplace. However, this does not mean that GitLab cannot be

@@ -1,0 +1,48 @@
+stages:
+  - build
+  - sbom
+
+build:
+  stage: build
+  script:
+    - uv build
+  artifacts:
+    paths:
+      - dist/
+
+include:
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+
+generate-sbom:
+  stage: test
+  image: ghcr.io/sbomify/sbomify-action
+  variables:
+    LOCK_FILE: uv.lock
+    OUTPUT_FILE: gl-sbom-report.cdx.json
+    UPLOAD: "false"
+    ENRICH: "true"
+  script:
+    - /sbomify.sh
+  artifacts:
+    paths:
+      - gl-sbom-report.cdx.json
+    reports:
+      cyclonedx: gl-sbom-report.cdx.json
+
+generate-sbom:
+  stage: sbom
+  image: ghcr.io/sbomify/sbomify-action
+  variables:
+    LOCK_FILE: uv.lock
+    OUTPUT_FILE: sbom.cdx.json
+    COMPONENT_NAME: myapp
+    COMPONENT_VERSION: $CI_COMMIT_TAG
+    UPLOAD: "false"
+    ENRICH: "true"
+  script:
+    - /sbomify.sh
+  artifacts:
+    paths:
+      - sbom.cdx.json
+    reports:
+      cyclonedx: sbom.cdx.json

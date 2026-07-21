@@ -80,4 +80,4 @@ hand for :doc:`testing`, :doc:`python-basics:logging/index`, :doc:`documenting
     testing
     logging
     qa/index
-    security
+    security/index

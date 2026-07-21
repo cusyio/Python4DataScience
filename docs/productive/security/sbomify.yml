@@ -1,0 +1,39 @@
+---
+name: Build with SBOM Attestation
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Build
+        run: uv build
+
+      - name: Generate SBOM
+        uses: sbomify/sbomify-action@f38411f20fe2cc52e5bb7abd4d094ffc9dc5f17c # v26.7.0
+        env:
+          LOCK_FILE: uv.lock
+          OUTPUT_FILE: sbom.cdx.json
+          COMPONENT_NAME: myapp
+          COMPONENT_VERSION: ${{ github.sha }}
+          ENRICH: true
+          UPLOAD: false
+
+      - name: Attest SBOM
+        uses: actions/attest-sbom@c604332985a26aa8cf1bdc465b92731239ec6b9e # v4.1.0
+        with:
+          subject-path: './dist'
+          sbom-path: './sbom.cdx.json'

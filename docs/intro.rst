@@ -54,7 +54,7 @@ From Chapter 2, the tutorial follows the prototype of a research project:
     <productive/licensing>`, :doc:`tests <productive/testing>` and
     :doc:`python-basics:logging/index`. Finally, the chapter includes advice on
     :doc:`improving code quality <productive/qa/index>` and :doc:`secure
-    operation <productive/security>`.
+    operation <productive/security/index>`.
 #.  :doc:`web/index` can either generate dashboards from Jupyter notebooks or
     require more comprehensive application logic, such as demonstrated in
     :doc:`pyviz:bokeh/embedding-export/flask`, or provide data via a `RESTful

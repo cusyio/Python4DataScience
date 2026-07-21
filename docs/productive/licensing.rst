@@ -630,8 +630,8 @@ Alternatives
 
     * generates `OWASP CycloneDX <https://cyclonedx.org>`_, `SPDX Software Bill
       of Materials (SBOM)
-      <https://github.com/opensbom-generator/spdx-sbom-generator>`_ or custom
-      FOSS attribution documentation for your software project
+      <https://spdx.github.io/spdx-spec/v3.0.1/model/Software/Classes/Sbom/>`_
+      or custom FOSS attribution documentation for your software project
     * automates your FOSS policy to check your software project and its
       dependencies for licensing, security vulnerabilities, source code and
       technical standards

@@ -90,7 +90,7 @@ or better still:
      <https://docs.astral.sh/uv/reference/settings/#audit_ignore-until-fixed>`_
 
 You can also add the vulnerability analysis using ``uv-audit`` to your
-:doc:`prek <git/advanced/hooks/prek>` checks:
+:doc:`prek <../git/advanced/hooks/prek>` checks:
 
 .. code-block:: yaml
 
@@ -235,8 +235,8 @@ into the codebase.
 .. _bandit:
 
 `Bandit <https://github.com/PyCQA/bandit>`__, which you can use with
-:doc:`qa/ruff`, allows you to check for the following vulnerabilities, amongst
-others:
+:doc:`../qa/ruff`, allows you to check for the following vulnerabilities,
+amongst others:
 
 +--------+-----------------------------------------------------------------------+
 | Rule   | Description                                                           |
@@ -260,7 +260,7 @@ others:
 
 You can also integrate Bandit into Jupyter Notebooks, IDEs and prek.
 
-In addition, you can use :doc:`qa/pysa` for `taint
+In addition, you can use :doc:`../qa/pysa` for `taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_ analyses.
 
 For GitHub repositories you can also use `CodeQL <https://codeql.github.com>`_;
@@ -288,9 +288,10 @@ Risk: High
 With :ref:`protected Git branches <protected_branches>`, rules can be defined
 for the adoption of changes in standard and release branches, for example
 automated `static code analyses
-<https://en.wikipedia.org/wiki/Static_program_analysis>`_ with :doc:`qa/flake8`,
-:doc:`qa/pysa`, :doc:`qa/wily` and :ref:`code reviews <code_reviews>` via
-:doc:`merge requests <git/advanced/gitlab/merge-requests>`.
+<https://en.wikipedia.org/wiki/Static_program_analysis>`_ with
+:doc:`../qa/flake8`, :doc:`../qa/pysa`, :doc:`../qa/wily` and :ref:`code reviews
+<code_reviews>` via :doc:`merge requests
+<../git/advanced/gitlab/merge-requests>`.
 
 .. seealso::
    * `Reproducible Builds <https://reproducible-builds.org>`_
@@ -335,17 +336,17 @@ In your project, dependencies used during the build and release process should
 be pinned. A pinned dependency should be explicitly set to a specific hash and
 not just to a mutable version or version range.
 
-:doc:`envs/spack/index` writes these hashes for the respective environment in
-:ref:`spack_lock`, :doc:`envs/uv/index` in :ref:`uv_lock`.
+:doc:`../envs/spack/index` writes these hashes for the respective environment in
+:ref:`spack_lock`, :doc:`../envs/uv/index` in :ref:`uv_lock`.
 
 .. tip::
    Üblicherweise verwalte ich diese Dateien jedoch nur bei
-   :doc:`python-basics:packs/apps` in :doc:`git/index`. Bei
+   :doc:`python-basics:packs/apps` in :doc:`../git/index`. Bei
    :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
    Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
 
-:doc:`envs/spack/index` writes these hashes for the respective environment in
-:ref:`spack_lock`, :doc:`envs/uv/index` in :ref:`uv_lock`. These files should
+:doc:`../envs/spack/index` writes these hashes for the respective environment in
+:ref:`spack_lock`, :doc:`../envs/uv/index` in :ref:`uv_lock`. These files should
 therefore also be checked in with the source code.
 
 This can reduce the following security risks for
@@ -371,3 +372,10 @@ reduce this risk by
 .. _S324: https://docs.astral.sh/ruff/rules/hashlib-insecure-hash-function/
 .. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
 .. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
+
+.. toctree::
+    :hidden:
+    :titlesonly:
+    :maxdepth: 0
+
+    sbom
