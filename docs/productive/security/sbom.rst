@@ -7,30 +7,39 @@ Software Bill of Materials (SBOM)
 
 A Software Bill of Materials (SBOM) is a document used to exchange information
 about software and its composition. This format is primarily used in the
-security field to check software and its dependencies for vulnerabilities using
+security sector to check software and its dependencies for vulnerabilities using
 vulnerability databases such as `CVE <https://www.cve.org/>`_ and `OSV
-<https://osv.dev/>`_. The SBOM format used by the CPython project is `SPDX
+<https://osv.dev/>`_.
+
+The SBOM format used by the CPython project is `SPDX
 <https://spdx.github.io/spdx-spec/v3.0.1/model/Software/Classes/Sbom/>`_, which
-can be converted to other formats as needed. The SBOM file for the dependencies
-included in CPython is maintained at `Misc/sbom.spdx.json
+can be converted to other formats if required. The SBOM file for the
+dependencies included in CPython is maintained at `Misc/sbom.spdx.json
 <https://github.com/python/cpython/blob/main/Misc/sbom.spdx.json>`_. The file is
 generated using `Tools/build/generate_sbom.py
 <https://github.com/python/cpython/blob/main/Tools/build/generate_sbom.py>`_.
+You can retrieve the SBOM file for any Python version at :samp:`https://www.python.org/ftp/python/{MAJOR.MINOR.PATCH}/Python-{MAJOR.MINOR.PATCH}.tgz.spdx.json`,
+for example at
+https://www.python.org/ftp/python/3.14.6/Python-3.14.6.tgz.spdx.json.
 
-Generating an SBOM File
------------------------
+.. seealso::
+   * `Python Software Bill-of-Materials Information
+     <https://www.python.org/downloads/metadata/sbom/>`_
 
-… with uv
-~~~~~~~~~
+Creating an SBOM file
+---------------------
 
-:term:`uv` provides an easy way to generate an SBOM file in the CycloneDX v1.5
-format using:
+… using uv
+~~~~~~~~~~
+
+:term:`uv` offers a simple way to create an SBOM file in CycloneDX v1.5 format
+using:
 
 .. code-block:: console
 
    $ uv export --format='cyclonedx1.5' > sbom.cdx.json
 
-However, the file contains only very basic information; for example, for
+However, the file contains only very basic information, for example, for
 `cusy.tasks <https://github.com/cusyio/cusy.tasks>`_:
 
 .. code-block:: json
@@ -48,11 +57,11 @@ However, the file contains only very basic information; for example, for
       ]
     }
 
-Using ``uv export --all-groups --format='cyclonedx1.5' > sbom.cdx.json``, you
+Using ``uv export --all-groups --format="cyclonedx1.5" > sbom.cdx.json``, you
 can also include all dependency groups in the SBOM file.
 
-… using CycloneDX Python
-~~~~~~~~~~~~~~~~~~~~~~~~
+… with CycloneDX Python
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The output from `CycloneDX Python
 <https://cyclonedx-bom-tool.readthedocs.io/en/latest/index.html>`_ is
@@ -98,7 +107,7 @@ considerably more comprehensive:
       "version": "26.2.0"
     }
 
-The command to generate the file is:
+The command-line command to generate the file is:
 
 .. code-block:: console
 
@@ -184,17 +193,18 @@ CycloneDX SBOM file can be checked into the repository:
    }
 
 In the :term:`CI` workflow, the placeholder SBOM file is then checked out along
-with the code. sbomify then enriches it with the latest information. Hatchling
-subsequently builds the wheel using the latest SBOM file, and finally the :term:`wheel` is published to :term:`PyPI`.
+with the code. sbomify then populates it with the latest information. Hatchling
+then builds the :term:`wheel <Wheel>` using the latest SBOM file, and finally
+the wheel is published to PyPI.
 
 Analysis
 --------
 
 There are numerous tools available for security and licence checks, each
-focusing on different problem areas. Two open-source tools for SBOM analysis are
-`Dependency Track <https://dependencytrack.org>`_ and `GUAC <https://guac.sh>`_.
-With ``sbomify-action``, you can upload SBOMs directly from the :term:`CI`
-pipeline to your Dependency Track instance using:
+focusing on different areas of concern. Two open-source tools for SBOM analysis
+are `Dependency Track <https://dependencytrack.org>`_ and `GUAC
+<https://guac.sh>`_. With ``sbomify-action``, you can upload SBOMs from the CI
+pipeline directly to your Dependency Track instance using:
 
 .. code-block:: yaml
 
