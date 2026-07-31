@@ -5,377 +5,137 @@
 Security
 ========
 
-In previous chapters, we have already provided some tips designed to help ensure
-safer operation.
-
-.. seealso::
-   * :ref:`secure-release-workflow`
-   * :ref:`zizmorcore`
-   * :ref:`add_2fa`
-
-Here, we would like to summarise and expand on the individual elements once
-again. We will be using the `OpenSSF Scorecard
-<https://securityscorecards.dev/>`_ as our guide. Alternatively, you can also
-refer to :ref:`open_chain`.
-
-.. _check-vulnerabilities:
-
-Check vulnerabilities
----------------------
-
-Risk: High
-
-This check determines whether the project has open, unfixed vulnerabilities in
-its own code base or in its dependencies. An open vulnerability can be easily
-exploited and should be closed as soon as possible.
-
-For such a check, you can use for example ``uv audit`` Alternatively, you can
-use `osv <https://pypi.org/project/osv/>`_ or `pip-audit
-<https://pypi.org/project/pip-audit/>`_.
-
-``uv audit`` is a new command introduced in uv≥0.11.19 that checks the
-dependencies in your project for known vulnerabilities in the `OSV
-<https://osv.dev>`_ database and ‘undesirable’ project statuses, such as
-*deprecated*:
+As of July 2026, :term:`PyPI` hosts over 750,000 packages, and this number is
+growing daily. An average Python project includes dozens of additional
+dependencies – packages that you have never explicitly chosen, but on which you
+nevertheless rely because your dependencies require them. When you install
+pandas in your application, you get more than just pandas. The complete
+dependency tree looks like this:
 
 .. code-block:: console
 
-   $ uv audit
-   warning: `uv audit` is experimental and may change without warning. Pass `--preview-features audit-command` to disable this warning.
-   Resolved 115 packages in 16ms
-   Found 12 known vulnerabilities and no adverse project statuses in 114 packages
+   $ uv add pandas
+   $ uv pip tree
+   myapp v0.1.0
+   └── pandas v3.0.5
+       ├── numpy v2.5.1
+       └── python-dateutil v2.9.0.post0
+           └── six v1.17.0
+
+Although you only wanted to add one package (``pandas``), you ended up with four
+without being asked. Even if just one of these transitive packages – which you
+never explicitly installed – were to contain a security vulnerability, your
+entire application would be at risk. This greatly increases the attack surface
+compared to what you yourself specified in ``dependencies``.
+
+Here are just a few recent attacks on the software supply chain:
+
+LiteLLM/Telnyx
+    In March this year, following the disclosure of an API token due to an
+    `exploited trivy dependency
+    <https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/>`_,
+    versions of the `litellm <https://pypi.org/project/litellm/>`_ and `telnyx
+    <https://pypi.org/project/telnyx/>`_ packages were published on :term:`PyPI`
+    that contained malware designed to steal login credentials. The malware was
+    executed upon installation, collected sensitive login credentials and files,
+    and forwarded them to a remote API.
+
+    .. seealso::
+       `Incident Report: LiteLLM/Telnyx supply-chain attacks, with guidance
+       <https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/>`_
+
+Email phishing attack targeting PyPI users
+    In April 2026, the wave of phishing attacks – which exploit domain name
+    confusion and involve the sending of emails that appear legitimate –
+    continues. This is the same attack that occurred in June 2025 and targets
+    many other open-source repositories, albeit with a different domain name.
+
+    .. seealso::
+       `PyPI Users Email Phishing Attack
+       <https://blog.pypi.org/posts/2025-07-28-pypi-phishing-attack/>`_
+
+Shai-Hulud
+    In November 2025, an attack on the `npm <https://www.npmjs.com/>`_ ecosystem
+    escalated, exploiting compromised accounts to publish malicious packages.
+    This campaign, known as Shai-Hulud, targeted a large number of JavaScript
+    packages and stole credentials to spread further. Although :term:`PyPI`
+    itself was not exploited, some PyPI login credentials were exposed in
+    compromised repositories.
+
+    .. seealso::
+       `PyPI and Shai-Hulud: Staying Secure Amid Emerging Threats
+       <https://blog.pypi.org/posts/2025-11-26-pypi-and-shai-hulud/>`_
+
+.. _token_exfiltration:
+
+Token Exfiltration
+    In September 2025, code was injected into GitHub Actions workflows in over
+    570 repositories, resulting in the theft of more than 3,300 secrets,
+    including :term:`PyPI` and npm tokens as well as AWS access keys. PyPI
+    blocked all the stolen tokens and urged all users to switch to
+    :ref:`trusted_publishers`.
+
+    .. seealso::
+       `Token Exfiltration Campaign via GitHub Actions Workflows
+       <https://blog.pypi.org/posts/2025-09-16-github-actions-token-exfiltration/>`_
+
+ZIP parser confusion attacks
+    In August 2025, :term:`PyPI` introduced restrictions designed to prevent
+    confusion arising from different implementations of the ZIP parser in
+    installation and verification programmes for Python packages. :term:`uv`
+    exhibited different extraction behaviour to many Python-based installation
+    programmes that use :mod:`zipfile`.
+
+    .. seealso::
+       `uv security advisory: ZIP payload obfuscation
+       <https://astral.sh/blog/uv-security-advisory-cve-2025-54368>`_
+
+.. _ultralytics:
+
+Ultralytics
+    In December 2024, `ultralytics <https://pypi.org/project/ultralytics/>`_
+    fell victim to a supply-chain attack in which the project’s GitHub Actions
+    workflows were first compromised, followed by its PyPI API tokens. No
+    vulnerability in :term:`PyPI` was exploited to carry out this attack.
+
+    .. seealso::
+       `Supply-chain attack analysis: Ultralytics
+       <https://blog.pypi.org/posts/2024-12-11-ultralytics-attack-analysis/>`_
+
+These are not theoretical attacks. They have occurred in real-world projects
+with millions of users. If you discover a malicious package on PyPI, you can
+report it via `PyPI’s security reporting system <https://pypi.org/security/>`_.
+
+In June 2026, Seth Larson, a member of the `Python Security Response Team
+<https://devguide.python.org/security/psrt/>`_, published a chart showing the
+annual trend in security vulnerabilities published by Python, which indicates
+that the number is expected to triple in 2026:
+
+.. figure:: python-cve-per-year.png
+   :alt: Number of CVEs published annually by Python. It is expected that around
+         65 CVEs will be published in 2026.
+
+   Source: https://mastodon.social/@sethmlarson/116680832573268456
 
-   Vulnerabilities:
+However, this merely reflects the results and does not provide an overview of
+the reports received. Many of these are closed and treated instead as
+non-security-related error reports; others are closed as neither security nor
+error reports. Here is the number of reports created since July 2024 relating to
+GitHub security advisories:
 
-   idna 3.12 has 1 known vulnerability:
-   - GHSA-65pc-fj4g-8rjx: Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix
-     Fixed in: 3.15
-     Advisory information: https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx
-   …
+.. figure:: ghsas-by-month.webp
+   :alt: Chart showing new security reports. From 2024, single-digit numbers or
+         zero per month, rising to around 40 in 2026.
 
-``uv add``, ``uv sync``, and so on can now be run during every synchronisation
-process to check for previously identified malware. This feature is not enabled
-by default, but it can be easily enabled by setting  ``UV_MALWARE_CHECK=1`` in
-the shell.
-
-.. seealso::
-   * `uv audit <https://docs.astral.sh/uv/reference/cli/#uv-audit>`_
-   * `uv audit settings <https://docs.astral.sh/uv/reference/settings/#audit>`_
-
-If a vulnerability is found in a dependency, you should update to a
-non-vulnerable version; if no update is available, you should consider removing
-the dependency.
-
-If you believe that the security vulnerability does not affect your project, you
-can define exceptions for ``uv audit`` in the :file:`pyproject.toml` file, for
-example:
-
-.. code-block:: toml
-   :caption: pyproject.toml
-
-   [tool.uv.audit]
-   ignore = ["PYSEC-2022-43017", "GHSA-5239-wwwm-4pmq"]
-
-or better still:
-
-.. code-block:: toml
-   :caption: pyproject.toml
-
-   [tool.uv.audit]
-   ignore-until-fixed = ["PYSEC-2022-43017"]
-
-.. seealso::
-   * `ignore <https://docs.astral.sh/uv/reference/settings/#audit_ignore>`_
-   * `ignore-until-fixed
-     <https://docs.astral.sh/uv/reference/settings/#audit_ignore-until-fixed>`_
-
-You can also add the vulnerability analysis using ``uv-audit`` to your
-:doc:`prek <../git/advanced/hooks/prek>` checks:
-
-.. code-block:: yaml
-
-   - repo: https://github.com/astral-sh/uv-pre-commit
-     rev: d9fca3320346514799461a80b0753eb45d707d46 # 0.11.28
-     hooks:
-     - id: uv-audit
-       files: ^(uv\.lock|pyproject\.toml)$
-
-Maintenance
------------
-
-.. _automatic-update:
-
-Are the dependencies updated automatically?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: High
-
-Outdated dependencies make a project vulnerable to attacks on known
-vulnerabilities. Therefore, the process of updating dependencies should be
-automated by checking for outdated or insecure requirements and updating them if
-necessary. You can use `dependabot <https://github.com/dependabot>`_ or `Safety
-<https://www.getsafety.com/>`_ for this purpose.
-
-You can also update your :doc:`/productive/envs/uv/index` environments
-automatically.
-
-.. seealso::
-   * :ref:`Update uv.lock <python-basics:update-uv-lock>`
-
-Are the dependencies still maintained?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: High
-
-This indicates possible unpatched security vulnerabilities. Therefore, it should
-be checked regularly whether a project has been archived. Conversely, the
-OpenSSF scorecard assumes that with at least one commit a week for 90 days, the
-project is very actively maintained. However, a lack of active maintenance is
-not necessarily always a problem: smaller utilities in particular usually do not
-need to be maintained, or only very rarely. So a lack of active maintenance only
-tells you that you should investigate the situation more closely.
-
-You can also display the activities of a project with badges, for example:
-
-.. image:: https://img.shields.io/github/commit-activity/y/veit/python4datascience
-   :alt: Annual commit activity
-.. image:: https://img.shields.io/github/commit-activity/m/veit/python4datascience
-   :alt: Monthly commit activity
-.. image:: https://img.shields.io/github/commit-activity/w/veit/python4datascience
-   :alt: Weekly commit activity
-
-Is there a safety concept for the project?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: Medium
-
-Ideally, a :ref:`python-basics:security` or similar file should have been
-published with the project. This file should contain information
-
-* how a security vulnerability can be reported without it becoming publicly
-  visible,
-* on the procedure and schedule for disclosing the vulnerability,
-* to links, for example  URLs and emails, where support can be requested.
-
-.. seealso::
-   * `Guide to implementing a coordinated vulnerability disclosure process for
-     open source projects
-     <https://github.com/ossf/oss-vulnerability-guide/blob/main/maintainer-guide.md>`_
-   * `Adding a security policy to your repository
-     <https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/add-security-policy>`_
-   * `Runbook
-     <https://github.com/ossf/oss-vulnerability-guide/blob/main/runbook.md>`_
-
-Does the project contain a usable licence?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: Low
-
-A :doc:`license </productive/licensing>` indicates how the source code may or
-may not be used. The absence of a licence complicates any kind of security
-review or audit and poses a legal risk for potential use.
-
-OSSF-Scorecard uses the `GitHub License API
-<https://docs.github.com/en/rest/licenses/licenses?apiVersion=2022-11-28#get-the-license-for-a-repository>`_
-for projects hosted on GitHub, otherwise it uses its own heuristics to detect a
-published license file. Files in a :file:`LICENSES` directory should be named
-with their :ref:`SPDX <standard_format_licensing>` licence identifier followed
-by an appropriate file extension as described in the :ref:`REUSE <reuse>`
-specification.
-
-OpenSSF Best Practices Badge
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: Low
-
-You can also get a corresponding badge with the `OpenSSF Best Practices Badge
-Program <https://www.bestpractices.dev/en>`_.
-
-Continuous testing
-------------------
-
-Are CI tests carried out in the project?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: Low
-
-Before code is merged into pull or merge requests, tests should be performed to
-help detect errors early and reduce the number of vulnerabilities in a project.
-
-.. seealso::
-   * :ref:`coverage-github-actions`
-
-Does the project use fuzzing tools?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-risk: Medium
-
-Fuzzing or fuzz testing passes unexpected or random data to your programme to
-detect bugs. Regular fuzzing is important to detect vulnerabilities that can be
-exploited by others, especially since fuzzing can also be used in an attack to
-find the same vulnerabilities.
-
-* Does your project use `fuzzing <https://owasp.org/www-community/Fuzzing>`_?
-* Is the name of the repository included in the `OSS fuzz
-  <https://github.com/google/oss-fuzz>`_ project list?
-* Is `ClusterFuzzLite <https://google.github.io/clusterfuzzlite/>`_ used in the
-  repository?
-* Are custom language-specific fuzzing features present in the repository, for
-  example with `atheris <https://pypi.org/project/atheris/>`_?
-
-Does your project use static code analysis tools?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: Medium
-
-:term:`Static test procedures` test the source code before the application is
-run. This can prevent known types of errors from being inadvertently introduced
-into the codebase.
-
-.. _bandit:
-
-`Bandit <https://github.com/PyCQA/bandit>`__, which you can use with
-:doc:`../qa/ruff`, allows you to check for the following vulnerabilities,
-amongst others:
-
-+--------+-----------------------------------------------------------------------+
-| Rule   | Description                                                           |
-+--------+-----------------------------------------------------------------------+
-| `S105`_| Hard-coded secrets                                                    |
-+--------+-----------------------------------------------------------------------+
-| `S301`_| :doc:`/data-processing/serialisation-formats/pickle/index` and other  |
-|        | insecure deserialisation                                              |
-+--------+-----------------------------------------------------------------------+
-| `S307`_| Use of :func:`eval` with untrusted input                              |
-+--------+-----------------------------------------------------------------------+
-| `S113`_| Missing timeouts                                                      |
-+--------+-----------------------------------------------------------------------+
-| `S324`_| Weak cryptography, such as MD5 collisions                             |
-+--------+-----------------------------------------------------------------------+
-| `S608`_| SQL injection via string formatting                                   |
-+--------+-----------------------------------------------------------------------+
-
-.. seealso:
-   `flake8-bandit <https://docs.astral.sh/ruff/rules/#flake8-bandit-s>`_
-
-You can also integrate Bandit into Jupyter Notebooks, IDEs and prek.
-
-In addition, you can use :doc:`../qa/pysa` for `taint
-<https://en.wikipedia.org/wiki/Taint_checking>`_ analyses.
-
-For GitHub repositories you can also use `CodeQL <https://codeql.github.com>`_;
-see `codeql-action <https://github.com/github/codeql-action/blob/main/README.md#usage>`_.
-
-Risk assessment of the source code
-----------------------------------
-
-Is the project free of checked-in binaries?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: High
-
-Generated executables in the source code repository (for example  Java
-:file:`.class` files, Python :file:`.pyc` files) increase risk because they are
-difficult to verify, so they may be out of date or maliciously tampered with.
-These problems can be countered with verified, reproducible builds, but their
-executables should not end up back in the source code repository.
-
-Is the development process vulnerable to the introduction of malicious code?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: High
-
-With :ref:`protected Git branches <protected_branches>`, rules can be defined
-for the adoption of changes in standard and release branches, for example
-automated `static code analyses
-<https://en.wikipedia.org/wiki/Static_program_analysis>`_ with
-:doc:`../qa/flake8`, :doc:`../qa/pysa`, :doc:`../qa/wily` and :ref:`code reviews
-<code_reviews>` via :doc:`merge requests
-<../git/advanced/gitlab/merge-requests>`.
-
-.. seealso::
-   * `Reproducible Builds <https://reproducible-builds.org>`_
-   * `Python 3.12.0 from a supply chain security perspective
-     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-13>`_
-   * `Defending against the PyTorch supply chain attack PoC
-     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-25>`_
-
-.. _code_reviews:
-
-Are code reviews performed?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: High
-
-Code reviews can detect unintentional vulnerabilities or possible introduction
-of malicious code. Possible attacks can be detected in which the account of a
-team member has been infiltrated.
-
-Does the project involve people from several organisations?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: Low
-
-This is taken as an indication of a lower number of trustworthy code reviewers.
-For this purpose, you can search for different entries in the * Company* field
-in the profiles. At least three different companies in the last 30 commits are
-desirable, whereby each of these team members should have made at least five
-commits.
-
-Risk assessment of the builds
------------------------------
-
-.. _lock-dependencies:
-
-Are dependencies declared and fixed in the project?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risk: Medium
-
-In your project, dependencies used during the build and release process should
-be pinned. A pinned dependency should be explicitly set to a specific hash and
-not just to a mutable version or version range.
-
-:doc:`../envs/spack/index` writes these hashes for the respective environment in
-:ref:`spack_lock`, :doc:`../envs/uv/index` in :ref:`uv_lock`.
-
-.. tip::
-   Üblicherweise verwalte ich diese Dateien jedoch nur bei
-   :doc:`python-basics:packs/apps` in :doc:`../git/index`. Bei
-   :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
-   Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
-
-:doc:`../envs/spack/index` writes these hashes for the respective environment in
-:ref:`spack_lock`, :doc:`../envs/uv/index` in :ref:`uv_lock`. These files should
-therefore also be checked in with the source code.
-
-This can reduce the following security risks for
-:doc:`python-basics:packs/apps`:
-
-* Testing and deployment are done with the same software, which reduces
-  deployment risks, simplifies debugging and enables reproducibility.
-* Compromised dependencies do not undermine the security of the project.
-* Substitution attacks, :abbr:`i.e. (id est)` attacks that aim to confuse
-  dependencies, can thus be countered.
-
-However, fixing dependencies should not prevent software updates. You can
-reduce this risk by
-
-* automated tools that notify you when dependencies in your project are out of
-  date
-* update applications that lock dependencies quickly.
-
-.. _S105: https://docs.astral.sh/ruff/rules/hardcoded-password-string/
-.. _S301: https://docs.astral.sh/ruff/rules/suspicious-pickle-usage/
-.. _S307: https://docs.astral.sh/ruff/rules/suspicious-eval-usage/
-.. _S113: https://docs.astral.sh/ruff/rules/request-without-timeout/
-.. _S324: https://docs.astral.sh/ruff/rules/hashlib-insecure-hash-function/
-.. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
-.. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
+   Source: Hugo van Kemenade: `Security: line goes up
+   <https://hugovk.dev/blog/2026/security-line-goes-up/>`_
 
 .. toctree::
     :hidden:
     :titlesonly:
     :maxdepth: 0
 
+    own-code
+    dependencies
+    environments
     sbom

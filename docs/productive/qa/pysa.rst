@@ -13,10 +13,10 @@ and identifies vulnerable code.
 .. seealso::
    * `What Is Taint Analysis and Why Should I Care?
      <https://dzone.com/articles/what-is-taint-analysis-and-why-should-i-care>`_
-   * `How Pysa works <https://pyre-check.org/docs/pysa-basics>`_
+   * `How Pysa works <https://pyre-check.org/docs/pysa-basics/>`_
    * `Running Pysa <https://pyre-check.org/docs/pysa-running/>`_
    * `Pysa Tutorial
-     <https://github.com/facebook/pyre-check/tree/main/documentation/pysa_tutorial>`_
+     <https://github.com/facebook/Pysa/tree/main/documentation/pysa_tutorial>`_
 
 Configuration
 -------------
