@@ -49,16 +49,25 @@ of workload:
 
 pandas
     is the canonical Python DataFrame library for analysis on a single machine.
+
+.. _polars:
+
 Polars
     is written in Rust and allows for powerful analysis on a single node or when
     `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_ and
     `expressions API
     <https://docs.pola.rs/api/python/stable/reference/expressions/index.html>`_
     are important.
+
+.. _dask:
+
 Dask
     is a Python library for parallel computing that scales familiar APIs,
     including pandas and `Scikit-Learn <https://scikit-learn.org/stable/>`_, to
     clusters.
+
+.. _duckdb:
+
 DuckDB
     is an in-process `OLAP
     <https://en.wikipedia.org/wiki/Online_analytical_processing>`_ database for

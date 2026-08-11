@@ -23,6 +23,7 @@ emergencies when we need to start branches for older versions.
 Added
 ~~~~~
 
+* 📝 Add Narwhals
 * 📝 Add protobuf-py
 
 Changed

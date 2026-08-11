@@ -9,6 +9,8 @@ In  :doc:`pandas:user_guide/enhancingperf`, some possibilities are described for
 improving the performance of pandas. However, there are also special libraries
 that can parallelise the processing of data frames.
 
+.. _cudf:
+
 cuDF
 ----
 
@@ -22,6 +24,8 @@ cuDF is a GPU DataFrame library that implements a `pandas-like API
     * `PyPI <https://pypi.org/project/cudf/>`_
     * `Example notebooks
       <https://github.com/rapidsai-community/notebooks-contrib>`_
+
+.. _modin:
 
 Modin
 -----
@@ -54,3 +58,13 @@ of the pandas API, although there are minor changes.
     * `API docs <https://docs.dask.org/en/latest/dataframe-api.html>`_
     * `Example notebook <https://examples.dask.org/dataframe.html>`_
     * `Tutorial <https://tutorial.dask.org/01_dataframe.html>`_
+
+Narwhals
+--------
+
+`Narwhals <https://narwhals-dev.github.io/narwhals/>`_ provides a lightweight
+and extensible compatibility layer between various DataFrame libraries, with
+full API support for :ref:`cudf`, :ref:`modin`,
+:doc:`../workspace/pandas/index`, :ref:`polars` and `PyArrow
+<https://arrow.apache.org/docs/python/index.html>`_. :ref:`dask`, :ref:`duckdb`
+and others are also supported to a certain extent.
