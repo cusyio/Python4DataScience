@@ -14,64 +14,70 @@ are often hidden in everyday coding patterns that may initially appear harmless
 during a code review and can be overlooked by humans. Detecting these using a
 linter is the first line of defence.
 
-The eternal secret
-------------------
+.. card-carousel:: 1
 
-Leaked credentials are the starting point for many security breaches in the
-supply chain. An exposed :term:`PyPI` token makes it possible to publish
-versions of your packages containing backdoors. An exposed database URL makes it
-possible to steal data. And yet, this pattern is all too common. It is better to
-use environment variables:
+   .. card::
 
-.. code-block:: python
+      **The eternal secret**
 
-   import os
+      Leaked credentials are the starting point for many security breaches in
+      the supply chain. An exposed :term:`PyPI` token makes it possible to
+      publish versions of your packages containing backdoors. An exposed
+      database URL makes it possible to steal data. And yet, this pattern is all
+      too common. It is better to use environment variables:
 
-   DATABASE_KEY = os.environ["DB_KEY"]
-   DATABASE_URL = os.environ["DB_URL"]
+      .. code-block:: python
 
-.. warning::
-   Git never forgets: once you’ve managed a secret via Git, it remains in your
-   repository’s history forever. Simply deleting it in a later commit doesn’t
-   really help. Anyone with access to the repository can extract these
-   credentials. In attacks, the Git history is often scoured for secrets first,
-   and a PyPI token or cloud credentials that have been exposed are often the
-   first step in a supply chain compromise.
+         import os
 
-Cryptographic vulnerabilities
------------------------------
+         DATABASE_KEY = os.environ["DB_KEY"]
+         DATABASE_URL = os.environ["DB_URL"]
 
-Other common security vulnerabilities include cryptographic weaknesses such as
-`MD5 <https://en.wikipedia.org/wiki/MD5>`_ and `SHA-1
-<https://en.wikipedia.org/wiki/SHA-1>`_. MD5 collisions were first demonstrated
-in 2004 and SHA-1 collisions in 2017. This means that collisions can be
-generated using different inputs that produce the same hash value. This enables
-the forgery of certificates, the manipulation of downloads or the circumvention
-of integrity checks. Therefore, do not use either of these algorithms for
-security purposes; instead, use `SHA-256 <https://en.wikipedia.org/wiki/SHA-2>`_
-or better:
+      .. warning::
+         Git never forgets: once you’ve managed a secret via Git, it remains in
+         your repository’s history forever. Simply deleting it in a later commit
+         doesn’t really help. Anyone with access to the repository can extract
+         these credentials. In attacks, the Git history is often scoured for
+         secrets first, and a PyPI token or cloud credentials that have been
+         exposed are often the first step in a supply chain compromise.
 
-.. code-block:: python
+   .. card::
 
-   import hashlib
+      Cryptographic vulnerabilities
 
-   digest = hashlib.sha256(payload).hexdigest()
+      Other common security vulnerabilities include cryptographic weaknesses
+      such as `MD5 <https://en.wikipedia.org/wiki/MD5>`_ and `SHA-1
+      <https://en.wikipedia.org/wiki/SHA-1>`_. MD5 collisions were first
+      demonstrated in 2004 and SHA-1 collisions in 2017. This means that
+      collisions can be generated using different inputs that produce the same
+      hash value. This enables the forgery of certificates, the manipulation of
+      downloads or the circumvention of integrity checks. Therefore, do not use
+      either of these algorithms for security purposes; instead, use `SHA-256
+      <https://en.wikipedia.org/wiki/SHA-2>`_ or better:
 
-Stalled connections
--------------------
+      .. code-block:: python
 
-This may be subtle, but it is nonetheless dangerous, as a slow server can bring
-your process to a standstill indefinitely. An attack via such a server, with
-which your application communicates, can bring every request to a standstill,
-exhaust your thread pool and trigger a denial-of-service attack. Your entire
-application will then grind to a halt because you forgot to specify a parameter.
-You should therefore always specify a timeout:
+         import hashlib
 
-.. code-block:: pycon
+         digest = hashlib.sha256(payload).hexdigest()
 
-   >>> import httpx
-   >>> r = httpx.get("https://httpbin.org/get", timeout=30)
-   httpx.ReadTimeout: The read operation timed out
+   .. card::
+
+      **Stalled connections**
+
+      This may be subtle, but it is nonetheless dangerous, as a slow server can
+      bring your process to a standstill indefinitely. An attack via such a
+      server, with which your application communicates, can bring every request
+      to a standstill, exhaust your thread pool and trigger a denial-of-service
+      attack. Your entire application will then grind to a halt because you
+      forgot to specify a parameter. You should therefore always specify a
+      timeout:
+
+      .. code-block:: pycon
+
+         >>> import httpx
+         >>> r = httpx.get("https://httpbin.org/get", timeout=30)
+           httpx.ReadTimeout: The read operation timed out
 
 .. _bandit:
 

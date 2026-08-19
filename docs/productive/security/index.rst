@@ -30,81 +30,104 @@ compared to what you yourself specified in ``dependencies``.
 
 Here are just a few recent attacks on the software supply chain:
 
-LiteLLM/Telnyx
-    In March this year, following the disclosure of an API token due to an
-    `exploited trivy dependency
-    <https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/>`_,
-    versions of the `litellm <https://pypi.org/project/litellm/>`_ and `telnyx
-    <https://pypi.org/project/telnyx/>`_ packages were published on :term:`PyPI`
-    that contained malware designed to steal login credentials. The malware was
-    executed upon installation, collected sensitive login credentials and files,
-    and forwarded them to a remote API.
+.. card-carousel:: 2
 
-    .. seealso::
-       `Incident Report: LiteLLM/Telnyx supply-chain attacks, with guidance
-       <https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/>`_
+   .. card::
 
-Email phishing attack targeting PyPI users
-    In April 2026, the wave of phishing attacks – which exploit domain name
-    confusion and involve the sending of emails that appear legitimate –
-    continues. This is the same attack that occurred in June 2025 and targets
-    many other open-source repositories, albeit with a different domain name.
+      **LiteLLM/Telnyx**
 
-    .. seealso::
-       `PyPI Users Email Phishing Attack
-       <https://blog.pypi.org/posts/2025-07-28-pypi-phishing-attack/>`_
+      In March this year, following the disclosure of an API token due to an
+      `exploited trivy dependency
+      <https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/>`_,
+      versions of the `litellm <https://pypi.org/project/litellm/>`_ and `telnyx
+      <https://pypi.org/project/telnyx/>`_ packages were published on
+      :term:`PyPI` that contained malware designed to steal login credentials.
+      The malware was executed upon installation, collected sensitive login
+      credentials and files, and forwarded them to a remote API.
 
-Shai-Hulud
-    In November 2025, an attack on the `npm <https://www.npmjs.com/>`_ ecosystem
-    escalated, exploiting compromised accounts to publish malicious packages.
-    This campaign, known as Shai-Hulud, targeted a large number of JavaScript
-    packages and stole credentials to spread further. Although :term:`PyPI`
-    itself was not exploited, some PyPI login credentials were exposed in
-    compromised repositories.
+      .. seealso::
+         `Incident Report: LiteLLM/Telnyx supply-chain attacks, with guidance
+         <https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/>`_
 
-    .. seealso::
-       `PyPI and Shai-Hulud: Staying Secure Amid Emerging Threats
-       <https://blog.pypi.org/posts/2025-11-26-pypi-and-shai-hulud/>`_
+   .. card::
 
-.. _token_exfiltration:
+      **Email phishing attack targeting PyPI users**
 
-Token Exfiltration
-    In September 2025, code was injected into GitHub Actions workflows in over
-    570 repositories, resulting in the theft of more than 3,300 secrets,
-    including :term:`PyPI` and npm tokens as well as AWS access keys. PyPI
-    blocked all the stolen tokens and urged all users to switch to
-    :ref:`trusted_publishers`.
+      In April 2026, the wave of phishing attacks – which exploit domain name
+      confusion and involve the sending of emails that appear legitimate –
+      continues. This is the same attack that occurred in June 2025 and targets
+      many other open-source repositories, albeit with a different domain name.
 
-    .. seealso::
-       `Token Exfiltration Campaign via GitHub Actions Workflows
-       <https://blog.pypi.org/posts/2025-09-16-github-actions-token-exfiltration/>`_
+      .. seealso::
+         `PyPI Users Email Phishing Attack
+         <https://blog.pypi.org/posts/2025-07-28-pypi-phishing-attack/>`_
 
-ZIP parser confusion attacks
-    In August 2025, :term:`PyPI` introduced restrictions designed to prevent
-    confusion arising from different implementations of the ZIP parser in
-    installation and verification programmes for Python packages. :term:`uv`
-    exhibited different extraction behaviour to many Python-based installation
-    programmes that use :mod:`zipfile`.
+   .. card::
 
-    .. seealso::
-       `uv security advisory: ZIP payload obfuscation
-       <https://astral.sh/blog/uv-security-advisory-cve-2025-54368>`_
+      **Shai-Hulud**
 
-.. _ultralytics:
+      In November 2025, an attack on the `npm <https://www.npmjs.com/>`_
+      ecosystem escalated, exploiting compromised accounts to publish malicious
+      packages. This campaign, known as Shai-Hulud, targeted a large number of
+      JavaScript packages and stole credentials to spread further. Although
+      :term:`PyPI` itself was not exploited, some PyPI login credentials were
+      exposed in compromised repositories.
 
-Ultralytics
-    In December 2024, `ultralytics <https://pypi.org/project/ultralytics/>`_
-    fell victim to a supply-chain attack in which the project’s GitHub Actions
-    workflows were first compromised, followed by its PyPI API tokens. No
-    vulnerability in :term:`PyPI` was exploited to carry out this attack.
+      .. seealso::
+         `PyPI and Shai-Hulud: Staying Secure Amid Emerging Threats
+         <https://blog.pypi.org/posts/2025-11-26-pypi-and-shai-hulud/>`_
 
-    .. seealso::
-       `Supply-chain attack analysis: Ultralytics
-       <https://blog.pypi.org/posts/2024-12-11-ultralytics-attack-analysis/>`_
+   .. card::
+
+      .. _token-exfiltration:
+
+      **Token Exfiltration**
+
+      In September 2025, code was injected into GitHub Actions workflows in over
+      570 repositories, resulting in the theft of more than 3,300 secrets,
+      including :term:`PyPI` and npm tokens as well as AWS access keys. PyPI
+      blocked all the stolen tokens and urged all users to switch to
+      :ref:`trusted_publishers`.
+
+      .. seealso::
+         `Token Exfiltration Campaign via GitHub Actions Workflows
+         <https://blog.pypi.org/posts/2025-09-16-github-actions-token-exfiltration/>`_
+
+   .. card::
+
+      **ZIP parser confusion attacks**
+
+      In August 2025, :term:`PyPI` introduced restrictions designed to prevent
+      confusion arising from different implementations of the ZIP parser in
+      installation and verification programmes for Python packages. :term:`uv`
+      exhibited different extraction behaviour to many Python-based installation
+      programmes that use :mod:`zipfile`.
+
+      .. seealso::
+         `uv security advisory: ZIP payload obfuscation
+         <https://astral.sh/blog/uv-security-advisory-cve-2025-54368>`_
+
+   .. card::
+
+      .. _ultralytics:
+
+      **Ultralytics**
+
+      In December 2024, `ultralytics <https://pypi.org/project/ultralytics/>`_
+      fell victim to a supply-chain attack in which the project’s GitHub Actions
+      workflows were first compromised, followed by its PyPI API tokens. No
+      vulnerability in :term:`PyPI` was exploited to carry out this attack.
+
+      .. seealso::
+         `Supply-chain attack analysis: Ultralytics
+         <https://blog.pypi.org/posts/2024-12-11-ultralytics-attack-analysis/>`_
 
 These are not theoretical attacks. They have occurred in real-world projects
 with millions of users. If you discover a malicious package on PyPI, you can
 report it via `PyPI’s security reporting system <https://pypi.org/security/>`_.
+
+Security challenges are on the rise
+-----------------------------------
 
 In June 2026, Seth Larson, a member of the `Python Security Response Team
 <https://devguide.python.org/security/psrt/>`_, published a chart showing the

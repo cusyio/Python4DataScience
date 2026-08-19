@@ -571,17 +571,19 @@ example:
 Alternatively, you can also view the PyPI versions of a project with badges, for
 example:
 
-+---------------+-------------------------------------------------------+
-| Package name  | Current PyPI version                                  |
-+===============+=======================================================+
-| pypi-simple   | .. image:: https://img.shields.io/pypi/v/pypi-simple  |
-|               |    :alt: PyPI Version                                 |
-|               |    :target: https://pypi.org/project/pypi-simple      |
-+---------------+-------------------------------------------------------+
-| mdurl         | .. image:: https://img.shields.io/pypi/v/mdurl        |
-|               |    :alt: PyPI Version                                 |
-|               |    :target: https://pypi.org/project/mdurl            |
-+---------------+-------------------------------------------------------+
+.. tab:: View
+
+   +---------------+-------------------------------------------------------+
+   | Package name  | Current PyPI version                                  |
+   +===============+=======================================================+
+   | pypi-simple   | .. image:: https://img.shields.io/pypi/v/pypi-simple  |
+   |               |    :alt: PyPI Version                                 |
+   |               |    :target: https://pypi.org/project/pypi-simple      |
+   +---------------+-------------------------------------------------------+
+   | mdurl         | .. image:: https://img.shields.io/pypi/v/mdurl        |
+   |               |    :alt: PyPI Version                                 |
+   |               |    :target: https://pypi.org/project/mdurl            |
+   +---------------+-------------------------------------------------------+
 
 .. tab:: reST
 

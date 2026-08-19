@@ -54,6 +54,7 @@ extensions = [
     "sphinx.ext.graphviz",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
+    "sphinx_design",
     "sphinx_copybutton",
     "sphinx_inline_tabs",
     "sphinx_sitemap",

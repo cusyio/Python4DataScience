@@ -84,7 +84,7 @@ security vulnerabilities in GitHub Actions workflows – including template
 injection, unpinned actions, excessive permissions, credential exposure and
 `more than 30 other checks <https://docs.zizmor.sh/audits/>`_. zizmor identifies
 vulnerabilities such as those exploited through :ref:`token exfiltration
-<token_exfiltration>`.
+<token-exfiltration>`.
 
 .. seealso::
    * :ref:`zizmorcore`
