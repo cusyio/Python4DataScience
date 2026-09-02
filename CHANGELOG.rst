@@ -29,6 +29,11 @@ Added
 Changed
 ~~~~~~~
 
+* 📝 Update string matching
+
+  * Replace deprecated fuzzywuzzy lib with thefuzz
+  * Expand the textacy section
+
 * 📝 Extend seccurity section
 * 👷🔧📝 Switch to prek
 
