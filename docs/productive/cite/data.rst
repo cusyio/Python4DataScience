@@ -8,11 +8,10 @@ Cite data
 DataCite Metadata Schema
 ------------------------
 
-The DataCite Metadata Working Group published the DataCite Metadata Schema
-Documentation for the publication and citation of research data in 2019:
-`DataCite Metadata Schema 4.3 <https://schema.datacite.org/meta/kernel-4.3/>`_
-together with a XSD (XML Schema Definition): `metadata.xsd
-<https://schema.datacite.org/meta/kernel-4.3/metadata.xsd>`_.
+The DataCite Metadata Working Group published the `DataCite Metadata Schema
+<https://schema.datacite.org/meta/kernel-4.7/>`_ for the publication and
+citation of research data in 2019 together with a XSD (XML Schema Definition):
+`metadata.xsd <https://schema.datacite.org/meta/kernel-4.7/metadata.xsd>`_.
 
 A simple datacite example can look like this:
 

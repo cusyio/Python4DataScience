@@ -29,6 +29,11 @@ Added
 Changed
 ~~~~~~~
 
+* 📝 Update the ‘Citations’ section
+
+  * Update CodeMeta
+  * Update DataCite Metadata Schema
+
 * 📝 Update string matching
 
   * Replace deprecated fuzzywuzzy lib with thefuzz
