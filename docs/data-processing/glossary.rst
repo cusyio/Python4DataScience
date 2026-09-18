@@ -128,6 +128,89 @@ Glossary
         **c**\ommodity **h**\ardware **D**\ata **B**\ase. This is a
         :doc:`nosql/document-oriented-db`.
 
+    Data catalogue
+        A data catalogue is a centralised overview of an organisation’s data
+        assets. It uses metadata to provide contextual information on each
+        dataset, including its origin, structure, ownership, usage history and
+        quality. Data catalogues help users to find and evaluate data, support
+        data management and regulatory compliance initiatives, and facilitate
+        cross-team collaboration.
+
+    Data Lake
+        The architecture of data lakes is characterised by the following layers:
+
+        Storage layer
+            A highly scalable platform capable of storing a wide variety of data
+            formats
+        Ingestion layer
+            Processes that load data into storage, either in so-called batches
+            or as a data stream (→ `Apache Kafka <https://kafka.apache.org/>`_,
+            → `Apache NiFi <https://nifi.apache.org/>`_)
+        Metadata and Cataloguing
+            Systems that document datasets, schemas and :term:`data lineage`;
+            see also :term:`data catalogues <data catalogue>`. Without suitable
+            metadata, a so-called ‘data swamp’ would arise.
+        Governance and Security
+            Mechanisms for access control, encryption and logging
+
+    Data lineage
+    Data origin
+    Data provenance
+    Data pedigree
+         Operational infrastructure that traces the path of data through
+         systems: where it comes from, how it has been transformed and where it
+         is used.
+
+    Data Mesh
+        Decentralised data architecture for teams with data products within
+        their respective subject domains (→ `Domain-driven design (DDD)
+        <https://en.wikipedia.org/wiki/Domain-driven_design>`, → `Team
+        Topologies <https://teamtopologies.com>`_)
+
+        Data Mesh is based on the following four fundamental principles:
+
+        Domain ownership
+            Data Mesh delegates responsibility for data analysis to
+            domain-specific teams.
+        Data as a product
+            Analytical data is made available to other teams in the form of data
+            products to enable cross-functional analyses.
+        Federated governance
+            Common standards and rules are jointly defined by the teams in the
+            form of federated governance to ensure interoperability and meet
+            security requirements.
+        Self-serve data platform
+            The data infrastructure is provided by a data platform team in the
+            form of a data platform based on the self-service principle.
+
+    Data Warehouse
+        A database optimised for analytical purposes with the following
+        characteristics:
+
+        integrated
+            Various source systems containing data with different structures are
+            consolidated into a central database in a standardised format
+        subject-oriented
+            Analysis of key performance indicators, not for operational
+            processes
+        time-variant
+            Analyses of changes and trends over time are possible
+        nonvolatile
+            Data is stored permanently, not just temporarily
+
+    DataOps
+        Modelled on :term:`DevOps`, DataOps aims to make previously isolated
+        data processing functions automated, agile and consistent. Through
+        continuous testing and monitoring, DataOps helps to improve data quality
+        and availability in :term:`data warehouses <Data warehouse>`,
+        :term:`data lakes <Data lake>` and :term:`data meshes <Data mesh>`.
+
+    DevOps
+        A software development methodology that accelerates the delivery of
+        software applications and services by integrating and automating
+        software development (Dev) and operations (Ops). Traditionally, these
+        two groups have worked separately from one another in different silos.
+
     Eventual Consistency
         *«Consistency as a state transition that is reached at some point.»*
 
@@ -213,6 +296,11 @@ Glossary
         computer clusters. It was inspired by the *map* and *reduce* functions,
         which are often used in functional programming, even if the semantics
         deviate slightly from them.
+
+    MLOps
+        MLOps combines machine learning (ML) and :term:`DevOps` and is a process
+        for building and operating machine learning models, whereby the
+        individual tasks are automated and monitored.
 
     MongoDB
         MongoDB is a schema-free :doc:`nosql/document-oriented-db`,

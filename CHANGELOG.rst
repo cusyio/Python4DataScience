@@ -29,6 +29,13 @@ Added
 Changed
 ~~~~~~~
 
+* 📝 Update the section on data cleaning
+
+  * Add validation categories and procedures
+  * Add text encoding with charset_normalizer and ftfy
+  * Add DataProfiler and cerberus
+  * Update data processing glossary
+
 * 📝 Update the ‘Citations’ section
 
   * Update CodeMeta

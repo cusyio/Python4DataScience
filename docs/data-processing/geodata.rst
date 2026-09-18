@@ -288,7 +288,7 @@ Remote sensing
        https://raster.shields.io/github/license/remotesensinginfo/rsgislib
 
 .. seealso::
-   :doc:`/clean-prep/dask-pipeline`
+   :doc:`/clean-prep/libs-methods/dask-pipeline`
 
 General purposes
 ~~~~~~~~~~~~~~~~
