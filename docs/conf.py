@@ -22,6 +22,8 @@
 import os
 import re
 
+from datetime import date
+
 
 # Set canonical URL for the sitemap
 html_baseurl = "https://python4data.science/en/latest/"
@@ -33,7 +35,8 @@ if os.environ.get("READTHEDOCS", "") == "True":
 
 project = "Python for Data Science"
 author = "Veit Schiele"
-copyright = f"2019–2025, {author}"
+current_year = date.today().year
+copyright = f"2019–{current_year}, {author}"
 
 # The full version, including alpha/beta/rc tags
 git_tag = "git describe --abbrev=0"
