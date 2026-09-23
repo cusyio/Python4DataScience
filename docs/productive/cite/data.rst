@@ -5,6 +5,20 @@
 Cite data
 =========
 
+Similar to the way in which researchers routinely provide bibliographical
+references to other academic sources, data should also be cited. Although data
+is frequently shared, it is not always cited in the same way, thereby hindering
+access, transparency, reproducibility and reuse.
+
+.. seealso::
+   * :term:`Data Package`
+   * :term:`DCAT`
+   * :term:`DCAT-AP.de`
+   * :term:`OAI-ORE`
+   * :term:`DataONE Data Packaging`
+   * `Springer Nature: Data repository guidance
+     <https://www.springernature.com/gp/authors/research-data-policy/recommended-repositories>`_
+
 DataCite Metadata Schema
 ------------------------
 

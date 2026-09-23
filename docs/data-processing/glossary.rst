@@ -183,6 +183,26 @@ Glossary
             The data infrastructure is provided by a data platform team in the
             form of a data platform based on the self-service principle.
 
+    Data Package
+    Frictionless Specs
+        `Data Package <https://datapackage.org/standard/data-package/>`_ is a
+        lightweight, open-source standard for bundling, describing, and ensuring
+        FAIR use of datasets.
+
+        Data Package Descriptor
+            Central JSON file :file:`datapackage.json` in the root directory
+            containing general metadata (such as title, license, authors) and a
+            list of resources.
+        Data Resource
+            describes individual files or data sources (path, format, URL).
+        Table Schema
+            JSON schema for tabular data (column types, data types such as
+            ``string``/``integer``/``date``, constraints, and external foreign
+            keys).
+        Table Dialect
+            describes CSV dialect formatting (delimiters, quotation marks,
+            header rows).
+
     Data Warehouse
         A database optimised for analytical purposes with the following
         characteristics:
@@ -198,12 +218,37 @@ Glossary
         nonvolatile
             Data is stored permanently, not just temporarily
 
+    DataONE Data Packaging
+        `DataONE Data Packaging
+        <https://dataone-architecture-documentation.readthedocs.io/en/latest/design/DataPackage.html>`_
+        is a bundled collection that contains at least one scientific metadata
+        document, one or more data objects, and an RDF resource mapping that
+        defines their relationships using :term:`OAI-ORE` terms.
+
     DataOps
         Modelled on :term:`DevOps`, DataOps aims to make previously isolated
         data processing functions automated, agile and consistent. Through
         continuous testing and monitoring, DataOps helps to improve data quality
         and availability in :term:`data warehouses <Data warehouse>`,
         :term:`data lakes <Data lake>` and :term:`data meshes <Data mesh>`.
+
+    DCAT
+    Data Catalog Vocabulary
+        `DCAT <https://www.w3.org/TR/vocab-dcat-3/>`_ is a metadata standard
+        developed by the W3C for describing datasets and data catalogues on the
+        web. It is designed to facilitate the discovery, linking and exchange of
+        data, and uses :abbr:`RDF (Resource Description Framework)` for this
+        purpose. It primarily distinguishes between a *catalogue*, a *dataset*
+        and the *distribution* of a dataset.
+
+    DCAT-AP.de
+        A Common German Metadata Model for the Exchange of Open Government Data.
+
+        .. seealso::
+           * `DCAT-AP.de Spezifikation 3.0
+             <https://www.dcat-ap.de/def/dcatde/3.0/spec/>`_
+           * `Metadatenschema
+             <https://www.govdata.de/informationen/metadatenschema>`_
 
     DevOps
         A software development methodology that accelerates the delivery of
@@ -297,6 +342,12 @@ Glossary
         which are often used in functional programming, even if the semantics
         deviate slightly from them.
 
+    MediaWiki Tabular Data
+        MediaWiki `Tabular Data
+        <https://www.mediawiki.org/wiki/Help:Tabular_data>`_ stores structured
+        rows and columns as JSON in the ``Data:`` namespace, with the file
+        extension :file:`.tab` tab for cross-wiki lists and charts.
+
     MLOps
         MLOps combines machine learning (ML) and :term:`DevOps` and is a process
         for building and operating machine learning models, whereby the
@@ -367,6 +418,13 @@ Glossary
             is set with write access to data
         UNLOCK
             removes the locks SLOCK and XLOCK.
+
+    OAI-ORE
+    ORE
+    Open Archives Initiative Object Reuse and Exchange
+        `Open Archives Initiative Object Reuse and Exchange (OAI-ORE)
+        <https://www.openarchives.org/ore/>`_ defines standards for the
+        description and exchange of aggregations of web resources.
 
     Vector clock
         A vector clock is a software component used to assign unique time stamps
