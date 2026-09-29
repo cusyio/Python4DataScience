@@ -30,13 +30,9 @@ Git branches
     ``-c``
         creates the branch to switch to.
 
-:samp:`$ git switch -`
-    alternates between the last two branches. This makes it much easier to jump
-    back and forth between branches.
+    .. version-added:: 2.24
 
-    .. note::
-
-       In Git < 2.23, ``git switch`` is not yet available. In this case you
+       Before Git 2.24, ``git switch`` is not yet available. In this case you
        still need to use ``git checkout``:
 
        :samp:`$ git checkout [-b] [{BRANCH_NAME}]`
@@ -44,6 +40,10 @@ Git branches
 
            ``-b``
                creates the specified branch if it does not already exist.
+
+:samp:`$ git switch -`
+    alternates between the last two branches. This makes it much easier to jump
+    back and forth between branches.
 
 :samp:`$ git merge {FROM_BRANCH_NAME}`
     connects the specified branch with the branch you are currently in, for
@@ -76,6 +76,20 @@ Git branches
         is a merge strategy that is used when the merge is only to be done to
         ``HEAD``.
 
+:samp:`$ git merge-base [-a|--all] {COMMIT {COMMIT}`
+    finds the best possible common ancestors for a merge.
+
+    .. _git-merge-base:
+
+    .. version-added:: 2.56
+
+       From Git 2.56 onwards, the search has improved considerably, particularly
+       for so-called criss-cross merges.
+
+       .. seealso::
+          * `Stop searching history once no more merge bases can exist
+            <https://github.blog/open-source/git/highlights-from-git-2-56/#h-stop-searching-history-once-no-more-merge-bases-can-exist>`_
+
 .. _merge-conflicts:
 
 Merge conflicts
@@ -100,6 +114,13 @@ The history can then look like this, for example:
    * | 46ab1a2 Hotfix directly in main
    |/
    * 0c65f04 Initial commit
+
+.. _git-add-resolved:
+
+.. version-added:: 2.56
+
+   From Git 2.56 onwards, you can use ``git add --resolved`` to include only
+   those paths that have not yet been merged into the index.
 
 .. seealso::
 
