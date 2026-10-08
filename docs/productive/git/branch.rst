@@ -306,10 +306,11 @@ And to edit the non-merged files, you can create a `Git command alias
 Now you can edit all unmerged files with ``git edit-unmerged`` and then add all
 files to the staging area with ``git add -u``.
 
-.. seealso::
-   I took the editor variable from the `gitalias
-   <https://github.com/GitAlias/gitalias/tree/main>`_ project. And maybe you’ll
-   find more ideas for your alias there.
+Alternatively, you can also use ``git mergetool``.
+
+ .. seealso::
+   * `gitalias <https://github.com/GitAlias/gitalias/tree/main>`_
+   * `git-mergetool <https://git-scm.com/docs/git-mergetool>`_
 
 Delete branches
 ---------------

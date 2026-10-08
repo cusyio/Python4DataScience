@@ -23,7 +23,8 @@ emergencies when we need to start branches for older versions.
 Added
 ~~~~~
 
-📝 Adopt Git 2.56 features
+* 📝 Add git mergetool
+* 📝 Adopt Git 2.56 features
 
   * Add git add --resolved
   * Add git merge-base
