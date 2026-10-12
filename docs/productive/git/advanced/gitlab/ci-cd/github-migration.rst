@@ -311,7 +311,7 @@ GitHub Actions syntax for databases and service containers
             uses: actions/checkout@v4
             uses: actions/setup-python@v5
             with:
-              python-version: '3.10'
+              python-version-file: '.python-version'
 
           - name: Test with pytest
             run: python -m pytest
