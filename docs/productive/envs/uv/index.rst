@@ -68,7 +68,7 @@ Testing in different Python environments
 ----------------------------------------
 
 uv simplifies the :ref:`parallel installation of different Python versions,
-including PyPy and free-threaded Python 3.13 <various-python-versions>`. With
+including PyPy and free-threaded Python <various-python-versions>`. With
 :ref:`tox_uv` you can then test your project automatically in the different
 Python environments.
 
