@@ -5,7 +5,7 @@
 from functools import lru_cache
 from time import sleep
 
-import httpx
+import httpx2 as httpx
 
 
 @lru_cache(maxsize=1000)
