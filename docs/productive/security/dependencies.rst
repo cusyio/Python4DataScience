@@ -204,7 +204,7 @@ Alternatively, you can use ``pip-compile --generate-hashes`` from the
 
 However, you should not only use hash pinning for your Python dependencies, but
 also, for example, for your :doc:`pre-commit checks
-<../git/advanced/hooks/checks>` and :ref:`GitHub Actions <pinact>`.
+<../git/advanced/hooks/checks>` and :ref:`GitHub Actions <gh-actions-lock>`.
 
 Hash pinning does not, however, protect against installing a malicious package
 for the first time; in that case, you would simply be pinning the hash of the

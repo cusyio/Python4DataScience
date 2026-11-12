@@ -12,6 +12,8 @@ workflows:
     '.github/workflows/prek.yml':
         - 'actions/checkout@v7.0.1'
         - 'j178/prek-action@v3.0.0'
+    '.github/workflows/verify-lockfile.yml':
+        - 'actions/checkout@v7.0.1'
     '.github/workflows/zizmor.yml':
         - 'actions/checkout@v7.0.1'
         - 'zizmorcore/zizmor-action@v0.6.4'
