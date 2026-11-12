@@ -67,6 +67,21 @@ access via HTTP like :ref:`pmtiles`.
 .. seealso::
    * `MBTiles specification <https://github.com/mapbox/mbtiles-spec>`_
 
+.. _geotiff:
+
+GeoTIFF
+~~~~~~~
+
+`GeoTIFF <https://www.ogc.org/de/standards/geotiff/>`_ is a lossless image
+format that embeds coordinates, map projections, reference systems (such as EPSG
+codes) and elevation data directly in the image file’s header.
+
+.. seealso::
+   * :ref:`GeoTIFF konvertieren <pyviz:rio-pmtiles>`
+   * `OGC GeoTIFF standard <https://docs.ogc.org/is/19-008r4/19-008r4.html>`_
+
+.. _cog:
+
 Cloud Optimized GeoTIFF (COG)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
