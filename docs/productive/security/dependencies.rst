@@ -249,7 +249,7 @@ file:
 .. seealso::
    * :ref:`Update uv.lock <python-basics:update-uv-lock>`
 
-Alternatively, you can also use :doc:`../envs/uv/dependency-bot` for assistance.
+Alternatively, you can also use :doc:`../envs/uv/renovate` for assistance.
 
 .. _vulnerability_scans:
 

@@ -1,5 +1,5 @@
-Dependency bot
-==============
+Renovate
+========
 
 It is good practice to update dependencies regularly to avoid vulnerabilities,
 limit incompatibilities between dependencies and avoid complex upgrades when

@@ -57,8 +57,8 @@ update individual dependencies in a controlled manner.
 Code or Cursor also uses uv reliably.
 
 We describe how you can regularly update the dependencies of your project
-automatically in :doc:`dependency-bot`. These measures significantly increase
-the security of your project.
+automatically in :doc:`renovate`. These measures significantly increase the
+security of your project.
 
 .. seealso::
    * :ref:`lock-dependencies`
@@ -76,6 +76,6 @@ Python environments.
    :hidden:
 
    cicd
-   dependency-bot
+   renovate
    claude-cursor
    docker
