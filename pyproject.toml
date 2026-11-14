@@ -13,7 +13,7 @@ license-files = [ "LICENSE" ]
 authors = [
   { name = "Veit Schiele", email = "veit@cusy.io" },
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.11.5"
 classifiers = [
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
@@ -52,8 +52,9 @@ docs = [
   "sphinxext-opengraph",            # matplotlib is required for social cards
 ]
 
-[tool.setuptools]
-packages = []
+[tool.uv]
+exclude-newer = "P3D"  # "3 days" in RFC 3339 format
+exclude-newer-package = { soupsieve = "P0D" }
 
 [tool.ruff]
 line-length = 79
