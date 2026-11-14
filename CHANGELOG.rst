@@ -23,6 +23,7 @@ emergencies when we need to start branches for older versions.
 Added
 ~~~~~
 
+* 📝 Add python-sbom
 * 📝 Add git mergetool
 * 📝 Adopt Git 2.56 features
 

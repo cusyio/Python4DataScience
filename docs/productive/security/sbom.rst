@@ -157,24 +157,35 @@ PEP 770 – SBOMs in Python packages
 file when they install your package, for example:
 
 .. code-block:: console
+   :emphasize-lines: 4-
 
-   myapp-26.2.0.dist-info
+   cusy_tasks-26.2.0.dist-info
    ├── METADATA
    ├── RECORD
-   └── sboms/
-       └── myapp.cdx.json
+   └── sboms
+       └── cusy-tasks.cdx.json
 
-Build backends such as Hatchling ≥ 1.28 already support this via the
-``sbom-files`` configuration:
+`python-sbom <https://python-sbom.readthedocs.io/en/latest/>`_ supports this for
+many build backends; for :term:`uv`, for example, with:
 
 .. code-block:: toml
    :caption: pyproject.toml
 
-   [tool.hatch.build.targets.wheel]
-   sbom-files = ["myapp.cdx.json"]
+   [build-system]
+   build-backend = "python_sbom.backend"
+   requires = [ "uv-build", "python-sbom" ]
+   ...
+   [tool.python-sbom]
+   build-backend = "uv_build"
+   supplier = { name = "Veit Schiele", url = [ "https://github.com/veit" ] }
 
-Instead of generating the SBOM file from scratch during the build, a minimal
-CycloneDX SBOM file can be checked into the repository:
+.. seealso::
+
+   However, other backends are also supported: `Set it up for a build backend
+   <https://python-sbom.readthedocs.io/en/latest/how-to/backends/index.html>`_.
+
+Alternatively, you can also check the SBOM file into the repository using a
+minimal CycloneDX SBOM file:
 
 .. code-block:: json
 
@@ -185,7 +196,7 @@ CycloneDX SBOM file can be checked into the repository:
      "metadata": {
        "component": {
          "type": "library",
-         "name": "mylib",
+         "name": "cusy.tasks",
          "version": "0.0.0-placeholder"
        }
      },
@@ -200,11 +211,46 @@ the wheel is published to PyPI.
 Analysis
 --------
 
-There are numerous tools available for security and licence checks, each
-focusing on different areas of concern. Two open-source tools for SBOM analysis
-are `Dependency Track <https://dependencytrack.org>`_ and `GUAC
-<https://guac.sh>`_. With ``sbomify-action``, you can upload SBOMs from the CI
-pipeline directly to your Dependency Track instance using:
+There are numerous tools available for validation, each focusing on different
+problem areas. You can easily validate the SBOM file using ``python-sbom
+validate``. To do this, you must first install the ``validate`` extra:
+
+.. code-block:: console
+
+   $ uv add --group dev 'python-sbom[validate]'
+
+You can then check your wheel using
+
+.. code-block:: console
+
+   $ uv run python-sbom validate dist/
+   SBOM in cusy_tasks-26.2.0-py3-none-any.whl is valid
+
+You can also render the SBOM file as an SPDX using
+
+.. code-block:: console
+
+   $ unzip -p dist/cusy_tasks-26.2.0-py3-none-any.whl '*/sboms/cusy-tasks.cdx.json' > cusy-tasks.cdx.json
+   $ uv run python-sbom spdx cusy-tasks.cdx.json cusy-tasks.spdx.json
+
+.. hint::
+   Two things are omitted here, which SPDX 2.3 cannot include:
+
+   * the file-specific hashes, as SPDX 2.3 requires an SHA-1 hash for each file,
+     whilst :file:`RECORD` files in :term:`Wheels <Wheel>` contain SHA-256
+   * the build entry.
+
+The SPDX rendering can also be checked using
+
+.. code-block:: console
+
+   $ uv run python-sbom validate cusy-tasks.spdx.json
+
+* `Dependency Track <https://dependencytrack.org>`_
+* `GUAC <https://guac.sh>`_
+
+And with ``sbomify-action``, you can upload SBOMs from the CI pipeline directly
+to your Dependency Track instance using:
 
 .. code-block:: yaml
 
