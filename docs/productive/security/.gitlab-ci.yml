@@ -13,7 +13,7 @@ build:
 include:
   - template: Security/Dependency-Scanning.gitlab-ci.yml
 
-generate-sbom:
+report-sbom:
   stage: test
   image: ghcr.io/sbomify/sbomify-action
   variables:
